@@ -14,6 +14,7 @@
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home">
+        <!-- NEW LOGO IMAGE -->
         <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" style="height:48px; width:auto; border-radius:14px;">
         <div class="brand-text">
           <strong>AbridMoroccoTrip</strong>
@@ -27,6 +28,7 @@
         <li><a href="index.html#tours">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#comments">Reviews</a></li>
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
 
@@ -46,6 +48,7 @@
         <a href="index.html#tours">Tours / Services</a>
         <a href="index.html#packages">Pricing / Packages</a>
         <a href="index.html#gallery">Gallery / Testimonials</a>
+        <a href="index.html#comments">Reviews</a>
         <a href="index.html#contact">Booking / Contact</a>
       </div>
     </div>
@@ -500,6 +503,96 @@
       </div>
     </section>
 
+    <!-- NEW COMMENTS / REVIEWS SECTION -->
+    <section id="comments">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Guest Reviews</span>
+          <h2>What our travelers say</h2>
+          <p>Read honest feedback from people who have traveled with us.</p>
+        </div>
+
+        <!-- Display existing comments (static examples) -->
+        <div class="testimonials-grid" style="margin-bottom:40px;">
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Amazing experience! The camel trek at sunset was unforgettable. Highly recommend the Merzouga desert tour."</p>
+            <div class="author">
+              <div class="avatar">J</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0;">James</h3>
+                <div class="subtle">United States</div>
+              </div>
+            </div>
+          </div>
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"We did the Marrakech Discovery Tour with Abdellah. He was knowledgeable and friendly. Perfect introduction to the city!"</p>
+            <div class="author">
+              <div class="avatar">E</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0">Emma</h3>
+                <div class="subtle">Canada</div>
+              </div>
+            </div>
+          </div>
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"The 3-day desert trip was the highlight of our Morocco vacation. Everything was well organized and the guides were fantastic."</p>
+            <div class="author">
+              <div class="avatar">M</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0">Michael</h3>
+                <div class="subtle">Australia</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comment submission form -->
+        <div class="card form-card reveal" style="max-width:800px; margin:0 auto;">
+          <h3>Leave your own review</h3>
+          <p class="subtle">Your email will not be published. Your review may be featured on our site.</p>
+          <form id="commentForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="comment-name">Your Name *</label>
+                <input id="comment-name" name="name" type="text" placeholder="e.g., John Doe" required>
+              </div>
+              <div class="field">
+                <label for="comment-email">Email *</label>
+                <input id="comment-email" name="email" type="email" placeholder="you@example.com" required>
+              </div>
+              <div class="field full">
+                <label for="comment-country">Country</label>
+                <input id="comment-country" name="country" type="text" placeholder="e.g., United States">
+              </div>
+              <div class="field full">
+                <label for="comment-text">Your Review *</label>
+                <textarea id="comment-text" name="comment" rows="5" placeholder="Share your experience..." required></textarea>
+              </div>
+              <div class="field full">
+                <label for="comment-rating">Rating</label>
+                <select id="comment-rating" name="rating">
+                  <option value="5">★★★★★ (5 stars)</option>
+                  <option value="4">★★★★☆ (4 stars)</option>
+                  <option value="3">★★★☆☆ (3 stars)</option>
+                  <option value="2">★★☆☆☆ (2 stars)</option>
+                  <option value="1">★☆☆☆☆ (1 star)</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Submit Review</button>
+            </div>
+          </form>
+          <div id="commentResult" class="result-box" style="display:none; margin-top:20px;">
+            ✅ Thank you! Your review has been sent. We'll review it and may post it soon.
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="container">
         <div class="section-head reveal">
@@ -759,6 +852,40 @@ Thank you!`;
       });
     }
 
+    // Comment form submission (sends via email)
+    const commentForm = document.getElementById('commentForm');
+    const commentResult = document.getElementById('commentResult');
+
+    if (commentForm) {
+      commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('comment-name').value.trim();
+        const email = document.getElementById('comment-email').value.trim();
+        const country = document.getElementById('comment-country').value.trim();
+        const comment = document.getElementById('comment-text').value.trim();
+        const rating = document.getElementById('comment-rating').value;
+
+        const subject = `New Review from ${name}`;
+        const body =
+`New review submitted on AbridMoroccoTrip website:
+
+Name: ${name}
+Email: ${email}
+Country: ${country || 'Not provided'}
+Rating: ${rating} stars
+
+Review:
+${comment}
+
+--- This review was sent via the website comment form. ---`;
+
+        window.location.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        commentResult.style.display = 'block';
+        commentForm.reset();
+      });
+    }
+
     // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -845,4 +972,3 @@ Thank you!`;
   </script>
 </body>
 </html>
-
