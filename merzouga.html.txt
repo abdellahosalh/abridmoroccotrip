@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Merzouga Desert Adventure | AbridMoroccoTrip</title>
+  <meta name="description" content="Book your 3-day Merzouga Desert Adventure with AbridMoroccoTrip. Camel trek, desert camp, all meals. $97 per person." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home">
+        <div class="brand-mark">
+          <span>A</span>
+        </div>
+        <div class="brand-text">
+          <strong>AbridMoroccoTrip</strong>
+          <span>Premium Morocco Tours</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Booking</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#tours">Tours / Services</a>
+        <a href="index.html#packages">Pricing / Packages</a>
+        <a href="index.html#gallery">Gallery / Testimonials</a>
+        <a href="index.html#contact">Booking / Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="tour-detail" style="padding-top: 120px;">
+      <div class="container">
+        <div class="tour-detail-grid">
+          <div class="tour-detail-info">
+            <h3>Merzouga Desert Adventure</h3>
+            <p class="subtle">3 days / 2 nights – Sahara camp, camel trek, and unforgettable sunsets.</p>
+            <div class="price-large">$97 <small>per person</small></div>
+            <h4>What's Included</h4>
+            <ul class="inclusions-list">
+              <li>Transport Marrakech → Dades → Merzouga → Marrakech</li>
+              <li>Licensed guide throughout</li>
+              <li>1 night hotel in Dades Valley (dinner & breakfast)</li>
+              <li>1 night desert camp (dinner & breakfast)</li>
+              <li>Camel trek & sunset in dunes</li>
+              <li>Sandboarding</li>
+            </ul>
+            <h4>Not Included</h4>
+            <ul class="exclusions-list">
+              <li>Lunch on Day 1 and Day 3</li>
+              <li>Drinks</li>
+              <li>Tips</li>
+            </ul>
+            <h4>Itinerary</h4>
+            <p><strong>Day 1:</strong> Marrakech → Dades Valley (hotel overnight).<br>
+               <strong>Day 2:</strong> Dades → Merzouga, camel trek, desert camp.<br>
+               <strong>Day 3:</strong> Sunrise camel trek, return to Marrakech.</p>
+            <a href="index.html#tours" class="back-to-tours">← Back to all tours</a>
+          </div>
+          <div class="tour-detail-form">
+            <h3>Book This Tour</h3>
+            <form id="bookingFormMerzouga">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name-d">Full Name *</label>
+                  <input id="name-d" name="name" type="text" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                  <label for="email-d">Email *</label>
+                  <input id="email-d" name="email" type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="phone-d">Phone / WhatsApp *</label>
+                  <input id="phone-d" name="phone" type="text" placeholder="+212 000-000000" required>
+                </div>
+                <div class="field">
+                  <label for="date-d">Preferred Start Date *</label>
+                  <input id="date-d" name="date" type="date" required>
+                </div>
+                <div class="field full">
+                  <label for="message-d">Special Requests</label>
+                  <textarea id="message-d" name="message" placeholder="Any special requirements?"></textarea>
+                </div>
+                <input type="hidden" name="tour" value="Merzouga Desert Adventure ($97)">
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                <a class="btn btn-secondary" href="https://wa.me/212762934488" target="_blank">Chat on WhatsApp</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImg" src="" alt="Expanded gallery image">
+  </div>
+
+  <!-- Recent Booking Pop-up -->
+  <div id="recentBooking" style="position: fixed; bottom: 20px; left: 20px; background: white; padding: 12px 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-left: 5px solid #b84f2b; z-index: 1000; display: none; font-size: 0.95rem; max-width: 280px;">
+    <span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/212762934488" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;" target="_blank" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    💬
+  </a>
+
+  <!-- Email Pop-up (Discount Offer) - REPLACE WITH YOUR MAILCHIMP CODE -->
+  <div id="emailPopup" style="position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: white; padding: 25px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); z-index: 2000; display: none; max-width: 90%; width: 400px; border: 2px solid #f0a94b;">
+    <button onclick="document.getElementById('emailPopup').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+    <h3 style="margin-top: 0; color: #b84f2b;">🎁 Get 10% off your first tour!</h3>
+    <p style="color: #3f2a20; margin-bottom: 20px;">Subscribe for exclusive deals and Morocco travel tips.</p>
+    <input type="email" id="popupEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #ddd; font-size: 1rem;">
+    <button onclick="alert('Thanks! 10% discount code sent to your email (demo).'); document.getElementById('emailPopup').style.display='none';" style="background: #b84f2b; color: white; border: none; padding: 12px; width: 100%; border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer;">Subscribe Now</button>
+    <small style="display: block; text-align: center; margin-top: 15px; color: #6e5649;">No spam, unsubscribe anytime. We'll send you a 10% discount code immediately.</small>
+  </div>
+
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Form submission for this page
+    const form = document.getElementById('bookingFormMerzouga');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('name-d').value.trim();
+        const email = document.getElementById('email-d').value.trim();
+        const phone = document.getElementById('phone-d').value.trim();
+        const date = document.getElementById('date-d').value;
+        const message = document.getElementById('message-d').value.trim();
+
+        const subject = `Booking Inquiry - Merzouga Desert Adventure | ${name}`;
+        const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Merzouga Desert Adventure.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Start Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
+
+        window.location.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
+      });
+    }
+
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Recent booking pop-up
+    const recentBooking = document.getElementById('recentBooking');
+    const bookings = [
+      "🇫🇷 Jean from Paris booked Merzouga Desert Tour",
+      "🇬🇧 Sarah from London booked Marrakech Tour",
+      "🇩🇪 Marco from Berlin booked Atlas Mountains",
+      "🇪🇸 Maria from Madrid booked Essaouira Tour",
+      "🇺🇸 John from NYC booked Imperial Cities",
+      "🇨🇦 Emma from Toronto booked Private Custom Trip"
+    ];
+    
+    setInterval(() => {
+      const random = bookings[Math.floor(Math.random() * bookings.length)];
+      recentBooking.innerHTML = `<span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span> ${random}`;
+      recentBooking.style.display = 'block';
+      setTimeout(() => {
+        recentBooking.style.display = 'none';
+      }, 5000);
+    }, 30000);
+
+    // Email pop-up after 10 seconds
+    setTimeout(() => {
+      document.getElementById('emailPopup').style.display = 'block';
+    }, 10000);
+  </script>
+</body>
+</html>

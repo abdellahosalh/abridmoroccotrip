@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AbridMoroccoTrip | Premium Morocco Tours with Local Experts</title>
+  <meta name="description" content="AbridMoroccoTrip offers private Morocco tours, day trips, desert adventures, and custom travel experiences with authentic local guidance. Transport, guide, and hotels included." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home">
+        <div class="brand-mark">
+          <span>A</span>
+        </div>
+        <div class="brand-text">
+          <strong>AbridMoroccoTrip</strong>
+          <span>Premium Morocco Tours</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="index.html#gallery">Gallery</a></li>
+        <li><a href="index.html#contact">Booking</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About Us</a>
+        <a href="index.html#tours">Tours / Services</a>
+        <a href="index.html#packages">Pricing / Packages</a>
+        <a href="index.html#gallery">Gallery / Testimonials</a>
+        <a href="index.html#contact">Booking / Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">🇲🇦 Moroccan vibes • Private tours • Desert escapes</span>
+          <h1>Explore Morocco with Premium Service & Local Experts</h1>
+          <p>
+            Welcome to <strong>AbridMoroccoTrip</strong> — your trusted guide for unforgettable journeys across Marrakech, the Atlas Mountains, Essaouira, imperial cities, and the Sahara Desert. <strong>Transport, guide, and accommodations included</strong> in all multi-day tours.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+            <a class="btn btn-secondary" href="index.html#tours">View Tours & Prices</a>
+          </div>
+          <div class="hero-badges">
+            <div class="badge">✓ Local expert guides</div>
+            <div class="badge">✓ Private & custom trips</div>
+            <div class="badge">✓ Hotel & transport included</div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-main card">
+            <img src="https://images.unsplash.com/photo-1755173095906-22500ce60b5e?w=1200&auto=format&fit=crop" alt="Morocco Atlas Mountains landscape">
+          </div>
+
+          <div class="hero-float top">
+            <div class="rating">
+              <span class="stars">★★★★★</span>
+              <span>4.9/5 (128 reviews)</span>
+            </div>
+            <div class="mini-list">
+              <div><span>Marrakech tours</span><strong>from $36</strong></div>
+              <div><span>Sahara adventures</span><strong>from $97</strong></div>
+              <div><span>Custom itineraries</span><strong>flexible</strong></div>
+            </div>
+          </div>
+
+          <div class="hero-float bottom">
+            <strong style="display:block;font-size:1.08rem;margin-bottom:8px;">All tours include:</strong>
+            <div class="mini-list">
+              <div><span>✓ Transport (AC vehicle)</span></div>
+              <div><span>✓ Licensed guide</span></div>
+              <div><span>✓ Hotels/camps (multi-day)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="trust-grid">
+          <div class="card trust-item reveal">
+            <strong>Day Trips</strong>
+            <span>from $36</span>
+          </div>
+          <div class="card trust-item reveal">
+            <strong>Desert Tours</strong>
+            <span>from $97</span>
+          </div>
+          <div class="card trust-item reveal">
+            <strong>Private Service</strong>
+            <span>Custom quotes</span>
+          </div>
+          <div class="card trust-item reveal">
+            <strong>Easy Booking</strong>
+            <span>WhatsApp available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">About Us</span>
+          <h2>Local knowledge. Genuine hospitality. Premium service.</h2>
+          <p>AbridMoroccoTrip is built around warm service, personalized travel, and real connection to Morocco's landscapes, culture, and traditions. All tours include professional guides and comfortable transport.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-copy reveal">
+            <h3 style="font-size:1.5rem;margin-top:0;">Meet your Morocco travel partner</h3>
+            <p>
+              I help travelers discover Morocco in a comfortable, authentic, and stress-free way. From lively medinas and coastal towns to mountain valleys and the golden dunes of the desert, every trip is designed with care and local experience.
+            </p>
+            <p>
+              <strong>What's included in every tour:</strong>
+            </p>
+            <div class="feature-list">
+              <div class="feature">
+                <div class="icon-chip">🚐</div>
+                <div>
+                  <strong>Comfortable transport</strong>
+                  <div class="subtle">Air-conditioned vehicles, hotel pickup/drop-off included</div>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="icon-chip">👨‍🏫</div>
+                <div>
+                  <strong>Licensed local guides</strong>
+                  <div class="subtle">English/French speaking, knowledgeable about history & culture</div>
+                </div>
+              </div>
+              <div class="feature">
+                <div class="icon-chip">🏨</div>
+                <div>
+                  <strong>Hand-picked accommodations</strong>
+                  <div class="subtle">Traditional riads, desert camps, and hotels (multi-day tours)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="stack reveal">
+            <div class="card side-card">
+              <h3>Why book with us</h3>
+              <p class="subtle">✓ Best price guarantee<br>✓ 24/7 WhatsApp support<br>✓ Flexible cancellation<br>✓ No hidden fees</p>
+            </div>
+            <div class="card side-card">
+              <h3>Contact anytime</h3>
+              <p class="subtle">
+                Phone/WhatsApp: <a href="tel:0762934488" style="color:var(--terracotta);font-weight:700;">0762934488</a><br>
+                Email: <a href="mailto:abdeosalh@gmail.com" style="color:var(--terracotta);font-weight:700;">abdeosalh@gmail.com</a><br>
+                Response within 2 hours
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tours">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Tours & Pricing</span>
+          <h2>Clear pricing with everything included</h2>
+          <p>All prices are per person. Transport and licensed guide included in every tour. Hotels/camps included in multi-day packages.</p>
+        </div>
+
+        <div class="filters reveal">
+          <button class="filter-btn active" data-filter="all">All Tours</button>
+          <button class="filter-btn" data-filter="day">Day Trips</button>
+          <button class="filter-btn" data-filter="desert">Desert</button>
+          <button class="filter-btn" data-filter="city">Culture & Cities</button>
+          <button class="filter-btn" data-filter="private">Private Custom</button>
+        </div>
+
+        <div class="tour-grid">
+          <!-- Marrakech Discovery Tour -->
+          <article class="card tour-card reveal" data-category="day city">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Marrakech city tour">
+              <span class="pill">1 Day</span>
+              <div style="position:absolute; top:16px; right:16px; background:#ffd966; color:#b84f2b; padding:5px 10px; border-radius:20px; font-weight:bold; font-size:0.8rem; z-index:10;">
+                ⚡ Only 2 spots left!
+              </div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Marrakech Discovery Tour</h3>
+                  <div class="subtle">Explore souks, palaces & gardens</div>
+                </div>
+                <div class="price">$36<span style="font-size:0.8rem;">/person</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Air-conditioned transport</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Licensed English/French guide</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Hotel pickup & drop-off</div>
+                <div class="inclusion-item"><span class="icon">✗</span> Lunch & monument fees extra</div>
+              </div>
+              <div class="tour-meta">
+                <span>City highlights</span><span>Local atmosphere</span>
+              </div>
+              <a class="btn btn-secondary" href="marrakech.html">View Details & Book</a>
+            </div>
+          </article>
+
+          <!-- Atlas Mountains Tour -->
+          <article class="card tour-card reveal" data-category="day">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1755172985998-e9f4f58fb83b?w=1200&auto=format&fit=crop" alt="Atlas mountains tour">
+              <span class="pill">1 Day</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Atlas Mountains & Ourika Valley</h3>
+                  <div class="subtle">Berber villages & mountain views</div>
+                </div>
+                <div class="price">$84<span style="font-size:0.8rem;">/person</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Private 4x4 transport</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Mountain guide</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Berber village visit</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Lunch included</div>
+              </div>
+              <div class="tour-meta">
+                <span>Nature</span><span>Berber culture</span><span>Mountains</span>
+              </div>
+              <a class="btn btn-secondary" href="atlas.html">View Details & Book</a>
+            </div>
+          </article>
+
+          <!-- Essaouira Coastal Tour -->
+          <article class="card tour-card reveal" data-category="day">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=1200&auto=format&fit=crop" alt="Essaouira coastal town">
+              <span class="pill">1 Day</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Essaouira Coastal Escape</h3>
+                  <div class="subtle">Atlantic medina & seafood</div>
+                </div>
+                <div class="price">$61<span style="font-size:0.8rem;">/person</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Round-trip transport</div>
+                <div class="inclusion-item"><span class="icon">✓</span> English-speaking driver</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Free time in medina</div>
+                <div class="inclusion-item"><span class="icon">✗</span> Lunch & activities extra</div>
+              </div>
+              <div class="tour-meta">
+                <span>Coastal</span><span>Photography</span><span>Seafood</span>
+              </div>
+              <a class="btn btn-secondary" href="essaouira.html">View Details & Book</a>
+            </div>
+          </article>
+
+          <!-- Merzouga Desert Adventure -->
+          <article class="card tour-card reveal" data-category="desert">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" alt="Merzouga Sahara desert">
+              <span class="pill">3 Days / 2 Nights</span>
+              <div style="position:absolute; top:16px; right:16px; background:#ffd966; color:#b84f2b; padding:5px 10px; border-radius:20px; font-weight:bold; font-size:0.8rem; z-index:10;">
+                ⚡ 4 spots left for March
+              </div>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Merzouga Desert Adventure</h3>
+                  <div class="subtle">Sahara camp & camel trek</div>
+                </div>
+                <div class="price">$97<span style="font-size:0.8rem;">/person</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech → Dades → Merzouga</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Licensed guide throughout</div>
+                <div class="inclusion-item"><span class="icon">✓</span> 2 nights accommodation (hotel + desert camp)</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Camel trek & sunset in dunes</div>
+                <div class="inclusion-item"><span class="icon">✓</span> 2 dinners & 2 breakfasts</div>
+              </div>
+              <div class="tour-meta">
+                <span>Best seller</span><span>Camel trek</span><span>Desert camp</span>
+              </div>
+              <a class="btn btn-primary" href="merzouga.html">View Details & Book</a>
+            </div>
+          </article>
+
+          <!-- Imperial Cities Circuit -->
+          <article class="card tour-card reveal" data-category="city">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=1200&auto=format&fit=crop" alt="Imperial cities Morocco">
+              <span class="pill">8 Days / 7 Nights</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Imperial Cities Circuit</h3>
+                  <div class="subtle">Fez, Marrakech, Rabat & more</div>
+                </div>
+                <div class="price">$2,156<span style="font-size:0.8rem;">/person</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> All transport in AC coach</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Multilingual guide</div>
+                <div class="inclusion-item"><span class="icon">✓</span> 7 nights 4-star hotels/riads</div>
+                <div class="inclusion-item"><span class="icon">✓</span> 7 breakfasts, 6 dinners</div>
+                <div class="inclusion-item"><span class="icon">✓</span> All entrance fees included</div>
+              </div>
+              <div class="tour-meta">
+                <span>Luxury</span><span>All-inclusive</span><span>Cultural</span>
+              </div>
+              <a class="btn btn-secondary" href="imperial.html">View Details & Book</a>
+            </div>
+          </article>
+
+          <!-- Private Tailor-Made Trip -->
+          <article class="card tour-card reveal" data-category="private">
+            <div class="tour-image">
+              <img src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=1200&auto=format&fit=crop" alt="Private tailor-made Morocco trip">
+              <span class="pill">Custom</span>
+            </div>
+            <div class="tour-body">
+              <div class="tour-top">
+                <div>
+                  <h3>Private Tailor-Made Trip</h3>
+                  <div class="subtle">Your dream itinerary</div>
+                </div>
+                <div class="price">$2,260+<span style="font-size:0.8rem;">/10 days</span></div>
+              </div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Private driver/guide</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Private AC vehicle</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Hand-picked riads/hotels</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Daily breakfast</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Camel trek & desert camp</div>
+              </div>
+              <div class="tour-meta">
+                <span>Private only</span><span>Your pace</span><span>Custom</span>
+              </div>
+              <a class="btn btn-secondary" href="private.html">View Details & Book</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="price-note reveal">
+          <p>*Prices are per person and may vary based on season, group size, and accommodation level. Private tours available for all itineraries. Contact us for a customized quote.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="packages">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Popular Packages</span>
+          <h2>Choose your perfect Morocco experience</h2>
+          <p>All packages include transport, guide, and accommodations as specified.</p>
+        </div>
+
+        <div class="packages-grid">
+          <div class="card package-card reveal">
+            <span class="tag">Quick Escape</span>
+            <h3>Day Trip Package</h3>
+            <div class="subtle">Perfect for short stays</div>
+            <div class="package-price">$36 <small>/person</small></div>
+            <ul class="check-list">
+              <li>Marrakech, Atlas or Essaouira</li>
+              <li>Transport + guide included</li>
+              <li>Hotel pickup/drop-off</li>
+              <li>Flexible booking</li>
+            </ul>
+            <a class="btn btn-secondary" href="index.html#tours">View Day Trips</a>
+          </div>
+
+          <div class="card package-card popular reveal">
+            <div class="popular-tag">BEST VALUE</div>
+            <span class="tag">Most Popular</span>
+            <h3>Desert Adventure</h3>
+            <div class="subtle">3 days / 2 nights</div>
+            <div class="package-price">$97 <small>/person</small></div>
+            <ul class="check-list">
+              <li>Transport Marrakech → Merzouga</li>
+              <li>Camel trek & desert camp</li>
+              <li>Hotel night + desert camp</li>
+              <li>All meals included (2 dinners, 2 breakfasts)</li>
+            </ul>
+            <a class="btn btn-primary" href="merzouga.html">Book Desert Tour</a>
+          </div>
+
+          <div class="card package-card reveal">
+            <span class="tag">Ultimate</span>
+            <h3>Complete Morocco</h3>
+            <div class="subtle">8 days / 7 nights</div>
+            <div class="package-price">$2,156 <small>/person</small></div>
+            <ul class="check-list">
+              <li>All 4 imperial cities</li>
+              <li>4-star hotels & riads</li>
+              <li>Most meals included</li>
+              <li>Private guide throughout</li>
+            </ul>
+            <a class="btn btn-secondary" href="imperial.html">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2>Real moments from our travelers</h2>
+          <p>Experience the magic of Morocco through our guests' eyes.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item reveal" data-full="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=1600&auto=format&fit=crop">
+            <img src="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=1200&auto=format&fit=crop" alt="Essaouira coastal view">
+            <div class="gallery-caption">Essaouira coast</div>
+          </div>
+          <div class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1680633480293-b64ec2e61e01?w=1600&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1680633480293-b64ec2e61e01?w=1200&auto=format&fit=crop" alt="Essaouira port">
+            <div class="gallery-caption">Essaouira port</div>
+          </div>
+          <div class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=1600&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=1200&auto=format&fit=crop" alt="Fez architecture">
+            <div class="gallery-caption">Fez details</div>
+          </div>
+          <div class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=1600&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=1200&auto=format&fit=crop" alt="Fez medina">
+            <div class="gallery-caption">Fez medina</div>
+          </div>
+          <div class="gallery-item reveal" data-full="https://images.unsplash.com/photo-1730759214696-0aba472f83a6?w=1600&auto=format&fit=crop">
+            <img src="https://images.unsplash.com/photo-1730759214696-0aba472f83a6?w=1200&auto=format&fit=crop" alt="Fez street">
+            <div class="gallery-caption">Fez streets</div>
+          </div>
+        </div>
+
+        <div class="testimonials-grid" style="margin-top:28px;">
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"The 3-day desert tour was incredible. Everything was included - transport, guide, hotel, camp, and all meals. Best value in Morocco!"</p>
+            <div class="author">
+              <div class="avatar">S</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0;">Sarah</h3>
+                <div class="subtle">United Kingdom</div>
+              </div>
+            </div>
+          </div>
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Perfect family trip. Our private guide was knowledgeable and the transport was comfortable. No hidden costs, exactly as advertised."</p>
+            <div class="author">
+              <div class="avatar">M</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0;">Marco</h3>
+                <div class="subtle">Italy</div>
+              </div>
+            </div>
+          </div>
+          <div class="card testimonial reveal">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"The 8-day imperial cities tour was worth every penny. 4-star hotels, all transport, and a fantastic guide. Highly recommended!"</p>
+            <div class="author">
+              <div class="avatar">L</div>
+              <div>
+                <h3 style="font-size:1rem;margin:0;">Lina</h3>
+                <div class="subtle">Germany</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Booking / Contact</span>
+          <h2>Ready to book your Morocco adventure?</h2>
+          <p>Send your dates, preferred tour, or dream itinerary. We'll respond within 2 hours with availability and pricing.</p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="card contact-card reveal">
+            <h3>Contact details</h3>
+            <p class="subtle">Fast replies, clear communication, and personalized service.</p>
+
+            <div class="contact-list">
+              <div class="contact-row">
+                <div class="icon-chip">📞</div>
+                <div>
+                  <strong>Phone / WhatsApp</strong><br>
+                  <a href="tel:0762934488" style="color:var(--terracotta);font-weight:700;">0762934488</a><br>
+                  <span style="font-size:0.8rem;">Response within 2 hours</span>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="icon-chip">✉️</div>
+                <div>
+                  <strong>Email</strong><br>
+                  <a href="mailto:abdeosalh@gmail.com" style="color:var(--terracotta);font-weight:700;">abdeosalh@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-row">
+                <div class="icon-chip">⏰</div>
+                <div>
+                  <strong>Office hours</strong><br>
+                  9:00 - 21:00 (Morocco time)
+                </div>
+              </div>
+            </div>
+
+            <h3 style="margin-top:0;">Follow AbridMoroccoTrip</h3>
+            <div class="socials">
+              <a href="https://wa.me/212762934488" target="_blank" rel="noopener">WhatsApp</a>
+              <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" rel="noopener">Instagram</a>
+              <a href="https://www.tiktok.com/@moroccoinsider" target="_blank" rel="noopener">TikTok</a>
+            </div>
+          </div>
+
+          <div class="card form-card reveal">
+            <h3>Send a booking inquiry</h3>
+            <form id="bookingForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name">Full Name *</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                  <label for="email">Email *</label>
+                  <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone / WhatsApp *</label>
+                  <input id="phone" name="phone" type="text" placeholder="+212 000-000000" required>
+                </div>
+                <div class="field">
+                  <label for="tour">Interested Tour *</label>
+                  <select id="tour" name="tour" required>
+                    <option value="">Select a tour</option>
+                    <option>Marrakech Discovery Tour ($36)</option>
+                    <option>Atlas Mountains & Ourika Valley ($84)</option>
+                    <option>Essaouira Coastal Escape ($61)</option>
+                    <option>Merzouga Desert Adventure ($97)</option>
+                    <option>Imperial Cities Circuit ($2,156)</option>
+                    <option>Private Tailor-Made Trip (custom quote)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="dates">Preferred Travel Dates *</label>
+                  <input id="dates" name="dates" type="text" placeholder="Example: 15-18 May 2026" required>
+                </div>
+                <div class="field">
+                  <label for="travelers">Number of Travelers *</label>
+                  <input id="travelers" name="travelers" type="number" min="1" placeholder="e.g., 2 adults" required>
+                </div>
+                <div class="field full">
+                  <label for="message">Special Requests or Questions</label>
+                  <textarea id="message" name="message" placeholder="Tell us about your ideal Morocco trip, accommodation preferences, or special requirements..."></textarea>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                <a class="btn btn-secondary" href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
+              </div>
+
+              <div class="result-box" id="resultBox">
+                ✅ Your inquiry is ready! Choose how to send:
+                <div class="result-links">
+                  <a class="btn btn-primary" id="emailLink" href="#" target="_blank" rel="noopener">Send by Email</a>
+                  <a class="btn btn-secondary" id="waLink" href="#" target="_blank" rel="noopener">Send by WhatsApp</a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- TRUST BADGES SECTION -->
+        <div class="trust-badge-section reveal">
+          <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 25px; color: var(--brown);">Why Book With AbridMoroccoTrip</h3>
+          
+          <div class="trust-badge-container">
+            <div class="trust-badge">
+              <div class="badge-icon">🔒</div>
+              <div class="badge-title">Secure Booking</div>
+              <div class="badge-text">256-bit encryption</div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">💬</div>
+              <div class="badge-title">24/7 Support</div>
+              <div class="badge-text">Always here to help</div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">✅</div>
+              <div class="badge-title">Best Price</div>
+              <div class="badge-text">Price match guarantee</div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">🏜️</div>
+              <div class="badge-title">Local Experts</div>
+              <div class="badge-text">Moroccan guides</div>
+            </div>
+            <div class="trust-badge">
+              <div class="badge-icon">⭐</div>
+              <div class="badge-title">5-Star Rated</div>
+              <div class="badge-text">128+ happy travelers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
+    <img id="lightboxImg" src="" alt="Expanded gallery image">
+  </div>
+
+  <!-- Recent Booking Pop-up -->
+  <div id="recentBooking" style="position: fixed; bottom: 20px; left: 20px; background: white; padding: 12px 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-left: 5px solid #b84f2b; z-index: 1000; display: none; font-size: 0.95rem; max-width: 280px;">
+    <span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/212762934488" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;" target="_blank" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+    💬
+  </a>
+
+  <!-- Email Pop-up (Discount Offer) - REPLACE WITH YOUR MAILCHIMP CODE -->
+  <div id="emailPopup" style="position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: white; padding: 25px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); z-index: 2000; display: none; max-width: 90%; width: 400px; border: 2px solid #f0a94b;">
+    <button onclick="document.getElementById('emailPopup').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+    <h3 style="margin-top: 0; color: #b84f2b;">🎁 Get 10% off your first tour!</h3>
+    <p style="color: #3f2a20; margin-bottom: 20px;">Subscribe for exclusive deals and Morocco travel tips.</p>
+    <input type="email" id="popupEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #ddd; font-size: 1rem;">
+    <button onclick="alert('Thanks! 10% discount code sent to your email (demo).'); document.getElementById('emailPopup').style.display='none';" style="background: #b84f2b; color: white; border: none; padding: 12px; width: 100%; border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer;">Subscribe Now</button>
+    <small style="display: block; text-align: center; margin-top: 15px; color: #6e5649;">No spam, unsubscribe anytime. We'll send you a 10% discount code immediately.</small>
+  </div>
+
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Tour filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const tourCards = document.querySelectorAll('.tour-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        tourCards.forEach(card => {
+          const category = card.dataset.category;
+          if (filter === 'all' || category.includes(filter)) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Main contact form
+    const mainForm = document.getElementById('bookingForm');
+    const resultBox = document.getElementById('resultBox');
+    const emailLink = document.getElementById('emailLink');
+    const waLink = document.getElementById('waLink');
+
+    if (mainForm) {
+      mainForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const tour = document.getElementById('tour').value;
+        const dates = document.getElementById('dates').value.trim();
+        const travelers = document.getElementById('travelers').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = `Booking Inquiry - ${tour || 'Morocco Trip'} | ${name}`;
+        const body =
+`Hello AbridMoroccoTrip,
+
+I would like to inquire about a trip.
+
+Name: ${name}
+Email: ${email}
+Phone / WhatsApp: ${phone || 'N/A'}
+Interested Tour: ${tour || 'N/A'}
+Travel Dates: ${dates || 'N/A'}
+Travelers: ${travelers || 'N/A'}
+
+Message:
+${message || 'No additional message.'}
+
+Thank you!`;
+
+        emailLink.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        waLink.href = `https://wa.me/212762934488?text=${encodeURIComponent(body)}`;
+        resultBox.classList.add('show');
+        resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      });
+    }
+
+    // Update copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.full;
+        lightbox.classList.add('show');
+        lightbox.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    lightboxClose.addEventListener('click', () => {
+      lightbox.classList.remove('show');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove('show');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxImg.src = '';
+      }
+    });
+
+    // Reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Active nav link based on scroll
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+          });
+        }
+      });
+    }, { threshold: 0.45 });
+
+    sections.forEach(section => navObserver.observe(section));
+
+    // Recent booking pop-up
+    const recentBooking = document.getElementById('recentBooking');
+    const bookings = [
+      "🇫🇷 Jean from Paris booked Merzouga Desert Tour",
+      "🇬🇧 Sarah from London booked Marrakech Tour",
+      "🇩🇪 Marco from Berlin booked Atlas Mountains",
+      "🇪🇸 Maria from Madrid booked Essaouira Tour",
+      "🇺🇸 John from NYC booked Imperial Cities",
+      "🇨🇦 Emma from Toronto booked Private Custom Trip"
+    ];
+    
+    setInterval(() => {
+      const random = bookings[Math.floor(Math.random() * bookings.length)];
+      recentBooking.innerHTML = `<span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span> ${random}`;
+      recentBooking.style.display = 'block';
+      setTimeout(() => {
+        recentBooking.style.display = 'none';
+      }, 5000);
+    }, 30000);
+
+    // Email pop-up after 10 seconds
+    setTimeout(() => {
+      document.getElementById('emailPopup').style.display = 'block';
+    }, 10000);
+  </script>
+</body>
+</html>
