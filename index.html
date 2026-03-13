@@ -11,6 +11,46 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Additional blog preview styling */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+    .blog-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 15px;
+    }
+    .blog-card h3 {
+      margin: 0 0 5px;
+      font-size: 1.1rem;
+    }
+    .blog-card .date {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 820px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -27,6 +67,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#tours">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
         <li><a href="index.html#comments">Reviews</a></li>
         <li><a href="index.html#contact">Booking</a></li>
@@ -45,6 +86,7 @@
         <a href="index.html#about">About Us</a>
         <a href="index.html#tours">Tours / Services</a>
         <a href="index.html#packages">Pricing / Packages</a>
+        <a href="blog.html">Blog</a>
         <a href="index.html#gallery">Gallery / Testimonials</a>
         <a href="index.html#comments">Reviews</a>
         <a href="index.html#contact">Booking / Contact</a>
@@ -468,42 +510,47 @@
             <div class="gallery-caption">Fez streets</div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="testimonials-grid" style="margin-top:28px;">
-          <div class="card testimonial reveal">
-            <div class="stars">★★★★★</div>
-            <p class="quote">"The 3-day desert tour was incredible. Everything was included - transport, guide, hotel, camp, and all meals. Best value in Morocco!"</p>
-            <div class="author">
-              <div class="avatar">S</div>
-              <div>
-                <h3 style="font-size:1rem;margin:0;">Sarah</h3>
-                <div class="subtle">United Kingdom</div>
-              </div>
-            </div>
+    <!-- NEW BLOG PREVIEW SECTION -->
+    <section id="blog-preview" class="container" style="margin-top: 60px; margin-bottom: 40px;">
+      <div class="section-head reveal">
+        <span class="eyebrow">Latest from Our Blog</span>
+        <h2>Morocco Travel Tips & Inspiration</h2>
+        <p>Read our latest articles to help plan your journey.</p>
+      </div>
+      <div class="blog-grid">
+        <!-- Blog Post 1 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+          <div class="blog-card-content">
+            <h3>Top 10 Things to Do in Marrakech</h3>
+            <div class="date">March 15, 2026</div>
+            <a href="blog-marrakech-top10.html" style="color:var(--terracotta); font-weight:600;">Read More →</a>
           </div>
-          <div class="card testimonial reveal">
-            <div class="stars">★★★★★</div>
-            <p class="quote">"Perfect family trip. Our private guide was knowledgeable and the transport was comfortable. No hidden costs, exactly as advertised."</p>
-            <div class="author">
-              <div class="avatar">M</div>
-              <div>
-                <h3 style="font-size:1rem;margin:0;">Marco</h3>
-                <div class="subtle">Italy</div>
-              </div>
-            </div>
+        </article>
+        <!-- Blog Post 2 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
+          <div class="blog-card-content">
+            <h3>Complete Guide to Sahara Desert</h3>
+            <div class="date">March 10, 2026</div>
+            <a href="blog-sahara-guide.html" style="color:var(--terracotta); font-weight:600;">Read More →</a>
           </div>
-          <div class="card testimonial reveal">
-            <div class="stars">★★★★★</div>
-            <p class="quote">"The 8-day imperial cities tour was worth every penny. 4-star hotels, all transport, and a fantastic guide. Highly recommended!"</p>
-            <div class="author">
-              <div class="avatar">L</div>
-              <div>
-                <h3 style="font-size:1rem;margin:0;">Lina</h3>
-                <div class="subtle">Germany</div>
-              </div>
-            </div>
+        </article>
+        <!-- Blog Post 3 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen" loading="lazy">
+          <div class="blog-card-content">
+            <h3>Exploring Chefchaouen, the Blue Pearl</h3>
+            <div class="date">March 5, 2026</div>
+            <a href="blog-chefchaouen.html" style="color:var(--terracotta); font-weight:600;">Read More →</a>
           </div>
-        </div>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:30px;">
+        <a href="blog.html" class="btn btn-secondary">View All Posts</a>
       </div>
     </section>
 
