@@ -65,7 +65,6 @@
       color: var(--terracotta);
       font-weight: 600;
     }
-    /* Disqus container */
     #disqus_thread {
       margin-top: 50px;
     }
@@ -73,7 +72,6 @@
 </head>
 <body>
   <header class="site-header">
-    <!-- Same header as blog.html (copy it exactly) -->
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home">
         <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" style="height:48px; width:auto; border-radius:14px;">
@@ -119,7 +117,6 @@
       <h1>Top 10 Things to Do in Marrakech</h1>
       <div class="date">Published March 15, 2026 • Updated March 2026</div>
       
-      <!-- Add more images! -->
       <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Marrakech souk" loading="lazy">
 
       <p>Marrakech, the Red City, is a feast for the senses. From the moment you step into the medina, you're surrounded by vibrant colors, exotic scents, and the buzz of daily life. Here are the top 10 things you absolutely cannot miss.</p>
@@ -129,7 +126,6 @@
       <p>The labyrinthine souks of Marrakech are a shopper's paradise. Lose yourself in alleys filled with carpets, lanterns, spices, and leather goods. Don't forget to haggle!</p>
 
       <h2>2. Visit Bahia Palace</h2>
-      <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Bahia Palace" loading="lazy">
       <p>A stunning 19th-century palace with intricate tilework, courtyards, and gardens. A must-see for architecture lovers.</p>
 
       <h2>3. Koutoubia Mosque</h2>
@@ -158,15 +154,15 @@
 
       <p>Planning a trip to Marrakech? <a href="index.html#contact">Contact us</a> to book a guided tour with a local expert.</p>
 
-      <!-- Like Button Section -->
+      <!-- Like Button -->
       <div class="like-section">
         <button class="like-btn" id="likeBtn">❤️ Like <span id="likeCount" class="like-count">0</span></button>
       </div>
 
-      <!-- Comment Section (Disqus) -->
+      <!-- Disqus Comments -->
       <div id="disqus_thread"></div>
       <script>
-          (function() { // DON'T EDIT BELOW THIS LINE
+          (function() {
           var d = document, s = d.createElement('script');
           s.src = 'https://abridmoroccotrip.disqus.com/embed.js'; // REPLACE WITH YOUR DISQUS SHORTNAME
           s.setAttribute('data-timestamp', +new Date());
@@ -187,7 +183,6 @@
   </footer>
 
   <script>
-    // Mobile menu (same as before)
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     menuToggle.addEventListener('click', () => {
@@ -202,21 +197,13 @@
     });
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Like button with localStorage
+    // Like button
     const likeBtn = document.getElementById('likeBtn');
     const likeCountSpan = document.getElementById('likeCount');
-    const postId = 'marrakech-top10'; // unique identifier for this post
-
-    // Load saved like count
+    const postId = 'marrakech-top10';
     let likes = localStorage.getItem('likes_' + postId);
-    if (likes === null) {
-      likes = 0;
-    } else {
-      likes = parseInt(likes);
-    }
+    if (likes === null) likes = 0;
     likeCountSpan.textContent = likes;
-
-    // Handle like button click
     likeBtn.addEventListener('click', () => {
       likes++;
       localStorage.setItem('likes_' + postId, likes);
