@@ -40,7 +40,7 @@
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -97,6 +97,15 @@
           </div>
           <div class="tour-detail-form">
             <h2>Book This Tour</h2>
+
+            <!-- Cash Payment Notice -->
+            <div style="background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px;">
+              <span style="font-size: 2rem;">💰</span>
+              <h3 style="margin: 10px 0 5px; color: #2e7d32;">Pay in Cash to Your Guide</h3>
+              <p style="margin: 0;">No online payment needed. You pay the full amount directly to your driver/guide on the day of the tour in cash (EUR, USD, or MAD).</p>
+            </div>
+
+            <h3 style="text-align: center;">Send a booking inquiry</h3>
             <form id="bookingFormAtlas">
               <div class="form-grid">
                 <div class="field">
@@ -135,48 +144,48 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
+      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
     </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+    (function() {
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
 
-    document.querySelectorAll('.mobile-panel a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+      const form = document.getElementById('bookingFormAtlas');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('name-a').value.trim();
+          const email = document.getElementById('email-a').value.trim();
+          const phone = document.getElementById('phone-a').value.trim();
+          const date = document.getElementById('date-a').value;
+          const message = document.getElementById('message-a').value.trim();
 
-    // Form submission for this page
-    const form = document.getElementById('bookingFormAtlas');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name-a').value.trim();
-        const email = document.getElementById('email-a').value.trim();
-        const phone = document.getElementById('phone-a').value.trim();
-        const date = document.getElementById('date-a').value;
-        const message = document.getElementById('message-a').value.trim();
+          const subject = `Booking Inquiry - Atlas Mountains Tour | ${name}`;
+          const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Atlas Mountains & Ourika Valley Tour.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
 
-        const subject = `Booking Inquiry - Atlas Mountains Tour | ${name}`;
-        const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Atlas Mountains & Ourika Valley Tour.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
-
-        window.location.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
-      });
-    }
-
-    // Update copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
+          window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
+        });
+      }
+    })();
   </script>
 </body>
 </html>
