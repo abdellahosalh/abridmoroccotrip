@@ -40,7 +40,7 @@
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -66,112 +66,4 @@
       <div class="container">
         <div class="tour-detail-grid">
           <div class="tour-detail-info">
-            <h1>Private Tailor-Made Morocco Trip</h1>
-            <p class="subtle">Design your dream Morocco itinerary. Flexible duration, private guide, and hand-picked accommodations.</p>
-            <div class="price-large">From $2,260 <small>for 10 days</small></div>
-            <h2>What's Included</h2>
-            <ul class="inclusions-list">
-              <li>Private driver/guide – fluent in <strong>English, Spanish, French, Dutch, Russian, or Japanese</strong> (your choice)</li>
-              <li>Deep cultural & historical knowledge customized to your interests</li>
-              <li>Private air-conditioned vehicle</li>
-              <li>Hand-picked riads/hotels (4-star equivalent)</li>
-              <li>Daily breakfast</li>
-              <li>Camel trek & desert camp (if included in your itinerary)</li>
-            </ul>
-            <h2>Not Included</h2>
-            <ul class="exclusions-list">
-              <li>International flights</li>
-              <li>Some lunches</li>
-              <li>Tips</li>
-            </ul>
-            <h2>How It Works</h2>
-            <ol>
-              <li>Tell us your interests, preferred dates, and group size.</li>
-              <li>We'll create a custom itinerary and quote within 24 hours.</li>
-              <li>Adjust until perfect, then confirm with a deposit.</li>
-            </ol>
-            <p><strong>Sample 10-day itinerary:</strong> Marrakech → Atlas Mountains → Merzouga Desert → Fez → Rabat → Casablanca.</p>
-            <a href="index.html#tours" class="back-to-tours">← Back to all tours</a>
-          </div>
-          <div class="tour-detail-form">
-            <h2>Request a Custom Quote</h2>
-            <form id="bookingFormPrivate">
-              <div class="form-grid">
-                <div class="field">
-                  <label for="name-p">Full Name *</label>
-                  <input id="name-p" name="name" type="text" placeholder="Your name" required>
-                </div>
-                <div class="field">
-                  <label for="email-p">Email *</label>
-                  <input id="email-p" name="email" type="email" placeholder="you@example.com" required>
-                </div>
-                <div class="field">
-                  <label for="phone-p">Phone / WhatsApp *</label>
-                  <input id="phone-p" name="phone" type="text" placeholder="+212 000-000000" required>
-                </div>
-                <div class="field">
-                  <label for="dates-p">Preferred Dates & Duration *</label>
-                  <input id="dates-p" name="dates" type="text" placeholder="e.g., 10 days in May" required>
-                </div>
-                <div class="field full">
-                  <label for="message-p">Tell us about your dream trip *</label>
-                  <textarea id="message-p" name="message" placeholder="Destinations, interests, group size, etc." required></textarea>
-                </div>
-                <input type="hidden" name="tour" value="Private Tailor-Made Trip">
-              </div>
-              <div class="form-actions">
-                <button class="btn btn-primary" type="submit">Request Quote</button>
-                <a class="btn btn-secondary" href="https://wa.me/212762934488" target="_blank">Chat on WhatsApp</a>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
-    </div>
-  </footer>
-
-  <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
-
-    document.querySelectorAll('.mobile-panel a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    const form = document.getElementById('bookingFormPrivate');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name-p').value.trim();
-        const email = document.getElementById('email-p').value.trim();
-        const phone = document.getElementById('phone-p').value.trim();
-        const dates = document.getElementById('dates-p').value.trim();
-        const message = document.getElementById('message-p').value.trim();
-
-        const subject = `Booking Inquiry - Private Tailor-Made Trip | ${name}`;
-        const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about a Private Tailor-Made Trip.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Dates: ${dates}\n\nMessage: ${message}\n\nThank you!`;
-
-        window.location.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
-      });
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+            <h1>Private Tail
