@@ -6,6 +6,14 @@
   <title>Private Tailor-Made Trip | AbridMoroccoTrip</title>
   <meta name="description" content="Design your dream Morocco itinerary with a private guide. Custom tours with hand-picked riads, private transport, and flexible dates. Request a quote." />
   <meta name="keywords" content="private Morocco tour, custom Morocco itinerary, luxury Morocco trip, tailor-made tour Morocco" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B2HL7PH8P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5B2HL7PH8P');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,6 +34,7 @@
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#tours">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
         <li><a href="index.html#comments">Reviews</a></li>
         <li><a href="index.html#contact">Booking</a></li>
@@ -42,11 +51,12 @@
       <div class="mobile-panel">
         <a href="index.html">Home</a>
         <a href="index.html#about">About Us</a>
-        <a href="index.html#tours">Tours / Services</a>
-        <a href="index.html#packages">Pricing / Packages</a>
-        <a href="index.html#gallery">Gallery / Testimonials</a>
+        <a href="index.html#tours">Tours</a>
+        <a href="index.html#packages">Packages</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#gallery">Gallery</a>
         <a href="index.html#comments">Reviews</a>
-        <a href="index.html#contact">Booking / Contact</a>
+        <a href="index.html#contact">Booking</a>
       </div>
     </div>
   </header>
@@ -127,39 +137,7 @@
     </div>
   </footer>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">×</button>
-    <img id="lightboxImg" src="" alt="Expanded gallery image">
-  </div>
-
-  <!-- Recent Booking Pop-up -->
-  <div id="recentBooking" style="position: fixed; bottom: 20px; left: 20px; background: white; padding: 12px 18px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-left: 5px solid #b84f2b; z-index: 1000; display: none; font-size: 0.95rem; max-width: 280px;">
-    <span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span>
-  </div>
-
-  <!-- Floating WhatsApp Button -->
-  <a href="https://wa.me/212762934488" style="position: fixed; bottom: 20px; right: 20px; background: #25D366; color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; box-shadow: 0 8px 25px rgba(37,211,102,0.4); z-index: 1000; text-decoration: none; transition: transform 0.3s;" target="_blank" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
-    💬
-  </a>
-
-  <!-- Email Pop-up (Discount Offer) - REPLACE WITH YOUR MAILCHIMP CODE -->
-  <div id="emailPopup" style="position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: white; padding: 25px; border-radius: 25px; box-shadow: 0 20px 50px rgba(0,0,0,0.3); z-index: 2000; display: none; max-width: 90%; width: 400px; border: 2px solid #f0a94b;">
-    <button onclick="document.getElementById('emailPopup').style.display='none'" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
-    <h3 style="margin-top: 0; color: #b84f2b;">🎁 Get 10% off your first tour!</h3>
-    <p style="color: #3f2a20; margin-bottom: 20px;">Subscribe for exclusive deals and Morocco travel tips.</p>
-    <input type="email" id="popupEmail" placeholder="Your email" style="width: 100%; padding: 12px; margin-bottom: 15px; border-radius: 50px; border: 1px solid #ddd; font-size: 1rem;">
-    <button onclick="alert('Thanks! 10% discount code sent to your email (demo).'); document.getElementById('emailPopup').style.display='none';" style="background: #b84f2b; color: white; border: none; padding: 12px; width: 100%; border-radius: 50px; font-weight: bold; font-size: 1rem; cursor: pointer;">Subscribe Now</button>
-    <small style="display: block; text-align: center; margin-top: 15px; color: #6e5649;">No spam, unsubscribe anytime. We'll send you a 10% discount code immediately.</small>
-  </div>
-
-  <!-- Vercel Analytics -->
   <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
-
-  <script>
-    // Mobile menu toggle
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
 
@@ -175,7 +153,6 @@
       });
     });
 
-    // Form submission for this page
     const form = document.getElementById('bookingFormPrivate');
     if (form) {
       form.addEventListener('submit', (e) => {
@@ -194,33 +171,7 @@
       });
     }
 
-    // Update copyright year
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Recent booking pop-up
-    const recentBooking = document.getElementById('recentBooking');
-    const bookings = [
-      "🇫🇷 Jean from Paris booked Merzouga Desert Tour",
-      "🇬🇧 Sarah from London booked Marrakech Tour",
-      "🇩🇪 Marco from Berlin booked Atlas Mountains",
-      "🇪🇸 Maria from Madrid booked Essaouira Tour",
-      "🇺🇸 John from NYC booked Imperial Cities",
-      "🇨🇦 Emma from Toronto booked Private Custom Trip"
-    ];
-    
-    setInterval(() => {
-      const random = bookings[Math.floor(Math.random() * bookings.length)];
-      recentBooking.innerHTML = `<span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span> ${random}`;
-      recentBooking.style.display = 'block';
-      setTimeout(() => {
-        recentBooking.style.display = 'none';
-      }, 5000);
-    }, 30000);
-
-    // Email pop-up after 10 seconds
-    setTimeout(() => {
-      document.getElementById('emailPopup').style.display = 'block';
-    }, 10000);
   </script>
 </body>
 </html>
