@@ -5,49 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog | AbridMoroccoTrip – Morocco Travel Tips & Guides</title>
   <meta name="description" content="Read our latest blog posts about Morocco travel: Marrakech guides, Sahara desert tips, hidden gems, and more." />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B2HL7PH8P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-5B2HL7PH8P');
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Link to your main style.css (make sure it's in the same folder) -->
   <link rel="stylesheet" href="style.css">
-  <!-- Fallback inline styles in case style.css is missing -->
   <style>
-    /* Basic fallback styles – will be overridden by style.css if present */
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', sans-serif; background: #fff8f1; color: #3f2a20; line-height: 1.5; }
-    .container { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; }
-    .site-header { background: rgba(255,248,241,0.9); border-bottom: 1px solid rgba(63,42,32,0.1); position: sticky; top: 0; z-index: 50; }
-    .nav { display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
-    .brand { display: flex; align-items: center; gap: 12px; }
-    .brand-text strong { font-size: 1rem; }
-    .brand-text span { font-size: 0.78rem; color: #6e5649; }
-    .nav-links { display: flex; gap: 22px; list-style: none; }
-    .nav-links a { color: #6e5649; font-weight: 600; text-decoration: none; padding: 6px 0; }
-    .nav-links a:hover { color: #b84f2b; }
-    .nav-actions { display: flex; align-items: center; gap: 12px; }
-    .btn-primary { background: #b84f2b; color: white; padding: 10px 20px; border-radius: 14px; text-decoration: none; font-weight: 700; }
-    .menu-toggle { display: none; }
-    .mobile-menu { display: none; }
-    .section-head { text-align: center; max-width: 720px; margin: 0 auto 38px; }
-    .eyebrow { background: rgba(212,106,47,0.1); color: #b84f2b; padding: 8px 14px; border-radius: 999px; font-weight: 700; font-size: 0.86rem; display: inline-block; }
-    h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3.2rem); margin: 16px 0 14px; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-    .blog-card { background: white; border-radius: 22px; overflow: hidden; box-shadow: 0 20px 50px rgba(120,68,31,0.12); transition: transform 0.3s; }
-    .blog-card:hover { transform: translateY(-5px); }
-    .blog-card img { width: 100%; height: 200px; object-fit: cover; }
-    .blog-card-content { padding: 20px; }
-    .blog-card h3 { margin: 0 0 10px; font-size: 1.3rem; }
-    .blog-card .date { color: #6e5649; font-size: 0.85rem; margin-bottom: 10px; }
-    .blog-card .excerpt { color: #3f2a20; margin-bottom: 15px; }
-    .read-more { color: #b84f2b; font-weight: 600; text-decoration: underline; }
-    footer { padding: 28px 0 40px; color: #6e5649; }
-    .footer-inner { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding-top: 18px; border-top: 1px solid rgba(63,42,32,0.08); }
-    @media (max-width: 820px) {
-      .nav-links, .nav-actions .mini-contact, .nav-actions .btn-primary { display: none; }
-      .menu-toggle { display: block; }
-      .mobile-menu.open { display: block; }
-      .mobile-panel { display: grid; gap: 10px; padding: 14px; background: #fff; border: 1px solid rgba(63,42,32,0.1); border-radius: 18px; }
-      .footer-inner { flex-direction: column; text-align: center; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .blog-card {
+      background: white;
+      border-radius: var(--radius, 22px);
+      overflow: hidden;
+      box-shadow: var(--shadow, 0 20px 50px rgba(120,68,31,0.12));
+      transition: transform 0.3s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px);
+    }
+    .blog-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .blog-card-content {
+      padding: 20px;
+    }
+    .blog-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+    }
+    .blog-card .date {
+      color: var(--muted, #6e5649);
+      font-size: 0.85rem;
+      margin-bottom: 10px;
+    }
+    .blog-card .excerpt {
+      color: var(--brown, #3f2a20);
+      margin-bottom: 15px;
+    }
+    .read-more {
+      color: var(--terracotta, #b84f2b);
+      font-weight: 600;
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -96,7 +107,7 @@
   <main>
     <section style="padding-top: 120px;">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head reveal">
           <span class="eyebrow">Blog</span>
           <h1>Morocco Travel Tips & Guides</h1>
           <p>Insights from our local experts to help you plan your perfect trip.</p>
@@ -104,7 +115,7 @@
 
         <div class="blog-grid">
           <!-- Blog Post 1 -->
-          <article class="blog-card">
+          <article class="blog-card reveal">
             <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
             <div class="blog-card-content">
               <h3>Top 10 Things to Do in Marrakech</h3>
@@ -115,7 +126,7 @@
           </article>
 
           <!-- Blog Post 2 -->
-          <article class="blog-card">
+          <article class="blog-card reveal">
             <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
             <div class="blog-card-content">
               <h3>A Complete Guide to the Sahara Desert Tour</h3>
@@ -126,7 +137,7 @@
           </article>
 
           <!-- Blog Post 3 -->
-          <article class="blog-card">
+          <article class="blog-card reveal">
             <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
             <div class="blog-card-content">
               <h3>Exploring the Blue Pearl: Chefchaouen</h3>
@@ -147,35 +158,23 @@
     </div>
   </footer>
 
-  <!-- Simple JavaScript with safety checks -->
   <script>
-    (function() {
-      // Update copyright year
-      var yearSpan = document.getElementById('year');
-      if (yearSpan) {
-        yearSpan.textContent = new Date().getFullYear();
-      }
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
 
-      // Mobile menu toggle
-      var menuToggle = document.getElementById('menuToggle');
-      var mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
 
-      if (menuToggle && mobileMenu) {
-        menuToggle.addEventListener('click', function() {
-          var isOpen = mobileMenu.classList.toggle('open');
-          this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
+    document.querySelectorAll('.mobile-panel a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
 
-        // Close mobile menu when a link is clicked
-        var mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            mobileMenu.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-          });
-        });
-      }
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
