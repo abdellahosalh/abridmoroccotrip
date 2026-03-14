@@ -93,12 +93,14 @@
           </div>
           <div class="tour-detail-form">
             <h2>Book This Tour</h2>
-            <!-- PayPal Instant Payment Button -->
-            <div style="text-align: center; margin-bottom: 20px;">
-              <a href="YOUR_PAYPAL_BUTTON_LINK" class="btn btn-primary" style="font-size: 1.2rem; display: inline-block;">✅ Book & Pay Now with PayPal</a>
-              <p style="font-size: 0.9rem; color: var(--muted); margin-top: 5px;">Instant confirmation – secure payment</p>
+
+            <!-- Cash Payment Notice -->
+            <div style="background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px;">
+              <span style="font-size: 2rem;">💰</span>
+              <h3 style="margin: 10px 0 5px; color: #2e7d32;">Pay in Cash to Your Guide</h3>
+              <p style="margin: 0;">No online payment needed. You pay the full amount directly to your driver/guide on the day of the tour in cash (EUR, USD, or MAD).</p>
             </div>
-            <p style="text-align: center; margin: 10px 0;">– OR –</p>
+
             <h3 style="text-align: center;">Send a booking inquiry</h3>
             <form id="bookingFormMerzouga">
               <div class="form-grid">
@@ -143,40 +145,43 @@
   </footer>
 
   <script>
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
+    (function() {
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    });
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          const isOpen = mobileMenu.classList.toggle('open');
+          menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.remove('open');
+            menuToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
 
-    document.querySelectorAll('.mobile-panel a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
+      const form = document.getElementById('bookingFormMerzouga');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('name-d').value.trim();
+          const email = document.getElementById('email-d').value.trim();
+          const phone = document.getElementById('phone-d').value.trim();
+          const date = document.getElementById('date-d').value;
+          const message = document.getElementById('message-d').value.trim();
 
-    const form = document.getElementById('bookingFormMerzouga');
-    if (form) {
-      form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        const name = document.getElementById('name-d').value.trim();
-        const email = document.getElementById('email-d').value.trim();
-        const phone = document.getElementById('phone-d').value.trim();
-        const date = document.getElementById('date-d').value;
-        const message = document.getElementById('message-d').value.trim();
+          const subject = `Booking Inquiry - Merzouga Desert Adventure | ${name}`;
+          const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Merzouga Desert Adventure.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Start Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
 
-        const subject = `Booking Inquiry - Merzouga Desert Adventure | ${name}`;
-        const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Merzouga Desert Adventure.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Start Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
-
-        window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
-      });
-    }
-
-    document.getElementById('year').textContent = new Date().getFullYear();
+          window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
+        });
+      }
+    })();
   </script>
 </body>
 </html>
