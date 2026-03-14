@@ -40,7 +40,7 @@
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -93,6 +93,13 @@
           </div>
           <div class="tour-detail-form">
             <h2>Book This Tour</h2>
+            <!-- PayPal Instant Payment Button -->
+            <div style="text-align: center; margin-bottom: 20px;">
+              <a href="YOUR_PAYPAL_BUTTON_LINK" class="btn btn-primary" style="font-size: 1.2rem; display: inline-block;">✅ Book & Pay Now with PayPal</a>
+              <p style="font-size: 0.9rem; color: var(--muted); margin-top: 5px;">Instant confirmation – secure payment</p>
+            </div>
+            <p style="text-align: center; margin: 10px 0;">– OR –</p>
+            <h3 style="text-align: center;">Send a booking inquiry</h3>
             <form id="bookingFormMerzouga">
               <div class="form-grid">
                 <div class="field">
@@ -131,7 +138,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
+      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
     </div>
   </footer>
 
@@ -164,7 +171,7 @@
         const subject = `Booking Inquiry - Merzouga Desert Adventure | ${name}`;
         const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Merzouga Desert Adventure.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Start Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
 
-        window.location.href = `mailto:abdeosalh@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
         alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
       });
     }
