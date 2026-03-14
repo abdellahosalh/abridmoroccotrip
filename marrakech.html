@@ -18,20 +18,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    .blog-post { max-width:800px; margin:0 auto; padding:40px 20px; }
-    .blog-post h1 { font-size:2.5rem; color: var(--terracotta, #b84f2b); }
-    .blog-post .date { color: var(--muted, #6e5649); margin-bottom:20px; }
-    .blog-post img { width:100%; border-radius: var(--radius, 22px); margin:30px 0; }
-    .blog-post h2 { margin-top:40px; }
-    .blog-post p { line-height:1.8; }
-    .like-section { margin:40px 0; display:flex; align-items:center; gap:10px; }
-    .like-btn { background:none; border:2px solid var(--terracotta, #b84f2b); border-radius:50px; padding:10px 20px; font-size:1.2rem; cursor:pointer; display:inline-flex; align-items:center; gap:8px; transition:0.2s; }
-    .like-btn:hover { background:var(--terracotta, #b84f2b); color:white; }
-    .like-count { font-weight:bold; }
-    .back-to-blog { display:inline-block; margin:40px 0; color:var(--terracotta, #b84f2b); font-weight:600; }
-    #disqus_thread { margin-top:50px; }
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -54,7 +40,7 @@
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:0762934488">📞 0762934488</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -76,95 +62,96 @@
   </header>
 
   <main>
-    <article class="blog-post">
-      <h1>Top 10 Things to Do in Marrakech</h1>
-      <div class="date">Published March 15, 2026</div>
+    <section class="tour-detail" style="padding-top: 120px;">
+      <div class="container">
+        <div class="tour-detail-grid">
+          <div class="tour-detail-info">
+            <h1>Marrakech Discovery Tour</h1>
+            <p class="subtle">Explore the vibrant souks, historic palaces, and beautiful gardens of Marrakech with a local guide.</p>
+            <div class="price-large">$36 <small>per person</small></div>
+            <h2>What's Included</h2>
+            <ul class="inclusions-list">
+              <li>Air-conditioned transport</li>
+              <li>Licensed guide – fluent in <strong>English, Spanish, French, Dutch, Russian, or Japanese</strong> (your choice)</li>
+              <li>Deep knowledge of Moroccan history & culture</li>
+              <li>Hotel pickup & drop-off</li>
+            </ul>
+            <h2>Not Included</h2>
+            <ul class="exclusions-list">
+              <li>Lunch</li>
+              <li>Monument entrance fees (approx $10)</li>
+              <li>Tips</li>
+            </ul>
+            <h2>Itinerary</h2>
+            <p><strong>Duration:</strong> 6 hours (9:00 AM – 3:00 PM)</p>
+            <ul>
+              <li>Pickup from your hotel</li>
+              <li>Koutoubia Mosque (exterior)</li>
+              <li>Explore the famous souks (markets)</li>
+              <li>Visit Bahia Palace (entrance fee extra)</li>
+              <li>Free time at Jemaa el-Fnaa square</li>
+              <li>Return to your hotel</li>
+            </ul>
+            <a href="index.html#tours" class="back-to-tours">← Back to all tours</a>
+          </div>
+          <div class="tour-detail-form">
+            <h2>Book This Tour</h2>
 
-      <p>Marrakech, the Red City, is a feast for the senses. From the moment you step into the medina, you're surrounded by vibrant colors, exotic scents, and the buzz of daily life. Here are the top 10 things you absolutely cannot miss.</p>
+            <!-- Cash Payment Notice -->
+            <div style="background: #e8f5e9; border: 2px solid #2e7d32; border-radius: 16px; padding: 20px; text-align: center; margin-bottom: 25px;">
+              <span style="font-size: 2rem;">💰</span>
+              <h3 style="margin: 10px 0 5px; color: #2e7d32;">Pay in Cash to Your Guide</h3>
+              <p style="margin: 0;">No online payment needed. You pay the full amount directly to your driver/guide on the day of the tour in cash (EUR, USD, or MAD).</p>
+            </div>
 
-      <h2>1. Explore the Souks</h2>
-      <p>The labyrinthine souks of Marrakech are a shopper's paradise. Lose yourself in alleys filled with carpets, lanterns, spices, and leather goods. Don't forget to haggle!</p>
-
-      <h2>2. Visit Bahia Palace</h2>
-      <!-- Bahia Place Image -->
-      <img src="https://images.unsplash.com/photo-1663297824621-27c5ff4cc826?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bahia Palace courtyard and architecture" loading="lazy">
-      <p>A stunning 19th-century palace with intricate tilework, courtyards, and gardens. A must-see for architecture lovers.</p>
-
-      <h2>3. Koutoubia Mosque</h2>
-      <!-- Kotobia Mosck Image -->
-      <img src="https://images.unsplash.com/photo-1716146743408-474521ee8039?q=80&w=1160&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Koutoubia Mosque minaret in Marrakech" loading="lazy">
-      <p>The largest mosque in Marrakech, with a beautiful minaret visible from miles away. Non-Muslims cannot enter, but the gardens are lovely.</p>
-
-      <h2>4. Jemaa el-Fna</h2>
-      <!-- JAMAA EL FNA Image -->
-      <img src="https://images.unsplash.com/photo-1579283135011-0974a412341a?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jemaa el-Fna square at dusk with food stalls" loading="lazy">
-      <p>The main square comes alive at night with food stalls, storytellers, and musicians. Try a bowl of snail soup or fresh orange juice.</p>
-
-      <h2>5. Majorelle Garden</h2>
-      <!-- JURDEN MAJOREL Image -->
-      <img src="https://images.unsplash.com/photo-1747601387763-3abf57ee79c8?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Majorelle Garden with striking blue buildings" loading="lazy">
-      <p>A serene garden designed by French painter Jacques Majorelle, later owned by Yves Saint Laurent. The striking blue buildings are iconic.</p>
-
-      <h2>6. Saadian Tombs</h2>
-      <!-- SAADIYIN TOMB Image -->
-      <img src="https://images.unsplash.com/photo-1569440703809-b6dc9ec25ed2?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ornate Saadian Tombs interior" loading="lazy">
-      <p>Hidden for centuries, these tombs date back to the 16th century and feature beautiful marble and cedar carvings.</p>
-
-      <h2>7. Ben Youssef Madrasa</h2>
-      <!-- BEN YOUSSEF MADRASA Image -->
-      <img src="https://images.unsplash.com/photo-1669734900468-69bf5b957184?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ben Youssef Madrasa intricate tilework and architecture" loading="lazy">
-      <p>A historic Islamic college with stunning architecture, now open to visitors.</p>
-
-      <h2>8. Take a Food Tour</h2>
-      <p>Sample traditional Moroccan dishes like tagine, couscous, and pastilla. Join a guided food tour for the best experience.</p>
-
-      <h2>9. Relax in a Hammam</h2>
-      <!-- HAMMAM Image -->
-      <img src="https://images.unsplash.com/photo-1714648775497-9f54f75eb3ea?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Traditional Moroccan hammam interior" loading="lazy">
-      <p>Experience a traditional Moroccan bath and massage. It's the perfect way to unwind after a day of sightseeing.</p>
-
-      <h2>10. Day Trip to the Atlas Mountains</h2>
-      <!-- ATLAS Image -->
-      <img src="https://images.unsplash.com/photo-1755172985998-e9f4f58fb83b?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Atlas Mountains scenic landscape" loading="lazy">
-      <p>Escape the city hustle and enjoy breathtaking mountain views, Berber villages, and waterfalls. Book our <a href="atlas.html">Atlas Mountains tour</a> for a hassle‑free experience.</p>
-
-      <p>Planning a trip to Marrakech? <a href="index.html#contact">Contact us</a> to book a guided tour with a local expert.</p>
-
-      <!-- Like Button Section -->
-      <div class="like-section">
-        <button class="like-btn" id="likeBtn">❤️ Like <span id="likeCount" class="like-count">0</span></button>
+            <h3 style="text-align: center;">Send a booking inquiry</h3>
+            <form id="bookingFormMarrakech">
+              <div class="form-grid">
+                <div class="field">
+                  <label for="name-m">Full Name *</label>
+                  <input id="name-m" name="name" type="text" placeholder="Your name" required>
+                </div>
+                <div class="field">
+                  <label for="email-m">Email *</label>
+                  <input id="email-m" name="email" type="email" placeholder="you@example.com" required>
+                </div>
+                <div class="field">
+                  <label for="phone-m">Phone / WhatsApp *</label>
+                  <input id="phone-m" name="phone" type="text" placeholder="+212 000-000000" required>
+                </div>
+                <div class="field">
+                  <label for="date-m">Preferred Date *</label>
+                  <input id="date-m" name="date" type="date" required>
+                </div>
+                <div class="field full">
+                  <label for="message-m">Special Requests</label>
+                  <textarea id="message-m" name="message" placeholder="Any special requirements?"></textarea>
+                </div>
+                <input type="hidden" name="tour" value="Marrakech Discovery Tour ($36)">
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-primary" type="submit">Send Inquiry</button>
+                <a class="btn btn-secondary" href="https://wa.me/212762934488" target="_blank">Chat on WhatsApp</a>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-
-      <!-- Disqus Comment Section -->
-      <div id="disqus_thread"></div>
-      <script>
-          (function() { // DON'T EDIT BELOW THIS LINE
-          var d = document, s = d.createElement('script');
-          s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js'; // 🔁 REPLACE with your actual shortname
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-      <a href="blog.html" class="back-to-blog">← Back to Blog</a>
-    </article>
+    </section>
   </main>
 
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 0762934488 • ✉️ abdeosalh@gmail.com</div>
+      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
     </div>
   </footer>
 
   <script>
     (function() {
-      // Update copyright year
       const yearSpan = document.getElementById('year');
       if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 
-      // Mobile menu
       const menuToggle = document.getElementById('menuToggle');
       const mobileMenu = document.getElementById('mobileMenu');
       if (menuToggle && mobileMenu) {
@@ -180,18 +167,21 @@
         });
       }
 
-      // Like button with localStorage
-      const likeBtn = document.getElementById('likeBtn');
-      const likeCountSpan = document.getElementById('likeCount');
-      if (likeBtn && likeCountSpan) {
-        const postId = 'marrakech-top10';
-        let likes = localStorage.getItem('likes_' + postId);
-        if (likes === null) likes = 0;
-        likeCountSpan.textContent = likes;
-        likeBtn.addEventListener('click', () => {
-          likes++;
-          localStorage.setItem('likes_' + postId, likes);
-          likeCountSpan.textContent = likes;
+      const form = document.getElementById('bookingFormMarrakech');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('name-m').value.trim();
+          const email = document.getElementById('email-m').value.trim();
+          const phone = document.getElementById('phone-m').value.trim();
+          const date = document.getElementById('date-m').value;
+          const message = document.getElementById('message-m').value.trim();
+
+          const subject = `Booking Inquiry - Marrakech Discovery Tour | ${name}`;
+          const body = `Hello AbridMoroccoTrip,\n\nI would like to inquire about Marrakech Discovery Tour.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nPreferred Date: ${date}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
+
+          window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          alert('Inquiry prepared! Your email client will open. If not, please send an email manually.');
         });
       }
     })();
