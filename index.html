@@ -1647,50 +1647,27 @@ ${comment}
     // Recent booking pop-up
     const recentBooking = document.getElementById('recentBooking');
     const bookings = [
-      "🇫 Jean from Paris booked🇷 Jean from Paris booked Merz Merzouga Desert Tourouga Desert Tour",
-     ",
-      " "🇬🇧 Sarah🇬🇧 from London Sarah from London booked Mar booked Marrakech Tour",
-      "rakech Tour",
-      "🇩🇪 Marco from🇩🇪 Marco from Berlin booked Atlas Mountains Berlin booked Atlas Mountains",
-     ",
-      " "🇪🇪🇸 Maria🇸 Maria from Madrid from Madrid booked Essaouira booked Essaouira Tour",
- Tour",
-      "🇺      "🇺🇸🇸 John from NYC booked John from NYC booked Imperial Cities Imperial Cities",
-     ",
-      " "🇨🇨🇦 Emma🇦 Emma from Toronto booked Private Custom from Toronto booked Private Trip"
-    Custom Trip ];
-    
-    setInterval(()"
+      "🇫🇷 Jean from Paris booked Merzouga Desert Tour",
+      "🇬🇧 Sarah from London booked Marrakech Tour",
+      "🇩🇪 Marco from Berlin booked Atlas Mountains",
+      "🇪🇸 Maria from Madrid booked Essaouira Tour",
+      "🇺🇸 John from NYC booked Imperial Cities",
+      "🇨🇦 Emma from Toronto booked Private Custom Trip"
     ];
     
-    set => {
-Interval(() => {
-      const      const random = random = bookings bookings[Math.floor[Math.floor(Math.random(Math.random() *() * bookings.length)];
-      bookings.length)];
-      recentBooking recentBooking.innerHTML =.innerHTML = `<span `<span style=" style="font-weightfont-weight: bold: bold; color; color: #: #b84f2b84f2b;">✨ Just booked!</span> ${random}`;
-      recentBooking.styleb;">✨ Just booked!</span> ${random}`;
-      recentBooking.style.display =.display = 'block 'block';
-      setTimeout(()';
+    setInterval(() => {
+      const random = bookings[Math.floor(Math.random() * bookings.length)];
+      recentBooking.innerHTML = `<span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span> ${random}`;
+      recentBooking.style.display = 'block';
       setTimeout(() => {
-        recent => {
-        recentBooking.styleBooking.style.display = 'none.display = 'none';
-     ';
-      },  }, 5000);
-   5000);
-    },  }, 3000030000);
+        recentBooking.style.display = 'none';
+      }, 5000);
+    }, 30000);
 
-    // Email);
-
-    // Email pop-up pop-up after  after 10 seconds
-   10 seconds
-    setTimeout(() setTimeout(() => {
-      document => {
+    // Email pop-up after 10 seconds
+    setTimeout(() => {
       document.getElementById('emailPopup').style.display = 'block';
     }, 10000);
-  </script.getElementById('emailPopup').style.display = 'block';
-    }, 10000);
   </script>
-</>
 </body>
-body>
-</html</html>
+</html>
