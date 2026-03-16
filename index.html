@@ -535,6 +535,71 @@
       text-decoration: underline;
     }
     
+    /* New CTA Banner Styles */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--terracotta), var(--gold));
+      padding: 40px;
+      border-radius: var(--radius);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .cta-banner h2 {
+      color: white;
+      font-size: 2rem;
+      margin: 0 0 10px;
+    }
+    .cta-banner p {
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    .cta-banner .btn-group {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .cta-banner .btn {
+      background: white;
+      color: var(--terracotta);
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+    .cta-banner .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
+    /* Country-specific section */
+    .country-section {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 40px 0;
+      box-shadow: var(--shadow);
+    }
+    .country-grid {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .country-item {
+      text-align: center;
+      min-width: 100px;
+    }
+    .country-item .flag {
+      font-size: 2rem;
+      margin-bottom: 5px;
+    }
+    .country-item .lang {
+      font-weight: bold;
+      color: var(--terracotta);
+    }
+    
     footer{
       padding:28px 0 40px; color:var(--muted);
     }
@@ -705,17 +770,37 @@
       </div>
     </section>
 
+    <!-- NEW CTA BANNER - Direct links to top tours -->
+    <div class="container cta-banner reveal">
+      <h2>🇲🇦 Discover Your Perfect Morocco Adventure</h2>
+      <p>From $36 – Expert guides, comfortable transport, unforgettable experiences</p>
+      <div class="btn-group">
+        <a href="merzouga.html" class="btn">🏜️ Sahara Desert (Most Popular)</a>
+        <a href="marrakech.html" class="btn">🕌 Marrakech Discovery</a>
+        <a href="atlas.html" class="btn">⛰️ Atlas Mountains</a>
+        <a href="essaouira.html" class="btn">🌊 Essaouira Coast</a>
+      </div>
+    </div>
+
+    <!-- NEW Country-Specific Trust Section -->
+    <div class="container country-section reveal">
+      <h3 style="text-align: center;">🌍 Travelers from around the world trust us</h3>
+      <div class="country-grid">
+        <div class="country-item"><span class="flag">🇺🇸</span> <span class="lang">English</span></div>
+        <div class="country-item"><span class="flag">🇫🇷</span> <span class="lang">Français</span></div>
+        <div class="country-item"><span class="flag">🇪🇸</span> <span class="lang">Español</span></div>
+        <div class="country-item"><span class="flag">🇳🇱</span> <span class="lang">Nederlands</span></div>
+        <div class="country-item"><span class="flag">🇷🇺</span> <span class="lang">Русский</span></div>
+        <div class="country-item"><span class="flag">🇯🇵</span> <span class="lang">日本語</span></div>
+        <div class="country-item"><span class="flag">🇩🇪</span> <span class="lang">Deutsch</span></div>
+      </div>
+      <p style="text-align: center; margin-top: 20px;">Our guides speak your language – fluent and knowledgeable about Morocco's history and culture.</p>
+    </div>
+
     <!-- Google Reviews Badge -->
     <div class="container reviews-badge reveal">
       ⭐️⭐️⭐️⭐️⭐️ <strong>4.9/5</strong> based on <strong>3 Google reviews</strong> · 
       <a href="YOUR_GOOGLE_REVIEW_LINK" target="_blank">Read what our guests say</a>
-    </div>
-
-    <!-- Strong Call-to-Action Banner -->
-    <div class="container" style="background: var(--gold); padding: 30px; border-radius: var(--radius); text-align: center; margin-bottom: 40px;">
-      <h2 style="margin: 0 0 10px;">🇲🇦 Ready for an unforgettable Morocco adventure?</h2>
-      <p style="font-size: 1.2rem;">Book your desert tour today and get 10% off with code <strong>WELCOME10</strong></p>
-      <a href="merzouga.html" class="btn btn-primary" style="font-size: 1.2rem;">👉 Book the Desert Adventure Now</a>
     </div>
 
     <section id="about">
@@ -1076,7 +1161,7 @@
       </div>
     </section>
 
-    <!-- NEW BLOG PREVIEW SECTION -->
+    <!-- BLOG PREVIEW SECTION -->
     <section id="blog-preview" class="container" style="margin-top: 60px; margin-bottom: 40px;">
       <div class="section-head reveal">
         <span class="eyebrow">Latest from Our Blog</span>
@@ -1562,27 +1647,50 @@ ${comment}
     // Recent booking pop-up
     const recentBooking = document.getElementById('recentBooking');
     const bookings = [
-      "🇫🇷 Jean from Paris booked Merzouga Desert Tour",
-      "🇬🇧 Sarah from London booked Marrakech Tour",
-      "🇩🇪 Marco from Berlin booked Atlas Mountains",
-      "🇪🇸 Maria from Madrid booked Essaouira Tour",
-      "🇺🇸 John from NYC booked Imperial Cities",
-      "🇨🇦 Emma from Toronto booked Private Custom Trip"
+      "🇫 Jean from Paris booked🇷 Jean from Paris booked Merz Merzouga Desert Tourouga Desert Tour",
+     ",
+      " "🇬🇧 Sarah🇬🇧 from London Sarah from London booked Mar booked Marrakech Tour",
+      "rakech Tour",
+      "🇩🇪 Marco from🇩🇪 Marco from Berlin booked Atlas Mountains Berlin booked Atlas Mountains",
+     ",
+      " "🇪🇪🇸 Maria🇸 Maria from Madrid from Madrid booked Essaouira booked Essaouira Tour",
+ Tour",
+      "🇺      "🇺🇸🇸 John from NYC booked John from NYC booked Imperial Cities Imperial Cities",
+     ",
+      " "🇨🇨🇦 Emma🇦 Emma from Toronto booked Private Custom from Toronto booked Private Trip"
+    Custom Trip ];
+    
+    setInterval(()"
     ];
     
-    setInterval(() => {
-      const random = bookings[Math.floor(Math.random() * bookings.length)];
-      recentBooking.innerHTML = `<span style="font-weight: bold; color: #b84f2b;">✨ Just booked!</span> ${random}`;
-      recentBooking.style.display = 'block';
+    set => {
+Interval(() => {
+      const      const random = random = bookings bookings[Math.floor[Math.floor(Math.random(Math.random() *() * bookings.length)];
+      bookings.length)];
+      recentBooking recentBooking.innerHTML =.innerHTML = `<span `<span style=" style="font-weightfont-weight: bold: bold; color; color: #: #b84f2b84f2b;">✨ Just booked!</span> ${random}`;
+      recentBooking.styleb;">✨ Just booked!</span> ${random}`;
+      recentBooking.style.display =.display = 'block 'block';
+      setTimeout(()';
       setTimeout(() => {
-        recentBooking.style.display = 'none';
-      }, 5000);
-    }, 30000);
+        recent => {
+        recentBooking.styleBooking.style.display = 'none.display = 'none';
+     ';
+      },  }, 5000);
+   5000);
+    },  }, 3000030000);
 
-    // Email pop-up after 10 seconds
-    setTimeout(() => {
+    // Email);
+
+    // Email pop-up pop-up after  after 10 seconds
+   10 seconds
+    setTimeout(() setTimeout(() => {
+      document => {
       document.getElementById('emailPopup').style.display = 'block';
     }, 10000);
+  </script.getElementById('emailPopup').style.display = 'block';
+    }, 10000);
   </script>
+</>
 </body>
-</html>
+body>
+</html</html>
