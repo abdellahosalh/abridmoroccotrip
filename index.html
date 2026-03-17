@@ -155,14 +155,12 @@
       width:48px;
       height:48px;
       border-radius:14px;
-      background: repeating-linear-gradient(45deg, var(--terracotta) 0px, var(--terracotta) 4px, var(--gold) 4px, var(--gold) 8px, var(--terracotta-2) 8px, var(--terracotta-2) 12px, #f4d03f 12px, #f4d03f 16px);
-      display:grid;
-      place-items:center;
-      color:#fff;
-      font-size:1.8rem;
-      font-weight:800;
-      text-shadow:2px 2px 0 rgba(0,0,0,0.2);
-      border:2px solid rgba(255,255,255,0.3);
+      overflow:hidden;
+    }
+    .brand-logo img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
     }
     .brand-text strong { display:block; font-size:1rem; }
     .brand-text span { font-size:.78rem; color:var(--muted); }
@@ -804,7 +802,9 @@
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand">
-        <div class="brand-logo">A</div>
+        <div class="brand-logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
+        </div>
         <div class="brand-text">
           <strong>AbridMoroccoTrip</strong>
           <span>Premium Morocco Tours</span>
