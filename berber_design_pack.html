@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berber Design Pack - High Contrast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f0f12;
+            --accent: #e0e0e0;
+            --card-bg: #1a1a20;
+            --highlight: #d4af37;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--accent);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        h1 { font-weight: 600; font-size: 2.5rem; margin-bottom: 30px; }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .design-card {
+            background: #ffffff; /* Show them as they will be downloaded */
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: 0.3s;
+        }
+        .svg-container {
+            width: 250px;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        svg {
+            max-width: 85%;
+            max-height: 85%;
+            fill: none;
+            stroke: #000000; /* Black ink for contrast */
+            stroke-width: 8;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .design-name { color: #000; opacity: 0.6; font-weight: 600; margin-bottom: 20px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        
+        button {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: none;
+            background: var(--bg);
+            color: white;
+            cursor: pointer;
+            transition: 0.2s;
+            font-weight: 600;
+        }
+        button:hover { background: var(--highlight); color: black; }
+        canvas { display: none; }
+    </style>
+</head>
+<body>
+
+    <h1 style="color:white">Berber High-Contrast Collection</h1>
+    <p style="color:rgba(255,255,255,0.6); margin-bottom:40px;">These will download with a solid white background for maximum visibility.</p>
+
+    <div class="gallery">
+        <!-- FIXED YAZ -->
+        <div class="design-card">
+            <div class="design-name">The Yaz (ⵣ) Pro</div>
+            <div class="svg-container" id="svg-yaz">
+                <svg viewBox="0 0 100 100">
+                    <line x1="50" y1="15" x2="50" y2="85" />
+                    <path d="M50 25 C25 25 25 45 50 45 M50 55 C25 55 25 75 50 75" />
+                    <path d="M50 25 C75 25 75 45 50 45 M50 55 C75 55 75 75 50 75" />
+                </svg>
+            </div>
+            <button onclick="downloadPNG('svg-yaz', 'Berber_Yaz_Full')">Download PNG (White Background)</button>
+        </div>
+
+        <!-- HAMSA -->
+        <div class="design-card">
+            <div class="design-name">Geometric Hamsa</div>
+            <div class="svg-container" id="svg-hamsa">
+                <svg viewBox="0 0 100 100">
+                    <line x1="50" y1="20" x2="50" y2="60" />
+                    <line x1="35" y1="30" x2="35" y2="65" />
+                    <line x1="65" y1="30" x2="65" y2="65" />
+                    <circle cx="50" cy="80" r="5" fill="black" />
+                    <path d="M20 50 Q20 10 50 10 Q80 10 80 50 L80 60 Q80 90 50 90 Q20 90 20 60 L20 50" />
+                </svg>
+            </div>
+            <button onclick="downloadPNG('svg-hamsa', 'Berber_Hamsa_Full')">Download PNG (White Background)</button>
+        </div>
+
+        <!-- SNAKE -->
+        <div class="design-card">
+            <div class="design-name">Sacred Snake</div>
+            <div class="svg-container" id="svg-snake">
+                <svg viewBox="0 0 100 100">
+                    <path d="M10 50 L25 30 L40 50 L55 30 L70 50 L85 30 L95 50" />
+                    <circle cx="10" cy="50" r="3" fill="black"/>
+                </svg>
+            </div>
+            <button onclick="downloadPNG('svg-snake', 'Berber_Snake_Full')">Download PNG (White Background)</button>
+        </div>
+
+        <!-- DIAMOND -->
+        <div class="design-card">
+            <div class="design-name">Diamond motif</div>
+            <div class="svg-container" id="svg-diamond">
+                <svg viewBox="0 0 100 100">
+                    <rect x="25" y="25" width="50" height="50" transform="rotate(45 50 50)" />
+                    <rect x="35" y="35" width="30" height="30" transform="rotate(45 50 50)" stroke-width="4"/>
+                    <line x1="50" y1="45" x2="50" y2="55" stroke-width="4"/>
+                    <line x1="45" y1="50" x2="55" y2="50" stroke-width="4"/>
+                </svg>
+            </div>
+            <button onclick="downloadPNG('svg-diamond', 'Berber_Diamond_Full')">Download PNG (White Background)</button>
+        </div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <script>
+        function downloadPNG(containerId, filename) {
+            const svg = document.getElementById(containerId).querySelector('svg');
+            const canvas = document.getElementById('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            img.onload = function() {
+                canvas.width = 3000;
+                canvas.height = 3000;
+                
+                // 1. FILL SOLID WHITE BACKGROUND
+                ctx.fillStyle = "white";
+                ctx.fillRect(0, 0, 3000, 3000);
+                
+                // 2. DRAW THE DESIGN (Scaled to fit)
+                ctx.drawImage(img, 300, 300, 2400, 2400); 
+                
+                const a = document.createElement("a");
+                a.href = canvas.toDataURL("image/png", 1.0);
+                a.download = `${filename}.png`;
+                a.click();
+            }
+            const svgData = new XMLSerializer().serializeToString(svg);
+            img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
+        }
+    </script>
+</body>
+</html>

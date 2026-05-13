@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Morocco Itinerary: Imperial Cities & Sahara Desert</title>
+    <!-- Google Fonts for luxurious look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-orange: #E46A10;
+            --dark-text: #1F2937;
+            --light-bg: #FAFAFA;
+            --white: #FFFFFF;
+            --gray: #6B7280;
+            --accent-bg: #FFF7ED;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark-text);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 42px;
+            margin-bottom: 5px;
+            line-height: 1.2;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2::before {
+            content: "";
+            background-color: var(--primary-orange);
+            width: 8px;
+            height: 32px;
+            border-radius: 4px;
+            display: inline-block;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-family: 'Outfit', sans-serif;
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .ebook-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 20px 0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .ebook-image:hover {
+            transform: scale(1.01);
+        }
+
+        .day-card {
+            background: var(--white);
+            border: 1px solid #E5E7EB;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 25px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .day-card:hover {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+        }
+
+        .day-card h3 {
+            color: var(--primary-orange);
+            font-family: 'Outfit', sans-serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .maps-link {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: var(--white);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            margin: 8px 8px 0 0;
+            transition: background 0.3s, transform 0.2s;
+            box-shadow: 0 4px 6px rgba(228, 106, 16, 0.2);
+        }
+
+        .maps-link:hover {
+            background-color: #C65A0D;
+            transform: translateY(-2px);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background-color: var(--accent-bg);
+            color: var(--primary-orange);
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+        }
+
+        tr:last-child td { border-bottom: none; }
+
+        .tip {
+            background-color: var(--accent-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-orange);
+            margin: 20px 0;
+            font-style: italic;
+            color: #555;
+        }
+
+        .author-section {
+            background: linear-gradient(135deg, #FFF, var(--accent-bg));
+            border: 1px solid #FFE4CD;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 60px 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            box-shadow: 0 15px 35px rgba(228, 106, 16, 0.05);
+        }
+
+        .author-photo {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .author-info h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
+            color: var(--primary-orange);
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+        }
+
+        .author-info p {
+            margin: 0 0 15px;
+            color: var(--gray);
+            font-size: 15px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--dark-text);
+            color: var(--white);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
+        
+        .social-link.website { background-color: var(--primary-orange); }
+        .social-link.instagram { background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+        .social-link.tiktok { background-color: #000000; }
+        .social-link.phone { background-color: #25D366; }
+
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #eee;
+        }
+
+        .brand-logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .author-section { flex-direction: column; text-align: center; }
+            .social-links { justify-content: center; }
+            h1 { font-size: 32px; }
+            .ebook-image { height: 280px; }
+            body { padding: 20px 15px; }
+        }
+    </style>
+</head>
+<body>
+
+<h1>7-Day Morocco Itinerary</h1>
+<p class="subtitle">Imperial Cities & Sahara Desert | The honest, insider guide by a true local.</p>
+
+<!-- COVER PHOTO -->
+<img class="ebook-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Rub_al_Khali_002.JPG/1280px-Rub_al_Khali_002.JPG" alt="Sahara Dunes at Sunset">
+
+<h2>Contents</h2>
+<div class="day-card" style="padding: 20px;">
+    <ul style="margin: 0; line-height: 1.8; color: var(--gray);">
+        <li>Morocco Overview & Trip Logistics</li>
+        <li>Day 1-2: Marrakech — The Red City</li>
+        <li>Day 3-4: Sahara Desert — Merzouga Dunes</li>
+        <li>Day 5: Fès — The Medieval Medina</li>
+        <li>Day 6: Chefchaouen — The Blue City</li>
+        <li>Day 7: Casablanca — Grand Finale</li>
+        <li>Complete Budget & Packing List</li>
+    </ul>
+</div>
+
+<!-- SECTION 01 -->
+<h2>Morocco Overview & Trip Logistics</h2>
+<p>Morocco is a North African kingdom where ancient medinas, snow-capped Atlas Mountains, and golden Sahara dunes exist within hours of each other. This 7-day route threads through the country's most iconic destinations giving you a genuine taste of Moroccan culture, cuisine, and landscape without rushing.</p>
+<p><strong>Best visited:</strong> October–April (avoid summer heat; Sahara hits 45°C in July).<br>
+<strong>Budget:</strong> $300–400 total for budget travelers; $600–800 for comfort seekers.</p>
+
+<!-- SECTION 02 -->
+<h2>Day 1-2: Marrakech — The Red City</h2>
+<div class="day-card">
+    <h3>Day 1: Arrival & Medina Immersion</h3>
+    <p><strong>Morning:</strong> Land at Marrakech Menara Airport. Take petite taxi (~70 MAD to medina — do NOT take grand taxis). Breakfast at café near riad — msemen with argan oil (~20–30 MAD).</p>
+    <p><strong>Afternoon:</strong> Walk to Jemaa el-Fna Square. Explore the Chouara Souks. Visit Bahia Palace (entry 70 MAD).</p>
+    <p><strong>Evening:</strong> Return to Jemaa el-Fna at sunset for food stalls (50–80 MAD total). Try snail soup (harira), lamb skewers, orange juice (4 MAD!). Rooftop mint tea at Café des Épices.</p>
+    <div class="tip">Insider tip: Don't walk into the Koutoubia Mosque courtyard as a non-Muslim — just photograph from outside. Save 20 MAD in "entry fees" that are actually fake.</div>
+    
+    <h3>Day 2: Gardens, Palaces & Food Tour</h3>
+    <p><strong>Morning:</strong> Majorelle Garden (entry 150 MAD) — arrive 8:30 AM before crowds. Walk through the Mellah (Jewish quarter).</p>
+    <p><strong>Afternoon:</strong> El Badi Palace ruins (entry 70 MAD). Hammam experience at Hammam El Bacha — traditional local hammam, 200 MAD with scrub.</p>
+    <p><strong>Evening - Depart for Sahara:</strong> Take 7 PM bus toward Merzouga.</p>
+    
+    <h4>Google Maps Pins:</h4>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Bahia+Palace+Marrakesh" target="_blank">Bahia Palace</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Jardin+Majorelle+Marrakesh" target="_blank">Majorelle Garden</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Jemaa+el-Fna+Marrakesh" target="_blank">Jemaa el-Fna</a>
+</div>
+
+<!-- MARRAKECH IMAGE -->
+<img class="ebook-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Djemaa_el_Fna.jpg/1280px-Djemaa_el_Fna.jpg" alt="Jemaa el-Fna Square in Marrakech">
+
+<!-- SECTION 03 -->
+<h2>Day 3-4: Sahara Desert — Merzouga Dunes</h2>
+<div class="day-card">
+    <h3>Day 3: Arrival & Sunset Camel Ride</h3>
+    <p><strong>Morning:</strong> Arrive ~8–9 AM. Check into your desert hotel and rest during the afternoon heat.</p>
+    <p><strong>Afternoon/Evening:</strong> Camel ride departs 4:30–5 PM. Sunset from highest dune is unmissable. Spend the night in a luxurious desert camp under a blanket of thousands of stars. Enjoy Berber music around a glowing campfire.</p>
+    <div class="tip">Desert tour scam alert: Do NOT pay roadside touts. Book through a trusted official partner like Abrid Morocco Trips.</div>
+    
+    <h3>Day 4: Sunrise & Todra Gorge</h3>
+    <p><strong>Pre-dawn:</strong> Wake at 5:30 AM, climb dune for sunrise.</p>
+    <p><strong>Afternoon – Todra Gorge (optional):</strong> Walk the gorge for 1 hour, then travel toward Fès.</p>
+    
+    <h4>Google Maps Pins:</h4>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Erg+Chebbi+Merzouga" target="_blank">Erg Chebbi Dunes</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Todra+Gorge+Tinghir" target="_blank">Todra Gorge</a>
+</div>
+
+<!-- SAHARA DESERT CAMP NIGHT IMAGE -->
+<img class="ebook-image" src="https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?auto=compress&cs=tinysrgb&w=1280" alt="Night Desert Camp under the stars, Sahara Desert">
+
+<!-- SECTION 04 -->
+<h2>Day 5: Fès — The Medieval Medina</h2>
+<div class="day-card">
+    <p><strong>Morning:</strong> Fès el-Bali medina, a UNESCO site. Visit Al-Qarawiyyin Library. Bou Inania Madrasa (entry 20 MAD).</p>
+    <p><strong>Key Attraction – Chouara Tannery:</strong> Enter through leather shops for free overhead views. Best light 10 AM–12 PM.</p>
+    <p><strong>Afternoon:</strong> Bab Bou Jeloud (Blue Gate). Get lost — 9,400 lanes is part of the experience.</p>
+    <p><strong>Evening:</strong> Travel to Chefchaouen.</p>
+    <div class="tip">Medina navigation: Download offline Google Maps BEFORE entering. Cell signal drops in narrow alleys.</div>
+    
+    <h4>Google Maps Pins:</h4>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Chouara+Tannery+Fes" target="_blank">Chouara Tannery</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Bab+Bou+Jeloud+Fes" target="_blank">Bab Bou Jeloud</a>
+</div>
+
+<!-- FÈS IMAGE -->
+<img class="ebook-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg/1280px-Chouara_Tannery_-_154_-_Marokko_Handybilder_2018_-_Fes_%2827347707917%29.jpg" alt="Chouara Tannery in Fès">
+
+<!-- SECTION 05 -->
+<h2>Day 6: Chefchaouen — The Blue City</h2>
+<div class="day-card">
+    <p><strong>Best Photo Spots:</strong> Blue staircase (Rue Targui) at 7–8 AM; Spanish Mosque viewpoint (35-min hike, sunset view).</p>
+    <p><strong>Food:</strong> Breakfast: msemen with goat cheese and honey. Lunch: Berber omelette.</p>
+    <p><strong>Afternoon:</strong> Travel toward Casablanca.</p>
+    <div class="tip">Why blue? Painted blue in the 15th century as a symbol of heaven and the sky above.</div>
+    
+    <h4>Google Maps Pins:</h4>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Blue+Street+Chefchaouen" target="_blank">Blue Staircase</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Spanish+Mosque+Chefchaouen" target="_blank">Spanish Mosque Viewpoint</a>
+</div>
+
+<!-- CHEFCHAOUEN IMAGE -->
+<img class="ebook-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Chefchaouen_%2852189357475%29.jpg/1280px-Chefchaouen_%2852189357475%29.jpg" alt="Chefchaouen Blue Streets">
+
+<!-- SECTION 06 -->
+<h2>Day 7: Casablanca — Grand Finale</h2>
+<div class="day-card">
+    <p><strong>Morning – Hassan II Mosque:</strong> World's 7th largest mosque, built on the Atlantic. Non-Muslims can enter (entry 120 MAD). Cover shoulders and knees.</p>
+    <p><strong>Afternoon:</strong> La Corniche beachfront promenade; Rick's Café (from the movie); Morocco Mall for fixed-price souvenirs.</p>
+    <p><strong>Departure:</strong> Airport Express train to Mohammed V International Airport.</p>
+    <div class="tip">Casablanca insider: Most tourists rush through. Spend your final evening at Ain Diab beach — watch sunset over the Atlantic.</div>
+    
+    <h4>Google Maps Pins:</h4>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Hassan+II+Mosque+Casablanca" target="_blank">Hassan II Mosque</a>
+    <a class="maps-link" href="https://www.google.com/maps/search/?api=1&query=Ricks+Cafe+Casablanca" target="_blank">Rick's Café</a>
+</div>
+
+<!-- CASABLANCA IMAGE (NEWLY ADDED) -->
+<img class="ebook-image" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ce/Hassan_II_mosque%2C_Casablanca_2.jpg/1280px-Hassan_II_mosque%2C_Casablanca_2.jpg" alt="Hassan II Mosque in Casablanca">
+
+<!-- AUTHOR / BRAND SECTION -->
+<div class="author-section" style="display: block; text-align: left;">
+    <div class="author-info">
+        <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+            <!-- Using the ACTUAL logo from abridmorocco.com -->
+            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Abrid Morocco Trip Logo" style="width: 75px; height: 75px; border-radius: 50%; object-fit: cover; border: 3px solid #E46A10;">
+            <h3 style="margin: 0; padding: 0;">Abdellah - Your Morocco Travel Partner</h3>
+        </div>
+        <p>Hi, I'm Abdellah! With years of local knowledge and a passion for genuine hospitality, my team and I craft journeys that stay in your heart forever. We guarantee best prices, multilingual guides, and totally seamless adventures. Contact me anytime to plan your dream Morocco trip or check out our social media for more inspiration.</p>
+        <div class="social-links">
+            <a href="https://abridmorocco.com" target="_blank" class="social-link website">Website</a>
+            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" class="social-link instagram" style="color: white !important;">Instagram</a>
+            <a href="https://www.tiktok.com/@abridmoroccotrip" target="_blank" class="social-link tiktok">TikTok</a>
+            <a href="tel:+212" class="social-link phone">Contact Us</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p style="margin-top: 15px; font-weight: 300; font-size: 14px; color: #888;">Complete 7-Day Guide · © ABRID MOROCCO TRIPS 2024</p>
+</footer>
+
+</body>
+</html>
