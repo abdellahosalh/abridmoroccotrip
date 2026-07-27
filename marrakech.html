@@ -30,31 +30,39 @@
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5B2HL7PH8P');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .review-block{background:#fff8f1;border-radius:16px;padding:20px;border-left:4px solid #f0a94b;margin-bottom:14px;}
-    .review-stars{color:#f0a94b;font-size:1rem;margin-bottom:6px;}
-    .review-text{font-style:italic;color:#3f2a20;margin:0 0 8px;line-height:1.6;}
-    .review-author{font-size:.9rem;font-weight:700;color:#b84f2b;}
-    .urgency-bar{background:linear-gradient(135deg,#fff3e0,#ffe0b2);border:1.5px solid #f0a94b;border-radius:12px;padding:12px 16px;text-align:center;margin-bottom:18px;font-size:.9rem;color:#5d4037;}
-    .faq-item{border-bottom:1px solid rgba(63,42,32,.1);padding:16px 0;}
-    .faq-q{font-weight:700;color:#3f2a20;cursor:pointer;display:flex;justify-content:space-between;align-items:center;}
-    .faq-a{color:#6e5649;line-height:1.7;margin-top:10px;font-size:.95rem;}
+    .review-block{background:rgba(192,82,46,.05);border-radius:var(--r-sm);padding:22px;border-left:4px solid var(--gold);margin-bottom:14px;transition:all var(--t-med) var(--ease-spring);}
+    .review-block:hover{transform:translateX(4px);background:rgba(192,82,46,.08);}
+    .review-stars{color:var(--gold);font-size:1.1rem;margin-bottom:8px;filter:drop-shadow(0 0 4px rgba(244,185,66,.4));}
+    .review-text{font-style:italic;color:var(--brown);margin:0 0 10px;line-height:1.75;font-size:.97rem;}
+    .review-author{font-size:.88rem;font-weight:700;color:var(--terracotta);}
+    .urgency-bar{background:linear-gradient(135deg,rgba(244,185,66,.15),rgba(232,150,26,.12));border:1.5px solid var(--gold);border-radius:var(--r-sm);padding:14px 18px;text-align:center;margin-bottom:20px;font-size:.9rem;color:var(--brown-mid);font-weight:600;}
+    .faq-item{border-bottom:1px solid var(--line-2);padding:18px 0;}
+    .faq-q{font-weight:700;color:var(--brown);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:.97rem;transition:color var(--t-fast);}
+    .faq-q:hover{color:var(--terracotta);}
+    .faq-q span{width:28px;height:28px;border-radius:50%;background:rgba(192,82,46,.1);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;}
+    .faq-a{color:var(--muted);line-height:1.8;margin-top:12px;font-size:.93rem;}
   </style>
 </head>
 <body>
-  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury & Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
-  <header class="site-header">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="promo-banner" id="promoBanner">🌟 SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!
+    <button onclick="document.getElementById('promoBanner').style.display='none'" style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;cursor:pointer;padding:4px 8px;">×</button>
+  </div>
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home">
-        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" style="height:48px;width:auto;border-radius:14px;">
+        <div class="brand-logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" width="46" height="46">
+        </div>
         <div class="brand-text"><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div>
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="index.html#tours" class="active">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
@@ -62,16 +70,21 @@
         <li><a href="index.html#contact">Booking</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
-        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <a class="btn btn-primary" href="index.html#contact" style="padding:11px 22px;font-size:.88rem;">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       </div>
     </div>
-    <div class="container mobile-menu" id="mobileMenu">
+    <div class="container mobile-menu" id="mobileMenu" aria-hidden="true">
       <div class="mobile-panel">
-        <a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="index.html#tours">Tours</a>
-        <a href="index.html#packages">Packages</a><a href="blog.html">Blog</a><a href="index.html#gallery">Gallery</a>
-        <a href="index.html#comments">Reviews</a><a href="index.html#contact">Booking</a>
+        <a href="index.html">🏠 Home</a>
+        <a href="index.html#about">👤 About Us</a>
+        <a href="index.html#tours">🗺️ Tours</a>
+        <a href="index.html#packages">📦 Packages</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="index.html#gallery">🖼️ Gallery</a>
+        <a href="index.html#comments">⭐ Reviews</a>
+        <a href="index.html#contact">📋 Booking</a>
       </div>
     </div>
   </header>
@@ -205,24 +218,79 @@
 
   <footer>
     <div class="container footer-inner">
-      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
+      <div>
+        <strong style="font-family:'Syne',sans-serif;color:var(--brown);">AbridMoroccoTrip</strong>
+        <div style="font-size:.82rem;margin-top:4px;">© <span id="year"></span> All rights reserved.</div>
+      </div>
+      <div style="font-size:.88rem;text-align:center;">🇲🇦 Authentic Morocco Tours · Sustainable Travel · Local Expertise</div>
+      <div style="font-size:.85rem;text-align:right;">
+        📞 <a href="tel:+212762934488" style="color:var(--muted);">+212 762 934 488</a><br>
+        ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:var(--muted);">abridmorocco@gmail.com</a>
+      </div>
     </div>
   </footer>
 
   <script>
     (function(){
-      document.getElementById('year').textContent=new Date().getFullYear();
-      const mt=document.getElementById('menuToggle'),mm=document.getElementById('mobileMenu');
-      if(mt&&mm){mt.addEventListener('click',()=>{const o=mm.classList.toggle('open');mt.setAttribute('aria-expanded',o?'true':'false');});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{mm.classList.remove('open');mt.setAttribute('aria-expanded','false');}));}
-      const form=document.getElementById('bookingFormMarrakech');
-      if(form){form.addEventListener('submit',(e)=>{e.preventDefault();const name=document.getElementById('name-m').value.trim();const email=document.getElementById('email-m').value.trim();const phone=document.getElementById('phone-m').value.trim();const date=document.getElementById('date-m').value;const people=document.getElementById('people-m').value;const message=document.getElementById('message-m').value.trim();const subject=`Booking Inquiry - Marrakech Discovery Tour | ${name}`;const body=`Hello AbridMoroccoTrip,\n\nI would like to book the Marrakech Discovery Tour.\n\nName: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nDate: ${date}\nPeople: ${people}\n\nMessage: ${message||'No additional message.'}\n\nThank you!`;window.location.href=`mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;alert('Inquiry prepared! Your email client will open. You can also reach us directly on WhatsApp.');});}
-      document.querySelectorAll('.faq-q').forEach(q=>{q.addEventListener('click',()=>{const a=q.nextElementSibling;const span=q.querySelector('span');if(a.style.display==='none'||!a.style.display){a.style.display='block';span.textContent='−';}else{a.style.display='none';span.textContent='+';}});q.nextElementSibling.style.display='none';});
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Scroll progress
+      const sp = document.getElementById('scrollProgress');
+      window.addEventListener('scroll', () => {
+        sp.style.width = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
+        document.getElementById('siteHeader').classList.toggle('scrolled', window.pageYOffset > 60);
+      }, { passive: true });
+
+      // Mobile menu
+      const mt = document.getElementById('menuToggle'), mm = document.getElementById('mobileMenu');
+      if (mt && mm) {
+        mt.addEventListener('click', () => {
+          const o = mm.classList.toggle('open');
+          mt.setAttribute('aria-expanded', o ? 'true' : 'false');
+          mm.setAttribute('aria-hidden', o ? 'false' : 'true');
+        });
+        mm.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+          mm.classList.remove('open');
+          mt.setAttribute('aria-expanded', 'false');
+        }));
+      }
+
+      // Booking form
+      const form = document.getElementById('bookingFormMarrakech');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('name-m').value.trim();
+          const email = document.getElementById('email-m').value.trim();
+          const phone = document.getElementById('phone-m').value.trim();
+          const date = document.getElementById('date-m').value;
+          const people = document.getElementById('people-m').value;
+          const message = document.getElementById('message-m').value.trim();
+          const subject = `Booking Inquiry – Marrakech Discovery Tour | ${name}`;
+          const body = `Hello AbridMoroccoTrip,\n\nI would like to book the Marrakech Discovery Tour.\n\nName: ${name}\nEmail: ${email}\nPhone/WhatsApp: ${phone}\nDate: ${date}\nPeople: ${people}\n\nMessage: ${message || 'No additional message.'}\n\nThank you!`;
+          window.location.href = `mailto:abridmorocco@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        });
+      }
+
+      // FAQ accordion
+      document.querySelectorAll('.faq-q').forEach(q => {
+        q.addEventListener('click', () => {
+          const a = q.nextElementSibling;
+          const span = q.querySelector('span');
+          if (a.style.display === 'none' || !a.style.display) {
+            a.style.display = 'block';
+            span.textContent = '−';
+          } else {
+            a.style.display = 'none';
+            span.textContent = '+';
+          }
+        });
+        q.nextElementSibling.style.display = 'none';
+      });
     })();
   </script>
 
-  <!-- Floating WhatsApp -->
-  <a href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" style="position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 25px rgba(37,211,102,.45);z-index:1000;text-decoration:none;transition:transform .3s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">💬</a>
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
 
   <!-- Google Review Nudge -->
   <!-- TO SET UP: Get your Google Business review link from https://business.google.com, then replace the href below -->

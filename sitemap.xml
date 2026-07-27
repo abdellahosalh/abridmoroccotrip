@@ -4,74 +4,133 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-  <!-- Homepage -->
+  <!-- ═══ HOMEPAGE (Priority 1.0) ═══ -->
   <url>
     <loc>https://www.abridmorocco.com/</loc>
-    <lastmod>2026-06-26</lastmod>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About Page -->
+  <!-- ═══ TOUR PAGES (Priority 0.9) ═══ -->
   <url>
-    <loc>https://www.abridmorocco.com/about</loc>
-    <lastmod>2026-06-26</lastmod>
+    <loc>https://www.abridmorocco.com/marrakech.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/merzouga.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/atlas.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/essaouira.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/imperial.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/air-balloon.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/private.html</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Tours / Packages Page -->
+  <!-- ═══ BLOG INDEX (Priority 0.8) ═══ -->
   <url>
-    <loc>https://www.abridmorocco.com/tours</loc>
-    <lastmod>2026-06-26</lastmod>
+    <loc>https://www.abridmorocco.com/blog.html</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Destinations Page -->
-  <url>
-    <loc>https://www.abridmorocco.com/destinations</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Sahara Desert Tours -->
-  <url>
-    <loc>https://www.abridmorocco.com/sahara-desert-tours</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Imperial Cities Tours -->
-  <url>
-    <loc>https://www.abridmorocco.com/imperial-cities</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Gallery Page -->
+  <!-- ═══ BLOG POSTS (Priority 0.7) ═══ -->
   <url>
-    <loc>https://www.abridmorocco.com/gallery</loc>
-    <lastmod>2026-06-26</lastmod>
+    <loc>https://www.abridmorocco.com/blog-marrakech-top10.html</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.75</priority>
   </url>
 
-  <!-- Blog Page -->
   <url>
-    <loc>https://www.abridmorocco.com/blog</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://www.abridmorocco.com/blog-sahara-guide.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/blog-sahara-erg-chebbi.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Contact Page -->
   <url>
-    <loc>https://www.abridmorocco.com/contact</loc>
-    <lastmod>2026-06-26</lastmod>
+    <loc>https://www.abridmorocco.com/blog-chefchaouen.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/blog-essaouira.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/blog-sahara-packing.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/blog-driving-safety.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/blog-essaouira-bus-vs-tour.html</loc>
+    <lastmod>2026-07-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+
+  <!-- ═══ LANDING / EBOOK PAGES (Priority 0.7) ═══ -->
+  <url>
+    <loc>https://www.abridmorocco.com/landing_page.html</loc>
+    <lastmod>2026-07-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
