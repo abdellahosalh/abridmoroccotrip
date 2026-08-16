@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- ===== HOMEPAGE ===== -->
   <url>
     <loc>https://www.abridmorocco.com/</loc>
     <lastmod>2026-08-16</lastmod>
@@ -9,7 +9,7 @@
     <priority>1.0000</priority>
   </url>
 
-  <!-- Landing / E-book -->
+  <!-- ===== LANDING / E-BOOK ===== -->
   <url>
     <loc>https://www.abridmorocco.com/landing_page.html</loc>
     <lastmod>2026-08-16</lastmod>
@@ -17,49 +17,56 @@
     <priority>0.9000</priority>
   </url>
 
-  <!-- Tour Pages -->
+  <url>
+    <loc>https://www.abridmorocco.com/morocco_ebook.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+
+  <!-- ===== TOUR PAGES ===== -->
   <url>
     <loc>https://www.abridmorocco.com/marrakech.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/atlas.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/essaouira.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/merzouga.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/imperial.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
-  <url>
-    <loc>https://www.abridmorocco.com/imperial-cities</loc>
-    <lastmod>2026-08-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8000</priority>
-  </url>
+
   <url>
     <loc>https://www.abridmorocco.com/private.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/air-balloon.html</loc>
     <lastmod>2026-08-16</lastmod>
@@ -67,7 +74,7 @@
     <priority>0.9000</priority>
   </url>
 
-  <!-- Blog Index -->
+  <!-- ===== BLOG INDEX ===== -->
   <url>
     <loc>https://www.abridmorocco.com/blog.html</loc>
     <lastmod>2026-08-16</lastmod>
@@ -75,49 +82,56 @@
     <priority>0.8000</priority>
   </url>
 
-  <!-- Blog Posts -->
+  <!-- ===== BLOG POSTS ===== -->
   <url>
     <loc>https://www.abridmorocco.com/blog-marrakech-top10.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-sahara-guide.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-chefchaouen.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-sahara-erg-chebbi.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-driving-safety.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-essaouira.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-sahara-packing.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6000</priority>
   </url>
+
   <url>
     <loc>https://www.abridmorocco.com/blog-essaouira-bus-vs-tour.html</loc>
     <lastmod>2026-08-16</lastmod>
@@ -125,18 +139,34 @@
     <priority>0.6000</priority>
   </url>
 
-  <!-- Gallery & Contact -->
+  <!-- ===== OTHER PAGES ===== -->
   <url>
-    <loc>https://www.abridmorocco.com/gallery</loc>
+    <loc>https://www.abridmorocco.com/berber_design_pack.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6000</priority>
+    <priority>0.5000</priority>
   </url>
+
   <url>
-    <loc>https://www.abridmorocco.com/contact</loc>
+    <loc>https://www.abridmorocco.com/sitemap.html</loc>
     <lastmod>2026-08-16</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7000</priority>
+    <priority>0.4000</priority>
+  </url>
+
+  <url>
+    <loc>https://www.abridmorocco.com/google88bf96ac49d5d2f5.html</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3000</priority>
+  </url>
+
+  <!-- ===== ROBOTS.TXT ===== -->
+  <url>
+    <loc>https://www.abridmorocco.com/robots.txt</loc>
+    <lastmod>2026-08-16</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3000</priority>
   </url>
 
 </urlset>
