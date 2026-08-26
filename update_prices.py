@@ -1,6 +1,6 @@
 import os
 
-directory = r"c:\Users\LENOVO THINKPAD\Documents\Nouveau dossier\abridmoroccotrip\abridmoroccotrip-main"
+directory = r"c:\Users\LENOVO THINKPAD\Documents\Nouveau dossier\abridmoroccotrip-main"
 
 literal_replacements = [
     # 36 -> 47

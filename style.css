@@ -23,12 +23,12 @@
   --muted-light:#a88878;
 
   /* Surfaces */
-  --bg:#fdf8f3;
-  --bg-2:#fff4ec;
-  --surface:rgba(255,255,255,.82);
-  --surface-2:rgba(255,248,240,.9);
-  --glass:rgba(255,255,255,.18);
-  --glass-border:rgba(255,255,255,.45);
+  --bg:#ecdcd0;
+  --bg-2:#e6d3c5;
+  --surface:rgba(245,235,225,.85);
+  --surface-2:rgba(235,220,205,.9);
+  --glass:rgba(255,255,255,.12);
+  --glass-border:rgba(255,255,255,.3);
 
   /* Lines */
   --line:rgba(44,26,18,.09);
@@ -1264,3 +1264,5 @@ footer::before{
 .align-center{align-items:center}
 .gap-sm{gap:8px}
 .gap-md{gap:16px}
+@ k e y f r a m e s   f a d e I n U p   {   f r o m   {   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 2 0 p x ) ;   }   t o   {   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;   }   }   . c a r d   {   a n i m a t i o n :   f a d e I n U p   0 . 8 s   v a r ( - - e a s e - s p r i n g )   b a c k w a r d s ;   }  
+ 
