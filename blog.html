@@ -7,7 +7,6 @@
   <link rel="canonical" href="https://www.abridmorocco.com/blog.html" />
   <meta name="description" content="Read expert travel tips, insider guides, and detailed itineraries for Morocco. Written by local tour guide Abdellah." />
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Morocco Travel Blog | AbridMoroccoTrip" />
   <meta property="og:description" content="Expert travel tips, itineraries, and guides for visiting Morocco. Discover Marrakech, Sahara, Chefchaouen and more." />
@@ -21,7 +20,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* (same as index styles, plus blog-specific) */
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,0.06); --shadow-hover: 0 16px 48px rgba(0,0,0,0.10); --radius: 20px; --radius-sm: 12px; --transition: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); --font: 'Inter', sans-serif; --font-serif: 'Playfair Display', serif; }
     body { font-family: var(--font); background: var(--bg); color: var(--brown); line-height: 1.6; }
@@ -31,7 +29,8 @@
     .btn-primary:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 14px 40px rgba(201,79,44,.45); }
     .btn-secondary { background:rgba(255,255,255,.92); color:var(--brown); border:2px solid rgba(61,42,30,.12); backdrop-filter:blur(10px); }
     .btn-secondary:hover { transform:translateY(-3px); border-color:var(--terracotta); box-shadow:0 8px 28px rgba(0,0,0,.08); background:#fff; }
-    /* Header, footer, etc. same as index */
+    .wa-float { position:fixed; bottom:24px; right:24px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 8px 28px rgba(37,211,102,.4); z-index:50; transition:all .35s; }
+    .wa-float:hover { transform:scale(1.1); }
     .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; margin:40px 0; }
     .blog-card { background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:all .35s; }
     .blog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); }
@@ -47,30 +46,41 @@
     .section-head h2 { font-family:var(--font-serif); font-size:clamp(2rem,3.5vw,2.8rem); margin-bottom:12px; }
     .section-head p { color:var(--muted); font-size:1.05rem; }
     .eyebrow { display:inline-block; background:var(--gold-light); color:var(--terracotta); font-weight:700; font-size:.8rem; padding:6px 18px; border-radius:60px; margin-bottom:12px; text-transform:uppercase; letter-spacing:.5px; }
-    .wa-float { position:fixed; bottom:24px; right:24px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 8px 28px rgba(37,211,102,.4); z-index:50; transition:all .35s; }
-    .wa-float:hover { transform:scale(1.1); }
-    /* reuse header and footer styles */
+    /* reuse header and footer styles from index */
+    .site-header { background:rgba(255,255,255,.92); backdrop-filter:blur(12px); position:sticky; top:0; z-index:100; border-bottom:1px solid rgba(0,0,0,.05); padding:10px 0; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand { display:flex; align-items:center; gap:12px; }
+    .brand img { width:46px; height:46px; border-radius:50%; object-fit:cover; }
+    .brand strong { font-size:1.1rem; }
+    .brand span { font-size:.75rem; color:var(--muted); display:block; margin-top:-2px; }
+    .nav-links { display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500; }
+    .nav-links a { color:var(--brown-light); transition:color .3s; }
+    .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
+    .mini-contact { font-size:.85rem; font-weight:600; color:var(--terracotta); }
+    .btn-sm { padding:11px 22px; font-size:.88rem; }
+    .footer { background:var(--brown); color:rgba(255,255,255,.7); padding:32px 0; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
   </style>
 </head>
 <body>
-  <header class="site-header" style="background:rgba(255,255,255,.92); backdrop-filter:blur(12px); position:sticky; top:0; z-index:100; border-bottom:1px solid rgba(0,0,0,.05); padding:10px 0;">
-    <div class="container nav" style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
-      <a href="index.html" class="brand" style="display:flex; align-items:center; gap:12px;">
-        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:46px;height:46px;border-radius:50%;object-fit:cover;">
-        <div><strong style="font-size:1.1rem;">AbridMoroccoTrip</strong><span style="font-size:.75rem;color:var(--muted);display:block;margin-top:-2px;">Premium Morocco Tours</span></div>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+        <div><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div>
       </a>
-      <ul class="nav-links" style="display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500;">
+      <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#tours">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
-        <li><a href="blog.html" class="active" style="color:var(--terracotta);">Blog</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
       <div style="display:flex; align-items:center; gap:12px;">
-        <a class="mini-contact" href="tel:+212762934488" style="font-size:.85rem; font-weight:600; color:var(--terracotta);">📞 +212 762 934 488</a>
-        <a class="btn btn-primary btn-sm" href="index.html#contact" style="padding:11px 22px;font-size:.88rem;">Book Now</a>
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <a class="btn btn-primary btn-sm" href="index.html#contact">Book Now</a>
       </div>
     </div>
   </header>
@@ -83,7 +93,6 @@
         <p>Discover insider tips, local secrets, and complete guides to plan your perfect Moroccan adventure — written by local expert Abdellah.</p>
       </div>
 
-      <!-- E-Book Banner -->
       <div style="background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark)); color:#fff; padding:40px; border-radius:20px; text-align:center; margin-bottom:48px;">
         <h3 style="font-family:var(--font-serif); font-size:1.8rem; margin-bottom:10px;">📖 The Ultimate Morocco 7-Day Itinerary</h3>
         <p style="margin-bottom:16px; opacity:.9;">Written by a local expert. Google Maps pins, real budget, scam warnings, and more.</p>
@@ -91,7 +100,6 @@
       </div>
 
       <div class="blog-grid">
-        <!-- Blog 1 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
           <div class="blog-content">
@@ -102,7 +110,6 @@
             <a href="blog-marrakech-top10.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 2 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
           <div class="blog-content">
@@ -113,7 +120,6 @@
             <a href="blog-sahara-guide.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 3 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
           <div class="blog-content">
@@ -124,7 +130,6 @@
             <a href="blog-chefchaouen.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 4 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sahara dunes comparison" loading="lazy">
           <div class="blog-content">
@@ -135,7 +140,6 @@
             <a href="blog-sahara-erg-chebbi.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 5 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving in Morocco" loading="lazy">
           <div class="blog-content">
@@ -146,7 +150,6 @@
             <a href="blog-driving-safety.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 6 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop" alt="Essaouira" loading="lazy">
           <div class="blog-content">
@@ -157,7 +160,6 @@
             <a href="blog-essaouira.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 7 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="Packing for Sahara" loading="lazy">
           <div class="blog-content">
@@ -168,7 +170,6 @@
             <a href="blog-sahara-packing.html" class="read-more">Read Article →</a>
           </div>
         </article>
-        <!-- Blog 8 -->
         <article class="blog-card">
           <img src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?w=600&auto=format&fit=crop" alt="Essaouira bus vs tour" loading="lazy">
           <div class="blog-content">
@@ -183,8 +184,8 @@
     </div>
   </main>
 
-  <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:32px 0;">
-    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+  <footer class="footer">
+    <div class="container footer-inner">
       <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
       <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
     </div>
@@ -194,7 +195,6 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    // WhatsApp click tracking (if GA loaded)
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
