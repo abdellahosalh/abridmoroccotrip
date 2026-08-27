@@ -3,179 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Ultimate Guide to Essaouira (2026) | AbridMoroccoTrip</title>
-  <meta name="description" content="Explore Essaouira, Morocco's enchanting coastal gem. History, seafood, and the best surfing spots in our local guide." />
-  <meta name="keywords" content="Essaouira guide, things to do in Essaouira, Morocco coast, Essaouira surfing, Essaouira medina, Essaouira ramparts, AbridMoroccoTrip" />
+  <title>The Ultimate Guide to Essaouira — Morocco's Windy City | AbridMoroccoTrip</title>
   <link rel="canonical" href="https://www.abridmorocco.com/blog-essaouira.html" />
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Facebook -->
+  <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
+  <meta name="description" content="Explore Essaouira, Morocco's enchanting coastal gem. History, seafood, and the best surfing spots in our local guide." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="The Ultimate Guide to Essaouira (2026) | AbridMoroccoTrip" />
-  <meta property="og:description" content="Discover the magic of Morocco's windy city. From the historic port to the blue-and-white medina." />
+  <meta property="og:title" content="The Ultimate Guide to Essaouira — Morocco's Windy City" />
+  <meta property="og:description" content="Explore Essaouira, Morocco's enchanting coastal gem. History, seafood, and the best surfing spots in our local guide." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200&auto=format&fit=crop" />
   <meta property="og:url" content="https://www.abridmorocco.com/blog-essaouira.html" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="The Ultimate Guide to Essaouira | AbridMoroccoTrip" />
-  <meta name="twitter:description" content="The coastal gem of Morocco you shouldn't miss." />
-  <meta name="twitter:image" content="https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200&auto=format&fit=crop" />
-
+  <meta name="twitter:title" content="The Ultimate Guide to Essaouira — Morocco's Windy City" />
+  <meta name="twitter:description" content="Explore Essaouira, Morocco's enchanting coastal gem." />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "The Ultimate Guide to Essaouira (2026)",
-    "image": "https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200&auto=format&fit=crop",
-    "author": {
-      "@type": "Person",
-      "name": "Abdellah"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "AbridMoroccoTrip",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg"
-      }
-    },
+    "headline": "The Ultimate Guide to Essaouira — Morocco's Windy City",
+    "image": "https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200",
+    "author": { "@type": "Person", "name": "Abdellah" },
+    "publisher": { "@type": "Organization", "name": "AbridMoroccoTrip", "logo": { "@type": "ImageObject", "url": "https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" } },
     "datePublished": "2026-03-24"
   }
   </script>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── RESET & VARIABLES ── */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root {
+      --terracotta: #c94f2c;
+      --terracotta-dark: #a63d1f;
+      --gold: #f4b942;
+      --gold-light: #fce8c8;
+      --cream: #fef9f0;
+      --brown: #3d2a1e;
+      --brown-light: #5a4a3a;
+      --muted: #8a7a6a;
+      --bg: #fcf8f2;
+      --shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.10);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --transition: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      --font: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--brown);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 20px;
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 860px; margin: 0 auto; padding: 40px 0; }
+
+    /* ── HEADER (minimal) ── */
+    .blog-header {
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(12px);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(0,0,0,.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .blog-header .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .blog-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .blog-header .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .blog-header .brand strong {
+      font-size: 1rem;
+      color: var(--brown);
+    }
+    .blog-header .brand span {
+      font-size: .7rem;
+      color: var(--muted);
+      display: block;
+      margin-top: -2px;
+    }
+    .blog-header .nav-links {
+      display: flex;
+      gap: 20px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+    .blog-header .nav-links a {
+      color: var(--brown-light);
+      transition: color .3s;
+    }
+    .blog-header .nav-links a:hover {
+      color: var(--terracotta);
+    }
+    @media (max-width: 640px) {
+      .blog-header .nav-links { display: none; }
+    }
+
+    /* ── BLOG POST STYLES ── */
+    .blog-post .featured-image {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      margin: 20px 0 30px;
+      box-shadow: var(--shadow);
+    }
+    .blog-post .meta {
+      color: var(--muted);
+      font-size: .9rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .blog-post .meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .blog-post h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      color: var(--brown);
+      margin: 0 0 6px;
+      line-height: 1.1;
+    }
+    .blog-post h2 {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      color: var(--brown);
+      margin-top: 48px;
+      margin-bottom: 16px;
+      border-left: 5px solid var(--terracotta);
+      padding-left: 16px;
+    }
+    .blog-post h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: var(--terracotta);
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+    .blog-post p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--brown-light);
+      margin-bottom: 16px;
+    }
+    .blog-post ul, .blog-post ol {
+      margin: 16px 0 24px 24px;
+      color: var(--brown-light);
+      line-height: 1.8;
+    }
+    .blog-post ul li, .blog-post ol li {
+      margin-bottom: 6px;
+    }
+    .blog-post .cta-box {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      padding: 28px 24px;
+      text-align: center;
+      margin: 40px 0;
+      border: 2px solid var(--gold);
+    }
+    .blog-post .cta-box h3 {
+      color: var(--brown);
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    .blog-post .cta-box .btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      padding: 12px 32px;
+      border-radius: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: 12px;
+      transition: background .3s;
+    }
+    .blog-post .cta-box .btn:hover {
+      background: var(--terracotta-dark);
+    }
+    .blog-post .cta-box .btn-gold {
+      background: var(--gold);
+      color: var(--brown);
+    }
+    .blog-post .cta-box .btn-gold:hover {
+      background: #e8a830;
+    }
+    .blog-post .back-link {
+      display: inline-block;
+      margin-top: 40px;
+      color: var(--terracotta);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .blog-post .back-link:hover {
+      text-decoration: underline;
+    }
+    .blog-post .divider {
+      border: 0;
+      border-top: 2px solid rgba(61,42,30,.08);
+      margin: 48px 0;
+    }
+    .blog-post .photo-credit {
+      font-size: .8rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: -10px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .blog-post .featured-image { height: 220px; }
+      .blog-post h1 { font-size: 1.8rem; }
+      .blog-post h2 { font-size: 1.3rem; }
+      .blog-post .cta-box { padding: 20px 16px; }
+      .container { padding: 20px 0; }
+    }
+
+    /* ── FOOTER ── */
+    .blog-footer {
+      background: var(--brown);
+      color: rgba(255,255,255,.7);
+      padding: 24px 0;
+      text-align: center;
+      font-size: .85rem;
+      margin-top: 40px;
+    }
+    .blog-footer a {
+      color: rgba(255,255,255,.7);
+    }
+    .blog-footer a:hover {
+      color: #fff;
+    }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      box-shadow: 0 8px 28px rgba(37,211,102,.4);
+      z-index: 50;
+      transition: all .3s;
+      text-decoration: none;
+    }
+    .wa-float:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-  <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
 
-  <header class="site-header">
-    <div class="container nav">
+  <!-- ─── HEADER ─── -->
+  <header class="blog-header">
+    <div class="inner">
       <a href="index.html" class="brand">
-        <div class="brand-logo">
-          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
-        </div>
-        <div class="brand-text">
+        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+        <div>
           <strong>AbridMoroccoTrip</strong>
           <span>Premium Morocco Tours</span>
         </div>
       </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#tours">Tours</a></li>
-        <li><a href="blog.html" class="active">Blog</a></li>
-        <li><a href="index.html#contact">Booking</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
-        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
-        <button class="menu-toggle" id="menuToggle">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="container mobile-menu" id="mobileMenu">
-      <div class="mobile-panel">
+      <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="index.html#tours">Tours</a>
         <a href="blog.html">Blog</a>
+        <a href="index.html#tours">Tours</a>
         <a href="index.html#contact">Contact</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <article class="container">
-      <div class="blog-intro reveal">
-        <span class="eyebrow">Coastal Escape Guide</span>
-        <h1>The Ultimate Guide to Essaouira: Morocco's Windy City</h1>
-        <div class="blog-meta">By Abdellah | Local Tour Expert | March 24, 2026</div>
-        <img src="https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200&auto=format&fit=crop" alt="Essaouira Blue Doors" class="blog-featured-image">
-      </div>
+  <!-- ─── BLOG POST ─── -->
+  <main class="container blog-post">
 
-      <div class="blog-content reveal">
-        <p class="drop-cap">Few places capture the soul as effortlessly as Essaouira. This white-and-blue coastal town, formerly known as Mogador, is a breath of fresh Atlantic air—literally. Known for its steady trade winds and laid-back atmosphere, it's the perfect antidote to the high energy of Marrakech.</p>
+    <a href="blog.html" class="back-link">← Back to Blog</a>
 
-        <h2>1. Walk the Historic Ramparts (Skala de la Ville)</h2>
-        <p>Built in the 18th century to protect the city from sea attacks, these ramparts offer stunning views of the Atlantic. You'll recognize them as a filming location for 'Game of Thrones'. It's the best spot for a sunset walk while watching the seagulls dance in the wind.</p>
+    <h1>The Ultimate Guide to Essaouira: Morocco's Windy City</h1>
 
-        <h2>2. Visit the Port and the Blue Boats</h2>
-        <p>The Essaouira fishing port is famous for its vibrant blue wooden boats. Watch local fishermen bring in the catch of the day, mend their nets, and sell fresh sardines. The atmosphere here is authentic, raw, and incredibly photogenic.</p>
-        
-        <img src="https://images.unsplash.com/photo-1541410965313-2d26fdf24388?w=1200&auto=format&fit=crop" alt="The famous blue boats of Essaouira">
+    <div class="meta">
+      <span>✍️ By Abdellah</span>
+      <span>📅 March 24, 2026</span>
+      <span>📍 Essaouira Blue Doors</span>
+    </div>
 
-        <h2>3. Explore the Labyrinthine Medina</h2>
-        <p>Unlike Marrakech, Essaouira's medina is easy to navigate because of its grid-like structure. It's filled with workshops where craftsmen carve beautiful objects from Thuya wood. Don't forget to look for the many art galleries that line the white-washed streets.</p>
+    <img class="featured-image" src="https://images.unsplash.com/photo-1629732002167-17257262a632?w=1200&auto=format&fit=crop" alt="Essaouira blue doors" loading="lazy">
 
-        <h2>4. Feast on Fresh Seafood</h2>
-        <p>Head to the fish stalls near the port. You pick your fish or lobster directly from the ice, and they grill it for you on the spot. Served with simple bread and salad, it's one of the most memorable meals you'll have in Morocco.</p>
+    <p>Few places capture the soul as effortlessly as Essaouira. This white-and-blue coastal town, formerly known as Mogador, is a breath of fresh Atlantic air—literally. Known for its steady trade winds and laid-back atmosphere, it's the perfect antidote to the high energy of Marrakech.</p>
 
-        <div class="cta-box">
-          <h3 style="margin-top: 0; font-family: 'Playfair Display', serif; font-size: 2rem;">Planning your dream trip?</h3>
-          <p>Get my comprehensive 7-day Morocco itinerary. It includes my secret spots in Essaouira, the best riads to stay in, and exactly how much to pay for excursions!</p>
-          <a href="landing_page.html" class="btn btn-primary">Download the Guide for $8.99</a>
-        </div>
+    <h2>1. Walk the Historic Ramparts (Skala de la Ville)</h2>
+    <p>Built in the 18th century to protect the city from sea attacks, these ramparts offer stunning views of the Atlantic. You'll recognize them as a filming location for 'Game of Thrones'. It's the best spot for a sunset walk while watching the seagulls dance in the wind.</p>
 
-        <h2>5. Try Kitesurfing or Windsurfing</h2>
-        <p>Essaouira is a world-class destination for wind sports. Whether you're a pro or a beginner, the beaches offer plenty of schools where you can rent gear or take a lesson. The "Alize" wind makes it a surfer's paradise nearly all year round.</p>
+    <h2>2. Visit the Port and the Blue Boats</h2>
+    <p>The Essaouira fishing port is famous for its vibrant blue wooden boats. Watch local fishermen bring in the catch of the day, mend their nets, and sell fresh sardines. The atmosphere here is authentic, raw, and incredibly photogenic.</p>
 
-        <div class="cta-box" style="background: var(--bg); border-style: dashed;">
-          <h3 style="margin-top: 0; font-family: 'Playfair Display', serif;">Ready to book your Morocco Adventure?</h3>
-          <p>Let <strong>AbridMoroccoTrip</strong> handle the logistics. From private transfers to local seaside guides, we ensure your trip to Essaouira is seamless and stress-free.</p>
-          <a href="index.html#tours" class="btn btn-secondary">Explore Our Coastal Tours</a>
-        </div>
+    <img src="https://images.unsplash.com/photo-1541410965313-2d26fdf24388?w=800&auto=format&fit=crop" alt="Essaouira blue boats" loading="lazy" style="width:100%; border-radius:12px; margin:20px 0;">
+    <p class="photo-credit">📍 The famous blue boats of Essaouira</p>
 
-      </div>
-    </article>
+    <h2>3. Explore the Labyrinthine Medina</h2>
+    <p>Unlike Marrakech, Essaouira's medina is easy to navigate because of its grid-like structure. It's filled with workshops where craftsmen carve beautiful objects from Thuya wood. Don't forget to look for the many art galleries that line the white-washed streets.</p>
+
+    <h2>4. Feast on Fresh Seafood</h2>
+    <p>Head to the fish stalls near the port. You pick your fish or lobster directly from the ice, and they grill it for you on the spot. Served with simple bread and salad, it's one of the most memorable meals you'll have in Morocco.</p>
+
+    <hr class="divider">
+
+    <!-- CTA 1: E-Book -->
+    <div class="cta-box">
+      <h3>📖 Planning your dream trip?</h3>
+      <p>Get my comprehensive <strong>7-day Morocco itinerary</strong>. It includes my secret spots in Essaouira, the best riads to stay in, and exactly how much to pay for excursions!</p>
+      <a href="landing_page.html" class="btn btn-gold">Download the Guide — $8.99</a>
+    </div>
+
+    <!-- CTA 2: Tour -->
+    <div class="cta-box" style="background:#fff; border-color:var(--terracotta);">
+      <h3>🌊 Ready to experience Essaouira?</h3>
+      <p>Book our <strong>Essaouira Coastal Escape</strong> — guided day trip from Marrakech. Just $95/person.</p>
+      <a href="essaouira.html" class="btn">View Tour →</a>
+    </div>
+
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+
   </main>
 
-  <footer>
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
-      <div class="socials">
-        <a href="#">Instagram</a>
-        <a href="#">TikTok</a>
-        <a href="#">WhatsApp</a>
-      </div>
+  <!-- ─── FOOTER ─── -->
+  <footer class="blog-footer">
+    <div style="max-width:860px; margin:0 auto; padding:0 20px;">
+      © 2026 AbridMoroccoTrip. All rights reserved.<br>
+      📞 <a href="tel:+212762934488">+212 762 934 488</a> •
+      ✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a>
     </div>
   </footer>
 
+  <!-- ─── WHATSAPP FLOAT ─── -->
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
   <script>
-    // Mobile menu
-    const menuToggle = document.getElementById('menuToggle');
-    const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-    });
-
-    // Back to top
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) backToTop.classList.add('show');
-      else backToTop.classList.remove('show');
-    });
-    backToTop.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-
-    // Copyright year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Reveal animations
-    const reveals = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
+    // WhatsApp click tracking
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {'send_to': 'G-5B2HL7PH8P/WhatsAppClick'});
         }
       });
-    }, { threshold: 0.1 });
-    reveals.forEach(el => revealObserver.observe(el));
+    });
   </script>
+
 </body>
 </html>
