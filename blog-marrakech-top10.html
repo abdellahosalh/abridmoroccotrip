@@ -11,6 +11,7 @@
   <meta property="og:title" content="Top 10 Things to Do in Marrakech (2026) — Local's Guide" />
   <meta property="og:description" content="Discover Marrakech's best souks, palaces, and gardens. Written by a local travel expert — includes Bahia Palace, Majorelle Garden, and hidden rooftop cafés." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.abridmorocco.com/blog-marrakech-top10.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Top 10 Things to Do in Marrakech (2026) — Local's Guide" />
   <meta name="twitter:description" content="Discover Marrakech's best souks, palaces, and gardens. Written by a local travel expert." />
@@ -25,87 +26,140 @@
     "datePublished": "2026-03-20"
   }
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* (minimal styles, same as blog index) */
-    body { font-family: 'Inter', sans-serif; background: #fcf8f2; color: #3d2a1e; line-height: 1.7; max-width:800px; margin:0 auto; padding:40px 20px; }
-    h1 { font-family: 'Playfair Display', serif; color: #c94f2c; }
-    .date { color: #8a7a6a; margin-bottom:20px; }
-    img { width:100%; border-radius:12px; margin:20px 0; }
-    h2 { margin-top:40px; color: #3d2a1e; border-left:5px solid #c94f2c; padding-left:15px; }
-    .cta-box { background: #fce8c8; padding:20px; border-radius:12px; margin:30px 0; text-align:center; }
-    .btn { display:inline-block; background:#c94f2c; color:#fff; padding:12px 28px; border-radius:60px; font-weight:700; text-decoration:none; }
-    .btn:hover { background:#a63d1f; }
-    .back { display:inline-block; margin-top:30px; color:#c94f2c; font-weight:600; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: var(--bg); color: var(--brown); line-height: 1.7; -webkit-font-smoothing: antialiased; padding: 0 20px; }
+    a { text-decoration: none; color: inherit; }
+    .container { max-width: 860px; margin: 0 auto; padding: 40px 0; }
+    .blog-header { background: rgba(255,255,255,.92); backdrop-filter: blur(12px); padding: 14px 0; border-bottom: 1px solid rgba(0,0,0,.05); position: sticky; top: 0; z-index: 100; }
+    .blog-header .inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 20px; }
+    .blog-header .brand { display: flex; align-items: center; gap: 12px; }
+    .blog-header .brand img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+    .blog-header .brand strong { font-size: 1rem; color: var(--brown); }
+    .blog-header .brand span { font-size: .7rem; color: var(--muted); display: block; margin-top: -2px; }
+    .blog-header .nav-links { display: flex; gap: 20px; font-size: .85rem; font-weight: 500; }
+    .blog-header .nav-links a { color: var(--brown-light); transition: color .3s; }
+    .blog-header .nav-links a:hover { color: var(--terracotta); }
+    @media (max-width: 640px) { .blog-header .nav-links { display: none; } }
+    .blog-post .featured-image { width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius); margin: 20px 0 30px; box-shadow: var(--shadow); }
+    .blog-post .meta { color: var(--muted); font-size: .9rem; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-bottom: 20px; }
+    .blog-post .meta span { display: inline-flex; align-items: center; gap: 4px; }
+    .blog-post h1 { font-family: var(--font-serif); font-size: clamp(2rem,4vw,2.8rem); color: var(--brown); margin: 0 0 6px; line-height: 1.1; }
+    .blog-post h2 { font-family: var(--font-serif); font-size: 1.6rem; color: var(--brown); margin-top: 48px; margin-bottom: 16px; border-left: 5px solid var(--terracotta); padding-left: 16px; }
+    .blog-post h3 { font-family: var(--font-serif); font-size: 1.2rem; color: var(--terracotta); margin-top: 32px; margin-bottom: 10px; }
+    .blog-post p { font-size: 1.05rem; line-height: 1.8; color: var(--brown-light); margin-bottom: 16px; }
+    .blog-post ul, .blog-post ol { margin: 16px 0 24px 24px; color: var(--brown-light); line-height: 1.8; }
+    .blog-post ul li, .blog-post ol li { margin-bottom: 6px; }
+    .blog-post .cta-box { background: var(--gold-light); border-radius: var(--radius-sm); padding: 28px 24px; text-align: center; margin: 40px 0; border: 2px solid var(--gold); }
+    .blog-post .cta-box h3 { color: var(--brown); margin-top: 0; font-size: 1.3rem; }
+    .blog-post .cta-box .btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 12px 32px; border-radius: 60px; font-weight: 700; text-decoration: none; margin-top: 12px; transition: background .3s; }
+    .blog-post .cta-box .btn:hover { background: var(--terracotta-dark); }
+    .blog-post .cta-box .btn-gold { background: var(--gold); color: var(--brown); }
+    .blog-post .cta-box .btn-gold:hover { background: #e8a830; }
+    .blog-post .back-link { display: inline-block; margin-top: 40px; color: var(--terracotta); font-weight: 600; text-decoration: none; }
+    .blog-post .back-link:hover { text-decoration: underline; }
+    .blog-post .divider { border: 0; border-top: 2px solid rgba(61,42,30,.08); margin: 48px 0; }
+    .blog-post .photo-credit { font-size: .8rem; color: var(--muted); text-align: center; margin-top: -10px; margin-bottom: 20px; }
+    @media (max-width: 640px) { .blog-post .featured-image { height: 220px; } .blog-post h1 { font-size: 1.8rem; } .blog-post h2 { font-size: 1.3rem; } .blog-post .cta-box { padding: 20px 16px; } .container { padding: 20px 0; } }
+    .blog-footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; font-size: .85rem; margin-top: 40px; }
+    .blog-footer a { color: rgba(255,255,255,.7); }
+    .blog-footer a:hover { color: #fff; }
+    .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: all .3s; text-decoration: none; }
+    .wa-float:hover { transform: scale(1.1); }
   </style>
 </head>
 <body>
-  <a href="blog.html" style="color:#8a7a6a; font-weight:500;">← Back to Blog</a>
+  <header class="blog-header">
+    <div class="inner">
+      <a href="index.html" class="brand">
+        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+        <div><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="index.html#tours">Tours</a><a href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
 
-  <h1>Top 10 Things to Do in Marrakech (2026) — Local's Guide</h1>
-  <div class="date">By Abdellah | March 20, 2026</div>
+  <main class="container blog-post">
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+    <h1>Top 10 Things to Do in Marrakech (2026) — Local's Guide</h1>
+    <div class="meta">
+      <span>✍️ By Abdellah</span>
+      <span>📅 March 20, 2026</span>
+      <span>📍 Marrakech, Red City</span>
+    </div>
+    <img class="featured-image" src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
 
-  <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=800&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+    <p>Marrakech — the Red City — is an intoxicating blend of colors, smells, and sounds. Whether you're getting lost in the labyrinthine souks or seeking peace in a riad courtyard, Marrakech engages all senses. Here are the top 10 absolute must-do experiences — straight from a local!</p>
 
-  <p>Marrakech — the Red City — is an intoxicating blend of colors, smells, and sounds. Whether you're getting lost in the labyrinthine souks or seeking peace in a riad courtyard, Marrakech engages all senses. Here are the top 10 absolute must-do experiences — straight from a local!</p>
+    <h2>1. Get Lost in the Medina and Souks</h2>
+    <p>You cannot visit Marrakech without diving into the deep, winding alleyways of the Medina. Shop for intricate lanterns, vibrant spices, leather goods, and hand-woven rugs. <strong>Tip:</strong> Always negotiate respectfully! The first price is almost never the final price. A local guide makes the difference between an overwhelming experience and a magical one.</p>
 
-  <h2>1. Get Lost in the Medina and Souks</h2>
-  <p>You cannot visit Marrakech without diving into the deep, winding alleyways of the Medina. Shop for intricate lanterns, vibrant spices, leather goods, and hand-woven rugs. <strong>Tip:</strong> Always negotiate respectfully! The first price is almost never the final price. A local guide makes the difference between an overwhelming experience and a magical one.</p>
+    <h2>2. Experience Jemaa el-Fna at Night</h2>
+    <p>As the sun sets, this enormous square transforms into the ultimate street food theater. Storytellers, musicians, snake charmers, and rows of food stalls. Grab a bowl of harira soup or a glass of fresh orange juice for just 4 Dirhams.</p>
 
-  <h2>2. Experience Jemaa el-Fna at Night</h2>
-  <p>As the sun sets, this enormous square transforms into the ultimate street food theater. Storytellers, musicians, snake charmers, and rows of food stalls. Grab a bowl of harira soup or a glass of fresh orange juice for just 4 Dirhams.</p>
+    <div class="cta-box">
+      <h3>🗺️ Want a local guide to show you all of this?</h3>
+      <p>Our Marrakech Discovery Tour takes you through all the highlights with an expert local guide. Hotel pickup included. Just $55/person!</p>
+      <a href="marrakech.html" class="btn">Book the Marrakech Tour →</a>
+    </div>
 
-  <div class="cta-box">
-    <h3>🗺️ Want a local guide to show you all of this?</h3>
-    <p>Our Marrakech Discovery Tour takes you through all the highlights with an expert local guide. Hotel pickup included. Just $55/person!</p>
-    <a href="marrakech.html" class="btn">Book the Marrakech Tour →</a>
-  </div>
+    <h2>3. Relax in the Majorelle Garden</h2>
+    <p>Created by French painter Jacques Majorelle and later restored by Yves Saint Laurent, this botanical garden is famous for its striking cobalt blue structures and towering cacti. Get here at 8:30 AM to beat the crowds!</p>
 
-  <h2>3. Relax in the Majorelle Garden</h2>
-  <p>Created by French painter Jacques Majorelle and later restored by Yves Saint Laurent, this botanical garden is famous for its striking cobalt blue structures and towering cacti. Get here at 8:30 AM to beat the crowds!</p>
+    <h2>4. Marvel at Bahia Palace</h2>
+    <p>The "Palace of the Brilliant" lives up to its name. Featuring 150 rooms filled with carved cedar wood ceilings, colorful zellij tiles, and grand courtyards — a masterpiece of 19th-century Moroccan architecture.</p>
 
-  <h2>4. Marvel at Bahia Palace</h2>
-  <p>The "Palace of the Brilliant" lives up to its name. Featuring 150 rooms filled with carved cedar wood ceilings, colorful zellij tiles, and grand courtyards — a masterpiece of 19th-century Moroccan architecture.</p>
+    <h2>5. Watch the Sunset from a Rooftop Café</h2>
+    <p>Head to Café des Épices or Nomad in the heart of the Medina. Sipping sweet Moroccan mint tea while watching the sun dip behind the Koutoubia Mosque is purely magical.</p>
 
-  <h2>5. Watch the Sunset from a Rooftop Café</h2>
-  <p>Head to Café des Épices or Nomad in the heart of the Medina. Sipping sweet Moroccan mint tea while watching the sun dip behind the Koutoubia Mosque is purely magical. These spots also serve excellent food.</p>
+    <div class="cta-box">
+      <h3>Want the exact timeline &amp; budget for all of this?</h3>
+      <p>My complete 7-day Morocco itinerary PDF includes exact Google Maps pins, the best rooftop cafés, and how to avoid tourist traps.</p>
+      <a href="landing_page.html" class="btn btn-gold">Get the Full Guide for $8.99</a>
+    </div>
 
-  <div class="cta-box">
-    <h3>Want the exact timeline &amp; budget for all of this?</h3>
-    <p>My complete 7-day Morocco itinerary PDF includes exact Google Maps pins, the best rooftop cafés, and how to avoid tourist traps.</p>
-    <a href="landing_page.html" class="btn">Get the Full Guide for $8.99</a>
-  </div>
+    <h2>6. Experience a Traditional Hammam</h2>
+    <p>For ultimate relaxation, visit a traditional Moroccan bathhouse. Enjoy a steam session followed by a vigorous scrub with black soap and a kessa glove.</p>
 
-  <h2>6. Experience a Traditional Hammam</h2>
-  <p>For ultimate relaxation, visit a traditional Moroccan bathhouse. Enjoy a steam session followed by a vigorous scrub with black soap and a kessa glove. You will leave with the softest skin of your life and a deep sense of calm.</p>
+    <h2>7. Stay in a Traditional Riad</h2>
+    <p>Skip the modern hotels. A riad is a traditional Moroccan house built around an inner courtyard, often with a fountain or small pool. It offers an oasis of quiet right in the center of the chaotic city.</p>
 
-  <h2>7. Stay in a Traditional Riad</h2>
-  <p>Skip the modern hotels. A riad is a traditional Moroccan house built around an inner courtyard, often with a fountain or small pool. It offers an oasis of quiet right in the center of the chaotic city. Worth every dirham.</p>
+    <h2>8. Explore the Saadian Tombs</h2>
+    <p>Hidden for centuries and only rediscovered in 1917, the resting place of the Saadian dynasty is an absolute marvel of imported Italian marble and pure gold decoration.</p>
 
-  <h2>8. Explore the Saadian Tombs</h2>
-  <p>Hidden for centuries and only rediscovered in 1917, the resting place of the Saadian dynasty is an absolute marvel of imported Italian marble and pure gold decoration. One of the most underrated sites in Marrakech.</p>
+    <h2>9. Take a Cooking Class</h2>
+    <p>Learn to make your own tagine! Cooking classes usually start with a market tour to buy fresh ingredients before returning to the kitchen to slow-cook vegetables and meat in the iconic clay pot.</p>
 
-  <h2>9. Take a Cooking Class</h2>
-  <p>Learn to make your own tagine! Cooking classes usually start with a market tour to buy fresh ingredients before returning to the kitchen to slow-cook vegetables and meat in the iconic clay pot. A delicious memory to take home.</p>
+    <h2>10. Take a Hot Air Balloon Ride at Sunrise</h2>
+    <p>See the Red City and the towering Atlas Mountains from above. Drifting over ancient Berber villages as the sun rises is truly a once-in-a-lifetime bucket list experience.</p>
 
-  <h2>10. Take a Hot Air Balloon Ride at Sunrise</h2>
-  <p>See the Red City and the towering Atlas Mountains from above. Drifting over ancient Berber villages as the sun rises is truly a once-in-a-lifetime bucket list experience. Perfect for couples and honeymoons!</p>
+    <div class="cta-box" style="background:#fff; border-color:var(--terracotta);">
+      <h3>🎈 Ready to experience Marrakech from the sky?</h3>
+      <p>Book our Hot Air Balloon ride — sunrise flight, Berber breakfast, and flight certificate. From just $260/person.</p>
+      <a href="air-balloon.html" class="btn">Book the Balloon Ride →</a>
+    </div>
 
-  <div class="cta-box">
-    <h3>🎈 Ready to experience Marrakech from the sky?</h3>
-    <p>Book our Hot Air Balloon ride — sunrise flight, Berber breakfast, and flight certificate. From just $234/person.</p>
-    <a href="air-balloon.html" class="btn">Book the Balloon Ride →</a>
-  </div>
+    <a href="blog.html" class="back-link">← Back to Blog</a>
+  </main>
 
-  <div class="cta-box" style="background:#fff; border:2px solid #c94f2c;">
-    <h3>Ready to book your Morocco adventure?</h3>
-    <p>If you don't want to plan this yourself, my team at <strong>AbridMoroccoTrip</strong> will handle everything for you. From airport pickup to fluent guides, we've got you covered.</p>
-    <a href="index.html#tours" class="btn" style="background:var(--gold); color:var(--brown);">View Our Local Tours</a>
-  </div>
+  <footer class="blog-footer">
+    <div style="max-width:860px; margin:0 auto; padding:0 20px;">
+      © 2026 AbridMoroccoTrip. All rights reserved.<br>
+      📞 <a href="tel:+212762934488">+212 762 934 488</a> •
+      ✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a>
+    </div>
+  </footer>
 
-  <a href="blog.html" class="back">← Back to Blog</a>
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank">💬</a>
 
   <script>
-    // WhatsApp tracking
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
