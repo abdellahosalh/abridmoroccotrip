@@ -3,402 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Morocco Travel Blog | AbridMoroccoTrip</title>
+  <title>Morocco Travel Blog | Local Expert Guides & Tips | AbridMoroccoTrip</title>
   <link rel="canonical" href="https://www.abridmorocco.com/blog.html" />
+  <meta name="description" content="Read expert travel tips, insider guides, and detailed itineraries for Morocco. Written by local tour guide Abdellah." />
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <meta name="description" content="Read expert travel tips, itineraries, and guides for visiting Morocco. Discover the best of Marrakech, the Sahara, Chefchaouen, and more." />
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Morocco Travel Blog | AbridMoroccoTrip" />
-  <meta property="og:description" content="Expert travel tips and guides for Morocco — Marrakech, Sahara, Chefchaouen and more." />
+  <meta property="og:description" content="Expert travel tips, itineraries, and guides for visiting Morocco. Discover Marrakech, Sahara, Chefchaouen and more." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" />
-  <meta property="og:site_name" content="AbridMoroccoTrip" />
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-5B2HL7PH8P"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-5B2HL7PH8P');</script>
-
-  <!-- Fonts -->
+  <meta property="og:url" content="https://www.abridmorocco.com/blog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Morocco Travel Blog | AbridMoroccoTrip" />
+  <meta name="twitter:description" content="Expert travel tips and guides for Morocco — Marrakech, Sahara, Chefchaouen and more." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* Blog-specific enhancements */
-    .page-hero {
-      padding: 100px 0 64px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .page-hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 60% 50% at 50% 20%, rgba(244,185,66,.15) 0%, transparent 65%),
-        linear-gradient(180deg, #fff9f4 0%, var(--bg) 100%);
-      z-index: 0;
-    }
-    .page-hero > * { position: relative; z-index: 1; }
-    .page-hero h1 {
-      font-family: 'Syne', sans-serif;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      color: var(--brown);
-      margin-bottom: 16px;
-      letter-spacing: -.03em;
-    }
-    .page-hero p {
-      font-size: 1.15rem;
-      color: var(--muted);
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.75;
-    }
-
-    .blog-section { padding: 24px 0 80px; }
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 28px;
-    }
-    .blog-card {
-      border-radius: var(--r);
-      overflow: hidden;
-      background: rgba(255,255,255,.97);
-      border: 1px solid var(--line-2);
-      box-shadow: var(--shadow-sm);
-      transition: all var(--t-med) var(--ease-spring);
-      display: flex;
-      flex-direction: column;
-    }
-    .blog-card:hover {
-      transform: translateY(-10px);
-      box-shadow: var(--shadow-lg);
-      border-color: rgba(192,82,46,.18);
-    }
-    .blog-card a { display: flex; flex-direction: column; height: 100%; }
-    .blog-card img {
-      width: 100%; height: 225px;
-      object-fit: cover;
-      transition: transform .55s var(--ease-smooth);
-    }
-    .blog-card:hover img { transform: scale(1.07); }
-    .blog-content {
-      padding: 26px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .blog-category {
-      display: inline-block;
-      color: var(--terracotta);
-      font-weight: 800;
-      font-size: .75rem;
-      text-transform: uppercase;
-      letter-spacing: .1em;
-      margin-bottom: 10px;
-      background: rgba(192,82,46,.09);
-      padding: 4px 10px;
-      border-radius: var(--r-pill);
-    }
-    .blog-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.25rem;
-      line-height: 1.3;
-      color: var(--brown);
-    }
-    .blog-card p {
-      color: var(--muted);
-      font-size: .92rem;
-      margin-bottom: 20px;
-      line-height: 1.7;
-      flex-grow: 1;
-    }
-    .read-more {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--terracotta);
-      font-weight: 700;
-      font-size: .9rem;
-      margin-top: auto;
-      transition: gap var(--t-fast);
-    }
-    .blog-card:hover .read-more { gap: 10px; }
-
-    .ebook-banner {
-      background: linear-gradient(135deg, var(--terracotta), var(--terracotta-2));
-      color: white;
-      padding: 44px 40px;
-      border-radius: var(--r-lg);
-      text-align: center;
-      margin: 32px 0 48px;
-      position: relative;
-      overflow: hidden;
-      box-shadow: var(--shadow-color);
-    }
-    .ebook-banner::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.1);
-    }
-    .ebook-banner h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 12px;
-      color: #fff;
-    }
-    .ebook-banner p { margin-bottom: 22px; opacity: .9; font-size: 1.05rem; }
-    .ebook-btn {
-      background: #fff;
-      color: var(--terracotta);
-      padding: 14px 34px;
-      border-radius: var(--r-pill);
-      font-weight: 800;
-      font-size: 1rem;
-      display: inline-block;
-      transition: all var(--t-med) var(--ease-spring);
-      box-shadow: 0 8px 24px rgba(0,0,0,.15);
-    }
-    .ebook-btn:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.2); }
-
-    @media (max-width: 640px) {
-      .blog-grid { grid-template-columns: 1fr; }
-      .page-hero { padding: 72px 0 40px; }
-    }
+    /* (same as index styles, plus blog-specific) */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,0.06); --shadow-hover: 0 16px 48px rgba(0,0,0,0.10); --radius: 20px; --radius-sm: 12px; --transition: 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275); --font: 'Inter', sans-serif; --font-serif: 'Playfair Display', serif; }
+    body { font-family: var(--font); background: var(--bg); color: var(--brown); line-height: 1.6; }
+    .container { max-width:1200px; margin:0 auto; padding:0 24px; }
+    .btn { display:inline-flex; align-items:center; gap:10px; padding:14px 32px; border-radius:60px; font-weight:700; font-size:.95rem; border:none; cursor:pointer; transition:all .35s cubic-bezier(.175,.885,.32,1.275); }
+    .btn-primary { background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark)); color:#fff; box-shadow:0 8px 28px rgba(201,79,44,.35); }
+    .btn-primary:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 14px 40px rgba(201,79,44,.45); }
+    .btn-secondary { background:rgba(255,255,255,.92); color:var(--brown); border:2px solid rgba(61,42,30,.12); backdrop-filter:blur(10px); }
+    .btn-secondary:hover { transform:translateY(-3px); border-color:var(--terracotta); box-shadow:0 8px 28px rgba(0,0,0,.08); background:#fff; }
+    /* Header, footer, etc. same as index */
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; margin:40px 0; }
+    .blog-card { background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:all .35s; }
+    .blog-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); }
+    .blog-card img { width:100%; height:200px; object-fit:cover; }
+    .blog-content { padding:20px; }
+    .blog-content .category { display:inline-block; background:var(--gold-light); color:var(--terracotta); font-weight:700; font-size:.75rem; padding:4px 12px; border-radius:60px; text-transform:uppercase; letter-spacing:.5px; margin-bottom:8px; }
+    .blog-content h3 { font-family:var(--font-serif); font-size:1.2rem; margin-bottom:6px; }
+    .blog-content .date { color:var(--muted); font-size:.85rem; margin-bottom:10px; }
+    .blog-content p { color:var(--brown-light); font-size:.95rem; line-height:1.7; margin-bottom:16px; }
+    .blog-content .read-more { color:var(--terracotta); font-weight:700; }
+    .blog-content .read-more:hover { text-decoration:underline; }
+    .section-head { text-align:center; max-width:700px; margin:0 auto 48px; }
+    .section-head h2 { font-family:var(--font-serif); font-size:clamp(2rem,3.5vw,2.8rem); margin-bottom:12px; }
+    .section-head p { color:var(--muted); font-size:1.05rem; }
+    .eyebrow { display:inline-block; background:var(--gold-light); color:var(--terracotta); font-weight:700; font-size:.8rem; padding:6px 18px; border-radius:60px; margin-bottom:12px; text-transform:uppercase; letter-spacing:.5px; }
+    .wa-float { position:fixed; bottom:24px; right:24px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 8px 28px rgba(37,211,102,.4); z-index:50; transition:all .35s; }
+    .wa-float:hover { transform:scale(1.1); }
+    /* reuse header and footer styles */
   </style>
 </head>
 <body>
-
-  <!-- Scroll Progress -->
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <!-- Promo Banner -->
-  <div class="promo-banner" id="promoBanner">
-    🌟 SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!
-    <button onclick="document.getElementById('promoBanner').style.display='none'"
-      style="position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:rgba(255,255,255,.7);font-size:1.2rem;cursor:pointer;padding:4px 8px;">×</button>
-  </div>
-
-  <!-- Header -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav">
-      <a href="index.html" class="brand">
-        <div class="brand-logo">
-          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" width="46" height="46">
-        </div>
-        <div class="brand-text">
-          <strong>AbridMoroccoTrip</strong>
-          <span>Premium Morocco Tours</span>
-        </div>
+  <header class="site-header" style="background:rgba(255,255,255,.92); backdrop-filter:blur(12px); position:sticky; top:0; z-index:100; border-bottom:1px solid rgba(0,0,0,.05); padding:10px 0;">
+    <div class="container nav" style="display:flex; align-items:center; justify-content:space-between; gap:20px;">
+      <a href="index.html" class="brand" style="display:flex; align-items:center; gap:12px;">
+        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:46px;height:46px;border-radius:50%;object-fit:cover;">
+        <div><strong style="font-size:1.1rem;">AbridMoroccoTrip</strong><span style="font-size:.75rem;color:var(--muted);display:block;margin-top:-2px;">Premium Morocco Tours</span></div>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" style="display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500;">
         <li><a href="index.html">Home</a></li>
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#tours">Tours</a></li>
         <li><a href="index.html#packages">Packages</a></li>
+        <li><a href="blog.html" class="active" style="color:var(--terracotta);">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
-        <li><a href="index.html#comments">Reviews</a></li>
-        <li><a href="index.html#contact">Booking</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
-      <div class="nav-actions">
-        <a href="landing_page.html" style="color:var(--terracotta);background:rgba(192,82,46,.09);padding:8px 16px;border-radius:var(--r-pill);font-weight:700;font-size:.85rem;border:1px solid rgba(192,82,46,.18);">E-Book 🔥</a>
-        <a class="btn btn-primary" href="index.html#contact" style="padding:11px 22px;font-size:.88rem;">Book Now</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="container mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="mobile-panel">
-        <a href="index.html">🏠 Home</a>
-        <a href="index.html#about">👤 About Us</a>
-        <a href="index.html#tours">🗺️ Tours</a>
-        <a href="index.html#packages">📦 Packages</a>
-        <a href="index.html#gallery">🖼️ Gallery</a>
-        <a href="index.html#comments">⭐ Reviews</a>
-        <a href="index.html#contact">📋 Booking</a>
-        <a href="landing_page.html" style="color:var(--terracotta);font-weight:800;">📚 E-Book 🔥</a>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <a class="mini-contact" href="tel:+212762934488" style="font-size:.85rem; font-weight:600; color:var(--terracotta);">📞 +212 762 934 488</a>
+        <a class="btn btn-primary btn-sm" href="index.html#contact" style="padding:11px 22px;font-size:.88rem;">Book Now</a>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <div class="container">
-        <span class="eyebrow" style="margin-bottom:20px;">📰 Travel Guides &amp; Tips</span>
-        <h1>Morocco Travel Blog</h1>
+  <main style="padding:60px 0 40px;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">📰 Travel Guides &amp; Tips</span>
+        <h2>Morocco Travel Blog</h2>
         <p>Discover insider tips, local secrets, and complete guides to plan your perfect Moroccan adventure — written by local expert Abdellah.</p>
       </div>
-    </section>
 
-    <div class="container">
       <!-- E-Book Banner -->
-      <div class="ebook-banner reveal">
-        <h2>📖 The Ultimate Morocco 7-Day Itinerary</h2>
-        <p>Written by a local expert. Google Maps pins, real budget, scam warnings, and more.</p>
-        <a href="landing_page.html" class="ebook-btn">Get the Guide for $8.99 →</a>
+      <div style="background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark)); color:#fff; padding:40px; border-radius:20px; text-align:center; margin-bottom:48px;">
+        <h3 style="font-family:var(--font-serif); font-size:1.8rem; margin-bottom:10px;">📖 The Ultimate Morocco 7-Day Itinerary</h3>
+        <p style="margin-bottom:16px; opacity:.9;">Written by a local expert. Google Maps pins, real budget, scam warnings, and more.</p>
+        <a href="landing_page.html" class="btn" style="background:#fff; color:var(--terracotta); padding:12px 30px; border-radius:60px; font-weight:700;">Get the Guide for $8.99 →</a>
       </div>
 
-      <!-- Blog Cards -->
-      <section class="blog-section">
-        <div class="blog-grid">
-
-          <article class="blog-card reveal">
-            <a href="blog-marrakech-top10.html">
-              <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks things to do" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">City Guides</span>
-                <h3>Top 10 Things to Do in Marrakech</h3>
-                <p>Discover the best unique things to do in Marrakech! From the crowded Jemaa el-Fna to hidden gardens, our local guide reveals the red city's top secrets.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-sahara-guide.html">
-              <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert Merzouga complete guide" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Desert Travel</span>
-                <h3>The Complete Guide to the Sahara Desert</h3>
-                <p>Planning a trip to the Sahara? Learn everything about Merzouga, camel treks, luxury desert camps, weather, and what to pack in this expert guide.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-sahara-erg-chebbi.html">
-              <img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Erg Chebbi vs Erg Chigaga Sahara dunes comparison" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Desert Travel</span>
-                <h3>Erg Chebbi vs Erg Chigaga: Which Sahara Dunes?</h3>
-                <p>Compare the two famous dune fields of the Sahara – Merzouga vs Zagora. We help you decide which desert experience fits your travel style best.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-chefchaouen.html">
-              <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen blue city pearl Morocco" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Hidden Gems</span>
-                <h3>Exploring Chefchaouen, the Blue Pearl</h3>
-                <p>A journey through the stunning blue-washed streets of the Rif Mountains. Find the best photo spots, local cafes, and tips for visiting this magical town.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-sahara-packing.html">
-              <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="What to pack for Sahara desert Morocco" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Travel Tips</span>
-                <h3>What to Pack for the Sahara Desert</h3>
-                <p>Don't know what to bring to the Sahara? Our complete packing list covers everything from clothing to electronics for the ultimate desert experience.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-essaouira.html">
-              <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop" alt="Essaouira coastal Atlantic town Morocco" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Coastal Escapes</span>
-                <h3>Essaouira: Morocco's Windy Atlantic Gem</h3>
-                <p>Explore the UNESCO-listed ramparts, fresh seafood stalls, and the vibrant artistic scene of Essaouira — the coolest (literally!) city in Morocco.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-driving-safety.html">
-              <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving safety Morocco road tips" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Travel Safety</span>
-                <h3>Driving in Morocco: Safety Tips &amp; What to Know</h3>
-                <p>Thinking of renting a car in Morocco? Read our essential guide about Moroccan road rules, mountain driving, and staying safe on the roads.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-          <article class="blog-card reveal">
-            <a href="blog-essaouira-bus-vs-tour.html">
-              <img src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?w=600&auto=format&fit=crop" alt="Essaouira bus or guided tour comparison" loading="lazy">
-              <div class="blog-content">
-                <span class="blog-category">Smart Travel</span>
-                <h3>Essaouira by Bus vs. Guided Tour: Which is Better?</h3>
-                <p>Should you take the public bus or book a guided tour to Essaouira? We break down the costs, convenience, and hidden benefits of each option.</p>
-                <span class="read-more">Read Article →</span>
-              </div>
-            </a>
-          </article>
-
-        </div>
-      </section>
+      <div class="blog-grid">
+        <!-- Blog 1 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+          <div class="blog-content">
+            <span class="category">City Guides</span>
+            <h3>Top 10 Things to Do in Marrakech (2026)</h3>
+            <div class="date">March 20, 2026</div>
+            <p>From the bustling Jemaa el-Fna to hidden gardens, our local guide reveals the red city's best-kept secrets.</p>
+            <a href="blog-marrakech-top10.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 2 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Desert Travel</span>
+            <h3>The Complete Guide to the Sahara Desert</h3>
+            <div class="date">March 20, 2026</div>
+            <p>Everything you need to know about Merzouga, camel treks, luxury desert camps, weather, and what to pack.</p>
+            <a href="blog-sahara-guide.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 3 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Hidden Gems</span>
+            <h3>Exploring Chefchaouen, the Blue Pearl</h3>
+            <div class="date">March 5, 2026</div>
+            <p>Discover the best photo spots, local cafes, and tips for visiting Morocco's most photogenic blue-washed town.</p>
+            <a href="blog-chefchaouen.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 4 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sahara dunes comparison" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Desert Travel</span>
+            <h3>Erg Chebbi vs Erg Chigaga: Which Sahara Dunes?</h3>
+            <div class="date">March 16, 2026</div>
+            <p>Compare the two famous dune fields and decide which Sahara experience fits your travel style best.</p>
+            <a href="blog-sahara-erg-chebbi.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 5 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving in Morocco" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Travel Safety</span>
+            <h3>Driving in Morocco: Safety Tips &amp; What to Know</h3>
+            <div class="date">May 24, 2026</div>
+            <p>Is it safe to drive in Morocco? Our expert guide on road rules, police checkpoints, and why hiring a driver might be better.</p>
+            <a href="blog-driving-safety.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 6 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop" alt="Essaouira" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Coastal Escapes</span>
+            <h3>Essaouira: Morocco's Windy Atlantic Gem</h3>
+            <div class="date">March 24, 2026</div>
+            <p>Explore the UNESCO-listed ramparts, fresh seafood stalls, and the vibrant artistic scene of Essaouira — the coolest city in Morocco.</p>
+            <a href="blog-essaouira.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 7 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="Packing for Sahara" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Travel Tips</span>
+            <h3>What to Pack for the Sahara Desert</h3>
+            <div class="date">May 24, 2026</div>
+            <p>Complete packing list for a desert camp in Merzouga – clothing, electronics, and essential gear from a local expert.</p>
+            <a href="blog-sahara-packing.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+        <!-- Blog 8 -->
+        <article class="blog-card">
+          <img src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?w=600&auto=format&fit=crop" alt="Essaouira bus vs tour" loading="lazy">
+          <div class="blog-content">
+            <span class="category">Smart Travel</span>
+            <h3>Essaouira by Bus vs. Guided Tour: Which is Better?</h3>
+            <div class="date">May 24, 2026</div>
+            <p>Should you take the public bus or book a guided tour to Essaouira? We break down the costs, convenience, and hidden benefits.</p>
+            <a href="blog-essaouira-bus-vs-tour.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+      </div>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong style="font-family:'Syne',sans-serif;color:var(--brown);">AbridMoroccoTrip</strong>
-        <div style="font-size:.82rem;margin-top:4px;">© <span id="year"></span> All rights reserved.</div>
-      </div>
-      <div style="font-size:.88rem;text-align:center;">
-        🇲🇦 Authentic Morocco Tours · Sustainable Travel · Local Expertise
-      </div>
-      <div style="font-size:.85rem;text-align:right;">
-        📞 <a href="tel:+212762934488" style="color:var(--muted);">+212 762 934 488</a><br>
-        ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:var(--muted);">abridmorocco@gmail.com</a>
-      </div>
+  <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:32px 0;">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+      <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
     </div>
   </footer>
 
-  <!-- WhatsApp Float -->
-  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank">💬</a>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll progress
-    const sp = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      sp.style.width = (window.pageYOffset / (document.documentElement.scrollHeight - window.innerHeight) * 100) + '%';
-      document.getElementById('siteHeader').classList.toggle('scrolled', window.pageYOffset > 60);
-    }, { passive: true });
-
-    // Mobile menu
-    const mt = document.getElementById('menuToggle'), mm = document.getElementById('mobileMenu');
-    if (mt && mm) {
-      mt.addEventListener('click', () => {
-        const o = mm.classList.toggle('open');
-        mt.setAttribute('aria-expanded', o ? 'true' : 'false');
-        mm.setAttribute('aria-hidden', o ? 'false' : 'true');
+    // WhatsApp click tracking (if GA loaded)
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {'send_to': 'G-5B2HL7PH8P/WhatsAppClick'});
+        }
       });
-      mm.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-        mm.classList.remove('open');
-        mt.setAttribute('aria-expanded', 'false');
-      }));
-    }
-
-    // Reveal
-    const obs = new IntersectionObserver(entries => entries.forEach(e => {
-      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-    }), { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    });
   </script>
 </body>
 </html>
