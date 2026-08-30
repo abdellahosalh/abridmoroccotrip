@@ -289,16 +289,30 @@ h1,h2,h3,h4,h5{
 }
 
 /* Brand */
-.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand{display:flex;align-items:center;gap:13px;min-width:0;text-decoration:none}
 .brand-logo{
-  width:46px;height:46px;
-  border-radius:var(--r-sm);
+  width:44px;height:44px;
+  min-width:44px;min-height:44px;
+  max-width:44px;max-height:44px;
+  border-radius:12px;
   overflow:hidden;
   flex-shrink:0;
   box-shadow:0 4px 14px rgba(192,82,46,.25);
   border:2px solid rgba(255,255,255,.6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-.brand-logo img{width:100%;height:100%}
+.brand-logo img, .brand img{
+  width:44px !important;
+  height:44px !important;
+  max-width:44px !important;
+  max-height:44px !important;
+  object-fit:cover;
+  border-radius:10px;
+  display:block;
+  flex-shrink:0;
+}
 .brand-text{line-height:1.15}
 .brand-text strong{
   display:block;
