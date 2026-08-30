@@ -219,8 +219,8 @@
       gap: 12px;
     }
     .brand img {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       object-fit: cover;
     }
@@ -1309,7 +1309,7 @@
         <li><a href="#tours">Tours</a></li>
         <li><a href="#packages">Packages</a></li>
         <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#blog">Blog</a></li>
+        <li><a href="blog.html">Blog</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
@@ -1330,7 +1330,7 @@
         <a href="#tours">Tours</a>
         <a href="#packages">Packages</a>
         <a href="#gallery">Gallery</a>
-        <a href="#blog">Blog</a>
+        <a href="blog.html">Blog</a>
         <a href="#contact">Contact</a>
         <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
       </div>
@@ -1609,7 +1609,7 @@
             </div>
           </article>
 
-          <!-- Blog Post 2: Sahara Guide -->
+          <!-- Blog Post 3: Sahara Guide -->
           <article class="blog-preview-card">
             <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
             <div class="blog-preview-content">
@@ -1621,7 +1621,7 @@
             </div>
           </article>
 
-          <!-- Blog Post 3: Chefchaouen Guide -->
+          <!-- Blog Post 4: Chefchaouen Guide -->
           <article class="blog-preview-card">
             <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
             <div class="blog-preview-content">
@@ -1633,7 +1633,7 @@
             </div>
           </article>
 
-          <!-- Blog Post 4: Erg Chebbi vs Erg Chigaga -->
+          <!-- Blog Post 5: Erg Chebbi vs Erg Chigaga -->
           <article class="blog-preview-card">
             <img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sahara dunes comparison" loading="lazy">
             <div class="blog-preview-content">
@@ -1676,13 +1676,13 @@
               <p style="margin:0;font-size:0.9rem;"><strong>📱 Quickest way:</strong> Message us on WhatsApp — reply in minutes.</p>
               <a href="https://wa.me/212762934488" target="_blank" class="btn btn-whatsapp" style="margin-top:10px;display:inline-block;">💬 Chat on WhatsApp</a>
             </div>
-            <form id="bookingForm">
+            <form id="bookingForm" action="https://formspree.io/f/maeyqwpw" method="POST">
               <div class="form-grid">
                 <div class="field"><label for="book-name">Full Name *</label><input id="book-name" type="text" placeholder="Your name" required></div>
                 <div class="field"><label for="book-email">Email *</label><input id="book-email" type="email" placeholder="you@example.com" required></div>
                 <div class="field"><label for="book-phone">Phone / WhatsApp *</label><input id="book-phone" type="text" placeholder="+212 000-000000" required></div>
                 <div class="field"><label for="book-tour">Tour *</label>
-                  <select id="book-tour">
+                  <select id="book-tour" name="tour">
                     <option value="Marrakech Discovery ($55)">Marrakech Discovery ($55)</option>
                     <option value="Atlas Mountains & Ourika ($125)">Atlas Mountains &amp; Ourika ($125)</option>
                     <option value="Essaouira Coastal Escape ($95)">Essaouira Coastal Escape ($95)</option>
@@ -1759,54 +1759,6 @@
       });
     });
 
-    // Booking form submit handler
-    const bForm = document.getElementById('bookingForm');
-    if (bForm) {
-      bForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('book-name').value.trim();
-        const email = document.getElementById('book-email').value.trim();
-        const phone = document.getElementById('book-phone').value.trim();
-        const tour = document.getElementById('book-tour').value;
-        const dates = document.getElementById('book-dates').value.trim();
-        const travelers = document.getElementById('book-travelers').value;
-        const notes = document.getElementById('book-notes').value.trim();
-
-        const messageText = `*New Booking Inquiry - AbridMoroccoTrip*\n` +
-                            `🗺️ *Tour:* ${tour}\n` +
-                            `👤 *Name:* ${name}\n` +
-                            `📧 *Email:* ${email}\n` +
-                            `📱 *Phone:* ${phone}\n` +
-                            `📅 *Travel Dates:* ${dates}\n` +
-                            `👥 *Travelers:* ${travelers}\n` +
-                            `📝 *Special Requests:* ${notes || 'None'}`;
-
-        const waUrl = `https://wa.me/212762934488?text=${encodeURIComponent(messageText)}`;
-
-        // Send direct email notification to abridmorocco@gmail.com
-        fetch('https://api.web3forms.com/submit', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify({
-            access_key: '568f5647-7590-48f1-8302-3c138f38ffb4',
-            email: 'abridmorocco@gmail.com',
-            from_name: name,
-            subject: `New Booking Inquiry: ${tour} - ${name}`,
-            tour: tour,
-            name: name,
-            user_email: email,
-            phone: phone,
-            travel_dates: dates,
-            travelers: travelers,
-            notes: notes
-          })
-        }).catch(() => {});
-
-        alert('Thank you, ' + name + '! Your inquiry has been sent to our team. Opening WhatsApp to connect with Abdellah directly.');
-        window.open(waUrl, '_blank');
-      });
-    }
-
     // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
@@ -1833,6 +1785,15 @@
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       document.getElementById('scrollProgress').style.width = (scrollTop / docHeight * 100) + '%';
       document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
+    });
+
+    // WhatsApp click tracking
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {'send_to': 'G-5B2HL7PH8P/WhatsAppClick'});
+        }
+      });
     });
   </script>
 
