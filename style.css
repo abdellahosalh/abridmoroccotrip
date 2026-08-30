@@ -1264,5 +1264,10 @@ footer::before{
 .align-center{align-items:center}
 .gap-sm{gap:8px}
 .gap-md{gap:16px}
-@ k e y f r a m e s   f a d e I n U p   {   f r o m   {   o p a c i t y :   0 ;   t r a n s f o r m :   t r a n s l a t e Y ( 2 0 p x ) ;   }   t o   {   o p a c i t y :   1 ;   t r a n s f o r m :   t r a n s l a t e Y ( 0 ) ;   }   }   . c a r d   {   a n i m a t i o n :   f a d e I n U p   0 . 8 s   v a r ( - - e a s e - s p r i n g )   b a c k w a r d s ;   }  
- 
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.card {
+  animation: fadeInUp 0.8s var(--ease-spring) backwards;
+}
