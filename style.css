@@ -1285,3 +1285,34 @@ footer::before{
 .card {
   animation: fadeInUp 0.8s var(--ease-spring) backwards;
 }
+/* ─── FIX: LOGO SIZE ON ALL PAGES ──────────────────────────── */
+.brand-logo img,
+.brand img,
+.blog-header .brand img,
+.site-header .brand img {
+  width: 44px !important;
+  height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  object-fit: cover !important;
+  border-radius: 10px !important;
+  flex-shrink: 0 !important;
+  display: block !important;
+}
+
+.brand-logo,
+.brand .brand-logo {
+  width: 44px !important;
+  height: 44px !important;
+  min-width: 44px !important;
+  min-height: 44px !important;
+  max-width: 44px !important;
+  max-height: 44px !important;
+  overflow: hidden !important;
+  flex-shrink: 0 !important;
+  border-radius: 10px !important;
+  border: 2px solid rgba(255,255,255,0.6);
+  box-shadow: 0 4px 14px rgba(192,82,46,0.25);
+}
