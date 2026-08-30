@@ -28,7 +28,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    /* ── RESET & VARIABLES ── */
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
     html { scroll-behavior: smooth; }
@@ -36,7 +35,6 @@
     a { text-decoration: none; color: inherit; }
     .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
 
-    /* ── HEADER ── */
     .site-header { background: rgba(255,255,255,.92); backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,.05); padding: 10px 0; }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
     .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
@@ -62,7 +60,6 @@
     .mobile-panel { display: flex; flex-direction: column; gap: 12px; background: #fff; border-radius: var(--radius-sm); padding: 20px; box-shadow: var(--shadow); }
     @media (max-width: 860px) { .nav-links { display: none; } .menu-toggle { display: flex; } .mini-contact { display: none; } }
 
-    /* ── TOUR DETAIL ── */
     .tour-detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
     .tour-detail-info { padding: 20px; }
     .tour-detail-info h1 { font-family: var(--font-serif); color: var(--terracotta); font-size: 2.2rem; }
@@ -77,33 +74,17 @@
     .day-badge { background:var(--terracotta); color:#fff; width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:.8rem; flex-shrink:0; }
     .day-text { font-size:.95rem; color:var(--brown-light); line-height:1.5; }
     .back-to-tours { display: inline-block; margin-top: 30px; color: var(--terracotta); font-weight: 600; }
-
-    /* ── BOOKING FORM ── */
-    .form-card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: var(--shadow); }
-    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-    .field { display: grid; gap: 6px; }
-    .field.full { grid-column: 1 / -1; }
-    .field label { font-weight: 700; font-size: .85rem; color: var(--brown-light); }
-    .field input, .field select, .field textarea { width: 100%; padding: 12px 14px; border: 1.5px solid rgba(44,26,18,.12); border-radius: var(--radius-sm); font-size: .95rem; background: #fcf9f5; transition: var(--transition); }
-    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--terracotta); box-shadow: 0 0 0 4px rgba(201,79,44,.08); }
-    .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
-    .urgency-bar { background: linear-gradient(135deg,#fff3e0,#ffe0b2); border: 1.5px solid #f0a94b; border-radius: 12px; padding: 12px 16px; text-align: center; margin-bottom: 18px; font-size: .9rem; color: #5d4037; }
-
-    /* ── WHATSAPP FLOAT ── */
     .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: all .3s; text-decoration: none; }
     .wa-float:hover { transform: scale(1.1); }
-
-    /* ── FOOTER ── */
     .blog-footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; font-size: .85rem; margin-top: 40px; }
     .blog-footer a { color: rgba(255,255,255,.7); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 800px) { .tour-detail-grid { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } .form-grid .full { grid-column: 1; } }
+    @media (max-width: 800px) { .tour-detail-grid { grid-template-columns: 1fr; } }
+    .google-form-btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 16px 36px; border-radius: 60px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all .3s ease; }
+    .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,79,44,.4); }
   </style>
 </head>
 <body>
 
-  <!-- ─── HEADER ─── -->
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand">
@@ -139,7 +120,6 @@
     </div>
   </header>
 
-  <!-- ─── TOUR DETAIL ─── -->
   <main>
     <div class="container tour-detail-grid" style="padding-top: 20px;">
       <div class="tour-detail-info">
@@ -187,86 +167,21 @@
         <a href="index.html#tours" class="back-to-tours">← Back to all tours</a>
       </div>
 
-      <!-- ─── BOOKING FORM ─── -->
-      <div class="form-card">
-        <h2>Request Your Free Quote</h2>
-        <div class="urgency-bar">✨ <strong>100% personalized</strong> — We respond within 24 hours with a detailed proposal!</div>
+      <div style="text-align:center; padding:30px; background:#fff; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.06);">
+        <h3 style="margin-bottom:16px;">📋 Request Your Free Quote</h3>
+        <p style="color:var(--muted); margin-bottom:20px;">Fill out our secure form — we'll respond within 24 hours with a detailed proposal.</p>
 
-        <div style="background:#e8f5e9; border:2px solid #2e7d32; border-radius:16px; padding:20px; text-align:center; margin-bottom:20px;">
-          <span style="font-size:2rem;">💰</span>
-          <h3 style="margin:10px 0 5px;color:#2e7d32;">No Hidden Fees</h3>
-          <p style="margin:0;">Your quote is fully transparent. You pay in cash directly to your guide. No surprises, no online payment required.</p>
-        </div>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrMgeNcgMVQTB60hm5bWD9ePW-Ep0aNEgQOFPC4iun5d4iSA/viewform?usp=publish-editor" target="_blank" class="google-form-btn">
+          📝 Request Free Quote
+        </a>
 
-        <form action="https://formspree.io/f/maeyqwpw" method="POST">
-          <input type="hidden" name="_subject" value="New Custom Tour Request - Private Morocco Trip">
-          <div class="form-grid">
-            <div class="field">
-              <label for="name">Full Name *</label>
-              <input id="name" name="name" type="text" placeholder="Your full name" required>
-            </div>
-            <div class="field">
-              <label for="email">Email *</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            </div>
-            <div class="field">
-              <label for="phone">Phone / WhatsApp *</label>
-              <input id="phone" name="phone" type="text" placeholder="+212 000-000000" required>
-            </div>
-            <div class="field">
-              <label for="dates">Travel Dates *</label>
-              <input id="dates" name="travel_dates" type="text" placeholder="e.g. April 10–17" required>
-            </div>
-            <div class="field">
-              <label for="people">Number of People *</label>
-              <input id="people" name="people" type="number" min="1" placeholder="e.g. 2" required>
-            </div>
-            <div class="field">
-              <label for="language">Preferred Language</label>
-              <select id="language" name="language">
-                <option value="">Select language</option>
-                <option>English</option>
-                <option>Spanish</option>
-                <option>French</option>
-                <option>Dutch</option>
-                <option>Russian</option>
-                <option>Japanese</option>
-              </select>
-            </div>
-            <div class="field full">
-              <label>Which destinations interest you?</label>
-              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:6px;">
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Marrakech"> Marrakech</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Sahara Desert"> Sahara Desert</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Fez"> Fez</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Chefchaouen"> Chefchaouen</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Atlas Mountains"> Atlas Mountains</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Essaouira"> Essaouira</label>
-                <label style="background:#fff8f1; padding:6px 12px; border-radius:20px; border:1px solid rgba(44,26,18,.08);"><input type="checkbox" name="dest" value="Casablanca"> Casablanca</label>
-              </div>
-            </div>
-            <div class="field full">
-              <label for="message">Tell us more about your ideal trip</label>
-              <textarea id="message" name="message" rows="4" placeholder="E.g. honeymoon for 2, love food and culture, prefer boutique riads, budget around $200/day per person..."></textarea>
-            </div>
-          </div>
-
-          <div class="form-actions">
-            <button class="btn" type="submit">Request Free Quote ✉️</button>
-            <a class="btn btn-whatsapp" href="https://wa.me/212762934488?text=I%20want%20to%20plan%20a%20custom%20private%20trip" target="_blank">💬 Chat on WhatsApp</a>
-          </div>
-        </form>
-
-        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; justify-content:center;">
-          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">✅ Free quote, no obligation</span>
-          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">⚡ Reply within 24 hours</span>
-          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">🌍 6 languages</span>
-        </div>
+        <p style="color:var(--muted); font-size:.85rem; margin-top:14px;">
+          💬 Or chat with us on <a href="https://wa.me/212762934488" style="color:var(--terracotta); font-weight:700;">WhatsApp</a>
+        </p>
       </div>
     </div>
   </main>
 
-  <!-- ─── FOOTER ─── -->
   <footer class="blog-footer">
     <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
       © 2026 AbridMoroccoTrip. All rights reserved.<br>
@@ -275,18 +190,14 @@
     </div>
   </footer>
 
-  <!-- ─── WHATSAPP FLOAT ─── -->
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
   <script>
-    // Mobile menu toggle
     const toggle = document.getElementById('menuToggle');
     const mobile = document.getElementById('mobileMenu');
     if (toggle && mobile) {
       toggle.addEventListener('click', () => { mobile.classList.toggle('open'); });
     }
-
-    // WhatsApp click tracking
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
