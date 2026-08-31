@@ -1,0 +1,12 @@
+{
+  "name": "abridmoroccotrip",
+  "version": "1.0.0",
+  "description": "Premium Morocco Tours",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'",
+    "dev": "python -m http.server 8000"
+  },
+  "dependencies": {
+    "@vercel/speed-insights": "^1.0.12"
+  }
+}
