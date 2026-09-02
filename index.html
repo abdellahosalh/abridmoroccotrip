@@ -361,71 +361,94 @@
   </main>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer>
-    <div class="container footer-inner">
-      <div><strong style="color:#fff;">AbridMoroccoTrip</strong><div style="font-size:0.8rem;">© <span id="year"></span> All rights reserved.</div></div>
-      <div style="font-size:0.85rem;">🇲🇦 Authentic Morocco Tours · Sustainable Travel</div>
-      <div style="font-size:0.85rem;text-align:right;">📞 <a href="tel:+212762934488">+212 762 934 488</a><br>✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a></div>
+  <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
+
+      <!-- Column 1: Brand -->
+      <div>
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:2px solid rgba(255,255,255,.1);">
+          <div>
+            <strong style="font-size:1.1rem; color:#fff; display:block;">AbridMoroccoTrip</strong>
+            <span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span>
+          </div>
+        </div>
+        <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">
+          Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.
+        </p>
+        <!-- Preferred Sources (subtle badge) -->
+        <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+          <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
+          <div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;">
+            <span style="font-size:0.6rem; color:rgba(255,255,255,.3);">☆</span>
+            <div google-add-preferred-source-btn data-theme="dark" style="transform:scale(0.65); transform-origin:center; display:inline-block;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column 2: Pages -->
+      <div>
+        <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Pages</h4>
+        <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+          <li><a href="index.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Home</a></li>
+          <li><a href="about.html" style="color:rgba(255,255,255,.5); transition:color .2s;">About</a></li>
+          <li><a href="tours.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Tours</a></li>
+          <li><a href="packages.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Packages</a></li>
+          <li><a href="gallery.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Gallery</a></li>
+          <li><a href="blog.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Blog</a></li>
+          <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Support -->
+      <div>
+        <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Support</h4>
+        <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+          <li><a href="faq.html" style="color:rgba(255,255,255,.5); transition:color .2s;">FAQ</a></li>
+          <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Booking</a></li>
+          <li><a href="#" style="color:rgba(255,255,255,.5); transition:color .2s;">Cancellation Policy</a></li>
+          <li><a href="#" style="color:rgba(255,255,255,.5); transition:color .2s;">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div>
+        <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
+        <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+          <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+            📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+            ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a>
+          </li>
+          <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">
+            ⏰ 9:00–21:00 (GMT+1)
+          </li>
+          <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">
+            📍 Casablanca, Morocco
+          </li>
+        </ul>
+        <div style="display:flex; gap:10px; margin-top:12px;">
+          <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
+          <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+        </div>
+      </div>
+
     </div>
 
-    <!-- ─── PREFERRED SOURCES BUTTON ─── -->
-    <div style="max-width:800px; margin:20px auto; text-align:center; padding:16px; background:#fce8c8; border-radius:16px;">
-      <p style="font-size:0.9rem; color:#3d2a1e; margin-bottom:8px;">
-        📰 Get our content in Google Search
-      </p>
-      <div google-add-preferred-source-btn></div>
-      <p style="font-size:0.75rem; color:var(--muted); margin-top:8px;">
-        Click the button to add AbridMoroccoTrip as a preferred source
-      </p>
+    <!-- Bottom bar -->
+    <div style="border-top:1px solid rgba(255,255,255,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.75rem; color:rgba(255,255,255,.3);">
+      <div>
+        © <span id="year"></span> AbridMoroccoTrip. All rights reserved.
+      </div>
+      <div style="display:flex; gap:20px; flex-wrap:wrap;">
+        <a href="#" style="color:rgba(255,255,255,.3);">Terms</a>
+        <a href="#" style="color:rgba(255,255,255,.3);">Privacy</a>
+        <a href="#" style="color:rgba(255,255,255,.3);">Cookies</a>
+        <span style="color:rgba(255,255,255,.15);">|</span>
+        <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
+      </div>
     </div>
-  </footer>
-
-  <!-- ═══ FLOATING WHATSAPP ═══ -->
-  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
-
-  <!-- ═══ LIGHTBOX ═══ -->
-  <div class="lightbox" id="lightbox"><button class="lightbox-close" id="lightboxClose">×</button><img id="lightboxImg" src="" alt=""></div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const toggle = document.getElementById('menuToggle');
-    const mobile = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => { mobile.classList.toggle('open'); });
-
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const lightboxClose = document.getElementById('lightboxClose');
-    document.querySelectorAll('.gallery-item').forEach(item => {
-      item.addEventListener('click', () => {
-        lightboxImg.src = item.dataset.full;
-        lightbox.classList.add('show');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    const closeLightbox = () => {
-      lightbox.classList.remove('show');
-      lightboxImg.src = '';
-      document.body.style.overflow = '';
-    };
-    lightboxClose.addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
-
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.pageYOffset;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      document.getElementById('scrollProgress').style.width = (scrollTop / docHeight * 100) + '%';
-      document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
-    });
-
-    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
-      link.addEventListener('click', function() {
-        if (typeof gtag !== 'undefined') {
-          gtag('event', 'conversion', {'send_to': 'G-5B2HL7PH8P/WhatsAppClick'});
-        }
-      });
-    });
-  </script>
-
-</body>
-</html>
+  </div>
+</footer>
