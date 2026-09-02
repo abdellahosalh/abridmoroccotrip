@@ -15,19 +15,14 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Marrakech Day Tour — Souks, Palaces & Gardens | $55" />
   <meta name="twitter:description" content="Explore Marrakech souks, palaces & gardens with a local expert guide. Hotel pickup. $55/person." />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "TouristTrip",
-    "name": "Marrakech Discovery Tour",
-    "description": "Explore the vibrant souks, historic palaces, and beautiful gardens of Marrakech with a local guide.",
-    "offers": { "@type": "Offer", "price": "55", "priceCurrency": "USD" },
-    "provider": { "@type": "Organization", "name": "AbridMoroccoTrip" }
-  }
-  </script>
+
+  <!-- ─── PREFERRED SOURCES SCRIPT ─── -->
+  <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
@@ -70,6 +65,7 @@
     .inclusions-list li::before { content: "✓ "; color: var(--terracotta); font-weight: 700; }
     .exclusions-list li::before { content: "✗ "; color: #999; }
     .back-to-tours { display: inline-block; margin-top: 30px; color: var(--terracotta); font-weight: 600; }
+
     .form-card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: var(--shadow); }
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .field { display: grid; gap: 6px; }
@@ -79,17 +75,22 @@
     .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--terracotta); box-shadow: 0 0 0 4px rgba(201,79,44,.08); }
     .form-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
     .urgency-bar { background: linear-gradient(135deg,#fff3e0,#ffe0b2); border: 1.5px solid #f0a94b; border-radius: 12px; padding: 12px 16px; text-align: center; margin-bottom: 18px; font-size: .9rem; color: #5d4037; }
+
     .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: all .3s; text-decoration: none; }
     .wa-float:hover { transform: scale(1.1); }
+
     .blog-footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; font-size: .85rem; margin-top: 40px; }
     .blog-footer a { color: rgba(255,255,255,.7); }
+
     @media (max-width: 800px) { .tour-detail-grid { grid-template-columns: 1fr; } .form-grid { grid-template-columns: 1fr; } .form-grid .full { grid-column: 1; } }
+
     .google-form-btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 16px 36px; border-radius: 60px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all .3s ease; }
     .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,79,44,.4); }
   </style>
 </head>
 <body>
 
+  <!-- ─── HEADER ─── -->
   <header class="site-header">
     <div class="container nav">
       <a href="index.html" class="brand">
@@ -103,28 +104,33 @@
       </a>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
-        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
       </div>
     </div>
     <div class="container mobile-menu" id="mobileMenu">
       <div class="mobile-panel">
         <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#tours">Tours</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
         <a href="blog.html">Blog</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </header>
 
+  <!-- ─── TOUR DETAIL ─── -->
   <main>
     <div class="container tour-detail-grid" style="padding-top: 20px;">
       <div class="tour-detail-info">
@@ -132,34 +138,162 @@
         <p>Explore the vibrant souks, historic palaces, and beautiful gardens of Marrakech with a local guide.</p>
         <div class="price-large">$55 <small>per person</small></div>
 
-        <h2>What's Included</h2>
-        <ul class="inclusions-list">
-          <li>Air-conditioned transport</li>
-          <li>Licensed guide – fluent in <strong>English, Spanish, French, Dutch, Russian, or Japanese</strong></li>
-          <li>Hotel pickup &amp; drop-off</li>
-        </ul>
+        <!-- ─── EXTENDED DESCRIPTION ─── -->
+        <div style="margin-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">Why choose this Marrakech tour?</h2>
+          <p style="color: var(--brown-light); line-height: 1.8;">
+            Marrakech is a city that captivates all your senses — the smell of spices, the vibrant colours of the souks, the sound of snake charmers and storytellers. But without a local guide, it can feel overwhelming. Our Marrakech Discovery Tour is designed to give you the perfect balance: insider knowledge, enough free time to explore on your own, and a stress-free experience.
+          </p>
+          <p style="color: var(--brown-light); line-height: 1.8; margin-top: 12px;">
+            We'll take you to the must‑see highlights (Bahia Palace, Jemaa el‑Fna, the souks) and also share hidden corners that most tourists miss — like the quiet Mellah (Jewish quarter) and the best rooftop spots for sunset mint tea. All with a friendly, English‑speaking guide who knows the city inside out.
+          </p>
+        </div>
 
-        <h2>Not Included</h2>
-        <ul class="exclusions-list">
-          <li>Lunch</li>
-          <li>Monument entrance fees (approx $10)</li>
-          <li>Tips</li>
-        </ul>
+        <!-- ─── DETAILED ITINERARY ─── -->
+        <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,.05); padding-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">Full Itinerary (6 hours)</h2>
+          <ul style="list-style: none; padding: 0; color: var(--brown-light);">
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>09:00</strong> – Pickup from your hotel / riad</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>09:30</strong> – Koutoubia Mosque (exterior) – learn about its history and architecture</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>10:15</strong> – Explore the souks (markets) – we'll help you navigate and bargain fairly</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>11:30</strong> – Visit Bahia Palace (entry fee extra, but worth it)</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>12:45</strong> – Free time at Jemaa el‑Fnaa square – grab lunch or a juice</li>
+            <li style="padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.04);"><strong>14:30</strong> – Rooftop mint tea stop (optional, our favourite café)</li>
+            <li style="padding: 8px 0;"><strong>15:00</strong> – Return to your hotel</li>
+          </ul>
+        </div>
 
-        <h2>Itinerary</h2>
-        <p><strong>Duration:</strong> 6 hours (9:00 AM – 3:00 PM)</p>
-        <ul>
-          <li>Pickup from your hotel</li>
-          <li>Koutoubia Mosque (exterior)</li>
-          <li>Explore the famous souks (markets)</li>
-          <li>Visit Bahia Palace (entrance fee extra)</li>
-          <li>Free time at Jemaa el-Fnaa square</li>
-          <li>Return to your hotel</li>
-        </ul>
+        <!-- ─── WHAT'S INCLUDED (Expanded) ─── -->
+        <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,.05); padding-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">What's included</h2>
+          <ul style="list-style: none; padding: 0; color: var(--brown-light);">
+            <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;"><span style="color: var(--terracotta); font-weight: 700;">✓</span> Air‑conditioned transport</li>
+            <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;"><span style="color: var(--terracotta); font-weight: 700;">✓</span> Licensed local guide (English, Spanish, French, Dutch, Russian, or Japanese)</li>
+            <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;"><span style="color: var(--terracotta); font-weight: 700;">✓</span> Hotel pickup and drop‑off</li>
+            <li style="padding: 6px 0; display: flex; align-items: center; gap: 8px;"><span style="color: var(--terracotta); font-weight: 700;">✓</span> Insider tips on bargaining, safety, and hidden gems</li>
+          </ul>
+          <p style="color: var(--muted); font-size: .9rem; margin-top: 8px;"><em>Not included: Lunch, monument entrance fees (~$10 total), tips.</em></p>
+        </div>
 
-        <a href="index.html#tours" class="back-to-tours">← Back to all tours</a>
+        <!-- ─── TESTIMONIALS ─── -->
+        <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,.05); padding-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">What travelers say</h2>
+          <div style="background: var(--gold-light); padding: 16px 20px; border-radius: 12px; margin: 12px 0;">
+            <div style="color: var(--gold); font-size: 1.2rem;">★★★★★</div>
+            <p style="font-style: italic; color: var(--brown-light); margin: 6px 0;">"Abdellah made our Marrakech visit absolutely magical. He knew every hidden corner of the souks and helped us avoid tourist traps. Spoke perfect English and was incredibly patient. Best $55 we spent in Morocco!"</p>
+            <div style="font-weight: 700; color: var(--terracotta);">— Sarah M., London 🇬🇧</div>
+          </div>
+          <div style="background: var(--gold-light); padding: 16px 20px; border-radius: 12px; margin: 12px 0;">
+            <div style="color: var(--gold); font-size: 1.2rem;">★★★★★</div>
+            <p style="font-style: italic; color: var(--brown-light); margin: 6px 0;">"Hablaba español perfectamente lo cual fue una sorpresa enorme. Nos llevó a los mejores lugares del zoco y negoció precios por nosotros. Increíble experiencia, lo recomiendo al 100%."</p>
+            <div style="font-weight: 700; color: var(--terracotta);">— María G., Madrid 🇪🇸</div>
+          </div>
+        </div>
+
+        <!-- ─── FAQ ─── -->
+        <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,.05); padding-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">Frequently Asked Questions</h2>
+
+          <div style="margin: 16px 0; border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 12px;">
+            <div style="font-weight: 700; color: var(--brown);">Is this tour suitable for children?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">Yes! This tour is family‑friendly. The walking pace is relaxed and we adapt to your group. Children under 12 get a 50% discount.</div>
+          </div>
+          <div style="margin: 16px 0; border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 12px;">
+            <div style="font-weight: 700; color: var(--brown);">Is it safe to walk through the souks?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">Absolutely. Marrakech is very safe for tourists. With our local guide you will feel completely comfortable – he knows all the safe routes and will handle any pushy sellers.</div>
+          </div>
+          <div style="margin: 16px 0; border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 12px;">
+            <div style="font-weight: 700; color: var(--brown);">Can I cancel or reschedule?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">Yes! Contact us via WhatsApp at least 24 hours before your tour to reschedule for free. Cancellations with less than 24 hours notice may incur a small fee.</div>
+          </div>
+          <div style="margin: 16px 0; border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 12px;">
+            <div style="font-weight: 700; color: var(--brown);">What should I wear?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">We recommend comfortable walking shoes and modest clothing (shoulders and knees covered) out of respect for local culture. This is especially important when visiting mosques and palaces.</div>
+          </div>
+          <div style="margin: 16px 0; border-bottom: 1px solid rgba(0,0,0,.05); padding-bottom: 12px;">
+            <div style="font-weight: 700; color: var(--brown);">Do you speak Spanish?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">Yes! Our guides speak English, Spanish, French, Dutch, Russian, and Japanese. Just let us know your preferred language when booking.</div>
+          </div>
+          <div style="margin: 16px 0;">
+            <div style="font-weight: 700; color: var(--brown);">How do I pay?</div>
+            <div style="color: var(--muted); line-height: 1.7; margin-top: 4px;">You pay in cash (EUR, USD, or MAD) directly to your guide on the day of the tour – no deposit required.</div>
+          </div>
+        </div>
+
+        <!-- ─── FAQ SCHEMA ─── -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is this tour suitable for children?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! This tour is family‑friendly. The walking pace is relaxed and we adapt to your group. Children under 12 get a 50% discount."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is it safe to walk through the souks?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely. Marrakech is very safe for tourists. With our local guide you will feel completely comfortable – he knows all the safe routes and will handle any pushy sellers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I cancel or reschedule?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Contact us via WhatsApp at least 24 hours before your tour to reschedule for free. Cancellations with less than 24 hours notice may incur a small fee."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What should I wear?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recommend comfortable walking shoes and modest clothing (shoulders and knees covered) out of respect for local culture. This is especially important when visiting mosques and palaces."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you speak Spanish?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes! Our guides speak English, Spanish, French, Dutch, Russian, and Japanese. Just let us know your preferred language when booking."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do I pay?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You pay in cash (EUR, USD, or MAD) directly to your guide on the day of the tour – no deposit required."
+              }
+            }
+          ]
+        }
+        </script>
+
+        <!-- ─── PHOTO GALLERY ─── -->
+        <div style="margin-top: 40px; border-top: 1px solid rgba(0,0,0,.05); padding-top: 30px;">
+          <h2 style="font-family: var(--font-serif); color: var(--brown); font-size: 1.4rem;">Photos from the tour</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; margin-top: 16px;">
+            <img src="https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?q=80&w=1224&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marrakech souks and spice shops" style="width:100%; border-radius: 10px; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1618423205267-e95744f57edf?q=80&w=1173&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marrakech souks and lanterns" style="width:100%; border-radius: 10px; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://plus.unsplash.com/premium_photo-1786504668243-4ddf3a69df0e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Marrakech souks and colorful goods" style="width:100%; border-radius: 10px; aspect-ratio: 1/1; object-fit: cover;">
+            <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=400&auto=format&fit=crop" alt="Marrakech souks and shops" style="width:100%; border-radius: 10px; aspect-ratio: 1/1; object-fit: cover;">
+          </div>
+          <p style="color: var(--muted); font-size: .85rem; margin-top: 8px;">Click images to expand (you can add your own photos).</p>
+        </div>
+
+        <a href="tours.html" class="back-to-tours">← Back to all tours</a>
       </div>
 
+      <!-- ─── BOOKING FORM ─── -->
       <div style="text-align:center; padding:30px; background:#fff; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,.06);">
         <h3 style="margin-bottom:16px;">📋 Book This Tour</h3>
         <p style="color:var(--muted); margin-bottom:20px;">Fill out our secure booking form — we'll respond within 2 hours.</p>
@@ -171,26 +305,48 @@
         <p style="color:var(--muted); font-size:.85rem; margin-top:14px;">
           💬 Or chat with us on <a href="https://wa.me/212762934488" style="color:var(--terracotta); font-weight:700;">WhatsApp</a>
         </p>
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px; justify-content:center;">
+          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">✅ Free cancellation 24h</span>
+          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">💬 Reply within 2 hours</span>
+          <span style="font-size:.8rem;color:#6e5649;background:#fff8f1;padding:6px 12px;border-radius:20px;">🌍 6 languages available</span>
+        </div>
       </div>
     </div>
   </main>
 
+  <!-- ─── FOOTER ─── -->
   <footer class="blog-footer">
     <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
       © 2026 AbridMoroccoTrip. All rights reserved.<br>
       📞 <a href="tel:+212762934488">+212 762 934 488</a> •
       ✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a>
     </div>
+
+    <!-- ─── PREFERRED SOURCES BUTTON ─── -->
+    <div style="max-width:800px; margin:20px auto; text-align:center; padding:16px; background:#fce8c8; border-radius:16px;">
+      <p style="font-size:0.9rem; color:#3d2a1e; margin-bottom:8px;">
+        📰 Get our content in Google Search
+      </p>
+      <div google-add-preferred-source-btn></div>
+      <p style="font-size:0.75rem; color:var(--muted); margin-top:8px;">
+        Click the button to add AbridMoroccoTrip as a preferred source
+      </p>
+    </div>
   </footer>
 
+  <!-- ─── WHATSAPP FLOAT ─── -->
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
   <script>
+    // Mobile menu toggle
     const toggle = document.getElementById('menuToggle');
     const mobile = document.getElementById('mobileMenu');
     if (toggle && mobile) {
       toggle.addEventListener('click', () => { mobile.classList.toggle('open'); });
     }
+
+    // WhatsApp click tracking
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
@@ -199,5 +355,6 @@
       });
     });
   </script>
+
 </body>
 </html>
