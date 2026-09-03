@@ -23,7 +23,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ── All your existing styles stay exactly the same ── */
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
     html { scroll-behavior: smooth; }
@@ -36,8 +35,6 @@
     .btn-primary:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 14px 40px rgba(201,79,44,.45); }
     .btn-secondary { background:rgba(255,255,255,.92); color:var(--brown); border:2px solid rgba(61,42,30,.12); backdrop-filter:blur(10px); }
     .btn-secondary:hover { transform:translateY(-3px); border-color:var(--terracotta); box-shadow:0 8px 28px rgba(0,0,0,.08); background:#fff; }
-    .btn-whatsapp { background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; box-shadow:0 8px 28px rgba(37,211,102,.35); }
-    .btn-whatsapp:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 14px 40px rgba(37,211,102,.45); }
     .scroll-progress { position:fixed; top:0; left:0; height:4px; background:linear-gradient(90deg,var(--terracotta),var(--gold)); z-index:999; width:0%; transition:width .1s; }
     .promo-banner { background:linear-gradient(90deg,var(--brown) 0%,var(--terracotta) 50%,var(--brown) 100%); background-size:200% 100%; animation:bannerSlide 6s linear infinite; color:#fff; text-align:center; padding:12px 20px; font-weight:600; font-size:.9rem; letter-spacing:.04em; position:relative; z-index:999; }
     @keyframes bannerSlide { 0%{background-position:0 0} 100%{background-position:200% 0} }
@@ -53,7 +50,7 @@
     .nav-links { display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500; }
     .nav-links a { color:var(--brown-light); transition:color var(--transition); }
     .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
-    .nav-actions { display:flex; align-items:center; gap:12px; }
+    .nav-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
     .mini-contact { font-size:.85rem; font-weight:600; color:var(--terracotta); }
     .menu-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
     .menu-toggle span { display:block; width:28px; height:3px; background:var(--brown); border-radius:4px; transition:var(--transition); }
@@ -61,7 +58,27 @@
     .mobile-menu.open { display:block; }
     .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
     .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
+
+    /* ─── LANGUAGE SWITCHER STYLES ─── */
+    .lang-wrapper { position:relative; display:inline-block; }
+    .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); transition:all .3s; }
+    .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
+    .lang-selector .arrow { font-size:.6rem; transition:transform .3s; }
+    .lang-selector.open .arrow { transform:rotate(180deg); }
+    .lang-dropdown { display:none; position:absolute; top:calc(100% + 6px); right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:6px 0; min-width:150px; border:1px solid rgba(0,0,0,.06); z-index:100; overflow:hidden; }
+    .lang-dropdown.show { display:block; }
+    .lang-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; font-size:.88rem; transition:background .2s; }
+    .lang-dropdown a:hover { background:#f5ede6; }
+    .lang-dropdown a .flag { font-size:1.2rem; }
+
+    /* Google Translate wrapper (hidden native elements) */
+    .skiptranslate iframe { display:none !important; }
+    .skiptranslate { display:none !important; }
+    body { top:0px !important; }
+
+    /* ─── REST OF STYLES ─── */
     @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } }
+
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 80% 20%, rgba(244,185,66,.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,79,44,.06) 0%, transparent 50%), linear-gradient(180deg,#fff9f4 0%,var(--bg) 100%); z-index:0; pointer-events:none; }
     .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; position:relative; z-index:1; }
@@ -126,38 +143,20 @@
     .google-form-btn:hover { background:var(--terracotta-dark); transform:translateY(-3px); box-shadow:0 12px 30px rgba(201,79,44,.4); }
     .wa-float { position:fixed; bottom:24px; right:24px; background:#25D366; color:#fff; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:2rem; box-shadow:0 8px 28px rgba(37,211,102,.4); z-index:50; transition:var(--transition); }
     .wa-float:hover { transform:scale(1.1) rotate(-5deg); }
-    .lightbox { position:fixed; inset:0; background:rgba(0,0,0,.8); backdrop-filter:blur(8px); z-index:999; display:none; align-items:center; justify-content:center; padding:24px; }
-    .lightbox.show { display:flex; }
-    .lightbox img { max-width:100%; max-height:90vh; border-radius:var(--radius-sm); box-shadow:var(--shadow-hover); }
-    .lightbox-close { position:absolute; top:24px; right:32px; background:none; border:none; color:#fff; font-size:2.8rem; cursor:pointer; opacity:.7; transition:var(--transition); }
-    .lightbox-close:hover { opacity:1; }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateX(-50%) translateY(20px); }
-      to { opacity: 1; transform: translateX(-50%) translateY(0); }
-    }
-    .lang-notification {
-      position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%);
-      background: #3d2a1e; color: white; padding: 12px 28px; border-radius: 60px;
-      font-weight: 600; box-shadow: 0 8px 30px rgba(0,0,0,.2); z-index: 1000;
-      animation: fadeInUp .4s ease;
-    }
+    @keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    .lang-notification { position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:#3d2a1e; color:#fff; padding:12px 28px; border-radius:60px; font-weight:600; box-shadow:0 8px 30px rgba(0,0,0,.2); z-index:1000; animation:fadeInUp .4s ease; }
+    .testimonial-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px; }
+    .testimonial-card { background:#fff; border-radius:var(--radius); padding:24px; box-shadow:var(--shadow); border:1px solid rgba(0,0,0,.04); transition:transform .3s ease; }
+    .testimonial-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-hover); }
+    .testimonial-card .stars { color:var(--gold); font-size:1.2rem; margin-bottom:8px; }
+    .testimonial-card .quote { color:var(--brown-light); font-style:italic; line-height:1.7; }
+    .testimonial-card .author { display:flex; align-items:center; gap:12px; margin-top:16px; }
+    .testimonial-card .avatar { width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,var(--terracotta),var(--gold)); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; flex-shrink:0; }
+    @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
+    @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
-
-  <!-- Google Translate Widget -->
-  <div id="google_translate_element" style="position:fixed; bottom:80px; right:20px; z-index:999; background:white; padding:8px; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,.15);"></div>
-
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,zh-CN,ar',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    }, 'google_translate_element');
-  }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
   <!-- Scroll Progress -->
   <div class="scroll-progress" id="scrollProgress"></div>
@@ -170,9 +169,9 @@
     <div class="container nav">
       <a href="index.html" class="brand">
         <div class="brand-logo">
-          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
         </div>
-        <div>
+        <div class="brand-text">
           <strong>AbridMoroccoTrip</strong>
           <span>Premium Morocco Tours</span>
         </div>
@@ -191,19 +190,25 @@
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
 
-        <!-- 🌍 LANGUAGE SWITCHER -->
-        <div style="position:relative; display:inline-block;">
-          <button onclick="toggleLanguageMenu()" style="background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:8px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); display:flex; align-items:center; gap:6px;">
-            🌍 <span id="currentLang">EN</span> <span style="font-size:.6rem;">▼</span>
+        <!-- 🌍 LANGUAGE SWITCHER (FULLY WORKING) -->
+        <div class="lang-wrapper">
+          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
+            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
           </button>
-          <div id="languageMenu" style="display:none; position:absolute; top:100%; right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:8px 0; min-width:140px; margin-top:6px; border:1px solid rgba(0,0,0,.06); z-index:100;">
-            <a href="#" onclick="switchLanguage('en')" style="display:block; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; transition:background .2s;" onmouseover="this.style.background='#f5ede6'" onmouseout="this.style.background='transparent'">🇬🇧 English</a>
-            <a href="#" onclick="switchLanguage('fr')" style="display:block; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; transition:background .2s;" onmouseover="this.style.background='#f5ede6'" onmouseout="this.style.background='transparent'">🇫🇷 Français</a>
-            <a href="#" onclick="switchLanguage('es')" style="display:block; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; transition:background .2s;" onmouseover="this.style.background='#f5ede6'" onmouseout="this.style.background='transparent'">🇪🇸 Español</a>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
+            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
+            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
+            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
+            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
+            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
+            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
+            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
+            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
           </div>
         </div>
 
-        <a class="btn btn-primary btn-sm" href="contact.html">Book Now</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -213,195 +218,234 @@
     <!-- Mobile -->
     <div class="container mobile-menu" id="mobileMenu">
       <div class="mobile-panel">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="tours.html">Tours</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About Us</a>
+        <a href="tours.html">🗺️ Tours</a>
+        <a href="packages.html">📦 Packages</a>
+        <a href="gallery.html">🖼️ Gallery</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="contact.html">📋 Contact</a>
         <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
       </div>
     </div>
   </header>
 
-  <main>
+  <!-- ─── HERO ─── -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1>Feel the Magic of<br><span class="highlight">Morocco</span></h1>
+        <p>Book your dream Morocco tour – Sahara, Atlas, Imperial Cities. Private guides, luxury camps, and 24/7 support from a local expert.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="contact.html">✨ Reserve Your Trip</a>
+          <a class="btn btn-secondary" href="tours.html">Discover Tours →</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">⭐ 4.9/5 Rated</span>
+          <span class="badge">✓ Multilingual Guides</span>
+          <span class="badge">🏨 Hand-Picked Riads</span>
+          <span class="badge">🌿 Eco Certified</span>
+        </div>
+      </div>
 
-    <!-- ═══ HERO ═══ -->
-    <section id="home" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <h1>Feel the Magic of<br><span class="highlight">Morocco</span></h1>
-          <p>Book your dream Morocco tour – Sahara, Atlas, Imperial Cities. Private guides, luxury camps, and 24/7 support from a local expert.</p>
-          <div class="hero-actions">
-            <a class="btn btn-primary btn-lg" href="contact.html">✨ Reserve Your Trip</a>
-            <a class="btn btn-secondary btn-lg" href="tours.html">Discover Tours →</a>
+      <div class="hero-visual">
+        <div class="hero-main">
+          <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+        </div>
+        <div class="hero-float top">
+          <div class="stars">★★★★★</div>
+          <div>Trusted trips</div>
+          <div class="mini-list">
+            <div><span>Desert camps</span>✨</div>
+            <div><span>Private guides</span>🌍</div>
+            <div><span>Hot air balloon</span>🎈</div>
           </div>
-          <div class="hero-badges">
-            <span class="badge">⭐ 4.9/5 Rated</span>
-            <span class="badge">✓ Multilingual Guides</span>
-            <span class="badge">🏨 Hand-Picked Riads</span>
-            <span class="badge">🌿 Eco Certified</span>
+        </div>
+        <div class="hero-float bottom">
+          <strong>Emotions included:</strong>
+          <div class="mini-list">
+            <div>❤️ Awe &amp; Wonder</div>
+            <div>✨ Unforgettable Moments</div>
+            <div>🌅 Sahara Sunrise Peace</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item"><strong>$55</strong><span>Day Trips from</span></div>
+        <div class="trust-item"><strong>$145</strong><span>Desert Tours from</span></div>
+        <div class="trust-item"><strong>$260</strong><span>Hot Air Balloon</span></div>
+        <div class="trust-item"><strong>Custom</strong><span>Private Service</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FEATURED TOURS ─── -->
+  <section id="tours">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Featured Tours</span>
+        <h2>Our most popular experiences</h2>
+        <p>Explore Morocco with our handpicked tours. From day trips to desert adventures — all include transport, guide, and authentic experiences.</p>
+      </div>
+
+      <div class="tour-grid">
+        <!-- Marrakech -->
+        <div class="tour-card">
+          <div class="tour-image"><div class="badge-trend">TOP PICK</div><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech" loading="lazy"><span class="pill">1 Day</span></div>
+          <div class="tour-body">
+            <div class="tour-top"><div><h3>Marrakech Discovery Tour</h3><div class="subtle">Souks, palaces &amp; gardens</div></div><div class="price">$55<small>/person</small></div></div>
+            <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> A/C transport</div><div class="inclusion-item"><span class="icon">✓</span> Guide: EN, ES, FR, NL, RU, JA</div><div class="inclusion-item"><span class="icon">✓</span> Hotel pickup</div></div>
+            <div class="tour-meta"><span>City highlights</span><span>Photography</span></div>
+            <a class="btn btn-secondary" href="marrakech.html">View Itinerary &amp; Book →</a>
           </div>
         </div>
 
-        <div class="hero-visual">
-          <div class="hero-main">
-            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+        <!-- Merzouga -->
+        <div class="tour-card">
+          <div class="tour-image"><div class="badge-trend">🏜️ BEST SELLER</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara" loading="lazy"><span class="pill">3 Days / 2 Nights</span></div>
+          <div class="tour-body">
+            <div class="tour-top"><div><h3>Merzouga Desert Adventure</h3><div class="subtle">Sahara camp &amp; camel trek</div></div><div class="price">$145<small>/person</small></div></div>
+            <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech ↔ Merzouga</div><div class="inclusion-item"><span class="icon">✓</span> 2 nights (hotel + camp)</div><div class="inclusion-item"><span class="icon">✓</span> Camel trek + 2 dinners</div></div>
+            <div class="tour-meta"><span>Best seller</span><span>Camel trek</span></div>
+            <a class="btn btn-primary" href="merzouga.html">View Itinerary &amp; Book →</a>
           </div>
-          <div class="hero-float top">
-            <div class="stars">★★★★★</div>
-            <div>Trusted trips</div>
-            <div class="mini-list">
-              <div><span>Desert camps</span>✨</div>
-              <div><span>Private guides</span>🌍</div>
-              <div><span>Hot air balloon</span>🎈</div>
-            </div>
-          </div>
-          <div class="hero-float bottom">
-            <strong>Emotions included:</strong>
-            <div class="mini-list">
-              <div>❤️ Awe &amp; Wonder</div>
-              <div>✨ Unforgettable Moments</div>
-              <div>🌅 Sahara Sunrise Peace</div>
-            </div>
+        </div>
+
+        <!-- Imilchil -->
+        <div class="tour-card">
+          <div class="tour-image"><div class="badge-trend">✨ NEW</div><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=437,fit=crop/YNqJlL3B9gIRgqnp/whatsapp-image-2024-06-10-at-2.36.14-pm-YBgpnWkbLWTVbLvN.jpeg" alt="Imilchil" loading="lazy"><span class="pill">3 Days / 2 Nights</span></div>
+          <div class="tour-body">
+            <div class="tour-top"><div><h3>Imilchil, Lakes &amp; Summit 2,804m</h3><div class="subtle">Lakes Isli &amp; Tislit · Bab N'Ouayad</div></div><div class="price">$150<small>/person</small></div></div>
+            <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> Transport from any city</div><div class="inclusion-item"><span class="icon">✓</span> 2 nights hotel + all meals</div><div class="inclusion-item"><span class="icon">✓</span> Summit climb &amp; certificate</div></div>
+            <div class="tour-meta"><span>All-Inclusive</span><span>Summit 2,804m</span></div>
+            <a class="btn btn-secondary" href="imilchil.html">View Itinerary &amp; Book →</a>
           </div>
         </div>
       </div>
 
-      <!-- Stats -->
-      <div class="container">
-        <div class="trust-grid">
-          <div class="trust-item"><strong>$55</strong><span>Day Trips from</span></div>
-          <div class="trust-item"><strong>$145</strong><span>Desert Tours from</span></div>
-          <div class="trust-item"><strong>$260</strong><span>Hot Air Balloon</span></div>
-          <div class="trust-item"><strong>Custom</strong><span>Private Service</span></div>
-        </div>
+      <div style="text-align:center; margin-top:40px;">
+        <a href="tours.html" class="btn btn-secondary">View All Tours →</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══ FEATURED TOURS ═══ -->
-    <section id="tours">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">Featured Tours</span>
-          <h2>Our most popular experiences</h2>
-          <p>Explore Morocco with our handpicked tours. From day trips to desert adventures — all include transport, guide, and authentic experiences.</p>
-        </div>
+  <!-- ─── TESTIMONIALS ─── -->
+  <section id="testimonials" style="background:var(--cream); padding:72px 0;">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What Our Travelers Say</h2>
+        <p>Real reviews from real travelers who experienced Morocco with us.</p>
+      </div>
 
-        <div class="tour-grid">
-          <!-- Marrakech -->
-          <div class="tour-card">
-            <div class="tour-image"><div class="badge-trend">TOP PICK</div><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech" loading="lazy"><span class="pill">1 Day</span></div>
-            <div class="tour-body">
-              <div class="tour-top"><div><h3>Marrakech Discovery Tour</h3><div class="subtle">Souks, palaces &amp; gardens</div></div><div class="price">$55<small>/person</small></div></div>
-              <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> A/C transport</div><div class="inclusion-item"><span class="icon">✓</span> Guide: EN, ES, FR, NL, RU, JA</div><div class="inclusion-item"><span class="icon">✓</span> Hotel pickup</div></div>
-              <div class="tour-meta"><span>City highlights</span><span>Photography</span></div>
-              <a class="btn btn-secondary" href="marrakech.html">View Itinerary &amp; Book →</a>
-            </div>
-          </div>
-
-          <!-- Merzouga -->
-          <div class="tour-card">
-            <div class="tour-image"><div class="badge-trend">🏜️ BEST SELLER</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara" loading="lazy"><span class="pill">3 Days / 2 Nights</span></div>
-            <div class="tour-body">
-              <div class="tour-top"><div><h3>Merzouga Desert Adventure</h3><div class="subtle">Sahara camp &amp; camel trek</div></div><div class="price">$145<small>/person</small></div></div>
-              <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech ↔ Merzouga</div><div class="inclusion-item"><span class="icon">✓</span> 2 nights (hotel + camp)</div><div class="inclusion-item"><span class="icon">✓</span> Camel trek + 2 dinners</div></div>
-              <div class="tour-meta"><span>Best seller</span><span>Camel trek</span></div>
-              <a class="btn btn-primary" href="merzouga.html">View Itinerary &amp; Book →</a>
-            </div>
-          </div>
-
-          <!-- Imilchil -->
-          <div class="tour-card">
-            <div class="tour-image"><div class="badge-trend">✨ NEW</div><img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=437,fit=crop/YNqJlL3B9gIRgqnp/whatsapp-image-2024-06-10-at-2.36.14-pm-YBgpnWkbLWTVbLvN.jpeg" alt="Imilchil" loading="lazy"><span class="pill">3 Days / 2 Nights</span></div>
-            <div class="tour-body">
-              <div class="tour-top"><div><h3>Imilchil, Lakes &amp; Summit 2,804m</h3><div class="subtle">Lakes Isli &amp; Tislit · Bab N'Ouayad</div></div><div class="price">$150<small>/person</small></div></div>
-              <div class="inclusions"><div class="inclusion-item"><span class="icon">✓</span> Transport from any city</div><div class="inclusion-item"><span class="icon">✓</span> 2 nights hotel + all meals</div><div class="inclusion-item"><span class="icon">✓</span> Summit climb &amp; certificate</div></div>
-              <div class="tour-meta"><span>All-Inclusive</span><span>Summit 2,804m</span></div>
-              <a class="btn btn-secondary" href="imilchil.html">View Itinerary &amp; Book →</a>
-            </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Abdellah made our Marrakech visit absolutely magical. He knew every hidden corner of the souks and helped us avoid tourist traps. Best $55 we spent in Morocco!"</p>
+          <div class="author">
+            <div class="avatar">SM</div>
+            <div><strong>Sarah M.</strong><div style="font-size:.8rem; color:var(--muted);">London, UK</div></div>
           </div>
         </div>
 
-        <div style="text-align:center; margin-top:40px;">
-          <a href="tours.html" class="btn btn-secondary">View All Tours →</a>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"The Merzouga desert tour was a dream come true! The camel trek at sunset, the Berber music around the campfire, the stars... Absolutely unforgettable."</p>
+          <div class="author">
+            <div class="avatar">MD</div>
+            <div><strong>Marco D.</strong><div style="font-size:.8rem; color:var(--muted);">Rome, Italy</div></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"I traveled solo as a woman and felt completely safe and well taken care of. The guides were professional, knowledgeable, and went above and beyond. Thank you Abdellah!"</p>
+          <div class="author">
+            <div class="avatar">ER</div>
+            <div><strong>Emma R.</strong><div style="font-size:.8rem; color:var(--muted);">Toronto, Canada</div></div>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- ═══ BLOG PREVIEW ═══ -->
-    <section id="blog" style="background:var(--cream);">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow">📰 Travel Guides</span>
-          <h2>Latest from Our Blog</h2>
-          <p>Insider tips, local secrets, and complete guides to plan your perfect Moroccan adventure.</p>
-        </div>
-
-        <div class="blog-preview-grid">
-          <article class="blog-preview-card">
-            <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600&auto=format&fit=crop/YNqJlL3B9gIRgqnp/untitled-2-3-AoPepbZODoTZZDk2.jpg" alt="Imilchil wedding festival" loading="lazy">
-            <div class="blog-preview-content">
-              <span class="blog-category">Culture &amp; Festival</span>
-              <h3>Imilchil: Morocco's Legendary Wedding Festival</h3>
-              <div class="blog-date">April 10, 2026</div>
-              <p>Discover the sacred gathering of the Aït Haddidou tribe, the legend of Twin Lakes Isli &amp; Tislit, and High Atlas traditions.</p>
-              <a href="blog-imilchil.html" class="read-more">Read Article →</a>
-            </div>
-          </article>
-
-          <article class="blog-preview-card">
-            <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
-            <div class="blog-preview-content">
-              <span class="blog-category">City Guides</span>
-              <h3>Top 10 Things to Do in Marrakech</h3>
-              <div class="blog-date">March 20, 2026</div>
-              <p>From the bustling Jemaa el-Fna to hidden gardens, our local guide reveals the red city's best-kept secrets.</p>
-              <a href="blog-marrakech-top10.html" class="read-more">Read Article →</a>
-            </div>
-          </article>
-
-          <article class="blog-preview-card">
-            <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
-            <div class="blog-preview-content">
-              <span class="blog-category">Desert Travel</span>
-              <h3>The Complete Guide to the Sahara Desert</h3>
-              <div class="blog-date">March 20, 2026</div>
-              <p>Everything you need to know about Merzouga, camel treks, luxury desert camps, weather, and what to pack.</p>
-              <a href="blog-sahara-guide.html" class="read-more">Read Article →</a>
-            </div>
-          </article>
-        </div>
-
-        <div class="blog-cta">
-          <a href="blog.html" class="btn btn-secondary">View All Blog Posts →</a>
-        </div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="https://www.google.com/search?q=AbridMoroccoTrip+reviews" target="_blank" class="btn btn-secondary">See All Reviews →</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- ═══ QUICK CONTACT CTA ═══ -->
-    <section id="contact" style="padding:48px 0;">
-      <div class="container">
-        <div style="max-width:700px; margin:0 auto; text-align:center; background:#fff; border-radius:20px; padding:40px 30px; box-shadow:var(--shadow);">
-          <h2 style="font-family:var(--font-serif); font-size:2rem; margin-bottom:12px;">Ready to book your Morocco adventure?</h2>
-          <p style="color:var(--muted); margin-bottom:24px;">Send your dates or dream itinerary. We'll respond within 2 hours.</p>
-          <a href="contact.html" class="google-form-btn">📝 Start Your Booking</a>
-          <p style="color:var(--muted); font-size:.85rem; margin-top:14px;">
-            💬 Or chat instantly on <a href="https://wa.me/212762934488" style="color:var(--terracotta); font-weight:700;">WhatsApp</a>
-          </p>
-        </div>
+  <!-- ─── BLOG PREVIEW ─── -->
+  <section id="blog" style="background:var(--bg);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">📰 Travel Guides</span>
+        <h2>Latest from Our Blog</h2>
+        <p>Insider tips, local secrets, and complete guides to plan your perfect Moroccan adventure.</p>
       </div>
-    </section>
 
-  </main>
+      <div class="blog-preview-grid">
+        <article class="blog-preview-card">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600&auto=format&fit=crop/YNqJlL3B9gIRgqnp/untitled-2-3-AoPepbZODoTZZDk2.jpg" alt="Imilchil wedding festival" loading="lazy">
+          <div class="blog-preview-content">
+            <span class="blog-category">Culture &amp; Festival</span>
+            <h3>Imilchil: Morocco's Legendary Wedding Festival</h3>
+            <div class="blog-date">April 10, 2026</div>
+            <p>Discover the sacred gathering of the Aït Haddidou tribe, the legend of Twin Lakes Isli &amp; Tislit, and High Atlas traditions.</p>
+            <a href="blog-imilchil.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
 
-  <!-- ═══ FOOTER ═══ -->
+        <article class="blog-preview-card">
+          <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+          <div class="blog-preview-content">
+            <span class="blog-category">City Guides</span>
+            <h3>Top 10 Things to Do in Marrakech</h3>
+            <div class="blog-date">March 20, 2026</div>
+            <p>From the bustling Jemaa el-Fna to hidden gardens, our local guide reveals the red city's best-kept secrets.</p>
+            <a href="blog-marrakech-top10.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+
+        <article class="blog-preview-card">
+          <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
+          <div class="blog-preview-content">
+            <span class="blog-category">Desert Travel</span>
+            <h3>The Complete Guide to the Sahara Desert</h3>
+            <div class="blog-date">March 20, 2026</div>
+            <p>Everything you need to know about Merzouga, camel treks, luxury desert camps, weather, and what to pack.</p>
+            <a href="blog-sahara-guide.html" class="read-more">Read Article →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="blog-cta">
+        <a href="blog.html" class="btn btn-secondary">View All Blog Posts →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT CTA ─── -->
+  <section id="contact" style="padding:48px 0;">
+    <div class="container">
+      <div style="max-width:700px; margin:0 auto; text-align:center; background:#fff; border-radius:20px; padding:40px 30px; box-shadow:var(--shadow);">
+        <h2 style="font-family:var(--font-serif); font-size:2rem; margin-bottom:12px;">Ready to book your Morocco adventure?</h2>
+        <p style="color:var(--muted); margin-bottom:24px;">Send your dates or dream itinerary. We'll respond within 2 hours.</p>
+        <a href="contact.html" class="google-form-btn">📝 Start Your Booking</a>
+        <p style="color:var(--muted); font-size:.85rem; margin-top:14px;">
+          💬 Or chat instantly on <a href="https://wa.me/212762934488" style="color:var(--terracotta); font-weight:700;">WhatsApp</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
 
-        <!-- Column 1: Brand -->
         <div>
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
             <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:2px solid rgba(255,255,255,.1);">
@@ -422,7 +466,6 @@
           </div>
         </div>
 
-        <!-- Column 2: Pages -->
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Pages</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
@@ -436,7 +479,6 @@
           </ul>
         </div>
 
-        <!-- Column 3: Support -->
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Support</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
@@ -449,22 +491,13 @@
           </ul>
         </div>
 
-        <!-- Column 4: Contact -->
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-              📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
-            </li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-              ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a>
-            </li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">
-              ⏰ 9:00–21:00 (GMT+1)
-            </li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">
-              📍 Casablanca, Morocco
-            </li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:12px;">
             <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
@@ -474,11 +507,8 @@
 
       </div>
 
-      <!-- Bottom bar -->
       <div style="border-top:1px solid rgba(255,255,255,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.75rem; color:rgba(255,255,255,.3);">
-        <div>
-          © <span id="year"></span> AbridMoroccoTrip. All rights reserved.
-        </div>
+        <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
         <div style="display:flex; gap:20px; flex-wrap:wrap;">
           <a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a>
           <a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a>
@@ -494,20 +524,51 @@
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
   <script>
-    // Update copyright year
+    // ─── UPDATE COPYRIGHT YEAR ───
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Language switcher
-    function toggleLanguageMenu() {
-      const menu = document.getElementById('languageMenu');
-      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    // ─── LANGUAGE SWITCHER (GOOGLE TRANSLATE) ───
+    let langDropdownOpen = false;
+
+    function toggleLangDropdown() {
+      const dropdown = document.getElementById('langDropdown');
+      const toggle = document.getElementById('langToggle');
+      langDropdownOpen = !langDropdownOpen;
+      dropdown.classList.toggle('show', langDropdownOpen);
+      toggle.classList.toggle('open', langDropdownOpen);
     }
 
     function switchLanguage(lang) {
-      document.getElementById('currentLang').textContent = lang.toUpperCase();
-      document.getElementById('languageMenu').style.display = 'none';
+      const langNames = {
+        'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
+        'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
+      };
+      document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
+      document.getElementById('langDropdown').classList.remove('show');
+      document.getElementById('langToggle').classList.remove('open');
+      langDropdownOpen = false;
+
+      // Save preference
       localStorage.setItem('preferredLanguage', lang);
-      showNotification('Language switched to ' + lang.toUpperCase());
+
+      // Show notification
+      showNotification('🌍 Switching to ' + langNames[lang] + '...');
+
+      // Use Google Translate to change language
+      const googleFrame = document.querySelector('.goog-te-menu-frame');
+      if (googleFrame) {
+        try {
+          const select = googleFrame.contentDocument.querySelector('.goog-te-combo');
+          if (select) {
+            select.value = lang;
+            select.dispatchEvent(new Event('change'));
+            return;
+          }
+        } catch(e) {}
+      }
+
+      // Fallback: reload with language parameter
+      window.location.href = window.location.pathname + '?lang=' + lang;
     }
 
     function showNotification(message) {
@@ -526,29 +587,36 @@
       }, 2000);
     }
 
-    // Load saved language preference
+    // ─── LOAD SAVED LANGUAGE ───
     document.addEventListener('DOMContentLoaded', function() {
       const savedLang = localStorage.getItem('preferredLanguage');
       if (savedLang) {
-        document.getElementById('currentLang').textContent = savedLang.toUpperCase();
+        const langNames = {
+          'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
+          'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
+        };
+        document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
       }
+
+      // Close dropdown when clicking outside
+      document.addEventListener('click', function(event) {
+        const wrapper = document.querySelector('.lang-wrapper');
+        if (wrapper && !wrapper.contains(event.target)) {
+          document.getElementById('langDropdown').classList.remove('show');
+          document.getElementById('langToggle').classList.remove('open');
+          langDropdownOpen = false;
+        }
+      });
     });
 
-    // Close language menu when clicking outside
-    document.addEventListener('click', function(event) {
-      const menu = document.getElementById('languageMenu');
-      const button = event.target.closest('button');
-      if (menu && !button) {
-        menu.style.display = 'none';
-      }
+    // ─── MOBILE MENU ───
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
     });
 
-    // Mobile menu
-    const toggle = document.getElementById('menuToggle');
-    const mobile = document.getElementById('mobileMenu');
-    toggle.addEventListener('click', () => mobile.classList.toggle('open'));
-
-    // Scroll progress
+    // ─── SCROLL PROGRESS ───
     window.addEventListener('scroll', () => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -556,7 +624,7 @@
       document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
     });
 
-    // WhatsApp tracking
+    // ─── WHATSAPP TRACKING ───
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
