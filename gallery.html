@@ -66,4 +66,330 @@
     .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
     .lang-selector .arrow { font-size:.6rem; transition:transform .3s; }
     .lang-selector.open .arrow { transform:rotate(180deg); }
-    .lang-dropdown { display:none; position:absolute; top:calc(100% + 6px); right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:6px 0; min-width:150px
+    .lang-dropdown { display:none; position:absolute; top:calc(100% + 6px); right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:6px 0; min-width:150px; border:1px solid rgba(0,0,0,.06); z-index:100; overflow:hidden; }
+    .lang-dropdown.show { display:block; }
+    .lang-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; font-size:.88rem; transition:background .2s; }
+    .lang-dropdown a:hover { background:#f5ede6; }
+    .lang-dropdown a .flag { font-size:1.2rem; }
+    .skiptranslate iframe { display:none !important; }
+    .skiptranslate { display:none !important; }
+    body { top:0px !important; }
+    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions .lang-wrapper { display:none; } }
+
+    .page-hero { padding: 100px 0 64px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 20%, rgba(244,185,66,.15) 0%, transparent 65%), linear-gradient(180deg, #fff9f4 0%, var(--bg) 100%); z-index: 0; }
+    .page-hero > * { position: relative; z-index: 1; }
+    .page-hero h1 { font-family: var(--font-serif); font-size: clamp(2.5rem,6vw,4rem); color: var(--brown); margin-bottom: 16px; letter-spacing: -.03em; }
+    .page-hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto; line-height: 1.75; }
+    .eyebrow { display: inline-block; background: var(--gold-light); color: var(--terracotta); font-weight: 700; font-size: .8rem; padding: 6px 18px; border-radius: 60px; margin-bottom: 12px; letter-spacing: .5px; text-transform: uppercase; }
+
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 40px; }
+    .gallery-item { position: relative; border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; aspect-ratio: 1/1; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+    .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(transparent, rgba(0,0,0,.5)); color: #fff; font-size: .85rem; opacity: 0; transition: var(--transition); }
+    .gallery-item:hover .gallery-caption { opacity: 1; }
+
+    .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); backdrop-filter: blur(12px); z-index: 999; display: none; align-items: center; justify-content: center; padding: 24px; }
+    .lightbox.show { display: flex; }
+    .lightbox img { max-width: 100%; max-height: 90vh; border-radius: var(--radius-sm); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+    .lightbox-close { position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.8rem; cursor: pointer; opacity: .7; transition: var(--transition); }
+    .lightbox-close:hover { opacity: 1; }
+
+    .google-form-btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 16px 36px; border-radius: 60px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all .3s ease; }
+    .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,79,44,.4); }
+    .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: var(--transition); }
+    .wa-float:hover { transform: scale(1.1) rotate(-5deg); }
+    .lang-notification { position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:#3d2a1e; color:#fff; padding:12px 28px; border-radius:60px; font-weight:600; box-shadow:0 8px 30px rgba(0,0,0,.2); z-index:1000; animation:fadeInUp .4s ease; }
+    @keyframes fadeInUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); } .page-hero { padding: 72px 0 40px; } }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-logo"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo"></div>
+        <div class="brand-text"><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <div class="lang-wrapper">
+          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
+            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
+            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
+            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
+            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
+            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
+            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
+            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
+            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
+            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
+          </div>
+        </div>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="tours.html">Tours</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Gallery</span>
+      <h1>Real moments from our travelers</h1>
+      <p>Experience the magic of Morocco through our guests' eyes — click any image to expand.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="gallery-grid">
+      <div class="gallery-item" data-full="https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        <img src="https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Morocco landscape" loading="lazy">
+        <div class="gallery-caption">Morocco landscape</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.pexels.com/photos/36202828/pexels-photo-36202828.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        <img src="https://images.pexels.com/photos/36202828/pexels-photo-36202828.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech spice market" loading="lazy">
+        <div class="gallery-caption">Marrakech spice market</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.pexels.com/photos/36202816/pexels-photo-36202816.jpeg?auto=compress&cs=tinysrgb&w=1600">
+        <img src="https://images.pexels.com/photos/36202816/pexels-photo-36202816.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech market" loading="lazy">
+        <div class="gallery-caption">Marrakech market</div>
+      </div>
+      <div class="gallery-item" data-full="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=1600&auto=format&fit=crop">
+        <img src="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=600&auto=format&fit=crop" alt="Essaouira coast" loading="lazy">
+        <div class="gallery-caption">Essaouira coast</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="Fez architecture" loading="lazy">
+        <div class="gallery-caption">Fez details</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=600&auto=format&fit=crop" alt="Fez medina" loading="lazy">
+        <div class="gallery-caption">Fez medina</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
+        <div class="gallery-caption">Sahara desert</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
+        <div class="gallery-caption">Chefchaouen blue city</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+        <div class="gallery-caption">Marrakech souks</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop" alt="Imperial city architecture" loading="lazy">
+        <div class="gallery-caption">Imperial city architecture</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+        <div class="gallery-caption">Chefchaouen blue streets</div>
+      </div>
+      <div class="gallery-item" data-full="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600&auto=format&fit=crop">
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="Morocco desert dunes" loading="lazy">
+        <div class="gallery-caption">Morocco desert dunes</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin:60px 0 40px;padding:40px 30px;background:linear-gradient(135deg,var(--cream),var(--gold-light));border-radius:20px;">
+      <h2 style="font-family:var(--font-serif);font-size:2rem;margin-bottom:12px;">Ready to create your own Morocco memories?</h2>
+      <p style="color:var(--muted);margin-bottom:24px;">Join hundreds of happy travelers — book your tour today and experience the real Morocco.</p>
+      <a href="contact.html" class="google-form-btn">📝 Start Your Booking</a>
+      <p style="color:var(--muted);font-size:.85rem;margin-top:14px;">💬 Or chat instantly on <a href="https://wa.me/212762934488" style="color:var(--terracotta);font-weight:700;">WhatsApp</a></p>
+    </div>
+  </div>
+
+  <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
+            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:2px solid rgba(255,255,255,.1);">
+            <div>
+              <strong style="font-size:1.1rem; color:#fff; display:block;">AbridMoroccoTrip</strong>
+              <span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span>
+            </div>
+          </div>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p>
+          <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
+            <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
+            <div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;">
+              <span style="font-size:0.6rem; color:rgba(255,255,255,.3);">☆</span>
+              <div google-add-preferred-source-btn data-theme="dark" style="transform:scale(0.65); transform-origin:center; display:inline-block;"></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Pages</h4>
+          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+            <li><a href="index.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Home</a></li>
+            <li><a href="about.html" style="color:rgba(255,255,255,.5); transition:color .2s;">About</a></li>
+            <li><a href="tours.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Tours</a></li>
+            <li><a href="packages.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Packages</a></li>
+            <li><a href="gallery.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Gallery</a></li>
+            <li><a href="blog.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Blog</a></li>
+            <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Support</h4>
+          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+            <li><a href="faq.html" style="color:rgba(255,255,255,.5); transition:color .2s;">FAQ</a></li>
+            <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Booking</a></li>
+            <li><a href="cancellation-policy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cancellation Policy</a></li>
+            <li><a href="privacy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Privacy Policy</a></li>
+            <li><a href="terms.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Terms of Service</a></li>
+            <li><a href="cookies.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
+          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
+          </ul>
+          <div style="display:flex; gap:10px; margin-top:12px;">
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.75rem; color:rgba(255,255,255,.3);">
+        <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a>
+          <a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a>
+          <a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a>
+          <span style="color:rgba(255,255,255,.15);">|</span>
+          <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank">💬</a>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">×</button>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    let langDropdownOpen = false;
+    function toggleLangDropdown() {
+      const dropdown = document.getElementById('langDropdown');
+      const toggle = document.getElementById('langToggle');
+      langDropdownOpen = !langDropdownOpen;
+      dropdown.classList.toggle('show', langDropdownOpen);
+      toggle.classList.toggle('open', langDropdownOpen);
+    }
+    function switchLanguage(lang) {
+      const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
+      document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
+      document.getElementById('langDropdown').classList.remove('show');
+      document.getElementById('langToggle').classList.remove('open');
+      langDropdownOpen = false;
+      localStorage.setItem('preferredLanguage', lang);
+      showNotification('🌍 Switching to ' + langNames[lang] + '...');
+    }
+    function showNotification(message) {
+      const existing = document.querySelector('.lang-notification');
+      if (existing) existing.remove();
+      const notif = document.createElement('div');
+      notif.className = 'lang-notification';
+      notif.textContent = message;
+      document.body.appendChild(notif);
+      setTimeout(() => { notif.style.opacity = '0'; notif.style.transition = 'opacity .4s ease'; setTimeout(() => notif.remove(), 400); }, 2000);
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) {
+        const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
+        document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
+      }
+      document.addEventListener('click', function(event) {
+        const wrapper = document.querySelector('.lang-wrapper');
+        if (wrapper && !wrapper.contains(event.target)) {
+          document.getElementById('langDropdown').classList.remove('show');
+          document.getElementById('langToggle').classList.remove('open');
+          langDropdownOpen = false;
+        }
+      });
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('scrollProgress').style.width = (scrollTop / docHeight * 100) + '%';
+      document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
+    });
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        lightboxImg.src = item.dataset.full;
+        lightbox.classList.add('show');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    const closeLightbox = () => {
+      lightbox.classList.remove('show');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+
+    document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'conversion', {'send_to': 'G-5B2HL7PH8P/WhatsAppClick'});
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
