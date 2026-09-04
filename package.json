@@ -1,0 +1,12 @@
+{
+  "name": "abridmoroccotrip",
+  "version": "1.0.0",
+  "description": "Premium Morocco Tours - Static Website",
+  "scripts": {
+    "analytics": "echo 'Vercel Analytics installed'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^1.4.1"
+  },
+  "private": true
+}
