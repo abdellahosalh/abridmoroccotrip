@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Local Morocco Travel Expert | AbridMoroccoTrip</title>
+  <title>About Us – Local Morocco Travel Experts | AbridMoroccoTrip</title>
   <link rel="canonical" href="https://www.abridmorocco.com/about.html" />
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <meta name="description" content="Meet Abdellah, your Morocco travel expert. Private tours with multilingual guides (English, Spanish, French, Dutch, Russian, Japanese). 500+ happy travelers. Sustainable travel. Best price guaranteed." />
+  <meta name="description" content="Meet Abdellah & Karim, your Morocco travel experts. Karim has traveled the entire country – from Tanger to the Sahara, Agadir to Ouarzazate. Private tours with multilingual guides. 500+ happy travelers." />
   
   <!-- hreflang Tags -->
   <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/about.html" />
@@ -15,8 +15,8 @@
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/about.html" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="About Us – Local Morocco Travel Expert | AbridMoroccoTrip" />
-  <meta property="og:description" content="Meet Abdellah, your Morocco travel expert. Private tours with multilingual guides. 500+ happy travelers." />
+  <meta property="og:title" content="About Us – Local Morocco Travel Experts | AbridMoroccoTrip" />
+  <meta property="og:description" content="Meet Abdellah & Karim, your Morocco travel experts. Karim has traveled the entire country – from Tanger to the Sahara." />
   <meta property="og:image" content="https://i.ibb.co/WQnDsHv/man-warm-brown-eyes.jpg" />
   <meta property="og:url" content="https://www.abridmorocco.com/about.html" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -27,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ── Same base styles as index.html ── */
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
     html { scroll-behavior: smooth; }
@@ -64,7 +63,6 @@
     .mobile-panel a { font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.05); }
     @media (max-width: 860px) { .nav-links { display: none; } .menu-toggle { display: flex; } .mini-contact { display: none; } }
 
-    /* ─── LANGUAGE SWITCHER ─── */
     .lang-wrapper { position:relative; display:inline-block; }
     .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); transition:all .3s; }
     .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
@@ -76,7 +74,7 @@
     .lang-dropdown a:hover { background:#f5ede6; }
     .lang-dropdown a .flag { font-size:1.2rem; }
     .skiptranslate iframe { display:none !important; }
-    .goog-te-banner-frame.skiptranslate { display:none !important; }
+    .skiptranslate { display:none !important; }
     body { top:0px !important; }
     @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
 
@@ -86,35 +84,238 @@
     .page-hero h1 { font-family: var(--font-serif); font-size: clamp(2.5rem,6vw,4rem); color: var(--brown); margin-bottom: 16px; letter-spacing: -.03em; }
     .page-hero p { font-size: 1.15rem; color: var(--muted); max-width: 600px; margin: 0 auto; line-height: 1.75; }
     .eyebrow { display: inline-block; background: var(--gold-light); color: var(--terracotta); font-weight: 700; font-size: .8rem; padding: 6px 18px; border-radius: 60px; margin-bottom: 12px; letter-spacing: .5px; text-transform: uppercase; }
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; margin-top: 40px; }
-    .about-copy p { color: var(--brown-light); line-height: 1.85; margin-bottom: 16px; }
-    .feature-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
-    .feature { display: flex; gap: 16px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid rgba(0,0,0,.05); }
-    .feature:last-child { border-bottom: none; }
-    .feature .icon-chip { font-size: 1.6rem; min-width: 40px; }
-    .feature strong { display: block; }
-    .feature .subtle { font-size: .9rem; color: var(--muted); }
-    .about-side { display: flex; flex-direction: column; gap: 20px; }
-    .side-card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,.04); transition: transform .3s ease; }
-    .side-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-    .side-card h3 { font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px; }
-    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(120px,1fr)); gap: 16px; margin-top: 40px; }
-    .stat-item { text-align: center; padding: 24px 16px; background: #fff; border-radius: var(--radius-sm); box-shadow: var(--shadow); border: 1px solid rgba(0,0,0,.04); }
-    .stat-item strong { font-family: var(--font-serif); font-size: 2.2rem; color: var(--terracotta); display: block; }
-    .stat-item span { font-size: .9rem; color: var(--muted); }
-    .google-form-btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 16px 36px; border-radius: 60px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all .3s ease; }
-    .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,79,44,.4); }
-    .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: var(--transition); }
+
+    /* Team Grid */
+    .team-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .team-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.04);
+      transition: transform .3s ease;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+    }
+    .team-card .profile {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 16px;
+    }
+    .team-card .profile img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--gold);
+      box-shadow: 0 8px 20px rgba(201,79,44,.15);
+    }
+    .team-card .profile h3 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin: 0;
+      color: var(--brown);
+    }
+    .team-card .profile .city {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: .9rem;
+    }
+    .team-card .profile .badge {
+      display: inline-block;
+      background: var(--gold-light);
+      color: var(--terracotta);
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 60px;
+      margin-top: 4px;
+    }
+    .team-card p {
+      color: var(--brown-light);
+      line-height: 1.8;
+      margin: 12px 0;
+    }
+    .team-card .expertise-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .team-card .expertise-tags span {
+      background: var(--cream);
+      padding: 4px 14px;
+      border-radius: 60px;
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--brown-light);
+      border: 1px solid rgba(0,0,0,.04);
+    }
+    .team-card .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .team-card .contact-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gold-light);
+      padding: 6px 16px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: .85rem;
+      color: var(--terracotta);
+      transition: all .3s;
+      text-decoration: none;
+    }
+    .team-card .contact-links a:hover {
+      background: var(--terracotta);
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+    /* Side cards */
+    .side-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .side-card {
+      background: #fff;
+      padding: 28px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.04);
+      transition: transform .3s ease;
+    }
+    .side-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .side-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    .side-card .contact-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0,0,0,.04);
+    }
+    .side-card .contact-row:last-child {
+      border-bottom: none;
+    }
+    .side-card .contact-row .icon {
+      font-size: 1.3rem;
+      min-width: 32px;
+    }
+    .side-card .contact-row strong {
+      display: block;
+      font-size: .9rem;
+    }
+    .side-card .contact-row span {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 24px 16px;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0,0,0,.04);
+    }
+    .stat-item strong {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      color: var(--terracotta);
+      display: block;
+    }
+    .stat-item span {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .google-form-btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all .3s ease;
+    }
+    .google-form-btn:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(201,79,44,.4);
+    }
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 28px rgba(37,211,102,.4);
+      z-index: 50;
+      transition: var(--transition);
+    }
     .wa-float:hover { transform: scale(1.1) rotate(-5deg); }
-    .lang-notification { position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:#3d2a1e; color:#fff; padding:12px 28px; border-radius:60px; font-weight:600; box-shadow:0 8px 30px rgba(0,0,0,.2); z-index:1000; animation:fadeInUp .4s ease; }
-    @keyframes fadeInUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
-    @media (max-width: 600px) { .about-grid { grid-template-columns: 1fr; } }
+    .lang-notification {
+      position:fixed;
+      bottom:100px;
+      left:50%;
+      transform:translateX(-50%);
+      background:#3d2a1e;
+      color:#fff;
+      padding:12px 28px;
+      border-radius:60px;
+      font-weight:600;
+      box-shadow:0 8px 30px rgba(0,0,0,.2);
+      z-index:1000;
+      animation:fadeInUp .4s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity:0; transform:translateX(-50%) translateY(20px); }
+      to { opacity:1; transform:translateX(-50%) translateY(0); }
+    }
+    @media (max-width: 800px) {
+      .team-grid { grid-template-columns: 1fr; }
+      .side-cards { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .team-card .profile { flex-direction: column; text-align: center; }
+      .team-card .profile img { width: 100px; height: 100px; }
+    }
   </style>
-  <!-- Vercel Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -151,7 +352,22 @@
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
 
         <!-- Language Switcher -->
-        <div id="google_translate_element" style="display:inline-block;"></div>
+        <div class="lang-wrapper">
+          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
+            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
+          </button>
+          <div class="lang-dropdown" id="langDropdown">
+            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
+            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
+            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
+            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
+            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
+            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
+            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
+            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
+            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
+          </div>
+        </div>
 
         <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -183,96 +399,124 @@
     </div>
   </section>
 
-  <!-- ─── ABOUT CONTENT ─── -->
+  <!-- ─── TEAM SECTION ─── -->
   <div class="container">
-    <div class="about-grid">
-      <div class="about-copy">
-        <div style="display:flex;align-items:center;gap:20px;margin-bottom:20px;">
-          <img src="https://i.ibb.co/WQnDsHv/man-warm-brown-eyes.jpg" alt="Abdellah - Morocco travel expert" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);box-shadow:0 8px 20px rgba(201,79,44,.15);">
+    <h2 style="font-family:var(--font-serif); font-size:2.2rem; text-align:center; margin-top:20px;">Meet Your Morocco Experts</h2>
+    <p style="text-align:center; color:var(--muted); max-width:600px; margin:0 auto 20px;">Passionate locals with deep knowledge of Morocco's hidden gems and iconic cities.</p>
+
+    <div class="team-grid">
+
+      <!-- Abdellah -->
+      <div class="team-card">
+        <div class="profile">
+          <img src="https://i.ibb.co/WQnDsHv/man-warm-brown-eyes.jpg" alt="Abdellah - Morocco travel expert">
           <div>
-            <h2 style="font-family:var(--font-serif);font-size:1.6rem;margin:0;">Hi, I'm Abdellah</h2>
-            <p style="color:var(--muted);margin:0;">Your local travel expert · Casablanca</p>
+            <h3>Abdellah</h3>
+            <div class="city">📍 Casablanca</div>
+            <span class="badge">🌟 Expert Guide</span>
           </div>
         </div>
+        <p>I've lived in Casablanca my whole life and have worked in Moroccan tourism for years. I've guided hundreds of travelers from all over the world — showing them the Morocco that guidebooks miss. I genuinely love helping people discover the beauty, culture, and hospitality of my country.</p>
+        <div class="expertise-tags">
+          <span>🏙️ Casablanca</span>
+          <span>🏜️ Sahara</span>
+          <span>🏛️ Imperial Cities</span>
+          <span>🌊 Atlantic Coast</span>
+        </div>
+        <div class="contact-links">
+          <a href="tel:+212762934488">📞 +212 762 934 488</a>
+          <a href="mailto:abridmorocco@gmail.com">✉️ abridmorocco@gmail.com</a>
+          <a href="https://wa.me/212762934488" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
 
-        <p>I've lived in Casablanca my whole life and have worked in Moroccan tourism for years. I've guided hundreds of travelers from all over the world — showing them the Morocco that guidebooks miss.</p>
-
-        <p>This isn't just a job for me. I genuinely love helping people discover the beauty, culture, and hospitality of my country. Whether it's the golden Sahara dunes, the blue streets of Chefchaouen, or the bustling souks of Marrakech — I want you to experience it all, without the stress of planning.</p>
-
-        <p>Our guides are fluent in <strong>English, Spanish, French, Dutch, Russian, and Japanese</strong>, so you never feel lost in translation. Every tour is designed to be authentic, comfortable, and memorable — at a fair price.</p>
-
-        <div class="feature-list">
-          <div class="feature">
-            <span class="icon-chip">🗣️</span>
-            <div>
-              <strong>Multilingual guides</strong>
-              <div class="subtle">Fluent in 6 languages — your story, your language</div>
-            </div>
+      <!-- Karim -->
+      <div class="team-card">
+        <div class="profile">
+          <img src="https://i.postimg.cc/nh6nW45C/blue-turban-portrait.jpg" alt="Karim Ousgho - Morocco travel expert">
+          <div>
+            <h3>Karim Ousgho</h3>
+            <div class="city">📍 Marrakech</div>
+            <span class="badge">🌟 National Explorer</span>
           </div>
-          <div class="feature">
-            <span class="icon-chip">🚐</span>
-            <div>
-              <strong>Comfortable transport</strong>
-              <div class="subtle">Air‑conditioned vehicles with hotel pickup and drop‑off</div>
-            </div>
+        </div>
+        <p>I'm a Marrakech native with a burning passion for exploring every corner of Morocco. I've traveled extensively across the entire country — from the blue streets of <strong>Chefchaouen</strong> and the Mediterranean coast of <strong>Tétouan</strong>, to the Atlantic vibes of <strong>Agadir</strong> and <strong>Essaouira</strong>, the golden dunes of the <strong>Sahara</strong>, and the cinematic landscapes of <strong>Ouarzazate</strong>. I know the souks like the back of my hand, the best rooftop terraces, and the hidden riads that make Morocco magical. I'm passionate about sharing authentic experiences and ensuring every guest feels like family.</p>
+        <div class="expertise-tags">
+          <span>🏙️ Marrakech</span>
+          <span>🔵 Chefchaouen</span>
+          <span>🏛️ Tétouan</span>
+          <span>🏜️ Sahara</span>
+          <span>🌊 Agadir</span>
+          <span>⛵ Essaouira</span>
+          <span>🎬 Ouarzazate</span>
+          <span>🌍 All Morocco</span>
+        </div>
+        <div class="contact-links">
+          <a href="tel:+212609282538">📞 +212 609 282 538</a>
+          <a href="mailto:ousghou39@gmail.com">✉️ ousghou39@gmail.com</a>
+          <a href="https://wa.me/212609282538" target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ─── SIDE CARDS ─── -->
+    <div class="side-cards">
+
+      <div class="side-card">
+        <h3>✅ Why book with us</h3>
+        <div style="display:grid;gap:12px;">
+          <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+            <span style="font-size:1.2rem;">✅</span>
+            <span><strong>Best price guarantee</strong> — no hidden fees, no surprises</span>
           </div>
-          <div class="feature">
-            <span class="icon-chip">🏨</span>
-            <div>
-              <strong>Hand‑picked accommodations</strong>
-              <div class="subtle">Riads, desert camps, and hotels chosen for authenticity</div>
-            </div>
+          <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+            <span style="font-size:1.2rem;">💬</span>
+            <span><strong>24/7 WhatsApp support</strong> — we're always here for you</span>
           </div>
-          <div class="feature">
-            <span class="icon-chip">🌿</span>
-            <div>
-              <strong>Sustainable travel</strong>
-              <div class="subtle">Eco‑conscious practices that support local communities</div>
-            </div>
+          <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
+            <span style="font-size:1.2rem;">🔄</span>
+            <span><strong>Flexible cancellation</strong> — plans change, we understand</span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;padding:8px 0;">
+            <span style="font-size:1.2rem;">🌍</span>
+            <span><strong>500+ happy travelers</strong> in 2026 — and counting</span>
           </div>
         </div>
       </div>
 
-      <div class="about-side">
-        <div class="side-card">
-          <h3>Why book with us</h3>
-          <div style="display:grid;gap:12px;margin-top:12px;">
-            <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
-              <span style="font-size:1.2rem;">✅</span>
-              <span><strong>Best price guarantee</strong> — no hidden fees, no surprises</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
-              <span style="font-size:1.2rem;">💬</span>
-              <span><strong>24/7 WhatsApp support</strong> — we're always here for you</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,.04);">
-              <span style="font-size:1.2rem;">🔄</span>
-              <span><strong>Flexible cancellation</strong> — plans change, we understand</span>
-            </div>
-            <div style="display:flex;gap:10px;align-items:center;padding:8px 0;">
-              <span style="font-size:1.2rem;">🌍</span>
-              <span><strong>500+ happy travelers</strong> in 2026 — and counting</span>
-            </div>
+      <div class="side-card">
+        <h3>📞 Contact anytime</h3>
+        <div class="contact-row">
+          <span class="icon">📱</span>
+          <div>
+            <strong>Abdellah (Casablanca)</strong>
+            <span><a href="tel:+212762934488" style="color:var(--terracotta);font-weight:700;">+212 762 934 488</a></span>
           </div>
         </div>
-
-        <div class="side-card">
-          <h3>Contact anytime</h3>
-          <p style="color:var(--muted);">
-            📞 <a href="tel:+212762934488" style="color:var(--terracotta);font-weight:700;">+212 762 934 488</a><br>
-            ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:var(--terracotta);font-weight:700;">abridmorocco@gmail.com</a><br>
-            <span style="font-size:.85rem;color:var(--muted);">⏰ Response within 2 hours (9am–9pm Morocco time)</span>
-          </p>
-        </div>
-
-        <div class="side-card" style="background:linear-gradient(135deg,rgba(244,185,66,.08),rgba(201,79,44,.06));border:2px solid var(--gold);">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;">
-            <span style="font-size:2rem;">🌟</span>
-            <h3 style="margin:0;">2026 Award Winner</h3>
+        <div class="contact-row">
+          <span class="icon">📱</span>
+          <div>
+            <strong>Karim (Marrakech)</strong>
+            <span><a href="tel:+212609282538" style="color:var(--terracotta);font-weight:700;">+212 609 282 538</a></span>
           </div>
-          <p style="color:var(--muted);font-size:.95rem;">Recognized as one of Morocco's top‑rated tour operators for sustainable and authentic travel experiences.</p>
+        </div>
+        <div class="contact-row">
+          <span class="icon">✉️</span>
+          <div>
+            <strong>Email</strong>
+            <span><a href="mailto:abridmorocco@gmail.com" style="color:var(--terracotta);font-weight:700;">abridmorocco@gmail.com</a></span>
+          </div>
+        </div>
+        <div class="contact-row" style="border-bottom:none;">
+          <span class="icon">⏰</span>
+          <div>
+            <strong>Response within 2 hours</strong>
+            <span>9am – 9pm Morocco time</span>
+          </div>
         </div>
       </div>
+
     </div>
 
     <!-- Stats -->
@@ -281,6 +525,7 @@
       <div class="stat-item"><strong>6</strong><span>Languages Spoken</span></div>
       <div class="stat-item"><strong>4.9★</strong><span>Average Rating</span></div>
       <div class="stat-item"><strong>100%</strong><span>Local Guides</span></div>
+      <div class="stat-item"><strong>15+</strong><span>Moroccan Cities</span></div>
     </div>
 
     <!-- CTA -->
@@ -294,7 +539,7 @@
     </div>
   </div>
 
-  <!-- ─── FOOTER (same as index.html) ─── -->
+  <!-- ─── FOOTER ─── -->
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
@@ -306,7 +551,7 @@
               <span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span>
             </div>
           </div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local experts Abdellah & Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p>
           <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
             <div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;">
@@ -341,19 +586,15 @@
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
-</li>
-<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
-</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca / Marrakech</li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:12px;">
-            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
-            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a>
+            <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a>
           </div>
         </div>
       </div>
@@ -441,16 +682,5 @@
     });
   </script>
 
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
