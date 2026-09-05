@@ -320,6 +320,11 @@
       gap: 14px;
     }
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -349,6 +354,7 @@
       </ul>
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <div id="google_translate_element" style="display:inline-block;"></div>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
           <span></span><span></span><span></span>
@@ -479,7 +485,7 @@
       </div>
       <div style="font-size:0.85rem;">🇲🇦 Authentic Morocco Tours · Sustainable Travel</div>
       <div style="font-size:0.85rem;text-align:right;">
-        📞 <a href="tel:+212762934488">+212 762 934 488</a><br>
+        📞 Abdellah: <a href="tel:+212762934488">+212 762 934 488</a><br>📞 Karim: <a href="tel:+212609282538">+212 609 282 538</a><br>
         ✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a>
       </div>
     </div>
@@ -500,5 +506,16 @@
     // The author photo is already updated in the header (logo) and no separate author image in this file.
     // If there is an author image, we can update it, but there isn't.
   </script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -72,7 +72,7 @@
     .lang-dropdown a:hover { background:#f5ede6; }
     .lang-dropdown a .flag { font-size:1.2rem; }
     .skiptranslate iframe { display:none !important; }
-    .skiptranslate { display:none !important; }
+    .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
     @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions .lang-wrapper { display:none; } }
 
@@ -116,6 +116,11 @@
     @keyframes fadeInUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
     @media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } .page-hero { padding: 72px 0 40px; } }
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -139,22 +144,7 @@
       </ul>
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
-        <div class="lang-wrapper">
-          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
-            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
-          </button>
-          <div class="lang-dropdown" id="langDropdown">
-            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
-            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
-            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
-            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
-            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
-            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
-            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
-            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
-            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
-          </div>
-        </div>
+        <div id="google_translate_element" style="display:inline-block;"></div>
         <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
       </div>
@@ -189,7 +179,8 @@
           <span class="icon-chip">📱</span>
           <div>
             <strong>Phone / WhatsApp</strong>
-            <a href="tel:+212762934488" style="color:var(--terracotta);font-weight:700;font-size:1.1rem;">+212 762 934 488</a>
+            <div>Abdellah: <a href="tel:+212762934488" style="color:var(--terracotta);font-weight:700;">+212 762 934 488</a></div>
+            <div>Karim: <a href="tel:+212609282538" style="color:var(--terracotta);font-weight:700;">+212 609 282 538</a></div>
             <div class="subtle">Response within 2 hours</div>
           </div>
         </div>
@@ -218,7 +209,8 @@
           </div>
         </div>
         <div class="socials">
-          <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366;color:#fff;border-color:#25D366;">💬 WhatsApp</a>
+          <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366;color:#fff;border-color:#25D366;">💬 Abdellah</a>
+          <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366;color:#fff;border-color:#25D366;">💬 Karim</a>
           <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4);color:#fff;border-color:#E1306C;">📸 Instagram</a>
           <a href="https://www.tiktok.com/@moroccoinsider" target="_blank" style="background:#000;color:#fff;border-color:#000;">🎵 TikTok</a>
         </div>
@@ -229,7 +221,14 @@
         <p>Fill out our secure booking form and we'll get back to you within 2 hours with availability and pricing.</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrMgeNcgMVQTB60hm5bWD9ePW-Ep0aNEgQOFPC4iun5d4iSA/viewform?usp=publish-editor" target="_blank" class="google-form-btn">📝 Start Your Booking</a>
         <p style="color:var(--muted);font-size:.85rem;margin:16px 0 8px;">💬 Or chat instantly on WhatsApp</p>
-        <a href="https://wa.me/212762934488" target="_blank" class="whatsapp-btn">💬 Chat on WhatsApp</a>
+        <div style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+          <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:12px 24px; border-radius:60px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+            💬 Chat with Abdellah
+          </a>
+          <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:12px 24px; border-radius:60px; font-weight:700; text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+            💬 Chat with Karim
+          </a>
+        </div>
         <div style="margin-top:20px;padding:16px;background:#e8f5e9;border-radius:12px;border:1px solid #a5d6a7;">
           <p style="margin:0;font-size:.85rem;color:#2e7d32;">✅ <strong>No deposit required</strong> – pay in cash to your guide</p>
         </div>
@@ -301,7 +300,12 @@
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+</li>
+<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
@@ -380,5 +384,16 @@
       document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
     });
   </script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

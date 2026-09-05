@@ -44,10 +44,16 @@
     .btn-white{background:white;color:#b84f2b;}
     .btn:hover{transform:translateY(-3px);}
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="container">
     <a href="blog.html" style="font-size:1.1rem;color:var(--muted);font-weight:normal;">← Back to Blog</a>
+    <div style="margin: 10px 0;"><div id="google_translate_element" style="display:inline-block;"></div></div>
 
     <div class="blog-header">
       <h1>Marrakech to Essaouira Day Trip: Bus vs. Private Taxi</h1>
@@ -84,9 +90,20 @@
 
   <footer style="background:#3f2a20;color:white;padding:30px 0;margin-top:40px;">
     <div style="max-width:800px;margin:0 auto;padding:0 20px;text-align:center;">
-      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 +212 762934488 · ✉️ abridmorocco@gmail.com</p>
+      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 Abdellah: +212 762 934 488 · 📞 Karim: +212 609 282 538 · ✉️ abridmorocco@gmail.com</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

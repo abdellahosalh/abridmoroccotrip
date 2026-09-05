@@ -42,6 +42,11 @@
     .cta-desert p{color:rgba(255,255,255,.9);margin:0 0 14px;}
     .cta-btn{display:inline-block;background:white;color:#b84f2b;padding:12px 28px;border-radius:30px;font-weight:700;}
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury & Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
@@ -49,7 +54,8 @@
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" style="height:48px;width:auto;border-radius:14px;"><div class="brand-text"><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div></a>
       <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#tours">Tours</a></li><li><a href="index.html#packages">Packages</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#gallery">Gallery</a></li><li><a href="index.html#comments">Reviews</a></li><li><a href="index.html#contact">Booking</a></li></ul>
-      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a><a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a><div id="google_translate_element" style="display:inline-block;"></div>
+        <a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
     </div>
     <div class="container mobile-menu" id="mobileMenu"><div class="mobile-panel"><a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="index.html#tours">Tours</a><a href="index.html#packages">Packages</a><a href="blog.html">Blog</a><a href="index.html#gallery">Gallery</a><a href="index.html#comments">Reviews</a><a href="index.html#contact">Booking</a></div></div>
   </header>
@@ -132,7 +138,7 @@
     </article>
   </main>
 
-  <footer><div class="container footer-inner"><div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div><div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div></div></footer>
+  <footer><div class="container footer-inner"><div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div><div>📞 Abdellah: +212 762 934 488 • 📞 Karim: +212 609 282 538 • ✉️ abridmorocco@gmail.com</div></div></footer>
   <script>
     (function(){
       document.getElementById('year').textContent=new Date().getFullYear();
@@ -146,5 +152,16 @@
   <!-- TO SET UP: Replace href with your Google Business review link from https://business.google.com -->
   <div id="reviewNudge" style="display:none;position:fixed;bottom:100px;right:24px;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 12px 40px rgba(63,42,32,.18);border:1px solid rgba(63,42,32,.1);max-width:270px;z-index:999;"><button onclick="document.getElementById('reviewNudge').style.display='none'" style="position:absolute;top:8px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:#6e5649;">×</button><div style="font-size:1.5rem;margin-bottom:6px;">⭐</div><strong style="display:block;color:#3f2a20;margin-bottom:6px;">Enjoyed your tour?</strong><p style="color:#6e5649;font-size:.9rem;margin:0 0 12px;line-height:1.5;">Leave us a Google review! 🙏</p><a href="https://www.google.com/maps/search/AbridMoroccoTrip" target="_blank" rel="noopener" style="display:block;text-align:center;background:linear-gradient(135deg,#b84f2b,#d46a2f);color:#fff;padding:10px;border-radius:12px;font-weight:700;font-size:.9rem;text-decoration:none;">Leave a Google Review ⭐</a></div>
   <script>setTimeout(function(){var n=document.getElementById('reviewNudge');if(n)n.style.display='block';},40000);</script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

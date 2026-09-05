@@ -46,6 +46,11 @@
     .btn-white{background:white;color:#b84f2b;}
     .btn:hover{transform:translateY(-3px);}
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury & Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
@@ -54,7 +59,8 @@
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home"><div class="brand-logo"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" width="44" height="44" style="width:44px;height:44px;object-fit:cover;border-radius:10px;"></div><div class="brand-text"><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div></a>
       <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#tours">Tours</a></li><li><a href="index.html#packages">Packages</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#gallery">Gallery</a></li><li><a href="index.html#comments">Reviews</a></li><li><a href="index.html#contact">Booking</a></li></ul>
-      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a><a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a><div id="google_translate_element" style="display:inline-block;"></div>
+        <a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
     </div>
     <div class="container mobile-menu" id="mobileMenu"><div class="mobile-panel"><a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="index.html#tours">Tours</a><a href="index.html#packages">Packages</a><a href="blog.html">Blog</a><a href="index.html#gallery">Gallery</a><a href="index.html#comments">Reviews</a><a href="index.html#contact">Booking</a></div></div>
   </header>
@@ -129,7 +135,7 @@
 
   <footer style="background:#3f2a20;color:white;padding:30px 0;margin-top:40px;">
     <div style="max-width:800px;margin:0 auto;padding:0 20px;text-align:center;">
-      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 +212 762934488 · ✉️ abridmorocco@gmail.com</p>
+      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 Abdellah: +212 762 934 488 · 📞 Karim: +212 609 282 538 · ✉️ abridmorocco@gmail.com</p>
     </div>
   </footer>
   <script>
@@ -138,5 +144,16 @@
     if(mt&&mm){mt.addEventListener('click',()=>{const o=mm.classList.toggle('open');mt.setAttribute('aria-expanded',o?'true':'false');});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{mm.classList.remove('open');mt.setAttribute('aria-expanded','false');}));}
   </script>
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 25px rgba(37,211,102,.45);z-index:1000;text-decoration:none;transition:transform .3s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">💬</a>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

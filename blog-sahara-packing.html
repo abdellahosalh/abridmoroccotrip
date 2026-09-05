@@ -45,10 +45,16 @@
     .btn-white{background:white;color:#b84f2b;}
     .btn:hover{transform:translateY(-3px);}
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="container">
     <a href="blog.html" style="font-size:1.1rem;color:var(--muted);font-weight:normal;">← Back to Blog</a>
+    <div style="margin: 10px 0;"><div id="google_translate_element" style="display:inline-block;"></div></div>
 
     <div class="blog-header">
       <h1>What to Pack for the Sahara Desert in Morocco (Local’s Guide)</h1>
@@ -96,10 +102,21 @@
 
   <footer style="background:#3f2a20;color:white;padding:30px 0;margin-top:40px;">
     <div style="max-width:800px;margin:0 auto;padding:0 20px;text-align:center;">
-      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 +212 762934488 · ✉️ abridmorocco@gmail.com</p>
+      <p>© <span id="year"></span> AbridMoroccoTrip · 📞 Abdellah: +212 762 934 488 · 📞 Karim: +212 609 282 538 · ✉️ abridmorocco@gmail.com</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 25px rgba(37,211,102,.45);z-index:1000;text-decoration:none;transition:transform .3s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">💬</a>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

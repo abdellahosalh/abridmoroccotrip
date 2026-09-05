@@ -72,7 +72,7 @@
     .lang-dropdown a:hover { background:#f5ede6; }
     .lang-dropdown a .flag { font-size:1.2rem; }
     .skiptranslate iframe { display:none !important; }
-    .skiptranslate { display:none !important; }
+    .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
     @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions .lang-wrapper { display:none; } }
 
@@ -104,6 +104,11 @@
     @keyframes fadeInUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
     @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); } .page-hero { padding: 72px 0 40px; } }
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -127,22 +132,7 @@
       </ul>
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
-        <div class="lang-wrapper">
-          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
-            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
-          </button>
-          <div class="lang-dropdown" id="langDropdown">
-            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
-            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
-            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
-            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
-            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
-            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
-            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
-            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
-            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
-          </div>
-        </div>
+        <div id="google_translate_element" style="display:inline-block;"></div>
         <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
       </div>
@@ -275,7 +265,12 @@
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+</li>
+<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
@@ -391,5 +386,16 @@
     });
   </script>
 
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

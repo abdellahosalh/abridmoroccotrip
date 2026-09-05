@@ -48,6 +48,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
@@ -71,6 +76,7 @@
       </ul>
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762934488</a>
+        <div id="google_translate_element" style="display:inline-block;"></div>
         <a class="btn btn-primary" href="index.html#contact">Book Now</a>
         <button class="menu-toggle" id="menuToggle">
           <span></span><span></span><span></span>
@@ -135,7 +141,7 @@
   <footer>
     <div class="container footer-inner">
       <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-      <div>📞 +212 762934488 • ✉️ abridmorocco@gmail.com</div>
+      <div>📞 Abdellah: +212 762 934 488 • 📞 Karim: +212 609 282 538 • ✉️ abridmorocco@gmail.com</div>
       <div class="socials">
         <a href="#">Instagram</a>
         <a href="#">TikTok</a>
@@ -177,5 +183,16 @@
     }, { threshold: 0.1 });
     reveals.forEach(el => revealObserver.observe(el));
   </script>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

@@ -45,6 +45,11 @@
     .btn-white{background:white;color:#b84f2b;}
     .btn:hover{transform:translateY(-3px);}
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
@@ -53,7 +58,8 @@
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="AbridMoroccoTrip home"><div class="brand-logo"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo" width="44" height="44" style="width:44px;height:44px;object-fit:cover;border-radius:10px;"></div><div class="brand-text"><strong>AbridMoroccoTrip</strong><span>Premium Morocco Tours</span></div></a>
       <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="index.html#about">About</a></li><li><a href="index.html#tours">Tours</a></li><li><a href="index.html#packages">Packages</a></li><li><a href="blog.html">Blog</a></li><li><a href="index.html#gallery">Gallery</a></li><li><a href="index.html#comments">Reviews</a></li><li><a href="index.html#contact">Booking</a></li></ul>
-      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a><a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
+      <div class="nav-actions"><a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a><div id="google_translate_element" style="display:inline-block;"></div>
+        <a class="btn btn-primary" href="index.html#contact">Book Now</a><button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div>
     </div>
     <div class="container mobile-menu" id="mobileMenu"><div class="mobile-panel"><a href="index.html">Home</a><a href="index.html#about">About Us</a><a href="index.html#tours">Tours</a><a href="index.html#packages">Packages</a><a href="blog.html">Blog</a><a href="index.html#gallery">Gallery</a><a href="index.html#comments">Reviews</a><a href="index.html#contact">Booking</a></div></div>
   </header>
@@ -152,8 +158,11 @@
         <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
         <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
           <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-            📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
-          </li>
+  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+</li>
+<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+</li>
           <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
             ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a>
           </li>
@@ -187,3 +196,17 @@
     </div>
   </div>
 </footer>
+
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

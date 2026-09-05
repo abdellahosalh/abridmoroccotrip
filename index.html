@@ -73,7 +73,7 @@
 
     /* Google Translate wrapper (hidden native elements) */
     .skiptranslate iframe { display:none !important; }
-    .skiptranslate { display:none !important; }
+    .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
 
     /* ─── REST OF STYLES ─── */
@@ -155,6 +155,11 @@
     @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
     @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } }
   </style>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -191,22 +196,7 @@
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
 
         <!-- 🌍 LANGUAGE SWITCHER (FULLY WORKING) -->
-        <div class="lang-wrapper">
-          <button class="lang-selector" id="langToggle" onclick="toggleLangDropdown()">
-            🌍 <span id="currentLangLabel">EN</span> <span class="arrow">▼</span>
-          </button>
-          <div class="lang-dropdown" id="langDropdown">
-            <a href="#" onclick="switchLanguage('en')"><span class="flag">🇬🇧</span> English</a>
-            <a href="#" onclick="switchLanguage('fr')"><span class="flag">🇫🇷</span> Français</a>
-            <a href="#" onclick="switchLanguage('es')"><span class="flag">🇪🇸</span> Español</a>
-            <a href="#" onclick="switchLanguage('de')"><span class="flag">🇩🇪</span> Deutsch</a>
-            <a href="#" onclick="switchLanguage('it')"><span class="flag">🇮🇹</span> Italiano</a>
-            <a href="#" onclick="switchLanguage('pt')"><span class="flag">🇵🇹</span> Português</a>
-            <a href="#" onclick="switchLanguage('ru')"><span class="flag">🇷🇺</span> Русский</a>
-            <a href="#" onclick="switchLanguage('ja')"><span class="flag">🇯🇵</span> 日本語</a>
-            <a href="#" onclick="switchLanguage('ar')"><span class="flag">🇸🇦</span> العربية</a>
-          </div>
-        </div>
+        <div id="google_translate_element" style="display:inline-block;"></div>
 
         <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -333,46 +323,30 @@
     </div>
   </section>
 
-  <!-- ─── TESTIMONIALS ─── -->
-  <section id="testimonials" style="background:var(--cream); padding:72px 0;">
+  <!-- Testimonials -->
+  <section style="background:var(--cream); padding:72px 0;">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Testimonials</span>
         <h2>What Our Travelers Say</h2>
         <p>Real reviews from real travelers who experienced Morocco with us.</p>
       </div>
-
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="quote">"Abdellah made our Marrakech visit absolutely magical. He knew every hidden corner of the souks and helped us avoid tourist traps. Best $55 we spent in Morocco!"</p>
-          <div class="author">
-            <div class="avatar">SM</div>
-            <div><strong>Sarah M.</strong><div style="font-size:.8rem; color:var(--muted);">London, UK</div></div>
-          </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">
+        <div style="background:#fff; border-radius:20px; padding:24px; box-shadow:var(--shadow);">
+          <div style="color:var(--gold); font-size:1.2rem;">★★★★★</div>
+          <p style="color:var(--brown-light); font-style:italic;">"Abdellah made our Marrakech visit absolutely magical! Best $55 we spent in Morocco."</p>
+          <div style="font-weight:700; color:var(--terracotta); margin-top:12px;">— Sarah M., London</div>
         </div>
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="quote">"The Merzouga desert tour was a dream come true! The camel trek at sunset, the Berber music around the campfire, the stars... Absolutely unforgettable."</p>
-          <div class="author">
-            <div class="avatar">MD</div>
-            <div><strong>Marco D.</strong><div style="font-size:.8rem; color:var(--muted);">Rome, Italy</div></div>
-          </div>
+        <div style="background:#fff; border-radius:20px; padding:24px; box-shadow:var(--shadow);">
+          <div style="color:var(--gold); font-size:1.2rem;">★★★★★</div>
+          <p style="color:var(--brown-light); font-style:italic;">"The Merzouga desert tour was a dream come true! Absolutely unforgettable."</p>
+          <div style="font-weight:700; color:var(--terracotta); margin-top:12px;">— Marco D., Rome</div>
         </div>
-
-        <div class="testimonial-card">
-          <div class="stars">★★★★★</div>
-          <p class="quote">"I traveled solo as a woman and felt completely safe and well taken care of. The guides were professional, knowledgeable, and went above and beyond. Thank you Abdellah!"</p>
-          <div class="author">
-            <div class="avatar">ER</div>
-            <div><strong>Emma R.</strong><div style="font-size:.8rem; color:var(--muted);">Toronto, Canada</div></div>
-          </div>
+        <div style="background:#fff; border-radius:20px; padding:24px; box-shadow:var(--shadow);">
+          <div style="color:var(--gold); font-size:1.2rem;">★★★★★</div>
+          <p style="color:var(--brown-light); font-style:italic;">"Traveled solo as a woman and felt completely safe. The guides went above and beyond."</p>
+          <div style="font-weight:700; color:var(--terracotta); margin-top:12px;">— Emma R., Toronto</div>
         </div>
-      </div>
-
-      <div style="text-align:center; margin-top:32px;">
-        <a href="https://www.google.com/search?q=AbridMoroccoTrip+reviews" target="_blank" class="btn btn-secondary">See All Reviews →</a>
       </div>
     </div>
   </section>
@@ -494,7 +468,12 @@
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+</li>
+<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
@@ -634,5 +613,16 @@
     });
   </script>
 
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
