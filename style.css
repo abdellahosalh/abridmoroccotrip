@@ -481,7 +481,7 @@ h1,h2,h3,h4,h5{
   overflow:hidden;
   box-shadow:0 32px 72px rgba(73,43,19,.22),0 0 0 1px rgba(255,255,255,.3);
 }
-.hero-main img{width:100%;height:100%}
+.hero-main img, .hero-main video{width:100%;height:100%;object-fit:cover}
 
 /* Floating cards on hero */
 .hero-float{
@@ -692,24 +692,6 @@ h1,h2,h3,h4,h5{
   margin:0 0 4px;
   color:var(--brown);
 }
-.price{
-  font-weight:800;
-  color:var(--terracotta);
-  font-size:1.18rem;
-  white-space:nowrap;
-}
-.price small{font-size:.75rem;color:var(--muted);font-weight:500}
-.inclusions{
-  margin:14px 0;
-  padding:12px 0;
-  border-top:1px dashed var(--line);
-  border-bottom:1px dashed var(--line);
-}
-.inclusion-item{
-  display:flex;align-items:center;gap:8px;
-  font-size:.88rem;margin-bottom:7px;color:var(--brown);
-}
-.inclusion-item .icon{color:var(--success);font-weight:900}
 .tour-meta{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 18px}
 .tour-meta span{
   font-size:.8rem;color:var(--muted);
@@ -1315,4 +1297,26 @@ footer::before{
   border-radius: 10px !important;
   border: 2px solid rgba(255,255,255,0.6);
   box-shadow: 0 4px 14px rgba(192,82,46,0.25);
+}
+
+/* ─── HIDE PRICES & REPLACE WITH "Contact for pricing" ────── */
+.price,
+.package-price,
+.price-large {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+.price::after,
+.package-price::after,
+.price-large::after {
+  content: "Contact for pricing";
+  font-size: 1rem !important;
+  color: var(--terracotta) !important;
+  display: inline-block !important;
+  font-weight: 700 !important;
+}
+.price small,
+.package-price small,
+.price-large small {
+  display: none !important;
 }
