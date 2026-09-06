@@ -2,6 +2,7 @@
    AbridMoroccoTrip — 2026 PREMIUM DESIGN SYSTEM
    World Trends: Glassmorphism · Bento Grid · Micro-animations
    Dark mode ready · Fluid typography · Neon-sand palette
+   PERFECTED FOR CLIENT PRESENTATION
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
@@ -1267,6 +1268,7 @@ footer::before{
 .card {
   animation: fadeInUp 0.8s var(--ease-spring) backwards;
 }
+
 /* ─── FIX: LOGO SIZE ON ALL PAGES ──────────────────────────── */
 .brand-logo img,
 .brand img,
@@ -1299,24 +1301,142 @@ footer::before{
   box-shadow: 0 4px 14px rgba(192,82,46,0.25);
 }
 
-/* ─── HIDE PRICES & REPLACE WITH "Contact for pricing" ────── */
+/* ─── PRICE REPLACEMENT - "Contact for pricing" ────────────── */
 .price,
 .package-price,
-.price-large {
+.price-large,
+.price-content,
+.tour-price,
+.pricing,
+[class*="price"] {
   font-size: 0 !important;
   color: transparent !important;
+  line-height: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 130px !important;
+  min-height: 30px !important;
 }
+
 .price::after,
 .package-price::after,
-.price-large::after {
-  content: "Contact for pricing";
-  font-size: 1rem !important;
-  color: var(--terracotta) !important;
+.price-large::after,
+.price-content::after,
+.tour-price::after,
+.pricing::after,
+[class*="price"]::after {
+  content: "Contact for pricing" !important;
+  font-size: 0.9rem !important;
+  color: var(--terracotta, #c94f2c) !important;
   display: inline-block !important;
+  line-height: 1.4 !important;
   font-weight: 700 !important;
+  text-align: center !important;
+  background: rgba(201, 79, 44, 0.08) !important;
+  padding: 6px 16px !important;
+  border-radius: 60px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.3s ease !important;
 }
+
+.price:hover::after,
+.package-price:hover::after,
+.price-large:hover::after {
+  background: var(--terracotta) !important;
+  color: #fff !important;
+  transform: scale(1.02) !important;
+  box-shadow: 0 4px 14px rgba(201, 79, 44, 0.25) !important;
+}
+
 .price small,
 .package-price small,
-.price-large small {
+.price-large small,
+.price-content small,
+.tour-price small {
   display: none !important;
+}
+
+/* Mobile responsive for price replacement */
+@media (max-width: 600px) {
+  .price::after,
+  .package-price::after,
+  .price-large::after,
+  .price-content::after,
+  .tour-price::after,
+  .pricing::after,
+  [class*="price"]::after {
+    font-size: 0.7rem !important;
+    padding: 4px 10px !important;
+    min-width: 90px !important;
+  }
+}
+
+/* ─── GOOGLE TRANSLATE STYLING ────────────────────────────── */
+#google_translate_element {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#google_translate_element .goog-te-combo {
+  background: transparent;
+  border: 1px solid rgba(44, 26, 18, .12);
+  border-radius: 60px;
+  padding: 6px 14px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--brown);
+  cursor: pointer;
+  font-family: var(--font);
+  outline: none;
+  transition: all .3s;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  padding-right: 36px;
+  min-width: 110px;
+}
+
+#google_translate_element .goog-te-combo:hover {
+  border-color: var(--terracotta);
+  background-color: rgba(201, 79, 44, .06);
+}
+
+#google_translate_element .goog-te-gadget {
+  font-family: var(--font) !important;
+  color: transparent !important;
+}
+
+#google_translate_element .goog-te-gadget-simple {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.skiptranslate iframe,
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+@media (max-width: 860px) {
+  .nav-actions #google_translate_element {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #google_translate_element .goog-te-combo {
+    min-width: 80px !important;
+    font-size: .75rem !important;
+    padding: 4px 30px 4px 10px !important;
+  }
 }
