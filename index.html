@@ -7,12 +7,10 @@
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
   <meta name="description" content="Book authentic Morocco tours with local experts Abdellah & Karim. Sahara desert, Atlas Mountains, Imperial Cities. Private guides, luxury camps, sustainable travel. Best price guaranteed. Free cancellation 24h." />
   <link rel="canonical" href="https://www.abridmorocco.com/" />
-
   <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/" />
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/" />
-
   <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,11 +58,10 @@
     #google_translate_element .goog-te-combo { background:transparent; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; font-size:.85rem; font-weight:600; color:var(--brown); cursor:pointer; font-family:var(--font); outline:none; transition:all .3s; appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat:no-repeat; background-position:right 10px center; background-size:16px; padding-right:36px; min-width:110px; }
     #google_translate_element .goog-te-combo:hover { border-color:var(--terracotta); background-color:rgba(201,79,44,.06); }
     #google_translate_element .goog-te-gadget { font-family:var(--font) !important; color:transparent !important; }
-    #google_translate_element .goog-te-gadget-simple { background:transparent !important; border:none !important; padding:0 !important; }
     .skiptranslate iframe { display:none !important; }
     .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
-    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } }
+    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions #google_translate_element { display:none; } }
     @media (max-width:600px) { #google_translate_element .goog-te-combo { min-width:80px; font-size:.75rem; padding:4px 30px 4px 10px; } }
 
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
@@ -77,7 +74,9 @@
     .hero-badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
     .badge { background:rgba(255,255,255,.85); backdrop-filter:blur(8px); border:1px solid rgba(61,42,30,.06); padding:6px 14px; border-radius:60px; font-size:.78rem; font-weight:600; color:var(--brown-light); box-shadow:0 2px 8px rgba(0,0,0,.04); }
     .hero-visual { position:relative; }
-    .hero-main img, .hero-main video { border-radius:var(--radius); width:100%; height:400px; object-fit:cover; box-shadow:var(--shadow-hover); transition:transform .6s ease; }
+    .hero-main { position:absolute; inset:40px 0 0 40px; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-hover); }
+    .hero-main video { width:100%; height:400px; object-fit:cover; }
+    .hero-main img { border-radius:var(--radius); width:100%; height:400px; object-fit:cover; box-shadow:var(--shadow-hover); transition:transform .6s ease; }
     .hero-main:hover video { transform:scale(1.02); }
     .hero-float { position:absolute; background:rgba(255,255,255,.92); backdrop-filter:blur(12px); border-radius:var(--radius-sm); padding:16px 20px; box-shadow:0 16px 40px rgba(0,0,0,.08); font-size:.85rem; min-width:140px; border:1px solid rgba(255,255,255,.6); animation:floatCard 6s ease-in-out infinite; }
     .hero-float.top { top:-16px; left:-16px; animation-delay:0s; }
@@ -138,8 +137,54 @@
     .testimonial-card .quote { color:var(--brown-light); font-style:italic; line-height:1.7; }
     .testimonial-card .author { display:flex; align-items:center; gap:12px; margin-top:16px; }
     .testimonial-card .avatar { width:48px; height:48px; border-radius:50%; background:linear-gradient(135deg,var(--terracotta),var(--gold)); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:1.2rem; flex-shrink:0; }
-    @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
-    @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img, .hero-main video { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } }
+
+    /* ─── HIDE PRICES & REPLACE WITH "Contact for pricing" ────── */
+    .price,
+    .package-price,
+    .price-large {
+      font-size: 0 !important;
+      color: transparent !important;
+      line-height: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 130px !important;
+      min-height: 30px !important;
+    }
+    .price::after,
+    .package-price::after,
+    .price-large::after {
+      content: "Contact for pricing" !important;
+      font-size: 0.9rem !important;
+      color: var(--terracotta, #c94f2c) !important;
+      display: inline-block !important;
+      line-height: 1.4 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      background: rgba(201, 79, 44, 0.08) !important;
+      padding: 4px 12px !important;
+      border-radius: 60px !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      letter-spacing: 0.3px !important;
+    }
+    .price small,
+    .package-price small,
+    .price-large small {
+      display: none !important;
+    }
+    @media (max-width: 600px) {
+      .price::after,
+      .package-price::after,
+      .price-large::after {
+        font-size: 0.75rem !important;
+        padding: 3px 10px !important;
+        min-width: 100px !important;
+      }
+    }
+
+    @media (max-width:860px) { .nav-actions #google_translate_element { display:none; } }
+    @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main { inset:30px 0 0 0; } .hero-main video { height:250px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } }
   </style>
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -205,8 +250,9 @@
       </div>
       <div class="hero-visual">
         <div class="hero-main">
-          <video autoplay muted loop playsinline>
+          <video autoplay muted loop playsinline preload="auto">
             <source src="https://ik.imagekit.io/4q2losd27z/1000069430.mp4" type="video/mp4">
+            <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot air balloon over Marrakech">
           </video>
         </div>
         <div class="hero-float top">
@@ -362,70 +408,14 @@
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
-        <div>
-          <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;">
-            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:2px solid rgba(255,255,255,.1);">
-            <div>
-              <strong style="font-size:1.1rem; color:#fff; display:block;">AbridMoroccoTrip</strong>
-              <span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span>
-            </div>
-          </div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local experts Abdellah &amp; Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p>
-          <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
-            <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
-            <div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;">
-              <span style="font-size:0.6rem; color:rgba(255,255,255,.3);">☆</span>
-              <div google-add-preferred-source-btn data-theme="dark" style="transform:scale(0.65); transform-origin:center; display:inline-block;"></div>
-            </div>
-          </div>
-        </div>
-        <div>
-          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Pages</h4>
-          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li><a href="index.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Home</a></li>
-            <li><a href="about.html" style="color:rgba(255,255,255,.5); transition:color .2s;">About</a></li>
-            <li><a href="tours.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Tours</a></li>
-            <li><a href="packages.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Packages</a></li>
-            <li><a href="gallery.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Gallery</a></li>
-            <li><a href="blog.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Blog</a></li>
-            <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Support</h4>
-          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li><a href="faq.html" style="color:rgba(255,255,255,.5); transition:color .2s;">FAQ</a></li>
-            <li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Booking</a></li>
-            <li><a href="cancellation-policy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cancellation Policy</a></li>
-            <li><a href="privacy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Privacy Policy</a></li>
-            <li><a href="terms.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Terms of Service</a></li>
-            <li><a href="cookies.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cookies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
-          <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca / Marrakech</li>
-          </ul>
-          <div style="display:flex; gap:10px; margin-top:12px;">
-            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a>
-            <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a>
-          </div>
-        </div>
+        <div><div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px; height:44px; border-radius:10px; object-fit:cover; border:2px solid rgba(255,255,255,.1);"><div><strong style="font-size:1.1rem; color:#fff; display:block;">AbridMoroccoTrip</strong><span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span></div></div><p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local experts Abdellah &amp; Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p><div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;"><span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span><div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;"><span style="font-size:0.6rem; color:rgba(255,255,255,.3);">☆</span><div google-add-preferred-source-btn data-theme="dark" style="transform:scale(0.65); transform-origin:center; display:inline-block;"></div></div></div></div>
+        <div><h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Pages</h4><ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);"><li><a href="index.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Home</a></li><li><a href="about.html" style="color:rgba(255,255,255,.5); transition:color .2s;">About</a></li><li><a href="tours.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Tours</a></li><li><a href="packages.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Packages</a></li><li><a href="gallery.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Gallery</a></li><li><a href="blog.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Blog</a></li><li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Contact</a></li></ul></div>
+        <div><h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Support</h4><ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);"><li><a href="faq.html" style="color:rgba(255,255,255,.5); transition:color .2s;">FAQ</a></li><li><a href="contact.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Booking</a></li><li><a href="cancellation-policy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cancellation Policy</a></li><li><a href="privacy.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Privacy Policy</a></li><li><a href="terms.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Terms of Service</a></li><li><a href="cookies.html" style="color:rgba(255,255,255,.5); transition:color .2s;">Cookies</a></li></ul></div>
+        <div><h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4><ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);"><li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li><li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li><li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li><li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li><li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca / Marrakech</li></ul><div style="display:flex; gap:10px; margin-top:12px;"><a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a><a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a></div></div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.06); padding-top:20px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; font-size:0.75rem; color:rgba(255,255,255,.3);">
         <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-        <div style="display:flex; gap:20px; flex-wrap:wrap;">
-          <a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a>
-          <a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a>
-          <a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a>
-          <span style="color:rgba(255,255,255,.15);">|</span>
-          <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
-        </div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;"><a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a><a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a><a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a><span style="color:rgba(255,255,255,.15);">|</span><span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span></div>
       </div>
     </div>
   </footer>
@@ -434,6 +424,7 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
+
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
@@ -442,21 +433,35 @@
         autoDisplay: false
       }, 'google_translate_element');
     }
+
+    // Force video autoplay on mobile
     document.addEventListener('DOMContentLoaded', function() {
+      const videos = document.querySelectorAll('video');
+      videos.forEach(function(video) {
+        video.play().catch(function(e) {
+          document.addEventListener('click', function() {
+            video.play();
+          }, { once: true });
+        });
+      });
+      // Hide Google Translate banner
       setTimeout(function() {
         const banner = document.querySelector('.goog-te-banner-frame');
         if (banner) banner.style.display = 'none';
       }, 1000);
     });
+
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
+
     window.addEventListener('scroll', () => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       document.getElementById('scrollProgress').style.width = (scrollTop / docHeight * 100) + '%';
       document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
     });
+
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
