@@ -6,7 +6,7 @@
   <title>Morocco Gallery – Real Moments from Our Travelers | AbridMoroccoTrip</title>
   <link rel="canonical" href="https://www.abridmorocco.com/gallery.html" />
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <meta name="description" content="Explore real moments from Morocco tours – Sahara desert sunsets, Chefchaouen blue streets, Marrakech souks, Atlas Mountains, and hot air balloon flights. Get inspired for your trip!" />
+  <meta name="description" content="Explore real moments from Morocco tours – Sahara desert sunsets, Chefchaouen blue streets, Marrakech souks, and Atlas Mountains. 200+ travelers' experiences captured. Get inspired for your trip!" />
 
   <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/gallery.html" />
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/gallery.html" />
@@ -15,8 +15,8 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Morocco Gallery – Real Moments from Our Travelers | AbridMoroccoTrip" />
-  <meta property="og:description" content="Explore real moments from Morocco tours – Sahara desert, Chefchaouen, Marrakech souks, hot air balloon, and more." />
-  <meta property="og:image" content="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" />
+  <meta property="og:description" content="Explore real moments from Morocco tours – Sahara desert, Chefchaouen, Marrakech souks, and more." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" />
   <meta property="og:url" content="https://www.abridmorocco.com/gallery.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -61,44 +61,20 @@
     .mobile-panel { display: flex; flex-direction: column; gap: 12px; background: #fff; border-radius: var(--radius-sm); padding: 20px; box-shadow: var(--shadow); }
     .mobile-panel a { font-weight: 500; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,.05); }
 
-    /* Google Translate */
-    #google_translate_element {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    #google_translate_element .goog-te-combo {
-      background: transparent;
-      border: 1px solid rgba(44,26,18,.12);
-      border-radius: 60px;
-      padding: 6px 14px;
-      font-size: .85rem;
-      font-weight: 600;
-      color: var(--brown);
-      cursor: pointer;
-      font-family: var(--font);
-      outline: none;
-      transition: all .3s;
-      appearance: none;
-      -webkit-appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 16px;
-      padding-right: 36px;
-      min-width: 110px;
-    }
-    #google_translate_element .goog-te-combo:hover {
-      border-color: var(--terracotta);
-      background-color: rgba(201,79,44,.06);
-    }
-    #google_translate_element .goog-te-gadget {
-      font-family: var(--font) !important;
-      color: transparent !important;
-    }
+    .lang-wrapper { position:relative; display:inline-block; }
+    .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); transition:all .3s; }
+    .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
+    .lang-selector .arrow { font-size:.6rem; transition:transform .3s; }
+    .lang-selector.open .arrow { transform:rotate(180deg); }
+    .lang-dropdown { display:none; position:absolute; top:calc(100% + 6px); right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:6px 0; min-width:150px; border:1px solid rgba(0,0,0,.06); z-index:100; overflow:hidden; }
+    .lang-dropdown.show { display:block; }
+    .lang-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; font-size:.88rem; transition:background .2s; }
+    .lang-dropdown a:hover { background:#f5ede6; }
+    .lang-dropdown a .flag { font-size:1.2rem; }
     .skiptranslate iframe { display:none !important; }
     .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
-    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions #google_translate_element { display:none; } }
+    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } .nav-actions .lang-wrapper { display:none; } }
 
     .page-hero { padding: 100px 0 64px; text-align: center; position: relative; overflow: hidden; }
     .page-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 20%, rgba(244,185,66,.15) 0%, transparent 65%), linear-gradient(180deg, #fff9f4 0%, var(--bg) 100%); z-index: 0; }
@@ -235,23 +211,7 @@
         <div class="gallery-caption">Morocco desert dunes</div>
       </div>
 
-      <!-- Hot Air Balloon Images -->
-      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot air balloon over Marrakech" loading="lazy">
-        <div class="gallery-caption">Hot air balloon over Marrakech</div>
-      </div>
-
-      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069419.jpg" alt="Hot air balloon at sunrise" loading="lazy">
-        <div class="gallery-caption">Sunrise balloon flight</div>
-      </div>
-
-      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069422.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069422.jpg" alt="Hot air balloon over palm groves" loading="lazy">
-        <div class="gallery-caption">Balloon over palm groves</div>
-      </div>
-
-      <!-- Pin Images -->
+      <!-- NEW IMAGES ADDED HERE -->
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/3b/c0/f1/3bc0f17d8773a2fe7920bde33f9fde2f.jpg">
         <img src="https://i.pinimg.com/736x/3b/c0/f1/3bc0f17d8773a2fe7920bde33f9fde2f.jpg" alt="Morocco desert camp at night" loading="lazy">
         <div class="gallery-caption">Desert camp under stars</div>
@@ -302,7 +262,7 @@
               <span style="font-size:0.7rem; color:rgba(255,255,255,.4);">Premium Morocco Tours</span>
             </div>
           </div>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local experts Abdellah &amp; Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.</p>
           <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
             <div style="background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.06); border-radius:40px; padding:3px 12px 3px 10px; backdrop-filter:blur(4px); display:inline-flex; align-items:center; gap:4px;">
@@ -337,15 +297,19 @@
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+              📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+            </li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+              📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+            </li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca / Marrakech</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:12px;">
-            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a>
-            <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a>
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
           </div>
         </div>
       </div>
@@ -372,15 +336,47 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Google Translate
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
-        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-        autoDisplay: false
-      }, 'google_translate_element');
+    let langDropdownOpen = false;
+    function toggleLangDropdown() {
+      const dropdown = document.getElementById('langDropdown');
+      const toggle = document.getElementById('langToggle');
+      langDropdownOpen = !langDropdownOpen;
+      dropdown.classList.toggle('show', langDropdownOpen);
+      toggle.classList.toggle('open', langDropdownOpen);
     }
+    function switchLanguage(lang) {
+      const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
+      document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
+      document.getElementById('langDropdown').classList.remove('show');
+      document.getElementById('langToggle').classList.remove('open');
+      langDropdownOpen = false;
+      localStorage.setItem('preferredLanguage', lang);
+      showNotification('🌍 Switching to ' + langNames[lang] + '...');
+    }
+    function showNotification(message) {
+      const existing = document.querySelector('.lang-notification');
+      if (existing) existing.remove();
+      const notif = document.createElement('div');
+      notif.className = 'lang-notification';
+      notif.textContent = message;
+      document.body.appendChild(notif);
+      setTimeout(() => { notif.style.opacity = '0'; notif.style.transition = 'opacity .4s ease'; setTimeout(() => notif.remove(), 400); }, 2000);
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+      const savedLang = localStorage.getItem('preferredLanguage');
+      if (savedLang) {
+        const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
+        document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
+      }
+      document.addEventListener('click', function(event) {
+        const wrapper = document.querySelector('.lang-wrapper');
+        if (wrapper && !wrapper.contains(event.target)) {
+          document.getElementById('langDropdown').classList.remove('show');
+          document.getElementById('langToggle').classList.remove('open');
+          langDropdownOpen = false;
+        }
+      });
+    });
 
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -422,6 +418,16 @@
     });
   </script>
 
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+  </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
