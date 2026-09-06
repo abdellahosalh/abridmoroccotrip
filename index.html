@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AbridMoroccoTrip | Premium Morocco Tours</title>
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <meta name="description" content="Book authentic Morocco tours with local expert Abdellah. Sahara desert, Atlas Mountains, Imperial Cities. Private guides, luxury camps, sustainable travel. Best price guaranteed. Free cancellation 24h." />
+  <meta name="description" content="Book authentic Morocco tours with local experts Abdellah & Karim. Sahara desert, Atlas Mountains, Imperial Cities. Private guides, luxury camps, sustainable travel. Best price guaranteed. Free cancellation 24h." />
   <link rel="canonical" href="https://www.abridmorocco.com/" />
 
   <!-- hreflang Tags -->
@@ -59,25 +59,51 @@
     .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
     .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
 
-    /* ─── LANGUAGE SWITCHER STYLES ─── */
-    .lang-wrapper { position:relative; display:inline-block; }
-    .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); transition:all .3s; }
-    .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
-    .lang-selector .arrow { font-size:.6rem; transition:transform .3s; }
-    .lang-selector.open .arrow { transform:rotate(180deg); }
-    .lang-dropdown { display:none; position:absolute; top:calc(100% + 6px); right:0; background:#fff; border-radius:12px; box-shadow:0 16px 40px rgba(0,0,0,.15); padding:6px 0; min-width:150px; border:1px solid rgba(0,0,0,.06); z-index:100; overflow:hidden; }
-    .lang-dropdown.show { display:block; }
-    .lang-dropdown a { display:flex; align-items:center; gap:10px; padding:10px 18px; color:var(--brown); text-decoration:none; font-weight:500; font-size:.88rem; transition:background .2s; }
-    .lang-dropdown a:hover { background:#f5ede6; }
-    .lang-dropdown a .flag { font-size:1.2rem; }
-
-    /* Google Translate wrapper (hidden native elements) */
+    /* Google Translate Styling */
+    #google_translate_element {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    #google_translate_element .goog-te-combo {
+      background: transparent;
+      border: 1px solid rgba(44,26,18,.12);
+      border-radius: 60px;
+      padding: 6px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--brown);
+      cursor: pointer;
+      font-family: var(--font);
+      outline: none;
+      transition: all .3s;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px;
+      padding-right: 36px;
+      min-width: 110px;
+    }
+    #google_translate_element .goog-te-combo:hover {
+      border-color: var(--terracotta);
+      background-color: rgba(201,79,44,.06);
+    }
+    #google_translate_element .goog-te-gadget {
+      font-family: var(--font) !important;
+      color: transparent !important;
+    }
+    #google_translate_element .goog-te-gadget-simple {
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+    }
     .skiptranslate iframe { display:none !important; }
     .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
 
-    /* ─── REST OF STYLES ─── */
     @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } }
+    @media (max-width:600px) { #google_translate_element .goog-te-combo { min-width:80px; font-size:.75rem; padding:4px 30px 4px 10px; } }
 
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 80% 20%, rgba(244,185,66,.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,79,44,.06) 0%, transparent 50%), linear-gradient(180deg,#fff9f4 0%,var(--bg) 100%); z-index:0; pointer-events:none; }
@@ -195,8 +221,8 @@
       <div class="nav-actions">
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
 
-        <!-- 🌍 LANGUAGE SWITCHER (FULLY WORKING) -->
-        <div id="google_translate_element" style="display:inline-block;"></div>
+        <!-- 🌍 GOOGLE TRANSLATE - WORKING -->
+        <div id="google_translate_element"></div>
 
         <a class="btn btn-primary" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -225,7 +251,7 @@
     <div class="container hero-grid">
       <div class="hero-copy">
         <h1>Feel the Magic of<br><span class="highlight">Morocco</span></h1>
-        <p>Book your dream Morocco tour – Sahara, Atlas, Imperial Cities. Private guides, luxury camps, and 24/7 support from a local expert.</p>
+        <p>Book your dream Morocco tour – Sahara, Atlas, Imperial Cities. Private guides, luxury camps, and 24/7 support from local experts Abdellah & Karim.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="contact.html">✨ Reserve Your Trip</a>
           <a class="btn btn-secondary" href="tours.html">Discover Tours →</a>
@@ -240,7 +266,10 @@
 
       <div class="hero-visual">
         <div class="hero-main">
-          <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?q=80&w=2070&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+          <video autoplay muted loop playsinline style="width:100%; height:400px; object-fit:cover; border-radius:20px;">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069430.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div class="hero-float top">
           <div class="stars">★★★★★</div>
@@ -429,7 +458,7 @@
             </div>
           </div>
           <p style="font-size:0.85rem; color:rgba(255,255,255,.5); line-height:1.7; max-width:280px;">
-            Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.
+            Authentic Morocco tours with local experts Abdellah &amp; Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.
           </p>
           <div style="margin-top:16px; display:flex; align-items:center; gap:8px; flex-wrap:wrap;">
             <span style="font-size:0.6rem; color:rgba(255,255,255,.3); text-transform:uppercase; letter-spacing:0.5px;">Google</span>
@@ -469,18 +498,18 @@
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-  📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
-</li>
-<li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-  📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
-</li>
+              📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+            </li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+              📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+            </li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca / Marrakech</li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:12px;">
-            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
-            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a>
+            <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a>
           </div>
         </div>
 
@@ -503,99 +532,34 @@
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
   <script>
-    // ─── UPDATE COPYRIGHT YEAR ───
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ─── LANGUAGE SWITCHER (GOOGLE TRANSLATE) ───
-    let langDropdownOpen = false;
-
-    function toggleLangDropdown() {
-      const dropdown = document.getElementById('langDropdown');
-      const toggle = document.getElementById('langToggle');
-      langDropdownOpen = !langDropdownOpen;
-      dropdown.classList.toggle('show', langDropdownOpen);
-      toggle.classList.toggle('open', langDropdownOpen);
+    // Google Translate - Official Widget
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false
+      }, 'google_translate_element');
     }
 
-    function switchLanguage(lang) {
-      const langNames = {
-        'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
-        'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
-      };
-      document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
-      document.getElementById('langDropdown').classList.remove('show');
-      document.getElementById('langToggle').classList.remove('open');
-      langDropdownOpen = false;
-
-      // Save preference
-      localStorage.setItem('preferredLanguage', lang);
-
-      // Show notification
-      showNotification('🌍 Switching to ' + langNames[lang] + '...');
-
-      // Use Google Translate to change language
-      const googleFrame = document.querySelector('.goog-te-menu-frame');
-      if (googleFrame) {
-        try {
-          const select = googleFrame.contentDocument.querySelector('.goog-te-combo');
-          if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-            return;
-          }
-        } catch(e) {}
-      }
-
-      // Fallback: reload with language parameter
-      window.location.href = window.location.pathname + '?lang=' + lang;
-    }
-
-    function showNotification(message) {
-      const existing = document.querySelector('.lang-notification');
-      if (existing) existing.remove();
-
-      const notif = document.createElement('div');
-      notif.className = 'lang-notification';
-      notif.textContent = message;
-      document.body.appendChild(notif);
-
-      setTimeout(() => {
-        notif.style.opacity = '0';
-        notif.style.transition = 'opacity .4s ease';
-        setTimeout(() => notif.remove(), 400);
-      }, 2000);
-    }
-
-    // ─── LOAD SAVED LANGUAGE ───
+    // Hide Google Translate banner
     document.addEventListener('DOMContentLoaded', function() {
-      const savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang) {
-        const langNames = {
-          'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
-          'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
-        };
-        document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
-      }
-
-      // Close dropdown when clicking outside
-      document.addEventListener('click', function(event) {
-        const wrapper = document.querySelector('.lang-wrapper');
-        if (wrapper && !wrapper.contains(event.target)) {
-          document.getElementById('langDropdown').classList.remove('show');
-          document.getElementById('langToggle').classList.remove('open');
-          langDropdownOpen = false;
+      setTimeout(function() {
+        const banner = document.querySelector('.goog-te-banner-frame');
+        if (banner) {
+          banner.style.display = 'none';
         }
-      });
+      }, 1000);
     });
 
-    // ─── MOBILE MENU ───
+    // Mobile menu
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('open');
-    });
+    menuToggle.addEventListener('click', () => mobileMenu.classList.toggle('open'));
 
-    // ─── SCROLL PROGRESS ───
+    // Scroll progress
     window.addEventListener('scroll', () => {
       const scrollTop = window.pageYOffset;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -603,7 +567,7 @@
       document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
     });
 
-    // ─── WHATSAPP TRACKING ───
+    // WhatsApp tracking
     document.querySelectorAll('a[href^="https://wa.me/"]').forEach(function(link) {
       link.addEventListener('click', function() {
         if (typeof gtag !== 'undefined') {
@@ -613,16 +577,7 @@
     });
   </script>
 
-  <script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-      pageLanguage: 'en',
-      includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
-      layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
-      autoDisplay: false
-    }, 'google_translate_element');
-  }
-  </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
