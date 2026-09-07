@@ -1,0 +1,197 @@
+﻿import os
+import re
+from pathlib import Path
+
+# --- CSS fix to ensure nav-actions stay in one line ---
+HEADER_CSS_FIX = '''
+@media (max-width: 1024px) {
+    .nav-actions .contact-link {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    .nav-actions .btn-gold {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+    }
+    .nav-actions .lang-selector {
+        padding: 3px 8px;
+        font-size: 0.65rem;
+    }
+}
+@media (max-width: 860px) {
+    .nav-actions {
+        flex-wrap: nowrap !important;
+        gap: 4px !important;
+    }
+    .nav-actions .contact-link {
+        display: none !important;
+    }
+    .nav-actions .btn-gold {
+        display: none !important;
+    }
+    .nav-actions .lang-wrapper {
+        display: none !important;
+    }
+    .brand-text strong {
+        font-size: 0.8rem;
+    }
+    .brand-logo {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 28px;
+        max-height: 28px;
+    }
+}
+@media (max-width: 480px) {
+    .nav-actions .lang-selector {
+        display: none !important;
+    }
+    .brand-text strong {
+        font-size: 0.7rem;
+    }
+}
+'''
+
+# --- Helper: check if the fix is already applied ---
+def has_fix(content):
+    return '.nav-actions .contact-link' in content and 'display: none !important;' in content
+
+# --- Helper: ensure nav-actions have flex-wrap: nowrap ---
+def add_nav_flex_fix(content):
+    # Look for .nav-actions style block
+    # If we find it, add flex-wrap: nowrap
+    # If not, add the whole CSS block
+    if '.nav-actions' in content:
+        # Check if flex-wrap: nowrap is already there
+        if 'flex-wrap' in content:
+            # Try to add !important to existing flex-wrap
+            pattern = r'(\.nav-actions\s*\{[^}]*flex-wrap\s*:\s*[^;]*;)'
+            def repl(match):
+                return match.group(0).replace(';', ' !important;')
+            content = re.sub(pattern, repl, content, flags=re.IGNORECASE)
+        else:
+            # Add flex-wrap: nowrap to nav-actions
+            pattern = r'(\.nav-actions\s*\{[^}]*?)(\})'
+            def repl(match):
+                return match.group(1) + '  flex-wrap: nowrap !important;\n    }'
+            content = re.sub(pattern, repl, content, flags=re.IGNORECASE | re.DOTALL)
+        return content
+    return content
+
+# --- Helper: add the mobile fix CSS to style block ---
+def add_mobile_fix(content):
+    # Find the <style> block
+    style_match = re.search(r'<style[^>]*>.*?</style>', content, re.DOTALL | re.IGNORECASE)
+    if not style_match:
+        # No style block, create one before </head>
+        head_end = content.find('</head>')
+        if head_end != -1:
+            new_style = f'<style>\n{HEADER_CSS_FIX}\n</style>\n'
+            content = content[:head_end] + new_style + content[head_end:]
+        return content
+
+    style_content = style_match.group(0)
+    # Check if the fix is already there
+    if '.nav-actions .contact-link' in style_content and 'display: none !important;' in style_content:
+        return content  # already fixed
+
+    # Insert the fix at the end of the style block, before </style>
+    new_style = style_content[:-7] + HEADER_CSS_FIX + '\n</style>'
+    return content.replace(style_content, new_style)
+
+# --- Helper: ensure mobile panel has Contact and Book Now ---
+def ensure_mobile_panel_links(content):
+    panel_match = re.search(r'<div\s+class="mobile-panel"[^>]*>.*?</div>', content, re.DOTALL | re.IGNORECASE)
+    if not panel_match:
+        return content
+
+    panel = panel_match.group(0)
+
+    # Check for Contact
+    if '📋 Contact' not in panel and '>Contact<' not in panel:
+        # Insert before last </a> or before </div>
+        last_a = panel.rfind('</a>')
+        if last_a != -1:
+            new_a = '\n        <a href="contact.html">📋 Contact</a>'
+            panel = panel[:last_a] + new_a + panel[last_a:]
+            content = content.replace(panel_match.group(0), panel)
+
+    # Check for Book Now
+    if 'Book Now' not in panel and 'book now' not in panel.lower():
+        last_a = panel.rfind('</a>')
+        if last_a != -1:
+            new_a = '\n        <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a>'
+            panel = panel[:last_a] + new_a + panel[last_a:]
+            content = content.replace(panel_match.group(0), panel)
+
+    return content
+
+# --- Main update function ---
+def update_file(filepath):
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    original = content
+    changed = False
+
+    # 1. Add mobile fix CSS
+    new_content = add_mobile_fix(content)
+    if new_content != content:
+        content = new_content
+        changed = True
+
+    # 2. Ensure nav-actions have flex-wrap: nowrap
+    new_content = add_nav_flex_fix(content)
+    if new_content != content:
+        content = new_content
+        changed = True
+
+    # 3. Ensure mobile panel has Contact and Book Now
+    new_content = ensure_mobile_panel_links(content)
+    if new_content != content:
+        content = new_content
+        changed = True
+
+    if changed:
+        backup_dir = Path('backup_header_fix')
+        backup_dir.mkdir(exist_ok=True)
+        backup_path = backup_dir / os.path.basename(filepath)
+        with open(backup_path, 'w', encoding='utf-8') as f:
+            f.write(original)
+        with open(filepath, 'w', encoding='utf-8') as f:
+            f.write(content)
+        print(f"✅ Fixed header in {filepath}")
+        return True
+    else:
+        print(f"ℹ️  No changes needed in {filepath}")
+        return False
+
+def main():
+    html_files = []
+    for root, dirs, files in os.walk('.'):
+        if 'backup' in root.lower():
+            continue
+        for file in files:
+            if file.endswith('.html') and not file.startswith('.'):
+                html_files.append(os.path.join(root, file))
+
+    if not html_files:
+        print("No HTML files found.")
+        return
+
+    print(f"Found {len(html_files)} HTML files.")
+    any_changed = False
+    for f in html_files:
+        if update_file(f):
+            any_changed = True
+
+    if not any_changed:
+        print("\n🎉 All pages already have the correct header layout.")
+    else:
+        print("\n✅ Header layout fixed on all pages. Backups saved in 'backup_header_fix'.")
+        print("   Upload all files to your server and clear cache.")
+
+if __name__ == '__main__':
+    main()

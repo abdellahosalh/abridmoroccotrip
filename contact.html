@@ -52,7 +52,7 @@
     .nav-links { display: flex; list-style: none; gap: 24px; font-size: .9rem; font-weight: 500; }
     .nav-links a { color: var(--brown-light); transition: color var(--transition); }
     .nav-links a:hover, .nav-links a.active { color: var(--terracotta); }
-    .nav-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .nav-actions { display: flex !important; align-items: center !important; gap: 12px !important; flex-wrap: wrap !important; }
     .mini-contact { font-size: .85rem; font-weight: 600; color: var(--terracotta); }
     .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
     .menu-toggle span { display: block; width: 28px; height: 3px; background: var(--brown); border-radius: 4px; transition: var(--transition); }
@@ -188,7 +188,8 @@
         <a href="blog.html">📰 Blog</a>
         <a href="airport-transfer.html">✈️ Airport Transfer</a>
         <a href="contact.html">📋 Contact</a>
-        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp
+        <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a></a>
       </div>
     </div>
   </header>

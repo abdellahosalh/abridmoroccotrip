@@ -53,6 +53,58 @@
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
+<style>
+
+@media (max-width: 1024px) {
+    .nav-actions .contact-link {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+    .nav-actions .btn-gold {
+        padding: 4px 12px;
+        font-size: 0.7rem;
+    }
+    .nav-actions .lang-selector {
+        padding: 3px 8px;
+        font-size: 0.65rem;
+    }
+}
+@media (max-width: 860px) {
+    .nav-actions {
+        flex-wrap: nowrap !important !important;
+        gap: 4px !important;
+    }
+    .nav-actions .contact-link {
+        display: none !important;
+    }
+    .nav-actions .btn-gold {
+        display: none !important;
+    }
+    .nav-actions .lang-wrapper {
+        display: none !important;
+    }
+    .brand-text strong {
+        font-size: 0.8rem;
+    }
+    .brand-logo {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+        min-height: 28px;
+        max-width: 28px;
+        max-height: 28px;
+    }
+}
+@media (max-width: 480px) {
+    .nav-actions .lang-selector {
+        display: none !important;
+    }
+    .brand-text strong {
+        font-size: 0.7rem;
+    }
+}
+
+</style>
 </head>
 <body>
   <button id="backToTop" class="back-to-top" title="Go to top">↑</button>
@@ -110,7 +162,8 @@
         <a href="blog.html">📰 Blog</a>
         <a href="airport-transfer.html">✈️ Airport Transfer</a>
         <a href="contact.html">📋 Contact</a>
-        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp
+        <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a></a>
       </div>
     </div>
   </header>
