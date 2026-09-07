@@ -38,7 +38,90 @@
     .nav-actions .mini-contact {
         display: none !important;
     }
-}</style>
+}<
+/* ─── FORCE ONE‑LINE HEADER ─── */
+.nav {
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+}
+.nav-links {
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+}
+.nav-links a {
+    font-size: 0.75rem !important;
+    padding: 4px 6px !important;
+    white-space: nowrap !important;
+}
+.nav-actions {
+    flex-wrap: nowrap !important;
+    gap: 4px !important;
+    flex-shrink: 0 !important;
+}
+.nav-actions .contact-link {
+    font-size: 0.75rem !important;
+    padding: 4px 8px !important;
+    white-space: nowrap !important;
+}
+.nav-actions .btn-gold {
+    font-size: 0.7rem !important;
+    padding: 4px 12px !important;
+    white-space: nowrap !important;
+}
+.nav-actions .lang-selector {
+    font-size: 0.65rem !important;
+    padding: 3px 8px !important;
+}
+.brand-text strong {
+    font-size: 0.9rem !important;
+}
+.brand-text span {
+    font-size: 0.55rem !important;
+}
+.brand-logo {
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+}
+
+/* ─── MOBILE: hide Contact & Book Now ─── */
+@media (max-width: 860px) {
+    .nav-actions .contact-link,
+    .nav-actions .btn-gold,
+    .nav-actions .lang-wrapper {
+        display: none !important;
+    }
+    .nav-links {
+        display: none !important;
+    }
+    .menu-toggle {
+        display: flex !important;
+    }
+    .brand-text strong {
+        font-size: 0.75rem !important;
+    }
+    .brand-logo {
+        width: 28px !important;
+        height: 28px !important;
+        min-width: 28px !important;
+        min-height: 28px !important;
+        max-width: 28px !important;
+        max-height: 28px !important;
+    }
+}
+@media (max-width: 480px) {
+    .nav-actions .lang-selector {
+        display: none !important;
+    }
+    .brand-text strong {
+        font-size: 0.65rem !important;
+    }
+}
+
+</style>
   <!-- Vercel Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
