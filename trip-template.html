@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Trip Builder – Margin Calculator | AbridMoroccoTrip</title>
+  <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root { --terracotta: #c0522e; --gold: #f4b942; --bg: #ecdcd0; --brown: #2c1a12; --muted: #7a5f52; --radius: 20px; --font: 'Plus Jakarta Sans', sans-serif; }
+    body { font-family: var(--font); background: var(--bg); color: var(--brown); padding: 40px 20px; line-height: 1.7; }
+    .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.08); }
+    h1 { font-family: 'Syne', sans-serif; color: var(--terracotta); margin-bottom: 8px; }
+    .subtitle { color: var(--muted); margin-bottom: 30px; }
+    label { font-weight: 700; display: block; margin: 16px 0 4px; }
+    input, select { width: 100%; padding: 12px 16px; border: 1.5px solid #e0d6cc; border-radius: 12px; font-size: 1rem; background: #fcf8f2; }
+    input:focus { border-color: var(--terracotta); outline: none; }
+    .row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .result-box { background: #f0ebe4; padding: 24px; border-radius: var(--radius); margin: 30px 0; border-left: 6px solid var(--terracotta); }
+    .result-box .big { font-size: 2.4rem; font-weight: 800; color: var(--terracotta); }
+    .result-box .label { font-size: .85rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; }
+    .btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 14px 32px; border-radius: 60px; font-weight: 700; border: none; cursor: pointer; transition: all .3s; }
+    .btn:hover { background: #a63d1f; transform: translateY(-3px); }
+    .btn-secondary { background: var(--gold); color: var(--brown); }
+    .btn-secondary:hover { background: #e6a832; }
+    .back-link { display: inline-block; margin-top: 20px; color: var(--terracotta); font-weight: 600; }
+    @media (max-width: 600px) { .container { padding: 20px; } .row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>📐 Agent Margin Calculator</h1>
+  <p class="subtitle">Enter your costs to see your profit and suggested retail price.</p>
+
+  <form id="calcForm">
+    <div class="row">
+      <div>
+        <label for="accommodation">Accommodation (per person)</label>
+        <input type="number" id="accommodation" value="600" step="10" />
+      </div>
+      <div>
+        <label for="transport">Transport (per person)</label>
+        <input type="number" id="transport" value="300" step="10" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="meals">Meals (per person)</label>
+        <input type="number" id="meals" value="150" step="10" />
+      </div>
+      <div>
+        <label for="guides">Guides & Activities</label>
+        <input type="number" id="guides" value="200" step="10" />
+      </div>
+    </div>
+
+    <div>
+      <label for="agentFee">Your Agent Fee / Markup (%)</label>
+      <input type="number" id="agentFee" value="20" step="1" />
+    </div>
+
+    <div>
+      <label for="numTravelers">Number of Travelers</label>
+      <input type="number" id="numTravelers" value="2" step="1" min="1" />
+    </div>
+
+    <button type="button" class="btn" onclick="calculate()">💰 Calculate Price</button>
+    <button type="button" class="btn btn-secondary" onclick="resetForm()" style="margin-left: 10px;">↺ Reset</button>
+  </form>
+
+  <div class="result-box" id="resultBox">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+      <div>
+        <div class="label">Total Cost Per Person</div>
+        <div class="big" id="costPerPerson">$0</div>
+      </div>
+      <div>
+        <div class="label">Suggested Retail (per person)</div>
+        <div class="big" id="retailPerPerson">$0</div>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; padding-top: 16px; border-top: 1px solid #d0c4b8;">
+      <div>
+        <div class="label">Your Profit (per person)</div>
+        <div class="big" id="profitPerPerson" style="color: #2e7d32;">$0</div>
+      </div>
+      <div>
+        <div class="label">Total Package Price (for group)</div>
+        <div class="big" id="totalGroupPrice" style="color: var(--brown);">$0</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 20px; background: #fce8c8; padding: 16px; border-radius: 12px; border: 1px solid var(--gold);">
+    <p style="font-weight: 700;">📋 Agent Tip:</p>
+    <p style="font-size: .9rem; color: var(--brown);">Use this calculator to quickly price the <strong>Classic 13-Day Morocco Itinerary</strong> for your clients. Adjust the markup to match your agency's margin targets.</p>
+    <a href="classic-morocco.html" class="btn btn-secondary" style="margin-top: 10px;">📋 View Full Itinerary</a>
+  </div>
+
+  <a href="agent-tools.html" class="back-link">← Back to Agent Dashboard</a>
+</div>
+
+<script>
+  function calculate() {
+    const accommodation = parseFloat(document.getElementById('accommodation').value) || 0;
+    const transport = parseFloat(document.getElementById('transport').value) || 0;
+    const meals = parseFloat(document.getElementById('meals').value) || 0;
+    const guides = parseFloat(document.getElementById('guides').value) || 0;
+    const agentFee = parseFloat(document.getElementById('agentFee').value) || 0;
+    const travelers = parseInt(document.getElementById('numTravelers').value) || 1;
+
+    const costPerPerson = accommodation + transport + meals + guides;
+    const retailPerPerson = costPerPerson * (1 + agentFee / 100);
+    const profitPerPerson = retailPerPerson - costPerPerson;
+    const totalGroupPrice = retailPerPerson * travelers;
+
+    document.getElementById('costPerPerson').textContent = '$' + costPerPerson.toFixed(2);
+    document.getElementById('retailPerPerson').textContent = '$' + retailPerPerson.toFixed(2);
+    document.getElementById('profitPerPerson').textContent = '$' + profitPerPerson.toFixed(2);
+    document.getElementById('totalGroupPrice').textContent = '$' + totalGroupPrice.toFixed(2);
+  }
+
+  function resetForm() {
+    document.getElementById('accommodation').value = 600;
+    document.getElementById('transport').value = 300;
+    document.getElementById('meals').value = 150;
+    document.getElementById('guides').value = 200;
+    document.getElementById('agentFee').value = 20;
+    document.getElementById('numTravelers').value = 2;
+    calculate();
+  }
+
+  window.onload = calculate;
+</script>
+
+</body>
+</html>
