@@ -14,9 +14,6 @@
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/" />
 
-  <!-- ─── PREFERRED SOURCES SCRIPT ─── -->
-  <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,28 +40,25 @@
     .promo-banner span { color:var(--gold); font-weight:800; }
     .site-header { background:rgba(255,255,255,.92); backdrop-filter:blur(12px); position:sticky; top:0; z-index:100; border-bottom:1px solid rgba(0,0,0,.05); padding:10px 0; }
     .site-header.scrolled { box-shadow:0 4px 20px rgba(0,0,0,.06); }
-    .nav { display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap; }
-    .brand { display:flex; align-items:center; gap:12px; }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .brand { display:flex; align-items:center; gap:12px; flex-shrink:0; }
     .brand-logo { width:44px; height:44px; min-width:44px; min-height:44px; max-width:44px; max-height:44px; overflow:hidden; flex-shrink:0; border-radius:10px; border:2px solid rgba(255,255,255,0.6); box-shadow:0 4px 14px rgba(192,82,46,0.25); }
     .brand-logo img { width:100%; height:100%; object-fit:cover; display:block; }
     .brand-text strong { font-size:1.1rem; color:var(--brown); }
     .brand-text span { font-size:.75rem; color:var(--muted); display:block; margin-top:-2px; }
-    .nav-links { display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500; }
-    .nav-links a { color:var(--brown-light); transition:color var(--transition); }
+    .nav-links { display:flex; list-style:none; gap:20px; font-size:.9rem; font-weight:500; align-items:center; }
+    .nav-links a { color:var(--brown-light); transition:color var(--transition); white-space:nowrap; }
     .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
-    .nav-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-    .mini-contact { font-size:.95rem; font-weight:700; color:var(--terracotta); background:rgba(201,79,44,.08); padding:8px 16px; border-radius:60px; border:1px solid rgba(201,79,44,.15); transition:all .3s; white-space:nowrap; }
-    .mini-contact:hover { background:var(--terracotta); color:#fff; border-color:var(--terracotta); }
-    .menu-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
-    .menu-toggle span { display:block; width:28px; height:3px; background:var(--brown); border-radius:4px; transition:var(--transition); }
-    .mobile-menu { display:none; padding:16px 0; }
-    .mobile-menu.open { display:block; }
-    .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
-    .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
 
-    /* ─── LANGUAGE SWITCHER STYLES ─── */
+    /* ─── RIGHT SIDE: CONTACT + PHONE + BOOK NOW ─── */
+    .nav-actions { display:flex; align-items:center; gap:10px; flex-wrap:wrap; flex-shrink:0; }
+    .nav-actions .contact-link { font-weight:600; color:var(--brown-light); padding:6px 12px; border-radius:60px; transition:all .3s; font-size:.9rem; }
+    .nav-actions .contact-link:hover { color:var(--terracotta); background:rgba(201,79,44,.06); }
+    .nav-actions .mini-contact { font-size:.9rem; font-weight:700; color:var(--terracotta); background:rgba(201,79,44,.08); padding:8px 16px; border-radius:60px; border:1px solid rgba(201,79,44,.15); transition:all .3s; white-space:nowrap; }
+    .nav-actions .mini-contact:hover { background:var(--terracotta); color:#fff; border-color:var(--terracotta); }
+    .nav-actions .btn-gold { padding:10px 24px; font-size:.85rem; }
     .lang-wrapper { position:relative; display:inline-block; }
-    .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 14px; cursor:pointer; font-weight:600; font-size:.85rem; color:var(--brown); transition:all .3s; }
+    .lang-selector { display:flex; align-items:center; gap:6px; background:none; border:1px solid rgba(44,26,18,.12); border-radius:60px; padding:6px 12px; cursor:pointer; font-weight:600; font-size:.8rem; color:var(--brown); transition:all .3s; }
     .lang-selector:hover { border-color:var(--terracotta); background:rgba(201,79,44,.06); }
     .lang-selector .arrow { font-size:.6rem; transition:transform .3s; }
     .lang-selector.open .arrow { transform:rotate(180deg); }
@@ -74,22 +68,33 @@
     .lang-dropdown a:hover { background:#f5ede6; }
     .lang-dropdown a .flag { font-size:1.2rem; }
 
+    .menu-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; flex-shrink:0; }
+    .menu-toggle span { display:block; width:28px; height:3px; background:var(--brown); border-radius:4px; transition:var(--transition); }
+
     .skiptranslate iframe { display:none !important; }
     .goog-te-banner-frame.skiptranslate { display:none !important; }
     body { top:0px !important; }
 
-    /* Mobile adjustments: keep phone & booking visible */
+    /* ─── MOBILE: keep phone & book visible, hide language ─── */
     @media (max-width:860px) {
       .nav-links { display:none; }
       .menu-toggle { display:flex; }
-      /* Keep mini-contact visible on mobile */
-      .mini-contact { display:inline-flex; }
-      .nav-actions .lang-wrapper { display:none; } /* hide language on mobile to save space */
+      .nav-actions .lang-wrapper { display:none; }
+      .nav-actions .contact-link { display:none; }
+      .nav-actions .mini-contact { font-size:.8rem; padding:6px 12px; }
+      .nav-actions .btn-gold { padding:8px 16px; font-size:.75rem; }
     }
     @media (max-width:480px) {
-      .mini-contact { font-size:.8rem; padding:6px 12px; }
-      .btn-primary { padding:10px 18px; font-size:.8rem; }
+      .nav-actions .mini-contact { font-size:.7rem; padding:4px 10px; }
+      .nav-actions .btn-gold { padding:6px 12px; font-size:.7rem; }
+      .brand-text strong { font-size:.9rem; }
+      .brand-text span { font-size:.6rem; }
     }
+
+    .mobile-menu { display:none; padding:16px 0; }
+    .mobile-menu.open { display:block; }
+    .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
+    .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
 
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 80% 20%, rgba(244,185,66,.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,79,44,.06) 0%, transparent 50%), linear-gradient(180deg,#fff9f4 0%,var(--bg) 100%); z-index:0; pointer-events:none; }
@@ -177,14 +182,8 @@
     .classic-promo .btn-gold { background:var(--gold); color:var(--brown); }
     .classic-promo .btn-gold:hover { background:#fff; }
 
-    @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
     @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } .classic-promo { padding:24px; } }
   </style>
-  <!-- Vercel Analytics -->
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
-  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -197,6 +196,7 @@
   <!-- ── HEADER ── -->
   <header class="site-header" id="siteHeader">
     <div class="container nav">
+      <!-- Brand (left) -->
       <a href="index.html" class="brand">
         <div class="brand-logo">
           <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
@@ -207,6 +207,7 @@
         </div>
       </a>
 
+      <!-- Navigation Links (center) -->
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -215,26 +216,25 @@
         <li><a href="packages.html">Packages</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
       </ul>
 
+      <!-- Right Side: Contact + Phone + Book Now + Language + Menu -->
       <div class="nav-actions">
-        <!-- Phone number – always visible and prominent -->
+        <a href="contact.html" class="contact-link">Contact</a>
         <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
-
-        <!-- Language Switcher (hidden on mobile to save space) -->
-        <div id="google_translate_element" style="display:inline-block;"></div>
-
-        <!-- Book Now button – gold accent for visibility -->
         <a class="btn btn-gold" href="contact.html">✨ Book Now</a>
 
+        <!-- Language Switcher -->
+        <div id="google_translate_element" style="display:inline-block;"></div>
+
+        <!-- Mobile Menu Toggle -->
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile -->
+    <!-- Mobile Menu -->
     <div class="container mobile-menu" id="mobileMenu">
       <div class="mobile-panel">
         <a href="index.html">🏠 Home</a>
@@ -541,10 +541,9 @@
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
   <script>
-    // ─── UPDATE COPYRIGHT YEAR ───
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // ─── LANGUAGE SWITCHER (GOOGLE TRANSLATE) ───
+    // ─── LANGUAGE SWITCHER ───
     let langDropdownOpen = false;
 
     function toggleLangDropdown() {
@@ -556,27 +555,18 @@
     }
 
     function switchLanguage(lang) {
-      const langNames = {
-        'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
-        'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
-      };
+      const langNames = { 'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE', 'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR' };
       document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
       document.getElementById('langDropdown').classList.remove('show');
       document.getElementById('langToggle').classList.remove('open');
       langDropdownOpen = false;
-
       localStorage.setItem('preferredLanguage', lang);
       showNotification('🌍 Switching to ' + langNames[lang] + '...');
-
       const googleFrame = document.querySelector('.goog-te-menu-frame');
       if (googleFrame) {
         try {
           const select = googleFrame.contentDocument.querySelector('.goog-te-combo');
-          if (select) {
-            select.value = lang;
-            select.dispatchEvent(new Event('change'));
-            return;
-          }
+          if (select) { select.value = lang; select.dispatchEvent(new Event('change')); return; }
         } catch(e) {}
       }
       window.location.href = window.location.pathname + '?lang=' + lang;
@@ -599,10 +589,7 @@
     document.addEventListener('DOMContentLoaded', function() {
       const savedLang = localStorage.getItem('preferredLanguage');
       if (savedLang) {
-        const langNames = {
-          'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE',
-          'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR'
-        };
+        const langNames = { 'en': 'EN', 'fr': 'FR', 'es': 'ES', 'de': 'DE', 'it': 'IT', 'pt': 'PT', 'ru': 'RU', 'ja': 'JA', 'ar': 'AR' };
         document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
       }
       document.addEventListener('click', function(event) {
