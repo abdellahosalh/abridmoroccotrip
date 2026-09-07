@@ -1,284 +1,1158 @@
-@'
-import os
-import re
-from pathlib import Path
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Airport Transfer | AbridMoroccoTrip</title>
+  <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
+  <meta name="description" content="Complimentary airport pickup service for all AbridMoroccoTrip clients. Meet your driver at the arrival hall and enjoy a stress‑free start to your Morocco adventure." />
 
-# --- CSS fix to ensure nav-actions stay in one line ---
-HEADER_CSS_FIX = '''
-@media (max-width: 1024px) {
-    .nav-actions .contact-link {
-        font-size: 0.75rem;
-        padding: 4px 8px;
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .nav-actions .btn-gold {
-        padding: 4px 12px;
-        font-size: 0.7rem;
+    :root {
+      --terracotta: #c94f2c;
+      --terracotta-dark: #a63d1f;
+      --gold: #f4b942;
+      --gold-light: #fce8c8;
+      --cream: #fef9f0;
+      --brown: #3d2a1e;
+      --brown-light: #5a4a3a;
+      --muted: #8a7a6a;
+      --bg: #fcf8f2;
+      --shadow: 0 8px 30px rgba(0, 0, 0, .06);
+      --shadow-hover: 0 16px 48px rgba(0, 0, 0, .10);
+      --radius: 20px;
+      --radius-sm: 12px;
+      --transition: .35s cubic-bezier(.175, .885, .32, 1.275);
+      --font: 'Inter', -apple-system, sans-serif;
+      --font-serif: 'Playfair Display', serif;
     }
-    .nav-actions .lang-selector {
-        padding: 3px 8px;
-        font-size: 0.65rem;
+    html {
+      scroll-behavior: smooth;
     }
-}
-@media (max-width: 860px) {
-    .nav-actions {
-        flex-wrap: nowrap !important;
-        gap: 4px !important;
+    body {
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--brown);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
     }
-    .nav-actions .contact-link {
-        display: none !important;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
-    .nav-actions .btn-gold {
-        display: none !important;
+    a {
+      text-decoration: none;
+      color: inherit;
     }
-    .nav-actions .lang-wrapper {
-        display: none !important;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
-    .brand-text strong {
-        font-size: 0.8rem;
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: .85rem;
+      border: none;
+      cursor: pointer;
+      transition: all .35s cubic-bezier(.175, .885, .32, 1.275);
+      text-align: center;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--terracotta), var(--terracotta-dark));
+      color: #fff;
+      box-shadow: 0 8px 28px rgba(201, 79, 44, .35);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(201, 79, 44, .45);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, .92);
+      color: var(--brown);
+      border: 2px solid rgba(61, 42, 30, .12);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover {
+      transform: translateY(-3px);
+      border-color: var(--terracotta);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .08);
+      background: #fff;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), #e8a820);
+      color: var(--brown);
+      box-shadow: 0 8px 28px rgba(244, 185, 66, .35);
+    }
+    .btn-gold:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 14px 40px rgba(244, 185, 66, .5);
+    }
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--terracotta), var(--gold));
+      z-index: 999;
+      width: 0%;
+      transition: width .1s;
+    }
+    .promo-banner {
+      background: linear-gradient(90deg, var(--brown) 0%, var(--terracotta) 50%, var(--brown) 100%);
+      background-size: 200% 100%;
+      animation: bannerSlide 6s linear infinite;
+      color: #fff;
+      text-align: center;
+      padding: 12px 20px;
+      font-weight: 600;
+      font-size: .9rem;
+      letter-spacing: .04em;
+      position: relative;
+      z-index: 999;
+    }
+    @keyframes bannerSlide {
+      0% {
+        background-position: 0 0
+      }
+      100% {
+        background-position: 200% 0
+      }
+    }
+    .promo-banner span {
+      color: var(--gold);
+      font-weight: 800;
+    }
+    .site-header {
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+      padding: 8px 0;
+    }
+    .site-header.scrolled {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
     }
     .brand-logo {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
+      max-width: 38px;
+      max-height: 38px;
+      overflow: hidden;
+      flex-shrink: 0;
+      border-radius: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      box-shadow: 0 4px 14px rgba(192, 82, 46, 0.25);
+    }
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .brand-text strong {
+      font-size: 1rem;
+      color: var(--brown);
+      white-space: nowrap;
+    }
+    .brand-text span {
+      font-size: .65rem;
+      color: var(--muted);
+      display: block;
+      margin-top: -2px;
+      white-space: nowrap;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 12px;
+      font-size: .82rem;
+      font-weight: 500;
+      align-items: center;
+      flex-wrap: nowrap;
+      margin: 0 8px;
+    }
+    .nav-links a {
+      color: var(--brown-light);
+      transition: color var(--transition);
+      white-space: nowrap;
+      padding: 4px 0;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--terracotta);
+    }
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      flex-wrap: nowrap;
+    }
+    .nav-actions .contact-link {
+      font-weight: 600;
+      color: var(--brown-light);
+      padding: 4px 10px;
+      border-radius: 60px;
+      transition: all .3s;
+      font-size: .82rem;
+      white-space: nowrap;
+    }
+    .nav-actions .contact-link:hover {
+      color: var(--terracotta);
+      background: rgba(201, 79, 44, .06);
+    }
+    .nav-actions .btn-gold {
+      padding: 6px 16px;
+      font-size: .75rem;
+    }
+    .lang-wrapper {
+      position: relative;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+    .lang-selector {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: none;
+      border: 1px solid rgba(44, 26, 18, .12);
+      border-radius: 60px;
+      padding: 4px 10px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: .7rem;
+      color: var(--brown);
+      transition: all .3s;
+    }
+    .lang-selector:hover {
+      border-color: var(--terracotta);
+      background: rgba(201, 79, 44, .06);
+    }
+    .lang-selector .arrow {
+      font-size: .5rem;
+      transition: transform .3s;
+    }
+    .lang-selector.open .arrow {
+      transform: rotate(180deg);
+    }
+    .lang-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, .15);
+      padding: 4px 0;
+      min-width: 130px;
+      border: 1px solid rgba(0, 0, 0, .06);
+      z-index: 100;
+      overflow: hidden;
+    }
+    .lang-dropdown.show {
+      display: block;
+    }
+    .lang-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      color: var(--brown);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: .8rem;
+      transition: background .2s;
+    }
+    .lang-dropdown a:hover {
+      background: #f5ede6;
+    }
+    .lang-dropdown a .flag {
+      font-size: 1.1rem;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      flex-shrink: 0;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2.5px;
+      background: var(--brown);
+      border-radius: 4px;
+      transition: var(--transition);
+    }
+    .skiptranslate iframe {
+      display: none !important;
+    }
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-links {
+        gap: 8px;
+        font-size: .75rem;
+      }
+      .nav-links a {
+        padding: 4px 4px;
+      }
+      .brand-text strong {
+        font-size: .9rem;
+      }
+      .brand-text span {
+        font-size: .55rem;
+      }
+    }
+    @media (max-width: 860px) {
+      .nav-links {
+        display: none;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .nav-actions .contact-link {
+        display: none;
+      }
+      .nav-actions .btn-gold {
+        padding: 5px 12px;
+        font-size: .7rem;
+      }
+      .brand-text strong {
+        font-size: .85rem;
+      }
+      .brand-text span {
+        display: none;
+      }
+      .brand-logo {
+        width: 32px;
+        height: 32px;
+        min-width: 32px;
+        min-height: 32px;
+        max-width: 32px;
+        max-height: 32px;
+      }
+    }
+    @media (max-width: 480px) {
+      .nav-actions .btn-gold {
+        padding: 4px 10px;
+        font-size: .65rem;
+      }
+      .nav-actions .lang-selector {
+        padding: 3px 8px;
+        font-size: .6rem;
+      }
+      .brand-text strong {
+        font-size: .75rem;
+      }
+      .brand-logo {
         width: 28px;
         height: 28px;
         min-width: 28px;
         min-height: 28px;
         max-width: 28px;
         max-height: 28px;
+      }
     }
-}
-@media (max-width: 480px) {
-    .nav-actions .lang-selector {
-        display: none !important;
+    .mobile-menu {
+      display: none;
+      padding: 16px 0;
     }
-    .brand-text strong {
-        font-size: 0.7rem;
+    .mobile-menu.open {
+      display: block;
     }
-}
-'''
-
-# --- Helper: check if the fix is already applied ---
-def has_fix(content):
-    return '.nav-actions .contact-link' in content and 'display: none !important;' in content
-
-# --- Helper: ensure nav-actions have flex-wrap: nowrap ---
-def add_nav_flex_fix(content):
-    # Look for .nav-actions style block
-    # If we find it, add flex-wrap: nowrap
-    # If not, add the whole CSS block
-    if '.nav-actions' in content:
-        # Check if flex-wrap: nowrap is already there
-        if 'flex-wrap' in content:
-            # Try to add !important to existing flex-wrap
-            pattern = r'(\.nav-actions\s*\{[^}]*flex-wrap\s*:\s*[^;]*;)'
-            def repl(match):
-                return match.group(0).replace(';', ' !important;')
-            content = re.sub(pattern, repl, content, flags=re.IGNORECASE)
-        else:
-            # Add flex-wrap: nowrap to nav-actions
-            pattern = r'(\.nav-actions\s*\{[^}]*?)(\})'
-            def repl(match):
-                return match.group(1) + '  flex-wrap: nowrap !important;\n    }'
-            content = re.sub(pattern, repl, content, flags=re.IGNORECASE | re.DOTALL)
-        return content
-    return content
-
-# --- Helper: add the mobile fix CSS to style block ---
-def add_mobile_fix(content):
-    # Find the <style> block
-    style_match = re.search(r'<style[^>]*>.*?<
-/* ─── FORCE ONE‑LINE HEADER ─── */
-.nav {
-    flex-wrap: nowrap !important;
-    gap: 6px !important;
-}
-.nav-links {
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
-}
-.nav-links a {
-    font-size: 0.75rem !important;
-    padding: 4px 6px !important;
-    white-space: nowrap !important;
-}
-.nav-actions {
-    flex-wrap: nowrap !important;
-    gap: 4px !important;
-    flex-shrink: 0 !important;
-}
-.nav-actions .contact-link {
-    font-size: 0.75rem !important;
-    padding: 4px 8px !important;
-    white-space: nowrap !important;
-}
-.nav-actions .btn-gold {
-    font-size: 0.7rem !important;
-    padding: 4px 12px !important;
-    white-space: nowrap !important;
-}
-.nav-actions .lang-selector {
-    font-size: 0.65rem !important;
-    padding: 3px 8px !important;
-}
-.brand-text strong {
-    font-size: 0.9rem !important;
-}
-.brand-text span {
-    font-size: 0.55rem !important;
-}
-.brand-logo {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
-    max-width: 32px !important;
-    max-height: 32px !important;
-}
-
-/* ─── MOBILE: hide Contact & Book Now ─── */
-@media (max-width: 860px) {
-    .nav-actions .contact-link,
-    .nav-actions .btn-gold,
-    .nav-actions .lang-wrapper {
-        display: none !important;
+    .mobile-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      background: #fff;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      box-shadow: var(--shadow);
     }
-    .nav-links {
-        display: none !important;
+    .mobile-panel a {
+      font-weight: 500;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
     }
-    .menu-toggle {
-        display: flex !important;
+
+    /* ─── PAGE-SPECIFIC STYLES ─── */
+    .transfer-hero {
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, var(--brown), var(--terracotta-dark));
+      color: #fff;
     }
-    .brand-text strong {
-        font-size: 0.75rem !important;
+    .transfer-hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+      line-height: 1.1;
+      margin-bottom: 12px;
     }
-    .brand-logo {
-        width: 28px !important;
-        height: 28px !important;
-        min-width: 28px !important;
-        min-height: 28px !important;
-        max-width: 28px !important;
-        max-height: 28px !important;
+    .transfer-hero .highlight {
+      color: var(--gold);
     }
-}
-@media (max-width: 480px) {
-    .nav-actions .lang-selector {
-        display: none !important;
+    .transfer-hero p {
+      font-size: 1.1rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 680px;
+      line-height: 1.8;
+      margin-bottom: 20px;
     }
-    .brand-text strong {
-        font-size: 0.65rem !important;
+    .transfer-hero .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, .15);
+      backdrop-filter: blur(8px);
+      padding: 8px 20px;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: .9rem;
+      border: 1px solid rgba(255, 255, 255, .2);
     }
-}
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin: 48px 0;
+    }
+    .info-card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, .04);
+      transition: transform .3s ease;
+    }
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+    }
+    .info-card .icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .info-card h3 {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--brown);
+    }
+    .info-card p {
+      color: var(--brown-light);
+      font-size: .95rem;
+      line-height: 1.7;
+    }
 
-</style>', content, re.DOTALL | re.IGNORECASE)
-    if not style_match:
-        # No style block, create one before </head>
-        head_end = content.find('</head>')
-        if head_end != -1:
-            new_style = f'<style>\n{HEADER_CSS_FIX}\n</style>\n'
-            content = content[:head_end] + new_style + content[head_end:]
-        return content
+    .step-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 30px 0;
+    }
+    .step-item {
+      background: var(--cream);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      text-align: center;
+    }
+    .step-item .num {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      line-height: 40px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .step-item h4 {
+      font-weight: 700;
+      color: var(--brown);
+      margin-bottom: 4px;
+    }
+    .step-item p {
+      font-size: .9rem;
+      color: var(--muted);
+    }
 
-    style_content = style_match.group(0)
-    # Check if the fix is already there
-    if '.nav-actions .contact-link' in style_content and 'display: none !important;' in style_content:
-        return content  # already fixed
+    .cta-box {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta-box h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .cta-box p {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+    .contact-details {
+      background: #fff;
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 20px;
+    }
+    .contact-details .item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 600;
+    }
 
-    # Insert the fix at the end of the style block, before </style>
-    new_style = style_content[:-7] + HEADER_CSS_FIX + '\n</style>'
-    return content.replace(style_content, new_style)
+    /* ─── PERSONAL SERVICE WITH IMAGE ─── */
+    .personal-service {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 35px;
+      margin: 40px 0;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(0, 0, 0, .04);
+    }
+    .personal-service .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .personal-service .section-title .icon {
+      font-size: 1.8rem;
+    }
+    .personal-service .subtitle {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+    .personal-service .subtitle .tag {
+      background: var(--gold-light);
+      padding: 2px 14px;
+      border-radius: 60px;
+      color: var(--terracotta);
+      font-size: 0.9rem;
+    }
+    .personal-service .flex-wrap {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .personal-service .flex-wrap .image-wrap {
+      flex: 1 1 300px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+    }
+    .personal-service .flex-wrap .image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .personal-service .flex-wrap .list-wrap {
+      flex: 2 1 400px;
+    }
+    .personal-service ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .personal-service ul li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 1rem;
+      color: var(--brown-light);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .04);
+    }
+    .personal-service ul li .li-icon {
+      color: var(--terracotta);
+      font-weight: 700;
+      font-size: 1.1rem;
+      min-width: 28px;
+    }
+    .personal-service ul li .highlight {
+      color: var(--terracotta);
+      font-weight: 700;
+    }
+    .personal-service .safety-note {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 1rem;
+      color: var(--terracotta);
+      margin-top: 16px;
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      padding: 14px 20px;
+      border: 1px solid rgba(201, 79, 44, .12);
+    }
+    .personal-service .safety-note .check {
+      font-size: 1.3rem;
+    }
+    .personal-service .safety-note .text {
+      font-weight: 600;
+    }
 
-# --- Helper: ensure mobile panel has Contact and Book Now ---
-def ensure_mobile_panel_links(content):
-    panel_match = re.search(r'<div\s+class="mobile-panel"[^>]*>.*?</div>', content, re.DOTALL | re.IGNORECASE)
-    if not panel_match:
-        return content
+    /* ─── IMPORTANT INFORMATION ─── */
+    .important-info {
+      background: var(--cream);
+      border-radius: var(--radius);
+      padding: 30px;
+      margin: 40px 0;
+      border-left: 5px solid var(--terracotta);
+    }
+    .important-info .section-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      color: var(--brown);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .important-info .section-title .icon {
+      font-size: 1.8rem;
+    }
+    .important-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .important-info ul li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 1rem;
+      color: var(--brown-light);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, .05);
+    }
+    .important-info ul li:last-child {
+      border-bottom: none;
+    }
+    .important-info ul li .li-icon {
+      color: var(--terracotta);
+      font-weight: 700;
+      font-size: 1.1rem;
+      min-width: 28px;
+    }
 
-    panel = panel_match.group(0)
+    .climate-note {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      padding: 18px 24px;
+      margin: 30px 0;
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--brown-light);
+      border-left: 4px solid var(--gold);
+    }
+    .climate-note strong {
+      color: var(--terracotta);
+    }
 
-    # Check for Contact
-    if '📋 Contact' not in panel and '>Contact<' not in panel:
-        # Insert before last </a> or before </div>
-        last_a = panel.rfind('</a>')
-        if last_a != -1:
-            new_a = '\n        <a href="contact.html">📋 Contact</a>'
-            panel = panel[:last_a] + new_a + panel[last_a:]
-            content = content.replace(panel_match.group(0), panel)
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--brown);
+      color: rgba(255, 255, 255, .7);
+      padding: 48px 0 24px;
+      margin-top: 40px;
+      border-top: 1px solid rgba(255, 255, 255, .06);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .footer-brand img {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, .1);
+    }
+    .footer-brand strong {
+      font-size: 1.1rem;
+      color: #fff;
+      display: block;
+    }
+    .footer-brand span {
+      font-size: 0.7rem;
+      color: rgba(255, 255, 255, .4);
+    }
+    .footer-desc {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, .5);
+      line-height: 1.7;
+      max-width: 280px;
+    }
+    .footer-heading {
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      font-size: 0.85rem;
+      line-height: 2.2;
+      color: rgba(255, 255, 255, .5);
+    }
+    .footer-links a {
+      color: rgba(255, 255, 255, .5);
+      transition: color .2s;
+    }
+    .footer-links a:hover {
+      color: #fff;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, .06);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.75rem;
+      color: rgba(255, 255, 255, .3);
+    }
 
-    # Check for Book Now
-    if 'Book Now' not in panel and 'book now' not in panel.lower():
-        last_a = panel.rfind('</a>')
-        if last_a != -1:
-            new_a = '\n        <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a>'
-            panel = panel[:last_a] + new_a + panel[last_a:]
-            content = content.replace(panel_match.group(0), panel)
+    .wa-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #25D366;
+      color: #fff;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 28px rgba(37, 211, 102, .4);
+      z-index: 50;
+      transition: var(--transition);
+    }
+    .wa-float:hover {
+      transform: scale(1.1) rotate(-5deg);
+    }
 
-    return content
+    @media (max-width: 860px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+      .personal-service .flex-wrap {
+        flex-direction: column;
+      }
+      .personal-service .flex-wrap .image-wrap {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 600px) {
+      .step-list {
+        grid-template-columns: 1fr;
+      }
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      .transfer-hero {
+        padding: 60px 0 40px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+      .personal-service {
+        padding: 20px;
+      }
+      .important-info {
+        padding: 20px;
+      }
+      .cta-box {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
 
-# --- Main update function ---
-def update_file(filepath):
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
+  <!-- Scroll Progress -->
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-    original = content
-    changed = False
+  <!-- Promo Banner -->
+  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
 
-    # 1. Add mobile fix CSS
-    new_content = add_mobile_fix(content)
-    if new_content != content:
-        content = new_content
-        changed = True
+  <!-- ── HEADER ── -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
+        </div>
+        <div class="brand-text">
+          <strong>AbridMoroccoTrip</strong>
+          <span>Premium Tours</span>
+        </div>
+      </a>
 
-    # 2. Ensure nav-actions have flex-wrap: nowrap
-    new_content = add_nav_flex_fix(content)
-    if new_content != content:
-        content = new_content
-        changed = True
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="airport-transfer.html" class="active">✈️ Airport Transfer</a></li>
+      </ul>
 
-    # 3. Ensure mobile panel has Contact and Book Now
-    new_content = ensure_mobile_panel_links(content)
-    if new_content != content:
-        content = new_content
-        changed = True
+      <div class="nav-actions">
+        <a href="contact.html" class="contact-link">Contact</a>
+        <a class="btn btn-gold" href="contact.html">✨ Book Now</a>
+        <div id="google_translate_element" style="display:inline-block;"></div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
 
-    if changed:
-        backup_dir = Path('backup_header_fix')
-        backup_dir.mkdir(exist_ok=True)
-        backup_path = backup_dir / os.path.basename(filepath)
-        with open(backup_path, 'w', encoding='utf-8') as f:
-            f.write(original)
-        with open(filepath, 'w', encoding='utf-8') as f:
-            f.write(content)
-        print(f"✅ Fixed header in {filepath}")
-        return True
-    else:
-        print(f"ℹ️  No changes needed in {filepath}")
-        return False
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About Us</a>
+        <a href="tours.html">🗺️ Tours</a>
+        <a href="classic-morocco.html">🗺️ Classic 13-Day Itinerary</a>
+        <a href="packages.html">📦 Packages</a>
+        <a href="gallery.html">🖼️ Gallery</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="airport-transfer.html">✈️ Airport Transfer</a>
+        <a href="contact.html">📋 Contact</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
+      </div>
+    </div>
+  </header>
 
-def main():
-    html_files = []
-    for root, dirs, files in os.walk('.'):
-        if 'backup' in root.lower():
-            continue
-        for file in files:
-            if file.endswith('.html') and not file.startswith('.'):
-                html_files.append(os.path.join(root, file))
+  <!-- ─── HERO ─── -->
+  <section class="transfer-hero">
+    <div class="container">
+      <h1>✈️ <span class="highlight">Free</span> Airport Transfer</h1>
+      <p>Start your Morocco adventure stress‑free. We offer a complimentary private transfer from the airport to your riad or hotel in Casablanca, Marrakech, Fes, or any other city.</p>
+      <span class="badge">🚗 Private &amp; Comfortable</span>
+    </div>
+  </section>
 
-    if not html_files:
-        print("No HTML files found.")
-        return
+  <!-- ─── MAIN CONTENT ─── -->
+  <div class="container">
 
-    print(f"Found {len(html_files)} HTML files.")
-    any_changed = False
-    for f in html_files:
-        if update_file(f):
-            any_changed = True
+    <!-- ─── PERSONAL SERVICE ─── -->
+    <div class="personal-service">
+      <h2 class="section-title">
+        <span class="icon">🤝</span> Personal Service from Abdellah or Karim
+      </h2>
+      <p class="subtitle">
+        <span class="tag">We don't just arrange your transfer – we personally make sure everything is perfect.</span>
+      </p>
 
-    if not any_changed:
-        print("\n🎉 All pages already have the correct header layout.")
-    else:
-        print("\n✅ Header layout fixed on all pages. Backups saved in 'backup_header_fix'.")
-        print("   Upload all files to your server and clear cache.")
+      <div class="flex-wrap">
+        <div class="image-wrap">
+          <img src="https://i.ibb.co/My12k7xN/Chat-GPT-Image-Sep-7-2026-09-50-19-PM.png" alt="AbridMoroccoTrip personal service – Abdellah and Karim" loading="lazy">
+        </div>
+        <div class="list-wrap">
+          <ul>
+            <li>
+              <span class="li-icon">🏠</span>
+              <span>On the day of your tour, <span class="highlight">Abdellah or Karim</span> will come to your <strong>riad, hotel, or hostel</strong>.</span>
+            </li>
+            <li>
+              <span class="li-icon">🚶</span>
+              <span>They will personally <strong>walk you to your driver</strong> and ensure the vehicle and guide are ready.</span>
+            </li>
+            <li>
+              <span class="li-icon">💰</span>
+              <span>They will <strong>collect the remaining payment</strong> (if any) and provide you with a receipt.</span>
+            </li>
+            <li>
+              <span class="li-icon">📱</span>
+              <span>They will <strong>stay in contact</strong> with you throughout your entire journey – any question, any time.</span>
+            </li>
+            <li>
+              <span class="li-icon">📞</span>
+              <span>You'll have their <strong>direct WhatsApp number</strong> for instant support.</span>
+            </li>
+          </ul>
+          <div class="safety-note">
+            <span class="check">✅</span>
+            <span class="text">Your safety and satisfaction are our top priorities.</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-if __name__ == '__main__':
-    main()
-'@ | Out-File -FilePath fix_header_layout.py -Encoding utf8
+    <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
+    <div class="climate-note">
+      🌍 <strong>We're in the process of figuring out how much CO₂‑e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
+      When you travel with us, <strong>AbridMoroccoTrip</strong> gives you more opportunities to support important causes in the destinations you visit.
+    </div>
 
-python fix_header_layout.py
+    <!-- ─── INFO GRID ─── -->
+    <div class="info-grid">
+      <div class="info-card">
+        <span class="icon">🤝</span>
+        <h3>Meet &amp; Greet</h3>
+        <p>Your driver will be waiting in the arrival hall holding a sign with <strong>your name</strong> (or our company logo). No need to search – we'll find you.</p>
+      </div>
+      <div class="info-card">
+        <span class="icon">🚗</span>
+        <h3>Private Vehicle</h3>
+        <p>Travel in a clean, air‑conditioned car with a professional driver. Bottled water and Wi‑Fi available on request.</p>
+      </div>
+      <div class="info-card">
+        <span class="icon">📱</span>
+        <h3>24/7 Support</h3>
+        <p>If your flight is delayed or you can't find us, call or WhatsApp us immediately. We'll be there.</p>
+      </div>
+    </div>
+
+    <!-- ─── STEPS ─── -->
+    <h2 style="font-family:var(--font-serif); font-size:2rem; text-align:center; margin:40px 0 20px;">How It Works</h2>
+    <div class="step-list">
+      <div class="step-item">
+        <div class="num">1</div>
+        <h4>Book Your Tour</h4>
+        <p>Confirm your trip with us and provide your flight details (airline, flight number, arrival time).</p>
+      </div>
+      <div class="step-item">
+        <div class="num">2</div>
+        <h4>Arrival Day</h4>
+        <p>After clearing customs, proceed to the arrival hall. Your driver will be there with a sign.</p>
+      </div>
+      <div class="step-item">
+        <div class="num">3</div>
+        <h4>Relax &amp; Enjoy</h4>
+        <p>Hop in the car – we'll take you directly to your accommodation, sharing local tips along the way.</p>
+      </div>
+      <div class="step-item">
+        <div class="num">4</div>
+        <h4>Start Exploring</h4>
+        <p>Check into your riad or hotel and begin your Moroccan adventure without any hassle.</p>
+      </div>
+    </div>
+
+    <!-- ─── IMPORTANT INFORMATION ─── -->
+    <div class="important-info">
+      <h2 class="section-title">
+        <span class="icon">📋</span> Important Information
+      </h2>
+      <ul>
+        <li>
+          <span class="li-icon">✈️</span>
+          <span>Provide your <strong>flight number and arrival time</strong> at least <strong>48 hours</strong> before departure.</span>
+        </li>
+        <li>
+          <span class="li-icon">⏱️</span>
+          <span>The driver will wait up to <strong>90 minutes</strong> after landing. If you're delayed, <strong>please call us</strong>.</span>
+        </li>
+        <li>
+          <span class="li-icon">🛫</span>
+          <span>We <strong>track your flight</strong> – we'll adjust pickup if your flight is delayed.</span>
+        </li>
+        <li>
+          <span class="li-icon">🎁</span>
+          <span>Transfer is <strong>free</strong> for all guests on our tours. Additional stops (e.g., supermarket) can be arranged.</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- ─── CONTACT CTA (with both numbers) ─── -->
+    <div class="cta-box">
+      <h2>Need Help or Have Questions?</h2>
+      <p>Our team is available 24/7 to assist you with your transfer or any other travel needs.</p>
+      <div class="contact-details">
+        <div class="item">📞 Abdellah: <a href="tel:+212762934488">+212 762 934 488</a></div>
+        <div class="item">📞 Karim: <a href="tel:+212609282538">+212 609 282 538</a></div>
+        <div class="item">💬 <a href="https://wa.me/212762934488" target="_blank">WhatsApp</a></div>
+        <div class="item">✉️ <a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a></div>
+      </div>
+      <a href="contact.html" class="btn btn-primary" style="margin-top:20px;">📝 Contact Us Now</a>
+    </div>
+
+  </div>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+            <div>
+              <strong>AbridMoroccoTrip</strong>
+              <span>Premium Morocco Tours</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Pages</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="airport-transfer.html">Airport Transfer</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Booking</a></li>
+            <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links" style="line-height:2.2;">
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
+          </ul>
+          <div style="display:flex; gap:10px; margin-top:12px;">
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmorocco/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+        <div style="display:flex; gap:20px; flex-wrap:wrap;">
+          <a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a>
+          <a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a>
+          <a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a>
+          <span style="color:rgba(255,255,255,.15);">|</span>
+          <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── WHATSAPP FLOAT ─── -->
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollTop = window.pageYOffset;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      document.getElementById('scrollProgress').style.width = (scrollTop / docHeight * 100) + '%';
+      document.getElementById('siteHeader').classList.toggle('scrolled', scrollTop > 60);
+    });
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,fr,es,de,it,pt,ru,ja,ar,zh-CN',
+        layout: google.translate.TranslateElement.InlineLayout.HORIZONTAL,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
