@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta name="robots" content="index, follow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agent Trip Builder – Margin Calculator | AbridMoroccoTrip</title>
@@ -29,6 +30,9 @@
     .back-link { display: inline-block; margin-top: 20px; color: var(--terracotta); font-weight: 600; }
     @media (max-width: 600px) { .container { padding: 20px; } .row { grid-template-columns: 1fr; } }
   </style>
+  <link rel="stylesheet" href="style.css">
+  <link rel="canonical" href="https://www.abridmorocco.com/trip-template.html" />
+  <meta property="og:url" content="https://www.abridmorocco.com/trip-template.html" />
 </head>
 <body>
 
@@ -77,21 +81,21 @@
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
       <div>
         <div class="label">Total Cost Per Person</div>
-        <div class="big" id="costPerPerson">$0</div>
+        <div class="big" id="costPerPerson">Contact for pricing</div>
       </div>
       <div>
         <div class="label">Suggested Retail (per person)</div>
-        <div class="big" id="retailPerPerson">$0</div>
+        <div class="big" id="retailPerPerson">Contact for pricing</div>
       </div>
     </div>
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; padding-top: 16px; border-top: 1px solid #d0c4b8;">
       <div>
         <div class="label">Your Profit (per person)</div>
-        <div class="big" id="profitPerPerson" style="color: #2e7d32;">$0</div>
+        <div class="big" id="profitPerPerson" style="color: #2e7d32;">Contact for pricing</div>
       </div>
       <div>
         <div class="label">Total Package Price (for group)</div>
-        <div class="big" id="totalGroupPrice" style="color: var(--brown);">$0</div>
+        <div class="big" id="totalGroupPrice" style="color: var(--brown);">Contact for pricing</div>
       </div>
     </div>
   </div>
