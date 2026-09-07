@@ -44,7 +44,7 @@
     .cta-marrakech-tour p{color:rgba(255,255,255,.9);margin:0 0 16px;}
     .cta-marrakech-tour .btn{background:white;color:#b84f2b;}
     
-    /* ─── HEADER & NAV (copied from home page) ─── */
+    /* ─── HEADER & NAV ─── */
     .promo-banner { background:linear-gradient(90deg,var(--brown) 0%,var(--terracotta) 50%,var(--brown) 100%); background-size:200% 100%; animation:bannerSlide 6s linear infinite; color:#fff; text-align:center; padding:12px 20px; font-weight:600; font-size:.9rem; letter-spacing:.04em; position:relative; z-index:999; }
     @keyframes bannerSlide { 0%{background-position:0 0} 100%{background-position:200% 0} }
     .promo-banner span { color:var(--gold); font-weight:800; }
@@ -56,7 +56,7 @@
     .brand-logo img { width:100%; height:100%; object-fit:cover; display:block; }
     .brand-text strong { font-size:1.1rem; color:var(--brown); }
     .brand-text span { font-size:.75rem; color:var(--muted); display:block; margin-top:-2px; }
-    .nav-links { display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500; }
+    .nav-links { display:flex; list-style:none; gap:24px; font-size:.9rem; font-weight:500; align-items:center; }
     .nav-links a { color:var(--brown-light); transition:color .35s; }
     .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
     .nav-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
@@ -66,6 +66,8 @@
     .mobile-menu.open { display:block; }
     .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:12px; padding:20px; box-shadow:0 8px 30px rgba(0,0,0,.06); }
     .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
+    .nav-links .btn-book-now { background:linear-gradient(135deg,#b84f2b,#a63d1f); color:#fff !important; padding:10px 24px; border-radius:60px; font-weight:700; font-size:.9rem; box-shadow:0 8px 28px rgba(184,79,43,.35); transition:all .35s cubic-bezier(.175,.885,.32,1.275); }
+    .nav-links .btn-book-now:hover { transform:translateY(-3px) scale(1.02); box-shadow:0 14px 40px rgba(184,79,43,.45); color:#fff !important; }
     @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } }
     /* ─── GOOGLE TRANSLATE ─── */
     #google_translate_element { display:inline-block; vertical-align:middle; }
@@ -88,7 +90,7 @@
   <!-- Promo Banner -->
   <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
 
-  <!-- ─── HEADER (logo now says "AbridMorocco" exactly as in your image) ─── -->
+  <!-- ─── HEADER ─── -->
   <header class="site-header" id="siteHeader">
     <div class="nav">
       <a href="index.html" class="brand" aria-label="AbridMorocco home">
@@ -109,11 +111,10 @@
         <li><a href="blog.html" class="active">Blog</a></li>
         <li><a href="index.html#gallery">Gallery</a></li>
         <li><a href="index.html#comments">Reviews</a></li>
-        <li><a href="index.html#contact">Booking</a></li>
+        <li><a href="index.html#contact" class="btn-book-now">Book Now</a></li>
       </ul>
 
       <div class="nav-actions">
-        <!-- Phone number removed from header -->
         <div id="google_translate_element"></div>
         <a class="btn btn-primary" href="index.html#contact" style="display:inline-flex; align-items:center; justify-content:center; gap:10px; padding:14px 32px; border-radius:60px; font-weight:700; font-size:.95rem; border:none; cursor:pointer; transition:all .35s cubic-bezier(.175,.885,.32,1.275); text-align:center; background:linear-gradient(135deg,#b84f2b,#a63d1f); color:#fff; box-shadow:0 8px 28px rgba(184,79,43,.35);">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
@@ -132,7 +133,7 @@
         <a href="blog.html">Blog</a>
         <a href="index.html#gallery">Gallery</a>
         <a href="index.html#comments">Reviews</a>
-        <a href="index.html#contact">Booking</a>
+        <a href="index.html#contact">Book Now</a>
       </div>
     </div>
   </header>
@@ -155,11 +156,13 @@
 
       <h2>2. Experience Jemaa el-Fna at Night</h2>
       <p>As the sun sets, this enormous square transforms into the ultimate street food theater. Storytellers, musicians, snake charmers, and rows of food stalls. Grab a bowl of harira soup or a glass of fresh orange juice for just 4 Dirhams.</p>
+      <!-- NEW IMAGE 1: Jemaa el-Fna Food Stalls -->
+      <img src="https://images.unsplash.com/photo-1585004607620-fb4c44331e73?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jemaa el-Fna food stalls at night" loading="lazy" style="width:100%; border-radius:12px; margin:20px 0; box-shadow:0 5px 15px rgba(0,0,0,.1);">
 
-      <!-- CTA: Marrakech Tour -->
+      <!-- CTA: Marrakech Tour (PRICE REMOVED) -->
       <div class="cta-marrakech-tour">
         <h3>🗺️ Want a local guide to show you all of this?</h3>
-        <p>Our Marrakech Discovery Tour takes you through all the highlights with an expert local guide. Hotel pickup included. Just $47/person!</p>
+        <p>Our Marrakech Discovery Tour takes you through all the highlights with an expert local guide. Hotel pickup included. Contact us for current pricing!</p>
         <a href="marrakech.html" class="btn">Book the Marrakech Tour →</a>
       </div>
 
@@ -184,6 +187,8 @@
 
       <h2>7. Stay in a Traditional Riad</h2>
       <p>Skip the modern hotels. A riad is a traditional Moroccan house built around an inner courtyard, often with a fountain or small pool. It offers an oasis of quiet right in the center of the chaotic city. Worth every dirham.</p>
+      <!-- NEW IMAGE 2: Traditional Riad -->
+      <img src="https://images.unsplash.com/photo-1536237717235-0acadb345d8c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Traditional Riad courtyard in Marrakech" loading="lazy" style="width:100%; border-radius:12px; margin:20px 0; box-shadow:0 5px 15px rgba(0,0,0,.1);">
 
       <h2>8. Explore the Saadian Tombs</h2>
       <p>Hidden for centuries and only rediscovered in 1917, the resting place of the Saadian dynasty is an absolute marvel of imported Italian marble and pure gold decoration. One of the most underrated sites in Marrakech.</p>
@@ -193,11 +198,13 @@
 
       <h2>10. Take a Hot Air Balloon Ride at Sunrise</h2>
       <p>See the Red City and the towering Atlas Mountains from above. Drifting over ancient Berber villages as the sun rises is truly a once-in-a-lifetime bucket list experience. Perfect for couples and honeymoons!</p>
+      <!-- NEW IMAGE 3: Hot Air Balloon over Atlas Mountains -->
+      <img src="https://images.unsplash.com/photo-1624805098931-098c0d918b34?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Hot air balloon ride over Marrakech" loading="lazy" style="width:100%; border-radius:12px; margin:20px 0; box-shadow:0 5px 15px rgba(0,0,0,.1);">
 
-      <!-- CTA: Hot Air Balloon -->
+      <!-- CTA: Hot Air Balloon (PRICE REMOVED) -->
       <div class="cta-marrakech-tour" style="margin-top:30px;">
         <h3>🎈 Ready to experience Marrakech from the sky?</h3>
-        <p>Book our Hot Air Balloon ride — sunrise flight, Berber breakfast, and flight certificate. From just $234/person.</p>
+        <p>Book our Hot Air Balloon ride — sunrise flight, Berber breakfast, and flight certificate. Contact us for current rates!</p>
         <a href="air-balloon.html" class="btn">Book the Balloon Ride →</a>
       </div>
 
@@ -211,7 +218,7 @@
     <a href="blog.html" style="display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:700;">← Back to Blog</a>
   </div>
 
-  <!-- ─── FOOTER (brand updated to match logo) ─── -->
+  <!-- ─── FOOTER ─── -->
   <footer style="background:#3f2a20; color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container" style="max-width:1200px; margin:0 auto; padding:0 24px;">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
