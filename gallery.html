@@ -94,6 +94,7 @@
     .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); backdrop-filter: blur(12px); z-index: 999; display: none; align-items: center; justify-content: center; padding: 24px; }
     .lightbox.show { display: flex; }
      .lightbox img, .lightbox video { max-width: 100%; max-height: 90vh; border-radius: var(--radius-sm); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+     .lightbox-video-fallback { display:none; position:absolute; bottom:28px; left:50%; transform:translateX(-50%); background:#fff; color:var(--brown); padding:10px 18px; border-radius:30px; font-weight:700; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,.25); }
     .lightbox-close { position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.8rem; cursor: pointer; opacity: .7; transition: var(--transition); }
     .lightbox-close:hover { opacity: 1; }
 
@@ -376,7 +377,8 @@
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose">×</button>
     <img id="lightboxImg" src="" alt="">
-    <video id="lightboxVideo" controls playsinline></video>
+    <video id="lightboxVideo" controls playsinline preload="auto"></video>
+    <a id="lightboxVideoFallback" class="lightbox-video-fallback" href="#" target="_blank" rel="noopener">Open video directly</a>
   </div>
 
   <script>
@@ -439,17 +441,23 @@
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxVideo = document.getElementById('lightboxVideo');
+    const lightboxVideoFallback = document.getElementById('lightboxVideoFallback');
     const lightboxClose = document.getElementById('lightboxClose');
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('click', () => {
         const isVideo = item.dataset.type === 'video';
         lightboxImg.style.display = isVideo ? 'none' : 'block';
         lightboxVideo.style.display = isVideo ? 'block' : 'none';
+        lightboxVideoFallback.style.display = isVideo ? 'block' : 'none';
         if (isVideo) {
+          const cardVideo = item.querySelector('video');
+          lightboxVideo.poster = cardVideo ? cardVideo.poster : '';
           lightboxVideo.src = item.dataset.full;
-          lightboxVideo.play().catch(() => {});
+          lightboxVideoFallback.href = item.dataset.full;
+          lightboxVideo.load();
         } else {
           lightboxImg.src = item.dataset.full;
+          lightboxVideo.poster = '';
         }
         lightbox.classList.add('show');
         document.body.style.overflow = 'hidden';
@@ -463,6 +471,9 @@
       lightboxImg.src = '';
       lightboxVideo.pause();
       lightboxVideo.src = '';
+      lightboxVideo.poster = '';
+      lightboxVideoFallback.href = '#';
+      lightboxVideoFallback.style.display = 'none';
       document.body.style.overflow = '';
     };
     lightboxClose.addEventListener('click', closeLightbox);
