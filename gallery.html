@@ -85,14 +85,15 @@
 
     .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap: 16px; margin-top: 40px; }
     .gallery-item { position: relative; border-radius: var(--radius-sm); overflow: hidden; cursor: pointer; aspect-ratio: 1/1; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
-    .gallery-item:hover img { transform: scale(1.06); }
+     .gallery-item img, .gallery-item video { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; display:block; background:#1f1712; }
+     .gallery-item video { cursor:pointer; }
+     .gallery-item:hover img, .gallery-item:hover video { transform: scale(1.06); }
     .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 12px; background: linear-gradient(transparent, rgba(0,0,0,.5)); color: #fff; font-size: .85rem; opacity: 0; transition: var(--transition); }
     .gallery-item:hover .gallery-caption { opacity: 1; }
 
     .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.88); backdrop-filter: blur(12px); z-index: 999; display: none; align-items: center; justify-content: center; padding: 24px; }
     .lightbox.show { display: flex; }
-    .lightbox img { max-width: 100%; max-height: 90vh; border-radius: var(--radius-sm); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+     .lightbox img, .lightbox video { max-width: 100%; max-height: 90vh; border-radius: var(--radius-sm); box-shadow: 0 20px 60px rgba(0,0,0,.4); }
     .lightbox-close { position: absolute; top: 24px; right: 32px; background: none; border: none; color: #fff; font-size: 2.8rem; cursor: pointer; opacity: .7; transition: var(--transition); }
     .lightbox-close:hover { opacity: 1; }
 
@@ -241,6 +242,50 @@
         <img src="https://i.pinimg.com/1200x/99/cd/59/99cd59ce85d4d762f3c563e4394bff1c.jpg" alt="Moroccan desert landscape" loading="lazy">
         <div class="gallery-caption">Sahara desert landscape</div>
       </div>
+
+      <!-- Hot Air Balloon Media -->
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069435.mp4" data-type="video">
+        <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
+          <source src="https://ik.imagekit.io/4q2losd27z/1000069435.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-caption">Sunrise Over Marrakech from a Hot Air Balloon</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069430.mp4" data-type="video">
+        <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
+          <source src="https://ik.imagekit.io/4q2losd27z/1000069430.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-caption">Flying Above the Atlas Mountains</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069428.mp4" data-type="video">
+        <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069422.jpg">
+          <source src="https://ik.imagekit.io/4q2losd27z/1000069428.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-caption">Hot Air Balloon Takeoff at Dawn</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069432.mp4" data-type="video">
+        <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
+          <source src="https://ik.imagekit.io/4q2losd27z/1000069432.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-caption">Panoramic Views of Marrakech from the Sky</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069433.mp4" data-type="video">
+        <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
+          <source src="https://ik.imagekit.io/4q2losd27z/1000069433.mp4" type="video/mp4">
+        </video>
+        <div class="gallery-caption">A Magical Balloon Ride Over Morocco</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot Air Balloon Over the Moroccan Landscape" loading="lazy">
+        <div class="gallery-caption">Hot Air Balloon Over the Moroccan Landscape</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069419.jpg" alt="Marrakech Balloon Adventure at Sunrise" loading="lazy">
+        <div class="gallery-caption">Marrakech Balloon Adventure at Sunrise</div>
+      </div>
+      <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069422.jpg">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069422.jpg" alt="A Memorable Hot Air Balloon Experience" loading="lazy">
+        <div class="gallery-caption">A Memorable Hot Air Balloon Experience</div>
+      </div>
     </div>
 
     <div style="text-align:center;margin:60px 0 40px;padding:40px 30px;background:linear-gradient(135deg,var(--cream),var(--gold-light));border-radius:20px;">
@@ -331,6 +376,7 @@
   <div class="lightbox" id="lightbox">
     <button class="lightbox-close" id="lightboxClose">×</button>
     <img id="lightboxImg" src="" alt="">
+    <video id="lightboxVideo" controls playsinline></video>
   </div>
 
   <script>
@@ -392,17 +438,31 @@
     // Lightbox
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxVideo = document.getElementById('lightboxVideo');
     const lightboxClose = document.getElementById('lightboxClose');
     document.querySelectorAll('.gallery-item').forEach(item => {
       item.addEventListener('click', () => {
-        lightboxImg.src = item.dataset.full;
+        const isVideo = item.dataset.type === 'video';
+        lightboxImg.style.display = isVideo ? 'none' : 'block';
+        lightboxVideo.style.display = isVideo ? 'block' : 'none';
+        if (isVideo) {
+          lightboxVideo.src = item.dataset.full;
+          lightboxVideo.play().catch(() => {});
+        } else {
+          lightboxImg.src = item.dataset.full;
+        }
         lightbox.classList.add('show');
         document.body.style.overflow = 'hidden';
       });
     });
+    document.querySelectorAll('.gallery-item video').forEach(video => {
+      video.addEventListener('click', (event) => event.stopPropagation());
+    });
     const closeLightbox = () => {
       lightbox.classList.remove('show');
       lightboxImg.src = '';
+      lightboxVideo.pause();
+      lightboxVideo.src = '';
       document.body.style.overflow = '';
     };
     lightboxClose.addEventListener('click', closeLightbox);

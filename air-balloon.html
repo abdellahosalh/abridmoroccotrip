@@ -77,11 +77,19 @@
     .faq-q { font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
     .faq-q:hover { color:var(--terracotta); }
     .faq-a { display:none; padding-top:8px; color:var(--muted); font-size:.95rem; line-height:1.7; }
+     .media-showcase { margin: 60px auto 20px; max-width: 1200px; }
+     .media-showcase h2 { font-family: var(--font-serif); text-align:center; margin-bottom:10px; }
+     .media-showcase-intro { text-align:center; color:var(--muted); margin:0 auto 28px; max-width:680px; }
+     .media-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px; }
+     .media-card { background:#fff; border-radius:var(--radius-sm); overflow:hidden; box-shadow:var(--shadow); }
+     .media-card img, .media-card video { width:100%; aspect-ratio:16/10; display:block; object-fit:cover; background:#1f1712; }
+     .media-card video { cursor:pointer; }
+     .media-card figcaption { padding:13px 15px 16px; font-weight:700; color:var(--brown-light); font-size:.9rem; }
     .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: all .3s; text-decoration: none; }
     .wa-float:hover { transform: scale(1.1); }
     .blog-footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; font-size: .85rem; margin-top: 40px; }
     .blog-footer a { color: rgba(255,255,255,.7); }
-    @media (max-width: 800px) { .tour-detail-grid { grid-template-columns: 1fr; } }
+     @media (max-width: 800px) { .tour-detail-grid { grid-template-columns: 1fr; } .media-grid { grid-template-columns: 1fr; } }
     .google-form-btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 16px 36px; border-radius: 60px; font-weight: 700; font-size: 1.1rem; text-decoration: none; transition: all .3s ease; }
     .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(201,79,44,.4); }
   </style>
@@ -202,6 +210,55 @@
         </p>
       </div>
     </div>
+
+    <section class="media-showcase" aria-labelledby="balloon-media-title">
+      <h2 id="balloon-media-title">Hot Air Balloon Moments</h2>
+      <p class="media-showcase-intro">See the sunrise, the flight, and the unforgettable views over Marrakech and the Atlas Mountains.</p>
+      <div class="media-grid">
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069435.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sunrise Over Marrakech from a Hot Air Balloon</figcaption>
+        </figure>
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069430.mp4" type="video/mp4">
+          </video>
+          <figcaption>Flying Above the Atlas Mountains</figcaption>
+        </figure>
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069422.jpg">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069428.mp4" type="video/mp4">
+          </video>
+          <figcaption>Hot Air Balloon Takeoff at Dawn</figcaption>
+        </figure>
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069432.mp4" type="video/mp4">
+          </video>
+          <figcaption>Panoramic Views of Marrakech from the Sky</figcaption>
+        </figure>
+        <figure class="media-card">
+          <video controls preload="metadata" playsinline poster="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
+            <source src="https://ik.imagekit.io/4q2losd27z/1000069433.mp4" type="video/mp4">
+          </video>
+          <figcaption>A Magical Balloon Ride Over Morocco</figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot Air Balloon Over the Moroccan Landscape" loading="lazy">
+          <figcaption>Hot Air Balloon Over the Moroccan Landscape</figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="https://ik.imagekit.io/4q2losd27z/1000069419.jpg" alt="Marrakech Balloon Adventure at Sunrise" loading="lazy">
+          <figcaption>Marrakech Balloon Adventure at Sunrise</figcaption>
+        </figure>
+        <figure class="media-card">
+          <img src="https://ik.imagekit.io/4q2losd27z/1000069422.jpg" alt="A Memorable Hot Air Balloon Experience" loading="lazy">
+          <figcaption>A Memorable Hot Air Balloon Experience</figcaption>
+        </figure>
+      </div>
+    </section>
   </main>
 
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
