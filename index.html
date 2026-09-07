@@ -11,11 +11,95 @@
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/" />
+
   <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Extra styles for consistency */
+    .why-section {
+      background: var(--bg-2, #f0e8df);
+      padding: 72px 0;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .why-card {
+      background: #fff;
+      border-radius: var(--r, 20px);
+      padding: 24px 20px;
+      box-shadow: var(--shadow-sm, 0 6px 20px rgba(120,60,30,.10));
+      border-left: 4px solid var(--terracotta, #c0522e);
+      text-align: left;
+      transition: transform .3s ease;
+    }
+    .why-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow, 0 16px 40px rgba(120,60,30,.13));
+    }
+    .why-card .icon {
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .why-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem;
+      margin: 0 0 4px;
+      color: var(--brown, #2c1a12);
+    }
+    .why-card p {
+      color: var(--muted, #7a5f52);
+      font-size: 0.92rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+    .why-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .why-header .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(192,82,46,.08);
+      padding: 6px 20px;
+      border-radius: 60px;
+      margin-bottom: 16px;
+    }
+    .why-header .eyebrow span {
+      font-weight: 700;
+      color: var(--terracotta, #c0522e);
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .why-header h2 {
+      font-family: var(--font-serif, 'Playfair Display', serif);
+      font-size: clamp(2rem, 3.5vw, 2.6rem);
+      margin-bottom: 8px;
+      color: var(--brown, #2c1a12);
+    }
+    .why-header p {
+      color: var(--muted, #7a5f52);
+      font-size: 1.05rem;
+      margin-bottom: 0;
+    }
+  </style>
+
+  <script>
+    window.va = window.va || function() {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
 
@@ -121,70 +205,49 @@
   </section>
 
   <!-- ─── WHY ABRID MOROCCO? ─── -->
-  <section style="background:var(--cream); padding:60px 0;">
+  <section class="why-section">
     <div class="container">
-      <div style="text-align:center; max-width:800px; margin:0 auto;">
-        <div style="display:inline-flex; align-items:center; gap:10px; background:rgba(192,82,46,.08); padding:6px 20px; border-radius:60px; margin-bottom:16px;">
-          <span style="font-size:1.2rem;">🇲🇦</span>
-          <span style="font-weight:700; color:var(--terracotta); font-size:0.85rem; text-transform:uppercase; letter-spacing:1px;">Why Abrid Morocco?</span>
-          <span style="font-weight:700; color:var(--brown); font-size:0.85rem; text-transform:uppercase; letter-spacing:1px;">لماذا أبريد المغرب؟</span>
+      <div class="why-header">
+        <div class="eyebrow">
+          <span>🇲🇦 Why Abrid Morocco? · لماذا أبريد المغرب؟</span>
         </div>
-        <h2 style="font-family:var(--font-serif); font-size:clamp(2rem,3.5vw,2.6rem); margin-bottom:8px;">Your Morocco, Your Way</h2>
-        <p style="color:var(--muted); font-size:1.05rem; margin-bottom:32px;">We believe in creating journeys that are as unique as you are. Here's why travelers choose us.</p>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px,1fr)); gap:20px;">
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">🧑‍🌾</span>
-              <h3 style="font-size:1.1rem; margin:0;">Local Moroccan Expertise</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">Authentic insights from locals who know every hidden gem and cultural nuance.</p>
-          </div>
-
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">🎭</span>
-              <h3 style="font-size:1.1rem; margin:0;">Authentic Experiences</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">Real Morocco – from Berber villages to desert camps, not tourist traps.</p>
-          </div>
-
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">👥</span>
-              <h3 style="font-size:1.1rem; margin:0;">Small Groups</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">Intimate experiences with maximum personal attention – never lost in a crowd.</p>
-          </div>
-
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">💰</span>
-              <h3 style="font-size:1.1rem; margin:0;">No Hidden Costs</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">Transparent pricing – what you see is what you pay. No surprises.</p>
-          </div>
-
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">📞</span>
-              <h3 style="font-size:1.1rem; margin:0;">24/7 Assistance</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">We're always here – before, during, and after your journey.</p>
-          </div>
-
-          <div style="background:#fff; border-radius:var(--r); padding:24px 20px; box-shadow:var(--shadow-sm); border-left:4px solid var(--terracotta); text-align:left; transition:transform .3s ease;">
-            <div style="display:flex; align-items:center; gap:12px; margin-bottom:6px;">
-              <span style="font-size:1.8rem;">✈️</span>
-              <h3 style="font-size:1.1rem; margin:0;">Tailor-Made Journeys</h3>
-            </div>
-            <p style="color:var(--muted); font-size:0.92rem; margin:0;">Every trip is crafted around your interests, pace, and dreams.</p>
-          </div>
+        <h2>Your Morocco, Your Way</h2>
+        <p>We believe in creating journeys that are as unique as you are. Here's why travelers choose us.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <span class="icon">🧑‍🌾</span>
+          <h3>Local Moroccan Expertise</h3>
+          <p>Authentic insights from locals who know every hidden gem and cultural nuance.</p>
         </div>
-
-        <div style="margin-top:36px;">
-          <a href="contact.html" class="btn btn-primary">✨ Start Your Tailor-Made Journey</a>
+        <div class="why-card">
+          <span class="icon">🎭</span>
+          <h3>Authentic Experiences</h3>
+          <p>Real Morocco – from Berber villages to desert camps, not tourist traps.</p>
         </div>
+        <div class="why-card">
+          <span class="icon">👥</span>
+          <h3>Small Groups</h3>
+          <p>Intimate experiences with maximum personal attention – never lost in a crowd.</p>
+        </div>
+        <div class="why-card">
+          <span class="icon">💰</span>
+          <h3>No Hidden Costs</h3>
+          <p>Transparent pricing – what you see is what you pay. No surprises.</p>
+        </div>
+        <div class="why-card">
+          <span class="icon">📞</span>
+          <h3>24/7 Assistance</h3>
+          <p>We're always here – before, during, and after your journey.</p>
+        </div>
+        <div class="why-card">
+          <span class="icon">✈️</span>
+          <h3>Tailor-Made Journeys</h3>
+          <p>Every trip is crafted around your interests, pace, and dreams.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:36px;">
+        <a href="contact.html" class="btn btn-primary">✨ Start Your Tailor-Made Journey</a>
       </div>
     </div>
   </section>
@@ -231,7 +294,7 @@
   </section>
 
   <!-- ─── TESTIMONIALS ─── -->
-  <section style="background:var(--cream); padding:72px 0;">
+  <section style="background:var(--bg-2, #f0e8df); padding:72px 0;">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Testimonials</span>
@@ -259,7 +322,7 @@
   </section>
 
   <!-- ─── BLOG PREVIEW ─── -->
-  <section id="blog" style="background:var(--bg);">
+  <section id="blog" style="background:var(--bg, #f8f2ec);">
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">📰 Travel Guides</span>
