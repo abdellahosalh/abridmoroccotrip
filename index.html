@@ -11,7 +11,6 @@
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/" />
-
   <script async src="https://news.google.com/swg/js/v1/publisher.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,10 +18,55 @@
   <link rel="stylesheet" href="style.css">
 
   <style>
-    /* Extra styles for consistency */
+    /* ─── PRICE REPLACEMENT ─── */
+    .price,
+    .package-price,
+    .price-large {
+      font-size: 0 !important;
+      color: transparent !important;
+      line-height: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 120px !important;
+      min-height: 28px !important;
+    }
+    .price::after,
+    .package-price::after,
+    .price-large::after {
+      content: "Contact for pricing" !important;
+      font-size: 0.85rem !important;
+      color: var(--terracotta, #c94f2c) !important;
+      display: inline-block !important;
+      line-height: 1.4 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      background: rgba(201, 79, 44, 0.08) !important;
+      padding: 4px 14px !important;
+      border-radius: 60px !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      letter-spacing: 0.3px !important;
+    }
+    .price small,
+    .package-price small,
+    .price-large small {
+      display: none !important;
+    }
+    @media (max-width: 600px) {
+      .price::after,
+      .package-price::after,
+      .price-large::after {
+        font-size: 0.7rem !important;
+        padding: 3px 10px !important;
+        min-width: 90px !important;
+      }
+    }
+
+    /* ─── WHY ABRID MOROCCO ─── */
     .why-section {
       background: var(--bg-2, #f0e8df);
-      padding: 72px 0;
+      padding: 60px 0;
     }
     .why-grid {
       display: grid;
@@ -46,7 +90,7 @@
     .why-card .icon {
       font-size: 1.8rem;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
     .why-card h3 {
       font-family: 'Syne', sans-serif;
@@ -65,7 +109,7 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    .why-header .eyebrow {
+    .why-header .eyebrow-badge {
       display: inline-flex;
       align-items: center;
       gap: 10px;
@@ -74,7 +118,7 @@
       border-radius: 60px;
       margin-bottom: 16px;
     }
-    .why-header .eyebrow span {
+    .why-header .eyebrow-badge span {
       font-weight: 700;
       color: var(--terracotta, #c0522e);
       font-size: 0.85rem;
@@ -91,6 +135,24 @@
       color: var(--muted, #7a5f52);
       font-size: 1.05rem;
       margin-bottom: 0;
+    }
+
+    /* ─── GOOGLE FORM BUTTON ─── */
+    .google-form-btn {
+      display: inline-block;
+      background: var(--terracotta);
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all .3s ease;
+    }
+    .google-form-btn:hover {
+      background: var(--terracotta-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(201,79,44,.4);
     }
   </style>
 
@@ -208,7 +270,7 @@
   <section class="why-section">
     <div class="container">
       <div class="why-header">
-        <div class="eyebrow">
+        <div class="eyebrow-badge">
           <span>🇲🇦 Why Abrid Morocco? · لماذا أبريد المغرب؟</span>
         </div>
         <h2>Your Morocco, Your Way</h2>
