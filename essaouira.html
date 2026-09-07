@@ -94,38 +94,58 @@
 </head>
 <body>
 
-  <header class="site-header">
+    <!-- ── HEADER ── -->
+  <header class="site-header" id="siteHeader">
     <div class="container nav">
+      <!-- Brand (left) -->
       <a href="index.html" class="brand">
         <div class="brand-logo">
-          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
         </div>
         <div class="brand-text">
           <strong>AbridMoroccoTrip</strong>
-          <span>Premium Morocco Tours</span>
+          <span>Premium Tours</span>
         </div>
       </a>
+
+      <!-- Navigation Links (center) -->
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#tours">Tours</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
         <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
       </ul>
+
+      <!-- Right Side: Contact + Book Now + Language + Menu -->
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <a href="contact.html" class="contact-link">Contact</a>
+        <a class="btn btn-gold" href="contact.html">✨ Book Now</a>
+
+        <!-- Language Switcher -->
         <div id="google_translate_element" style="display:inline-block;"></div>
-        <a class="btn btn-primary" href="index.html#contact">Book Now</a>
-        <button class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></button>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
+
+    <!-- Mobile Menu -->
     <div class="container mobile-menu" id="mobileMenu">
       <div class="mobile-panel">
-        <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="index.html#tours">Tours</a>
-        <a href="blog.html">Blog</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="index.html">🏠 Home</a>
+        <a href="about.html">👤 About Us</a>
+        <a href="tours.html">🗺️ Tours</a>
+        <a href="classic-morocco.html">🗺️ Classic 13-Day Itinerary</a>
+        <a href="packages.html">📦 Packages</a>
+        <a href="gallery.html">🖼️ Gallery</a>
+        <a href="blog.html">📰 Blog</a>
+        <a href="contact.html">📋 Contact</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
       </div>
     </div>
   </header>
