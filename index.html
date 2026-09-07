@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ── All your existing styles stay exactly the same ── */
+    /* ── All your existing styles ── */
     * { margin:0; padding:0; box-sizing:border-box; }
     :root { --terracotta: #c94f2c; --terracotta-dark: #a63d1f; --gold: #f4b942; --gold-light: #fce8c8; --cream: #fef9f0; --brown: #3d2a1e; --brown-light: #5a4a3a; --muted: #8a7a6a; --bg: #fcf8f2; --shadow: 0 8px 30px rgba(0,0,0,.06); --shadow-hover: 0 16px 48px rgba(0,0,0,.10); --radius: 20px; --radius-sm: 12px; --transition: .35s cubic-bezier(.175,.885,.32,1.275); --font: 'Inter',-apple-system,sans-serif; --font-serif: 'Playfair Display',serif; }
     html { scroll-behavior: smooth; }
@@ -53,16 +53,14 @@
     .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
     .nav-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
     /* ─── PHONE NUMBER REMOVED ─── */
-    /* .mini-contact removed */
     .menu-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
     .menu-toggle span { display:block; width:28px; height:3px; background:var(--brown); border-radius:4px; transition:var(--transition); }
     .mobile-menu { display:none; padding:16px 0; }
     .mobile-menu.open { display:block; }
     .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
     .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
-    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } /* .mini-contact removed */ }
+    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } }
 
-    /* ─── REST OF STYLES (unchanged) ─── */
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 80% 20%, rgba(244,185,66,.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,79,44,.06) 0%, transparent 50%), linear-gradient(180deg,#fff9f4 0%,var(--bg) 100%); z-index:0; pointer-events:none; }
     .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; position:relative; z-index:1; }
@@ -258,6 +256,51 @@
         min-width: 80px !important;
         font-size: .75rem !important;
         padding: 4px 30px 4px 10px !important;
+      }
+    }
+
+    /* ─── PRICE HIDING ─── FIXED */
+    .price,
+    .package-price,
+    .price-large {
+      font-size: 0 !important;
+      color: transparent !important;
+      line-height: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 120px !important;
+      min-height: 28px !important;
+    }
+    .price::after,
+    .package-price::after,
+    .price-large::after {
+      content: "Contact for pricing" !important;
+      font-size: 0.85rem !important;
+      color: var(--terracotta, #c94f2c) !important;
+      display: inline-block !important;
+      line-height: 1.4 !important;
+      font-weight: 700 !important;
+      text-align: center !important;
+      background: rgba(201, 79, 44, 0.08) !important;
+      padding: 4px 14px !important;
+      border-radius: 60px !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      letter-spacing: 0.3px !important;
+    }
+    .price small,
+    .package-price small,
+    .price-large small {
+      display: none !important;
+    }
+    @media (max-width: 600px) {
+      .price::after,
+      .package-price::after,
+      .price-large::after {
+        font-size: 0.7rem !important;
+        padding: 3px 10px !important;
+        min-width: 90px !important;
       }
     }
   </style>
@@ -535,7 +578,7 @@
 
   </main>
 
-  <!-- ═══ FOOTER ═══ -->
+  <!-- ═══ FOOTER ═══ ── FIXED: KARIM IS BACK -->
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
@@ -589,12 +632,15 @@
           </ul>
         </div>
 
-        <!-- Column 4: Contact -->
+        <!-- Column 4: Contact ── FIXED: KARIM IS BACK -->
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-              📞 <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+              📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+            </li>
+            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
+              📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
             </li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
               ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a>
@@ -603,12 +649,12 @@
               ⏰ 9:00–21:00 (GMT+1)
             </li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">
-              📍 Casablanca, Morocco
+              📍 Casablanca / Marrakech
             </li>
           </ul>
           <div style="display:flex; gap:10px; margin-top:12px;">
-            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
-            <a href="https://www.instagram.com/abridmoroccotrip/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+            <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Abdellah</a>
+            <a href="https://wa.me/212609282538" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp Karim</a>
           </div>
         </div>
 
