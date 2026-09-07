@@ -315,7 +315,14 @@
       .team-card .profile { flex-direction: column; text-align: center; }
       .team-card .profile img { width: 100px; height: 100px; }
     }
-  </style>
+  
+@media (max-width:860px) {
+    .nav-actions .contact-link,
+    .nav-actions .btn-gold,
+    .nav-actions .lang-wrapper {
+        display: none !important;
+    }
+}</style>
 </head>
 <body>
 
@@ -378,7 +385,8 @@
         <a href="blog.html">📰 Blog</a>
         <a href="contact.html">📋 Contact</a>
         <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
-      </div>
+              <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a>
+</div>
     </div>
   </header>
 

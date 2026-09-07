@@ -28,7 +28,15 @@
     .legal-content ul { padding-left: 24px; margin: 16px 0; }
     .legal-content li { margin-bottom: 8px; }
     .last-updated { color: var(--muted); font-size: 0.9rem; margin-top: 40px; border-top: 1px solid var(--line); padding-top: 20px; }
-  </style>
+  
+@media (max-width:860px) {
+    .nav-actions .contact-link,
+    .nav-actions .btn-gold,
+    .nav-actions .lang-wrapper,
+    .nav-actions .mini-contact {
+        display: none !important;
+    }
+}</style>
   <!-- Vercel Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };

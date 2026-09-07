@@ -29,7 +29,15 @@
     .sitemap-section li { margin-bottom: 8px; }
     .sitemap-section a { color: var(--brown-light); font-weight: 500; transition: color var(--t-fast); }
     .sitemap-section a:hover { color: var(--terracotta); text-decoration: underline; }
-  </style>
+  
+@media (max-width:860px) {
+    .nav-actions .contact-link,
+    .nav-actions .btn-gold,
+    .nav-actions .lang-wrapper,
+    .nav-actions .mini-contact {
+        display: none !important;
+    }
+}</style>
   <!-- Vercel Analytics -->
   <script>
     window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
