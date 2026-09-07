@@ -52,14 +52,17 @@
     .nav-links a { color:var(--brown-light); transition:color var(--transition); }
     .nav-links a:hover, .nav-links a.active { color:var(--terracotta); }
     .nav-actions { display:flex; align-items:center; gap:12px; flex-wrap:wrap; }
-    .mini-contact { font-size:.85rem; font-weight:600; color:var(--terracotta); }
+    /* ─── PHONE NUMBER REMOVED ─── */
+    /* .mini-contact removed */
     .menu-toggle { display:none; flex-direction:column; gap:5px; background:none; border:none; cursor:pointer; padding:4px; }
     .menu-toggle span { display:block; width:28px; height:3px; background:var(--brown); border-radius:4px; transition:var(--transition); }
     .mobile-menu { display:none; padding:16px 0; }
     .mobile-menu.open { display:block; }
     .mobile-panel { display:flex; flex-direction:column; gap:12px; background:#fff; border-radius:var(--radius-sm); padding:20px; box-shadow:var(--shadow); }
     .mobile-panel a { font-weight:500; padding:8px 0; border-bottom:1px solid rgba(0,0,0,.05); }
-    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } .mini-contact { display:none; } }
+    @media (max-width:860px) { .nav-links { display:none; } .menu-toggle { display:flex; } /* .mini-contact removed */ }
+
+    /* ─── REST OF STYLES (unchanged) ─── */
     .hero { padding:60px 0 40px; position:relative; overflow:hidden; }
     .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 80% 20%, rgba(244,185,66,.12) 0%, transparent 60%), radial-gradient(ellipse 50% 50% at 20% 80%, rgba(201,79,44,.06) 0%, transparent 50%), linear-gradient(180deg,#fff9f4 0%,var(--bg) 100%); z-index:0; pointer-events:none; }
     .hero-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:48px; align-items:center; position:relative; z-index:1; }
@@ -132,7 +135,7 @@
     @media (max-width:860px) { .nav-actions .lang-wrapper { display:none; } }
     @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } }
 
-    /* ─── NEW: WHY ABRID MOROCCO SECTION ─── */
+    /* ─── WHY ABRID MOROCCO SECTION ─── */
     .why-section {
       background: var(--cream);
       padding: 60px 0;
@@ -201,6 +204,62 @@
       font-size: 1.05rem;
       margin-bottom: 0;
     }
+
+    /* ─── GOOGLE TRANSLATE ─── */
+    #google_translate_element {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    #google_translate_element .goog-te-combo {
+      background: transparent;
+      border: 1px solid rgba(44,26,18,.12);
+      border-radius: 60px;
+      padding: 6px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--brown);
+      cursor: pointer;
+      font-family: var(--font);
+      outline: none;
+      transition: all .3s;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px;
+      padding-right: 36px;
+      min-width: 110px;
+    }
+    #google_translate_element .goog-te-combo:hover {
+      border-color: var(--terracotta);
+      background-color: rgba(201,79,44,.06);
+    }
+    #google_translate_element .goog-te-gadget {
+      font-family: var(--font) !important;
+      color: transparent !important;
+    }
+    .skiptranslate iframe {
+      display: none !important;
+    }
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+    body {
+      top: 0px !important;
+    }
+    @media (max-width: 860px) {
+      .nav-actions #google_translate_element {
+        display: none !important;
+      }
+    }
+    @media (max-width: 600px) {
+      #google_translate_element .goog-te-combo {
+        min-width: 80px !important;
+        font-size: .75rem !important;
+        padding: 4px 30px 4px 10px !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -235,9 +294,8 @@
       </ul>
 
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
-        <!-- Google Translate widget (keep as is) -->
-        <div id="google_translate_element" style="display:inline-block;"></div>
+        <!-- Phone number removed -->
+        <div id="google_translate_element"></div>
         <a class="btn btn-primary btn-sm" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
           <span></span><span></span><span></span>
@@ -315,7 +373,7 @@
       </div>
     </section>
 
-    <!-- ═══ WHY ABRID MOROCCO? ═══ (NEW SECTION) -->
+    <!-- ═══ WHY ABRID MOROCCO? ═══ -->
     <section class="why-section">
       <div class="container">
         <div class="why-header">
