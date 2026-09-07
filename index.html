@@ -362,7 +362,7 @@
       </ul>
 
       <div class="nav-actions">
-        <a class="mini-contact" href="tel:+212762934488">📞 +212 762 934 488</a>
+        <!-- Phone number removed from header as requested -->
         <div id="google_translate_element"></div>
         <a class="btn btn-primary btn-sm" href="contact.html">Book Now</a>
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -603,7 +603,7 @@
 
   </main>
 
-  <!-- ═══ FOOTER ═══ ── FIXED: NUMBERS LOOK GOOD ── -->
+  <!-- ═══ FOOTER ═══ ── NUMBERS DISPLAYED CONSISTENTLY ── -->
   <footer style="background:var(--brown); color:rgba(255,255,255,.7); padding:48px 0 24px; margin-top:40px; border-top:1px solid rgba(255,255,255,.06);">
     <div class="container">
       <div style="display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:40px; margin-bottom:40px;">
@@ -657,15 +657,17 @@
           </ul>
         </div>
 
-        <!-- Column 4: Contact ── NUMBERS LOOK GOOD ── -->
+        <!-- Column 4: Contact ── both names and numbers now formatted identically with no wrapping -->
         <div>
           <h4 style="color:#fff; font-size:0.85rem; font-weight:700; margin-bottom:14px; letter-spacing:0.3px;">Contact</h4>
           <ul style="list-style:none; padding:0; font-size:0.85rem; line-height:2.2; color:rgba(255,255,255,.5);">
+            <!-- Abdellah – now with white-space: nowrap to match Karim -->
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-              📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a>
+              📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6); white-space: nowrap;">+212 762 934 488</a>
             </li>
+            <!-- Karim – already fine, we add nowrap for consistency -->
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
-              📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a>
+              📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6); white-space: nowrap;">+212 609 282 538</a>
             </li>
             <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">
               ✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a>
