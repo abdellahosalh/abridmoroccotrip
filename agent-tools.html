@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent Tools – AbridMoroccoTrip</title>
+  <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    :root { --terracotta: #c0522e; --gold: #f4b942; --bg: #ecdcd0; --brown: #2c1a12; --muted: #7a5f52; --radius: 20px; --font: 'Plus Jakarta Sans', sans-serif; }
+    body { font-family: var(--font); background: var(--bg); color: var(--brown); padding: 40px 20px; line-height: 1.7; }
+    .container { max-width: 1000px; margin: 0 auto; }
+    h1 { font-family: 'Syne', sans-serif; color: var(--terracotta); font-size: 2.6rem; margin-bottom: 4px; }
+    .subtitle { color: var(--muted); margin-bottom: 40px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+    .card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06); transition: transform .3s; }
+    .card:hover { transform: translateY(-6px); }
+    .card .icon { font-size: 2.8rem; display: block; margin-bottom: 8px; }
+    .card h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 6px; }
+    .card p { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+    .btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 12px 24px; border-radius: 60px; font-weight: 700; text-decoration: none; transition: all .3s; }
+    .btn:hover { background: #a63d1f; transform: translateY(-3px); }
+    .btn-gold { background: var(--gold); color: var(--brown); }
+    .btn-gold:hover { background: #e6a832; }
+    .back-link { display: inline-block; margin-top: 40px; color: var(--terracotta); font-weight: 600; }
+    .footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; margin-top: 40px; border-radius: var(--radius); }
+    .footer a { color: rgba(255,255,255,.7); }
+    @media (max-width: 600px) { .card { padding: 20px; } }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>⚙️ Agent Tools</h1>
+  <p class="subtitle">Everything you need to build, price, and sell Morocco trips with AbridMoroccoTrip.</p>
+
+  <div class="grid">
+    <div class="card">
+      <span class="icon">📋</span>
+      <h3>Classic 13-Day Itinerary</h3>
+      <p>Pre-built, ready-to-copy itinerary. Casablanca to Marrakech via Sahara, Fes, Chefchaouen.</p>
+      <a href="classic-morocco.html" class="btn">View & Copy</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">📐</span>
+      <h3>Margin Calculator</h3>
+      <p>Enter your costs, set your markup, and get instant retail prices and profits.</p>
+      <a href="trip-template.html" class="btn btn-gold">Open Calculator</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">📝</span>
+      <h3>Marketing Content Kit</h3>
+      <p>Ready-to-use descriptions, social media posts, and email templates for selling Morocco.</p>
+      <a href="#marketing-kit" class="btn" onclick="alert('Marketing kit is being prepared. Contact us for the full pack.');">Request Kit</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">📞</span>
+      <h3>Contact Us Directly</h3>
+      <p>Need a custom quote for a large group or special request? We're here to help.</p>
+      <a href="contact.html" class="btn btn-gold">Contact Support</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">🖼️</span>
+      <h3>Gallery & Media</h3>
+      <p>Download high-quality images and videos of Morocco to use in your own marketing.</p>
+      <a href="gallery.html" class="btn">View Gallery</a>
+    </div>
+
+    <div class="card">
+      <span class="icon">📰</span>
+      <h3>Blog Content Library</h3>
+      <p>Insider articles, city guides, and desert travel tips to share with your audience.</p>
+      <a href="blog.html" class="btn btn-gold">Read Blog</a>
+    </div>
+  </div>
+
+  <div style="margin-top: 40px; padding: 28px; background: #fff; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06);">
+    <h2 style="font-family: 'Syne', sans-serif; color: var(--terracotta); font-size: 1.4rem;">📋 Quick Copy – Itinerary Snippet</h2>
+    <p style="color: var(--muted);">Click the button below to copy a short, professional description of the Classic Morocco Tour.</p>
+    <button class="btn" onclick="copySnippet()" style="margin-top: 10px;">📋 Copy Marketing Snippet</button>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</div>
+
+<footer class="footer">
+  <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
+    © 2026 AbridMoroccoTrip. All rights reserved.<br>
+    📞 Abdellah: <a href="tel:+212762934488">+212 762 934 488</a> • 📞 Karim: <a href="tel:+212609282538">+212 609 282 538</a>
+  </div>
+</footer>
+
+<script>
+  function copySnippet() {
+    const snippet = `🌟 DISCOVER THE REAL MOROCCO – 13 DAYS\n\nFrom the bustling souks of Marrakech to the golden dunes of the Sahara, this 13-day journey takes you through the heart of Morocco. Explore the blue city of Chefchaouen, wander the medieval medina of Fes, camp under the stars in the desert, and hike through the stunning Todra Gorge. Led by local Berber guides. Authentic, sustainable, and unforgettable.\n\nBook now with AbridMoroccoTrip. Contact us for pricing and availability.`;
+    navigator.clipboard.writeText(snippet).then(() => {
+      alert('✅ Marketing snippet copied to clipboard!');
+    }).catch(() => {
+      prompt('Copy this snippet:', snippet);
+    });
+  }
+</script>
+
+</body>
+</html>
