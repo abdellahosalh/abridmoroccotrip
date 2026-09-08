@@ -199,4 +199,12 @@
     <priority>0.5000</priority>
   </url>
 
-<url><loc>https://www.abridmorocco.com/airport-transfer.html</loc><lastmod>2026-09-03</lastmod><changefreq>daily</changefreq><priority>0.8000</priority></url><url><loc>https://www.abridmorocco.com/classic-morocco.html</loc><lastmod>2026-09-03</lastmod><changefreq>daily</changefreq><priority>0.8000</priority></url></urlset>
+<url><loc>https://www.abridmorocco.com/airport-transfer.html</loc><lastmod>2026-09-03</lastmod><changefreq>daily</changefreq><priority>0.8000</priority></url><url><loc>https://www.abridmorocco.com/classic-morocco.html</loc><lastmod>2026-09-03</lastmod><changefreq>daily</changefreq><priority>0.8000</priority></url>
+  <url>
+    <loc>https://www.abridmorocco.com/6-day-christmas-morocco.html</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8000</priority>
+  </url>
+
+</urlset>
