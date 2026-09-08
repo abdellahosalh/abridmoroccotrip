@@ -715,78 +715,27 @@
       color: var(--terracotta);
     }
 
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--brown);
-      color: rgba(255, 255, 255, .7);
-      padding: 48px 0 24px;
-      margin-top: 40px;
-      border-top: 1px solid rgba(255, 255, 255, .06);
+    /* ─── FOOTER (MATCHED TO TOURS PAGE) ─── */
+    footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 48px 0 24px; margin-top: 40px; border-top: 1px solid rgba(255,255,255,.06); overflow-x: hidden; max-width: 100%; width: 100%; }
+    footer .container { max-width: 1200px; margin: 0 auto; padding: 0 16px; overflow-x: hidden; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .footer-brand img { width: 44px; height: 44px; border-radius: 10px; object-fit: cover; border: 2px solid rgba(255,255,255,.1); }
+    .footer-brand strong { font-size: 1.1rem; color: #fff; display: block; }
+    .footer-brand span { font-size: 0.7rem; color: rgba(255,255,255,.4); }
+    .footer-desc { font-size: 0.85rem; color: rgba(255,255,255,.5); line-height: 1.7; max-width: 280px; }
+    .footer-heading { color: #fff; font-size: 0.85rem; font-weight: 700; margin-bottom: 14px; }
+    .footer-links { list-style: none; padding: 0; font-size: 0.85rem; line-height: 2.2; color: rgba(255,255,255,.5); }
+    .footer-links a { color: rgba(255,255,255,.5); transition: color .2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,.06); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 0.75rem; color: rgba(255,255,255,.3); }
+
+    @media (max-width: 860px) {
+        .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
     }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 40px;
-      margin-bottom: 40px;
-    }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 14px;
-    }
-    .footer-brand img {
-      width: 44px;
-      height: 44px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 2px solid rgba(255, 255, 255, .1);
-    }
-    .footer-brand strong {
-      font-size: 1.1rem;
-      color: #fff;
-      display: block;
-    }
-    .footer-brand span {
-      font-size: 0.7rem;
-      color: rgba(255, 255, 255, .4);
-    }
-    .footer-desc {
-      font-size: 0.85rem;
-      color: rgba(255, 255, 255, .5);
-      line-height: 1.7;
-      max-width: 280px;
-    }
-    .footer-heading {
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 700;
-      margin-bottom: 14px;
-    }
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      font-size: 0.85rem;
-      line-height: 2.2;
-      color: rgba(255, 255, 255, .5);
-    }
-    .footer-links a {
-      color: rgba(255, 255, 255, .5);
-      transition: color .2s;
-    }
-    .footer-links a:hover {
-      color: #fff;
-    }
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, .06);
-      padding-top: 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      font-size: 0.75rem;
-      color: rgba(255, 255, 255, .3);
+    @media (max-width: 480px) {
+        .footer-grid { grid-template-columns: 1fr; gap: 16px; }
+        .footer-desc { max-width: 100%; }
     }
 
     .wa-float {
@@ -1053,7 +1002,7 @@
 
   </div>
 
-  <!-- ─── FOOTER ─── -->
+  <!-- ─── FOOTER (MATCHED) ─── -->
   <footer>
     <div class="container">
       <div class="footer-grid">
@@ -1065,11 +1014,8 @@
               <span>Premium Morocco Tours</span>
             </div>
           </div>
-          <p class="footer-desc">
-            Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.
-          </p>
+          <p class="footer-desc">Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.</p>
         </div>
-
         <div>
           <h4 class="footer-heading">Pages</h4>
           <ul class="footer-links">
@@ -1084,7 +1030,6 @@
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="footer-heading">Support</h4>
           <ul class="footer-links">
@@ -1095,29 +1040,21 @@
             <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
-
         <div>
           <h4 class="footer-heading">Contact</h4>
-          <ul class="footer-links" style="line-height:2.2;">
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Abdellah: <a href="tel:+212762934488" style="color:rgba(255,255,255,.6);">+212 762 934 488</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">📞 Karim: <a href="tel:+212609282538" style="color:rgba(255,255,255,.6);">+212 609 282 538</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.6);">✉️ <a href="mailto:abridmorocco@gmail.com" style="color:rgba(255,255,255,.6);">abridmorocco@gmail.com</a></li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">⏰ 9:00–21:00 (GMT+1)</li>
-            <li style="display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.4); font-size:0.8rem;">📍 Casablanca, Morocco</li>
-          </ul>
-          <div style="display:flex; gap:10px; margin-top:12px;">
+          <a href="contact.html" style="display:inline-block;background:var(--gold);color:var(--brown);padding:8px 20px;border-radius:60px;font-weight:700;text-decoration:none;font-size:0.85rem;margin-bottom:12px;">📋 Contact Us</a>
+          <div style="display:flex; gap:10px; margin-top:8px;">
             <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
             <a href="https://www.instagram.com/abridmorocco/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
           </div>
         </div>
       </div>
-
       <div class="footer-bottom">
         <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
         <div style="display:flex; gap:20px; flex-wrap:wrap;">
-          <a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a>
-          <a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a>
-          <a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a>
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
           <span style="color:rgba(255,255,255,.15);">|</span>
           <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
         </div>
