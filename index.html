@@ -334,6 +334,50 @@
     }
 }
 
+<
+/* ─── HORIZONTAL TOUR GRID ─── */
+.tour-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 20px !important;
+    padding: 4px 0 20px 0 !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+.tour-grid .tour-card {
+    flex: 0 0 300px !important;
+    scroll-snap-align: start !important;
+}
+/* Hide scrollbar on Firefox and IE */
+.tour-grid {
+    scrollbar-width: thin !important;
+}
+.tour-grid::-webkit-scrollbar {
+    height: 6px !important;
+}
+.tour-grid::-webkit-scrollbar-thumb {
+    background: var(--terracotta) !important;
+    border-radius: 10px !important;
+}
+.tour-grid::-webkit-scrollbar-track {
+    background: var(--cream) !important;
+}
+/* On desktop, revert to grid if you prefer, or keep horizontal */
+@media (min-width: 860px) {
+    .tour-grid {
+        flex-wrap: wrap !important;
+        overflow-x: visible !important;
+        scroll-snap-type: none !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(320px,1fr)) !important;
+    }
+    .tour-grid .tour-card {
+        flex: unset !important;
+        scroll-snap-align: unset !important;
+    }
+}
+
 </style>
 </head>
 <body>
