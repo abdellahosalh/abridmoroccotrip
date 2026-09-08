@@ -143,7 +143,7 @@
 
     /* ─── TOURS ─── */
     section { padding:72px 0; }
-    .tour-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap:28px; }
+    
     .tour-card { background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:var(--transition); display:flex; flex-direction:column; border:1px solid rgba(0,0,0,.04); }
     .tour-card:hover { transform:translateY(-6px); box-shadow:var(--shadow-hover); }
     .tour-image { position:relative; height:200px; overflow:hidden; }
@@ -199,7 +199,7 @@
     .classic-promo .btn-gold { background:var(--gold); color:var(--brown); }
     .classic-promo .btn-gold:hover { background:#fff; }
 
-    @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; } .tour-grid { grid-template-columns:1fr; } .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } .classic-promo { padding:24px; } .why-grid { grid-template-columns:1fr 1fr; } }
+    @media (max-width:600px) { .hero-grid { grid-template-columns:1fr; } .hero-visual { min-height:300px; } .hero-main img { height:250px; } .hero-float { display:none; }  .blog-preview-grid { grid-template-columns:1fr; } .testimonial-grid { grid-template-columns:1fr; } .classic-promo { padding:24px; } .why-grid { grid-template-columns:1fr 1fr; } }
     @media (max-width:400px) { .why-grid { grid-template-columns:1fr; } }
   <
 @media (max-width: 1024px) {
@@ -336,33 +336,16 @@
 
 <
 /* ─── HORIZONTAL TOUR GRID ─── */
-.tour-grid {
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 20px !important;
-    padding: 4px 0 20px 0 !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-}
+
 .tour-grid .tour-card {
     flex: 0 0 300px !important;
     scroll-snap-align: start !important;
 }
 /* Hide scrollbar on Firefox and IE */
-.tour-grid {
-    scrollbar-width: thin !important;
-}
-.tour-grid::-webkit-scrollbar {
-    height: 6px !important;
-}
-.tour-grid::-webkit-scrollbar-thumb {
-    background: var(--terracotta) !important;
-    border-radius: 10px !important;
-}
-.tour-grid::-webkit-scrollbar-track {
-    background: var(--cream) !important;
-}
+
+
+
+
 /* On desktop, revert to grid if you prefer, or keep horizontal */
 
 }
@@ -429,6 +412,59 @@ footer .footer-bottom {
         grid-template-columns: 1fr !important;
         gap: 12px !important;
     }
+}
+
+<
+/* ─── TOUR CAROUSEL – ONE AT A TIME ─── */
+.tour-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 16px !important;
+    padding: 8px 4px 20px 4px !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: var(--terracotta) var(--cream) !important;
+}
+.tour-grid::-webkit-scrollbar {
+    height: 6px !important;
+}
+.tour-grid::-webkit-scrollbar-thumb {
+    background: var(--terracotta) !important;
+    border-radius: 10px !important;
+}
+.tour-grid::-webkit-scrollbar-track {
+    background: var(--cream) !important;
+    border-radius: 10px !important;
+}
+/* ─── CARD SIZES ─── */
+.tour-grid .tour-card {
+    flex: 0 0 85% !important;
+    max-width: 400px !important;
+    scroll-snap-align: center !important;
+    min-height: 380px !important;
+}
+/* ─── TABLET ─── */
+@media (min-width: 600px) {
+    .tour-grid .tour-card {
+        flex: 0 0 45% !important;
+        max-width: 380px !important;
+        min-height: 380px !important;
+    }
+}
+/* ─── DESKTOP ─── */
+@media (min-width: 1024px) {
+    .tour-grid .tour-card {
+        flex: 0 0 30% !important;
+        max-width: 360px !important;
+        min-height: 400px !important;
+    }
+}
+/* ─── REMOVE OLD GRID STYLES ─── */
+.tour-grid {
+    display: flex !important;
 }
 
 </style>
