@@ -151,10 +151,40 @@
     .tour-grid::-webkit-scrollbar-thumb { background: var(--terracotta) !important; border-radius: 10px !important; }
     .tour-grid::-webkit-scrollbar-track { background: var(--cream) !important; border-radius: 10px !important; }
 
-    /* ─── DOTS ─── */
-    .tour-dots { display: flex; justify-content: center; gap: 8px; padding: 8px 0 20px 0; }
-    .tour-dots .dot { width: 10px; height: 10px; border-radius: 50%; background: #8a7a6a; border: none; padding: 0; cursor: pointer; transition: all 0.3s ease; opacity: 0.4; }
+    /* ─── DOTS & ARROWS ─── */
+    .tour-dots { display: flex; justify-content: center; gap: 12px; padding: 8px 0 20px 0; }
+    .tour-dots .dot { width: 14px; height: 14px; border-radius: 50%; background: #8a7a6a; border: none; padding: 0; cursor: pointer; transition: all 0.3s ease; opacity: 0.4; }
     .tour-dots .dot.active { background: var(--terracotta); opacity: 1; transform: scale(1.3); }
+
+    /* New Arrow Buttons */
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.95);
+        border: 1px solid rgba(0,0,0,0.1);
+        border-radius: 50%;
+        font-size: 1.5rem;
+        color: var(--brown);
+        cursor: pointer;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    .carousel-arrow:hover { background: var(--terracotta); color: #fff; border-color: var(--terracotta); }
+    .carousel-arrow.prev { left: -5px; }
+    .carousel-arrow.next { right: -5px; }
+    
+    /* Hide dots and arrows on small mobile screens (Swiping is better there) */
+    @media (max-width: 480px) {
+        .carousel-arrow { display: none; }
+        .tour-dots { display: none; }
+    }
 
     /* ─── CLIMATE NOTE ─── */
     .climate-note { background: var(--gold-light); border-radius: var(--radius-sm); padding: 18px 24px; margin: 30px 0; text-align: center; font-size: 0.95rem; color: var(--brown-light); border-left: 4px solid var(--gold); }
@@ -446,7 +476,9 @@
 
       </div>
 
-      <!-- ─── PAGINATION DOTS ─── -->
+      <!-- ─── NAVIGATION ARROWS & PAGINATION ─── -->
+      <button class="carousel-arrow prev" id="prevArrow" aria-label="Previous tours">‹</button>
+      <button class="carousel-arrow next" id="nextArrow" aria-label="Next tours">›</button>
       <div class="tour-dots" id="tourDots"></div>
     </div>
 
@@ -559,7 +591,7 @@
       });
     });
 
-    // ─── CAROUSEL DOTS ───
+    // ─── CAROUSEL DOTS & ARROWS ───
     function updateDots() {
       var grid = document.getElementById('tourGrid');
       var dotsContainer = document.getElementById('tourDots');
@@ -594,6 +626,14 @@
       dots.forEach(function(dot, i) {
         dot.classList.toggle('active', i === index);
       });
+
+      // Disable/Enable arrows based on position
+      var prevBtn = document.getElementById('prevArrow');
+      var nextBtn = document.getElementById('nextArrow');
+      if (prevBtn && nextBtn) {
+        prevBtn.style.opacity = scrollLeft <= 10 ? '0.4' : '1';
+        nextBtn.style.opacity = (scrollLeft + grid.clientWidth >= grid.scrollWidth - 10) ? '0.4' : '1';
+      }
     }
 
     // Initialize carousel
@@ -610,6 +650,23 @@
       window.addEventListener('resize', function() {
         setTimeout(updateDots, 200);
       });
+
+      // ── ADD ARROW BUTTON FUNCTIONALITY ──
+      var prevBtn = document.getElementById('prevArrow');
+      var nextBtn = document.getElementById('nextArrow');
+      var visibleCards = grid.querySelectorAll('.tour-card:not([style*="display: none"])');
+      
+      if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', function() {
+          var cardWidth = visibleCards[0].offsetWidth + 16;
+          grid.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        });
+        
+        nextBtn.addEventListener('click', function() {
+          var cardWidth = visibleCards[0].offsetWidth + 16;
+          grid.scrollBy({ left: cardWidth, behavior: 'smooth' });
+        });
+      }
     }
 
     // Google Translate
