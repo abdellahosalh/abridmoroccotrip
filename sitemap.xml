@@ -23,6 +23,12 @@
     <priority>0.9000</priority>
   </url>
   <url>
+    <loc>https://www.abridmorocco.com/destinations.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9000</priority>
+  </url>
+  <url>
     <loc>https://www.abridmorocco.com/packages.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
