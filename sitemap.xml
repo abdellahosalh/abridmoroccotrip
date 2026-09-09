@@ -61,6 +61,12 @@
     <priority>0.8000</priority>
   </url>
   <url>
+    <loc>https://www.abridmorocco.com/ouzoud-quad-tour.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+  <url>
     <loc>https://www.abridmorocco.com/essaouira.html</loc>
     <lastmod>2026-09-03</lastmod>
     <changefreq>daily</changefreq>
@@ -103,6 +109,12 @@
     <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6000</priority>
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/booking-guide.html</loc>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7000</priority>
   </url>
   <url>
     <loc>https://www.abridmorocco.com/privacy.html</loc>
