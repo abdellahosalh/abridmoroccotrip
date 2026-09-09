@@ -4,9 +4,10 @@
 User-agent: *
 Allow: /
 
-# Block access to admin or private areas
+# Block access to internal admin and agent tools
 Disallow: /admin/
-Disallow: /private/
+Disallow: /agent-tools.html
+Disallow: /trip-template.html
 Disallow: /tmp/
 
 # Sitemap location — helps search engines find all your pages
