@@ -1,371 +1,1332 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Morocco Tours | AbridMoroccoTrip</title>
-  <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <meta name="description" content="Browse all Morocco tours. Marrakech day trips, Sahara desert adventure, Atlas Mountains, Imperial Cities circuit, hot air balloon & private custom itineraries." />
-  <meta name="robots" content="index, follow" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Morocco Tours | AbridMoroccoTrip</title>
+    <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
+    <meta name="description" content="Browse all Morocco tours. Marrakech day trips, Sahara desert adventure, Atlas Mountains, Imperial Cities circuit, hot air balloon & private custom itineraries." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.abridmorocco.com/tours.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AbridMoroccoTrip" />
+    <meta property="og:title" content="All Morocco Tours | AbridMoroccoTrip" />
+    <meta property="og:description" content="Marrakech day trips, Sahara desert adventures, Atlas Mountains 4x4 tours, Imperial Cities circuits & hot air balloon rides — all with private local guides." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" />
+    <meta property="og:url" content="https://www.abridmorocco.com/tours.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="All Morocco Tours | AbridMoroccoTrip" />
+    <meta name="twitter:description" content="Marrakech day trips, Sahara desert adventures, Atlas Mountains 4x4 tours, Imperial Cities circuits & hot air balloon rides." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "AbridMoroccoTrip",
+      "url": "https://www.abridmorocco.com/",
+      "image": "https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg",
+      "description": "AbridMoroccoTrip is a local Morocco travel company based in Casablanca, Morocco, specializing in private tours, Sahara desert trips, Marrakech experiences, Atlas Mountain adventures and tailor-made Morocco itineraries.",
+      "telephone": "+212762934488",
+      "address": { "@type": "PostalAddress", "addressCountry": "MA", "addressLocality": "Casablanca" },
+      "areaServed": { "@type": "Country", "name": "Morocco" },
+      "sameAs": [ "https://www.instagram.com/abridmorocco/", "https://wa.me/212762934488" ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Morocco Tours by AbridMoroccoTrip",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Marrakech Discovery", "url": "https://www.abridmorocco.com/marrakech.html" },
+        { "@type": "ListItem", "position": 2, "name": "Atlas Mountains & Ourika Valley", "url": "https://www.abridmorocco.com/atlas.html" },
+        { "@type": "ListItem", "position": 3, "name": "Essaouira Coastal Day Trip", "url": "https://www.abridmorocco.com/essaouira.html" },
+        { "@type": "ListItem", "position": 4, "name": "Merzouga Sahara Desert 3 Days", "url": "https://www.abridmorocco.com/merzouga.html" },
+        { "@type": "ListItem", "position": 5, "name": "Imilchil Lakes & Summit 3 Days", "url": "https://www.abridmorocco.com/imilchil.html" },
+        { "@type": "ListItem", "position": 6, "name": "Imperial Cities 8 Days", "url": "https://www.abridmorocco.com/imperial.html" },
+        { "@type": "ListItem", "position": 7, "name": "Tailor-Made Private Tour", "url": "https://www.abridmorocco.com/private.html" },
+        { "@type": "ListItem", "position": 8, "name": "Sunrise Hot Air Balloon", "url": "https://www.abridmorocco.com/air-balloon.html" },
+        { "@type": "ListItem", "position": 9, "name": "6-Day Morocco Christmas Itinerary", "url": "https://www.abridmorocco.com/6-day-christmas-morocco.html" },
+        { "@type": "ListItem", "position": 10, "name": "11-Day Small Group Discovery", "url": "https://www.abridmorocco.com/small-group-tour.html" }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+  --primary: #E31C23;
+  --primary-dark: #C41820;
+  --primary-light: #FF3B42;
+  --terracotta: #E31C23;
+  --terracotta-dark: #C41820;
+  --terracotta-2: #FF3B42;
+  --gold: #E31C23;
+  --gold-light: #FFE5E6;
+  --gold-strong: #C41820;
+  --sand: #ffffff;
+  --sand-light: #f8f8f8;
+  --atlas-green: #1a1a1a;
+  --atlas-green-dark: #000000;
+  --charcoal: #1a1a1a;
+  --cream: #ffffff;
+  --brown: #1a1a1a;
+  --brown-light: #333333;
+  --muted: #666666;
+  --bg: #ffffff;
+  --bg-2: #f5f5f5;
+  --shadow: 0 4px 20px rgba(0,0,0,.08);
+  --shadow-hover: 0 12px 40px rgba(0,0,0,.12);
+  --radius: 12px;
+  --radius-sm: 8px;
+  --transition: .25s ease;
+  --font: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Montserrat', -apple-system, sans-serif;
+  --line: rgba(0,0,0,.08);
+  --line-2: rgba(0,0,0,.04);
+  --border: rgba(0,0,0,.1);
+  --r: 12px;
+  --t-fast: .2s;
+  --shadow-sm: 0 2px 10px rgba(0,0,0,.06);
+  --shadow-xs: 0 1px 4px rgba(0,0,0,.04);
+  --font-main: 'Montserrat', -apple-system, sans-serif;
+  --primary-orange: #E31C23;
+  --accent: #E31C23;
+  --accent2: #1a1a1a;
+  --accent-soft: rgba(227,28,35,.08);
+  --accent-bg: #fff5f5;
+  --white: #ffffff;
+  --dark-text: #1a1a1a;
+  --gray: #666666;
+  --light-bg: #f8f8f8;
+  --highlight: #E31C23;
+  --card: #ffffff;
+  --card-bg: #ffffff;
+}
+
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Montserrat', -apple-system, sans-serif;
+            background: #ffffff;
+            color: var(--brown);
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 32px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: .95rem;
+            border: none;
+            cursor: pointer;
+            transition: all .35s;
+            text-align: center;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--terracotta), var(--terracotta-dark));
+            color: #fff;
+            box-shadow: 0 8px 28px rgba(201, 79, 44, .35);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 40px rgba(201, 79, 44, .45);
+        }
+        .btn-secondary {
+            background: rgba(255, 255, 255, .92);
+            color: var(--brown);
+            border: 2px solid rgba(61, 42, 30, .12);
+            backdrop-filter: blur(10px);
+        }
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            border-color: var(--terracotta);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, .08);
+            background: #fff;
+        }
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), #e8a820);
+            color: var(--brown);
+            box-shadow: 0 8px 28px rgba(244, 185, 66, .35);
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 14px 40px rgba(244, 185, 66, .5);
+        }
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg,var(--terracotta),var(--gold),var(--atlas-green));
+            z-index: 999;
+            width: 0%;
+            transition: width .1s;
+        }
+        .promo-banner {
+            background: linear-gradient(90deg,var(--charcoal) 0%,var(--terracotta) 45%,var(--atlas-green) 100%);
+            background-size: 200% 100%;
+            animation: bannerSlide 6s linear infinite;
+            color: #fff;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 600;
+            font-size: .9rem;
+            letter-spacing: .04em;
+            position: relative;
+            z-index: 999;
+        }
+        @keyframes bannerSlide {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        .promo-banner span {
+            color: var(--gold);
+            font-weight: 800;
+        }
+        .site-header {
+            background: rgba(255, 255, 255, .92);
+            backdrop-filter: blur(12px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            padding: 10px 0;
+        }
+        .site-header.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, .06);
+        }
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+        .brand-logo {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            min-height: 38px;
+            max-width: 38px;
+            max-height: 38px;
+            overflow: hidden;
+            flex-shrink: 0;
+            border-radius: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 4px 14px rgba(192, 82, 46, 0.25);
+        }
+        .brand-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .brand-text strong {
+            font-size: 0.9rem;
+            color: var(--brown);
+            white-space: nowrap;
+        }
+        .brand-text span {
+            font-size: .55rem;
+            color: var(--muted);
+            display: block;
+            margin-top: -2px;
+            white-space: nowrap;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 8px;
+            font-size: .75rem;
+            font-weight: 500;
+            align-items: center;
+            flex-wrap: nowrap;
+        }
+        .nav-links a {
+            color: var(--brown-light);
+            transition: color var(--transition);
+            white-space: nowrap;
+            padding: 4px 6px;
+        }
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--terracotta);
+        }
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            flex-shrink: 0;
+            flex-wrap: nowrap;
+        }
+        .nav-actions .contact-link {
+            font-weight: 600;
+            color: var(--brown-light);
+            padding: 4px 8px;
+            border-radius: 60px;
+            font-size: .75rem;
+            white-space: nowrap;
+        }
+        .nav-actions .contact-link:hover {
+            color: var(--terracotta);
+            background: rgba(201, 79, 44, .06);
+        }
+        .nav-actions .btn-gold {
+            padding: 4px 12px;
+            font-size: .7rem;
+        }
+        .lang-wrapper {
+            position: relative;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+        .lang-selector {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: none;
+            border: 1px solid rgba(44, 26, 18, .12);
+            border-radius: 60px;
+            padding: 3px 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: .65rem;
+            color: var(--brown);
+            transition: all .3s;
+        }
+        .lang-selector:hover {
+            border-color: var(--terracotta);
+            background: rgba(201, 79, 44, .06);
+        }
+        .lang-selector .arrow {
+            font-size: .5rem;
+            transition: transform .3s;
+        }
+        .lang-selector.open .arrow {
+            transform: rotate(180deg);
+        }
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: calc(100% + 4px);
+            right: 0;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, .15);
+            padding: 4px 0;
+            min-width: 130px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            z-index: 100;
+            overflow: hidden;
+        }
+        .lang-dropdown.show {
+            display: block;
+        }
+        .lang-dropdown a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            color: var(--brown);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: .8rem;
+            transition: background .2s;
+        }
+        .lang-dropdown a:hover {
+            background: #f5ede6;
+        }
+        .lang-dropdown a .flag {
+            font-size: 1.1rem;
+        }
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            flex-shrink: 0;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2.5px;
+            background: var(--brown);
+            border-radius: 4px;
+            transition: var(--transition);
+        }
+        .skiptranslate iframe {
+            display: none !important;
+        }
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+        }
+        body {
+            top: 0px !important;
+        }
+
+        .mobile-menu {
+            display: none;
+            padding: 16px 0;
+        }
+        .mobile-menu.open {
+            display: block;
+        }
+        .mobile-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #fff;
+            border-radius: var(--radius-sm);
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        .mobile-panel a {
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+        }
+
+        @media (max-width: 860px) {
+            .nav-links {
+                display: none;
+            }
+            .menu-toggle {
+                display: flex;
+            }
+            .nav-actions .contact-link {
+                display: none;
+            }
+            .nav-actions .btn-gold {
+                display: none;
+            }
+            .nav-actions .lang-wrapper {
+                display: none;
+            }
+            .brand-text strong {
+                font-size: .75rem;
+            }
+            .brand-logo {
+                width: 28px;
+                height: 28px;
+                min-width: 28px;
+                min-height: 28px;
+                max-width: 28px;
+                max-height: 28px;
+            }
+            .brand-text span {
+                display: none;
+            }
+        }
+
+        /* ─── PAGE HERO ─── */
+        .page-hero {
+            padding: 80px 0 40px;
+            text-align: center;
+            background: radial-gradient(ellipse 40% 35% at 15% 85%, rgba(76,111,82,.10) 0%, transparent 70%), linear-gradient(180deg, #fff9f4 0%, var(--bg) 100%);
+        }
+        .page-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--brown);
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+        .eyebrow {
+            display: inline-block;
+            background: var(--gold-light);
+            color: var(--terracotta);
+            font-weight: 700;
+            font-size: .8rem;
+            padding: 6px 18px;
+            border-radius: 60px;
+            margin-bottom: 12px;
+            letter-spacing: .5px;
+            text-transform: uppercase;
+        }
+
+        /* ─── FILTERS ─── */
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .filter-btn {
+            padding: 8px 18px;
+            border-radius: 60px;
+            border: 2px solid #e0d6cc;
+            background: transparent;
+            font-weight: 600;
+            font-size: .8rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn.active,
+        .filter-btn:hover {
+            border-color: var(--terracotta);
+            background: var(--terracotta);
+            color: #fff;
+        }
+
+        /* ─── CAROUSEL ─── */
+        .tour-carousel-wrapper {
+            position: relative;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        .tour-grid {
+            display: flex !important;
+            flex-wrap: nowrap !important;
+            overflow-x: auto !important;
+            overflow-y: visible !important;
+            gap: 16px !important;
+            padding: 8px 8px 20px 8px !important;
+            scroll-snap-type: x mandatory !important;
+            -webkit-overflow-scrolling: touch !important;
+            scroll-behavior: smooth !important;
+            max-width: 100% !important;
+            width: 100% !important;
+            flex-direction: row !important;
+        }
+        .tour-grid .tour-card {
+            flex: 0 0 85% !important;
+            max-width: 380px !important;
+            min-width: 260px !important;
+            scroll-snap-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            background: #fff;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0, 0, 0, .04);
+            transition: transform .3s ease;
+        }
+        .tour-grid .tour-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .tour-card .tour-image {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .tour-card .tour-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tour-card .badge-trend {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: var(--terracotta);
+            color: #fff;
+            font-size: .65rem;
+            font-weight: 700;
+            padding: 3px 12px;
+            border-radius: 60px;
+            text-transform: uppercase;
+            z-index: 2;
+        }
+        .tour-card .pill {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, .65);
+            backdrop-filter: blur(6px);
+            color: #fff;
+            font-size: .65rem;
+            padding: 3px 12px;
+            border-radius: 60px;
+            z-index: 2;
+        }
+        .tour-card .tour-body {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .tour-card .tour-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        .tour-card .tour-top h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            line-height: 1.3;
+        }
+        .tour-card .tour-top .subtle {
+            font-size: .8rem;
+            color: var(--muted);
+        }
+        .tour-card .price {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--terracotta);
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .tour-card .inclusions {
+            margin: 8px 0 12px;
+            font-size: .8rem;
+        }
+        .tour-card .inclusion-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 3px 0;
+        }
+        .tour-card .inclusion-item .icon {
+            color: var(--terracotta);
+            font-weight: 700;
+        }
+        .tour-card .tour-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            font-size: .7rem;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        .tour-card .tour-meta span {
+            background: var(--cream);
+            padding: 2px 10px;
+            border-radius: 60px;
+        }
+        .tour-card .btn {
+            width: 100%;
+            padding: 10px 20px;
+            font-size: .8rem;
+            margin-top: auto;
+        }
+
+        @media (min-width: 600px) {
+            .tour-grid .tour-card {
+                flex: 0 0 45% !important;
+                max-width: 380px !important;
+            }
+        }
+        @media (min-width: 1024px) {
+            .tour-grid .tour-card {
+                flex: 0 0 30% !important;
+                max-width: 360px !important;
+            }
+        }
+        @media (max-width: 480px) {
+            .tour-grid .tour-card {
+                flex: 0 0 90% !important;
+                max-width: 340px !important;
+                min-width: 200px !important;
+            }
+            .tour-card .tour-image {
+                height: 150px !important;
+            }
+            .tour-card .tour-body {
+                padding: 14px !important;
+            }
+            .tour-card .tour-top h3 {
+                font-size: .9rem !important;
+            }
+        }
+
+        .tour-grid::-webkit-scrollbar {
+            height: 4px !important;
+        }
+        .tour-grid::-webkit-scrollbar-thumb {
+            background: var(--terracotta) !important;
+            border-radius: 10px !important;
+        }
+        .tour-grid::-webkit-scrollbar-track {
+            background: var(--cream) !important;
+            border-radius: 10px !important;
+        }
+
+        /* ─── DOTS & ARROWS ─── */
+        .tour-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            padding: 8px 0 20px 0;
+        }
+        .tour-dots .dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #8a7a6a;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            opacity: 0.4;
+        }
+        .tour-dots .dot.active {
+            background: var(--terracotta);
+            opacity: 1;
+            transform: scale(1.3);
+        }
+
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            color: var(--brown);
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .carousel-arrow:hover {
+            background: var(--terracotta);
+            color: #fff;
+            border-color: var(--terracotta);
+        }
+        .carousel-arrow.prev {
+            left: -5px;
+        }
+        .carousel-arrow.next {
+            right: -5px;
+        }
+
+        @media (max-width: 480px) {
+            .carousel-arrow {
+                display: none;
+            }
+            .tour-dots {
+                display: none;
+            }
+        }
+
+        /* ─── CLIMATE NOTE ─── */
+        .climate-note {
+            background: var(--gold-light);
+            border-radius: var(--radius-sm);
+            padding: 18px 24px;
+            margin: 30px 0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--brown-light);
+            border-left: 4px solid var(--gold);
+        }
+        .climate-note strong {
+            color: var(--terracotta);
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            background: var(--brown);
+            color: rgba(255, 255, 255, .7);
+            padding: 48px 0 24px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            overflow-x: hidden;
+            max-width: 100%;
+            width: 100%;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            overflow-x: hidden;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+        .footer-brand img {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 2px solid rgba(255, 255, 255, .1);
+        }
+        .footer-brand strong {
+            font-size: 1.1rem;
+            color: #fff;
+            display: block;
+        }
+        .footer-brand span {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, .4);
+        }
+        .footer-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, .5);
+            line-height: 1.7;
+            max-width: 280px;
+        }
+        .footer-heading {
+            color: #fff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            font-size: 0.85rem;
+            line-height: 2.2;
+            color: rgba(255, 255, 255, .5);
+        }
+        .footer-links a {
+            color: rgba(255, 255, 255, .5);
+            transition: color .2s;
+        }
+        .footer-links a:hover {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, .3);
+        }
+
+        @media (max-width: 860px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+        }
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            .footer-desc {
+                max-width: 100%;
+            }
+        }
+
+        .wa-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: #25D366;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 28px rgba(37, 211, 102, .4);
+            z-index: 50;
+            transition: var(--transition);
+        }
+        .wa-float:hover {
+            transform: scale(1.1) rotate(-5deg);
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Promo Banner -->
-  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- HEADER -->
-  <header class="site-header" id="siteHeader">
-    <div class="container nav">
-      <a href="index.html" class="brand">
-        <div class="brand-logo">
-          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
+    <!-- Promo Banner -->
+    <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
+
+    <!-- ── HEADER ── -->
+    <header class="site-header" id="siteHeader">
+        <div class="container nav">
+            <a href="index.html" class="brand">
+                <div class="brand-logo">
+                    <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+                </div>
+                <div class="brand-text">
+                    <strong>AbridMoroccoTrip</strong>
+                    <span>Premium Tours</span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="tours.html" class="active">Tours</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="airport-transfer.html">✈️ Transfer</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="contact-link">Contact</a>
+                <a class="btn btn-gold" href="contact.html">✨ Book Now</a>
+                <div id="google_translate_element" style="display:inline-block;"></div>
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
-        <div class="brand-text">
-          <strong>AbridMoroccoTrip</strong>
-          <span>Premium Morocco Tours</span>
+
+        <div class="container mobile-menu" id="mobileMenu">
+            <div class="mobile-panel">
+                <a href="index.html">🏠 Home</a>
+                <a href="about.html">👤 About Us</a>
+                <a href="tours.html">🗺️ Tours</a>
+                <a href="destinations.html">🗺️ Destinations</a>
+                <a href="classic-morocco.html">🗺️ Classic 13-Day</a>
+                <a href="packages.html">📦 Packages</a>
+                <a href="gallery.html">🖼️ Gallery</a>
+                <a href="blog.html">📰 Blog</a>
+                <a href="airport-transfer.html">✈️ Transfer</a>
+                <a href="contact.html">📋 Contact</a>
+                <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">💬 WhatsApp</a>
+                <a href="contact.html" class="btn-gold" style="display:block;text-align:center;margin-top:8px;">✨ Book Now</a>
+            </div>
         </div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="tours.html">Tours</a></li>
-        <li><a href="destinations.html">Destinations</a></li>
-        <li><a href="packages.html">Packages</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <div class="nav-actions">
-        <a href="contact.html" class="contact-link">Contact</a>
-        <a class="btn btn-primary" href="contact.html">Book Now</a>
-        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
-    <div class="container mobile-menu" id="mobileMenu">
-      <div class="mobile-panel">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="tours.html">Tours</a>
-        <a href="destinations.html">Destinations</a>
-        <a href="classic-morocco.html">Classic 13-Day</a>
-        <a href="packages.html">Packages</a>
-        <a href="gallery.html">Gallery</a>
-        <a href="blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">WhatsApp</a>
-      </div>
-    </div>
-  </header>
+    </header>
 
-<!-- Scroll Progress -->
+    <!-- ─── PAGE HERO ─── -->
+    <section class="page-hero">
+        <div class="container">
+            <span class="eyebrow">All Tours</span>
+            <h1>Choose your perfect Morocco experience</h1>
+            <p>Private tours include transport, a licensed guide, and planning for a stress-free trip. DIY offers freedom but demands more research. Choose private for convenience, DIY for full flexibility. From day trips to multi‑day adventures — all with private guides, transparent booking, and authentic local hospitality.</p>
+        </div>
+    </section>
 
-<!-- Promo Banner -->
+    <!-- ─── FILTERS ─── -->
+    <div class="container">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">🗺️ All Tours</button>
+            <button class="filter-btn" data-filter="day">☀️ Day Trips</button>
+            <button class="filter-btn" data-filter="desert">🏜️ Desert</button>
+            <button class="filter-btn" data-filter="city">🏙️ Culture</button>
+            <button class="filter-btn" data-filter="private">🔑 Private</button>
+        </div>
 
-<!-- ── HEADER ── -->
+        <!-- ─── CAROUSEL ─── -->
+        <div class="tour-carousel-wrapper">
+            <div class="tour-grid" id="tourGrid">
 
-<!-- ─── PAGE HERO ─── -->
-<section class="page-hero">
-<div class="container">
-<span class="eyebrow">All Tours</span>
-<h1>Choose your perfect Morocco experience</h1>
-<p>Private tours include transport, a licensed guide, and planning for a stress-free trip. DIY offers freedom but demands more research. Choose private for convenience, DIY for full flexibility. From day trips to multi‑day adventures — all with private guides, transparent booking, and authentic local hospitality.</p>
-</div>
-</section>
-<!-- ─── FILTERS ─── -->
-<div class="container">
-<div class="filters">
-<button class="filter-btn active" data-filter="all">🗺️ All Tours</button>
-<button class="filter-btn" data-filter="day">☀️ Day Trips</button>
-<button class="filter-btn" data-filter="desert">🏜️ Desert</button>
-<button class="filter-btn" data-filter="city">🏙️ Culture</button>
-<button class="filter-btn" data-filter="private">🔑 Private</button>
-</div>
-<!-- ─── CAROUSEL ─── -->
-<div class="tour-carousel-wrapper">
-<div class="tour-grid" id="tourGrid">
-<!-- Tour 1: Marrakech -->
-<div class="tour-card" data-category="day city">
-<div class="tour-image">
-<div class="badge-trend">🌟 TOP PICK</div>
-<img alt="Marrakech" loading="lazy" src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">1 Day</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Marrakech Discovery</h3><div class="subtle">Souks, palaces &amp; gardens</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> A/C transport</div>
-<div class="inclusion-item"><span class="icon">✓</span> Expert guide</div>
-<div class="inclusion-item"><span class="icon">✓</span> Hotel pickup</div>
-</div>
-<div class="tour-meta"><span>City highlights</span><span>Photography</span></div>
-<a class="btn btn-secondary" href="marrakech.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 2: Atlas -->
-<div class="tour-card" data-category="day">
-<div class="tour-image">
-<div class="badge-trend">🏔️ NATURE</div>
-<img alt="Atlas Mountains, Morocco" loading="lazy" src="https://images.unsplash.com/photo-1755172985998-e9f4f58fb83b?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">1 Day</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Atlas Mountains</h3><div class="subtle">Berber villages &amp; views</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Private 4x4</div>
-<div class="inclusion-item"><span class="icon">✓</span> Berber village visit</div>
-<div class="inclusion-item"><span class="icon">✓</span> Traditional lunch</div>
-</div>
-<div class="tour-meta"><span>Nature</span><span>Culture</span></div>
-<a class="btn btn-secondary" href="atlas.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 3: Essaouira -->
-<div class="tour-card" data-category="day">
-<div class="tour-image">
-<div class="badge-trend">🌊 COASTAL</div>
-<img alt="Essaouira coastal medina, Morocco" loading="lazy" src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">1 Day</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Essaouira Coastal</h3><div class="subtle">Atlantic medina &amp; seafood</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Round-trip transport</div>
-<div class="inclusion-item"><span class="icon">✓</span> Free time in medina</div>
-</div>
-<div class="tour-meta"><span>Coastal</span><span>Seafood</span></div>
-<a class="btn btn-secondary" href="essaouira.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 4: Merzouga -->
-<div class="tour-card" data-category="desert">
-<div class="tour-image">
-<div class="badge-trend">🏜️ BEST SELLER</div>
-<img alt="Sahara desert, Merzouga" loading="lazy" src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">3 Days</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Merzouga Desert</h3><div class="subtle">Sahara camp &amp; camel trek</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech ↔ Merzouga</div>
-<div class="inclusion-item"><span class="icon">✓</span> 2 nights (hotel + camp)</div>
-<div class="inclusion-item"><span class="icon">✓</span> Camel trek + dinners</div>
-</div>
-<div class="tour-meta"><span>Best seller</span><span>Camel trek</span></div>
-<a class="btn btn-primary" href="merzouga.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 5: Imilchil -->
-<div class="tour-card" data-category="day private">
-<div class="tour-image">
-<div class="badge-trend">✨ NEW</div>
-<img alt="Imilchil lakes and High Atlas summit, Morocco" loading="lazy" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=437,fit=crop/YNqJlL3B9gIRgqnp/whatsapp-image-2024-06-10-at-2.36.14-pm-YBgpnWkbLWTVbLvN.jpeg"/>
-<span class="pill">3 Days</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Imilchil, Lakes</h3><div class="subtle">Summit 2,804m</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Transport from any city</div>
-<div class="inclusion-item"><span class="icon">✓</span> All meals included</div>
-<div class="inclusion-item"><span class="icon">✓</span> Summit climb + certificate</div>
-</div>
-<div class="tour-meta"><span>All-Inclusive</span><span>Summit</span></div>
-<a class="btn btn-secondary" href="imilchil.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 6: Imperial Cities -->
-<div class="tour-card" data-category="city">
-<div class="tour-image">
-<div class="badge-trend">👑 LUXURY</div>
-<img alt="Imperial cities of Morocco - Fez, Marrakech, Rabat" loading="lazy" src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">8 Days</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Imperial Cities</h3><div class="subtle">Fez, Marrakech, Rabat</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> All transport</div>
-<div class="inclusion-item"><span class="icon">✓</span> 4-star riads</div>
-<div class="inclusion-item"><span class="icon">✓</span> Breakfasts &amp; dinners</div>
-</div>
-<div class="tour-meta"><span>Luxury</span><span>Cultural</span></div>
-<a class="btn btn-secondary" href="imperial.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 7: Private -->
-<div class="tour-card" data-category="private">
-<div class="tour-image">
-<div class="badge-trend">🔑 PRIVATE</div>
-<img alt="Private custom Morocco tour" loading="lazy" src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">Custom</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Tailor-Made</h3><div class="subtle">Your dream itinerary</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Private driver/guide</div>
-<div class="inclusion-item"><span class="icon">✓</span> Hand-picked riads</div>
-<div class="inclusion-item"><span class="icon">✓</span> Your pace, your way</div>
-</div>
-<div class="tour-meta"><span>Private</span><span>100% Custom</span></div>
-<a class="btn btn-secondary" href="private.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 8: Balloon -->
-<div class="tour-card" data-category="day">
-<div class="tour-image">
-<div class="badge-trend">🎈 BUCKET LIST</div>
-<img alt="Hot air balloon over Marrakech" loading="lazy" src="https://images.unsplash.com/photo-1708494852619-d93fe34ec12f?q=80&amp;w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">Half Day</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div><h3>Sunrise Balloon</h3><div class="subtle">Float above palm groves</div></div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Hotel pickup &amp; drop-off</div>
-<div class="inclusion-item"><span class="icon">✓</span> Berber breakfast</div>
-<div class="inclusion-item"><span class="icon">✓</span> 1-hour flight</div>
-</div>
-<div class="tour-meta"><span>Bucket list</span><span>Romantic</span></div>
-<a class="btn btn-secondary" href="air-balloon.html">View Itinerary →</a>
-</div>
-</div>
-<!-- Tour 9: 6-Day Morocco Christmas Itinerary (NOW INSIDE THE GRID) -->
-<div class="tour-card" data-category="day private">
-<div class="tour-image">
-<div class="badge-trend">🎄 CHRISTMAS</div>
-<img alt="6-Day Morocco Christmas" loading="lazy" src="https://i.ibb.co/fdT7KjVT/Chat-GPT-Image-Sep-8-2026-06-11-39-PM.png"/>
-<span class="pill">6 Days</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div>
-<h3>6-Day Morocco Christmas Itinerary</h3>
-<div class="subtle">Winter adventure from Tangier to Marrakech - Chefchaouen, Sahara, Todra Gorge, Ait Benhaddou.</div>
-</div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Private transport</div>
-<div class="inclusion-item"><span class="icon">✓</span> Riads &amp; desert camp</div>
-<div class="inclusion-item"><span class="icon">✓</span> Camel trek &amp; gorges</div>
-</div>
-<div class="tour-meta"><span>🎄 Christmas</span><span>Winter</span></div>
-<a class="btn btn-secondary" href="6-day-christmas-morocco.html">View Itinerary →</a>
-</div>
-</div>
-<!-- ─── NEW: Tour 10: Small Group Tour ─── -->
-<div class="tour-card" data-category="city">
-<div class="tour-image">
-<div class="badge-trend">👥 GROUP TOUR</div>
-<img alt="Small Group Morocco Tour" loading="lazy" src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">11 Days</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div>
-<h3>11-Day Small Group Discovery</h3>
-<div class="subtle">Rabat, Chefchaouen, Fez &amp; Marrakech</div>
-</div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> 10 nights accommodation</div>
-<div class="inclusion-item"><span class="icon">✓</span> 21 meals included</div>
-<div class="inclusion-item"><span class="icon">✓</span> English-speaking tour manager</div>
-</div>
-<div class="tour-meta">
-<span>Small group</span>
-<span>All-inclusive</span>
-<span>Cultural</span>
-</div>
-<a class="btn btn-secondary" href="small-group-tour.html">View Itinerary →</a>
-</div>
-</div>
-<!-- ─── Tour 11: Ouzoud Quad Tours ─── -->
-<div class="tour-card" data-category="day city">
-<div class="tour-image">
-<div class="badge-trend">★★★★★ 5.0 RATED</div>
-<img alt="Ouzoud Quad Bike Tours" loading="lazy" src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&amp;auto=format&amp;fit=crop"/>
-<span class="pill">Half Day</span>
-</div>
-<div class="tour-body">
-<div class="tour-top">
-<div>
-<h3>Ouzoud Quad Tour</h3>
-<div class="subtle">Guided quad bikes at Ouzoud Waterfalls - 99 verified reviews, 5.0/5.0</div>
-</div>
-<div class="price">Quote</div>
-</div>
-<div class="inclusions">
-<div class="inclusion-item"><span class="icon">✓</span> Experienced local guide</div>
-<div class="inclusion-item"><span class="icon">✓</span> Waterfall viewpoints</div>
-<div class="inclusion-item"><span class="icon">✓</span> Amazigh village stop</div>
-</div>
-<div class="tour-meta"><span>Adventure</span><span>Family-friendly</span></div>
-<a class="btn btn-secondary" href="ouzoud-quad-tour.html">View Itinerary →</a>
-</div>
-</div>
-</div>
-<!-- end tour-grid -->
-<button aria-label="Previous tours" class="carousel-arrow prev" id="prevArrow">‹</button>
-<button aria-label="Next tours" class="carousel-arrow next" id="nextArrow">›</button>
-<div class="tour-dots" id="tourDots"></div>
-</div>
-<!-- end tour-carousel-wrapper -->
-<p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:20px;">
+                <!-- Tour 1: Marrakech -->
+                <div class="tour-card" data-category="day city">
+                    <div class="tour-image">
+                        <div class="badge-trend">🌟 TOP PICK</div>
+                        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech" loading="lazy">
+                        <span class="pill">1 Day</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Marrakech Discovery</h3><div class="subtle">Souks, palaces &amp; gardens</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> A/C transport</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Expert guide</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Hotel pickup</div>
+                        </div>
+                        <div class="tour-meta"><span>City highlights</span><span>Photography</span></div>
+                        <a class="btn btn-secondary" href="marrakech.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 2: Atlas -->
+                <div class="tour-card" data-category="day">
+                    <div class="tour-image">
+                        <div class="badge-trend">🏔️ NATURE</div>
+                        <img src="https://images.unsplash.com/photo-1755172985998-e9f4f58fb83b?w=600&auto=format&fit=crop" alt="Atlas Mountains, Morocco" loading="lazy">
+                        <span class="pill">1 Day</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Atlas Mountains</h3><div class="subtle">Berber villages &amp; views</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Private 4x4</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Berber village visit</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Traditional lunch</div>
+                        </div>
+                        <div class="tour-meta"><span>Nature</span><span>Culture</span></div>
+                        <a class="btn btn-secondary" href="atlas.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 3: Essaouira -->
+                <div class="tour-card" data-category="day">
+                    <div class="tour-image">
+                        <div class="badge-trend">🌊 COASTAL</div>
+                        <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop" alt="Essaouira coastal medina, Morocco" loading="lazy">
+                        <span class="pill">1 Day</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Essaouira Coastal</h3><div class="subtle">Atlantic medina &amp; seafood</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Round-trip transport</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Free time in medina</div>
+                        </div>
+                        <div class="tour-meta"><span>Coastal</span><span>Seafood</span></div>
+                        <a class="btn btn-secondary" href="essaouira.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 4: Merzouga -->
+                <div class="tour-card" data-category="desert">
+                    <div class="tour-image">
+                        <div class="badge-trend">🏜️ BEST SELLER</div>
+                        <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert, Merzouga" loading="lazy">
+                        <span class="pill">3 Days</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Merzouga Desert</h3><div class="subtle">Sahara camp &amp; camel trek</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech ↔ Merzouga</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> 2 nights (hotel + camp)</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Camel trek + dinners</div>
+                        </div>
+                        <div class="tour-meta"><span>Best seller</span><span>Camel trek</span></div>
+                        <a class="btn btn-primary" href="merzouga.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 5: Imilchil -->
+                <div class="tour-card" data-category="day private">
+                    <div class="tour-image">
+                        <div class="badge-trend">✨ NEW</div>
+                        <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=437,fit=crop/YNqJlL3B9gIRgqnp/whatsapp-image-2024-06-10-at-2.36.14-pm-YBgpnWkbLWTVbLvN.jpeg" alt="Imilchil lakes and High Atlas summit, Morocco" loading="lazy">
+                        <span class="pill">3 Days</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Imilchil, Lakes</h3><div class="subtle">Summit 2,804m</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Transport from any city</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> All meals included</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Summit climb + certificate</div>
+                        </div>
+                        <div class="tour-meta"><span>All-Inclusive</span><span>Summit</span></div>
+                        <a class="btn btn-secondary" href="imilchil.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 6: Imperial Cities -->
+                <div class="tour-card" data-category="city">
+                    <div class="tour-image">
+                        <div class="badge-trend">👑 LUXURY</div>
+                        <img src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop" alt="Imperial cities of Morocco - Fez, Marrakech, Rabat" loading="lazy">
+                        <span class="pill">8 Days</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Imperial Cities</h3><div class="subtle">Fez, Marrakech, Rabat</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> All transport</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> 4-star riads</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Breakfasts &amp; dinners</div>
+                        </div>
+                        <div class="tour-meta"><span>Luxury</span><span>Cultural</span></div>
+                        <a class="btn btn-secondary" href="imperial.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 7: Private -->
+                <div class="tour-card" data-category="private">
+                    <div class="tour-image">
+                        <div class="badge-trend">🔑 PRIVATE</div>
+                        <img src="https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=600&auto=format&fit=crop" alt="Private custom Morocco tour" loading="lazy">
+                        <span class="pill">Custom</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Tailor-Made</h3><div class="subtle">Your dream itinerary</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Private driver/guide</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Hand-picked riads</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Your pace, your way</div>
+                        </div>
+                        <div class="tour-meta"><span>Private</span><span>100% Custom</span></div>
+                        <a class="btn btn-secondary" href="private.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 8: Balloon -->
+                <div class="tour-card" data-category="day">
+                    <div class="tour-image">
+                        <div class="badge-trend">🎈 BUCKET LIST</div>
+                        <img src="https://images.unsplash.com/photo-1708494852619-d93fe34ec12f?q=80&w=600&auto=format&fit=crop" alt="Hot air balloon over Marrakech" loading="lazy">
+                        <span class="pill">Half Day</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div><h3>Sunrise Balloon</h3><div class="subtle">Float above palm groves</div></div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Hotel pickup &amp; drop-off</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Berber breakfast</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> 1-hour flight</div>
+                        </div>
+                        <div class="tour-meta"><span>Bucket list</span><span>Romantic</span></div>
+                        <a class="btn btn-secondary" href="air-balloon.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- Tour 9: 6-Day Morocco Christmas Itinerary (NOW INSIDE THE GRID) -->
+                <div class="tour-card" data-category="day private">
+                    <div class="tour-image">
+                        <div class="badge-trend">🎄 CHRISTMAS</div>
+                        <img src="https://i.ibb.co/fdT7KjVT/Chat-GPT-Image-Sep-8-2026-06-11-39-PM.png" alt="6-Day Morocco Christmas" loading="lazy">
+                        <span class="pill">6 Days</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div>
+                                <h3>6-Day Morocco Christmas Itinerary</h3>
+                                <div class="subtle">Winter adventure from Tangier to Marrakech - Chefchaouen, Sahara, Todra Gorge, Ait Benhaddou.</div>
+                            </div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Private transport</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Riads &amp; desert camp</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Camel trek &amp; gorges</div>
+                        </div>
+                        <div class="tour-meta"><span>🎄 Christmas</span><span>Winter</span></div>
+                        <a class="btn btn-secondary" href="6-day-christmas-morocco.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- ─── NEW: Tour 10: Small Group Tour ─── -->
+                <div class="tour-card" data-category="city">
+                    <div class="tour-image">
+                        <div class="badge-trend">👥 GROUP TOUR</div>
+                        <img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=600&auto=format&fit=crop" alt="Small Group Morocco Tour" loading="lazy">
+                        <span class="pill">11 Days</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div>
+                                <h3>11-Day Small Group Discovery</h3>
+                                <div class="subtle">Rabat, Chefchaouen, Fez &amp; Marrakech</div>
+                            </div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> 10 nights accommodation</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> 21 meals included</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> English-speaking tour manager</div>
+                        </div>
+                        <div class="tour-meta">
+                            <span>Small group</span>
+                            <span>All-inclusive</span>
+                            <span>Cultural</span>
+                        </div>
+                        <a class="btn btn-secondary" href="small-group-tour.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+                <!-- ─── Tour 11: Ouzoud Quad Tours ─── -->
+                <div class="tour-card" data-category="day city">
+                    <div class="tour-image">
+                        <div class="badge-trend">★★★★★ 5.0 RATED</div>
+                        <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop" alt="Ouzoud Quad Bike Tours" loading="lazy">
+                        <span class="pill">Half Day</span>
+                    </div>
+                    <div class="tour-body">
+                        <div class="tour-top">
+                            <div>
+                                <h3>Ouzoud Quad Tour</h3>
+                                <div class="subtle">Guided quad bikes at Ouzoud Waterfalls - 99 verified reviews, 5.0/5.0</div>
+                            </div>
+                            <div class="price">Quote</div>
+                        </div>
+                        <div class="inclusions">
+                            <div class="inclusion-item"><span class="icon">✓</span> Experienced local guide</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Waterfall viewpoints</div>
+                            <div class="inclusion-item"><span class="icon">✓</span> Amazigh village stop</div>
+                        </div>
+                        <div class="tour-meta"><span>Adventure</span><span>Family-friendly</span></div>
+                        <a class="btn btn-secondary" href="ouzoud-quad-tour.html">View Itinerary →</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- end tour-grid -->
+
+            <button class="carousel-arrow prev" id="prevArrow" aria-label="Previous tours">‹</button>
+            <button class="carousel-arrow next" id="nextArrow" aria-label="Next tours">›</button>
+            <div class="tour-dots" id="tourDots"></div>
+        </div>
+        <!-- end tour-carousel-wrapper -->
+
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:20px;">
             * Final quotes vary by season, group size, and itinerary. Contact us for details.
         </p>
-</div>
-<!-- ─── CLIMATE NOTE ─── -->
-<div class="container">
-<div class="climate-note">
-            🌍 <strong>We're in the process of figuring out how much CO₂‑e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br/>
+    </div>
+
+    <!-- ─── CLIMATE NOTE ─── -->
+    <div class="container">
+        <div class="climate-note">
+            🌍 <strong>We're in the process of figuring out how much CO₂‑e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
             When you travel with us, <strong>AbridMoroccoTrip</strong> gives you more opportunities to support important causes in the destinations you visit.
         </div>
-</div>
-<!-- ─── FOOTER ─── -->
-<!-- ====== RELATED GUIDES ====== -->
-<section class="related-guides">
-<div class="container">
-<h2 class="related-title">Build the right itinerary</h2>
-<p class="related-sub">Browse packages, destinations, and handpicked itineraries.</p>
-<div class="related-grid">
+    </div>
+
+    <!-- ─── FOOTER ─── -->
+    
+  <!-- ====== RELATED GUIDES ====== -->
+  <section class="related-guides">
+    <div class="container">
+      <h2 class="related-title">Build the right itinerary</h2>
+      <p class="related-sub">Browse packages, destinations, and handpicked itineraries.</p>
+      <div class="related-grid">
 <a href="packages.html">Private tour packages and pricing</a>
 <a href="classic-morocco.html">13-day classic Morocco tour</a>
 <a href="small-group-tour.html">Small group Morocco tours</a>
 <a href="destinations.html">Morocco destinations to include</a>
 <a href="about.html">Meet your private Morocco tour operator</a>
 <a href="faq.html">Morocco trip planning FAQ</a>
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
+<footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+                        <div>
+                            <strong>AbridMoroccoTrip</strong>
+                            <span>Premium Morocco Tours</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Pages</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="ouzoud-quad-tour.html">Ouzoud Quad Tours</a></li>
+                        <li><a href="packages.html">Packages</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="booking-guide.html">Booking</a></li>
+                        <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <a href="contact.html" style="display:inline-block;background:var(--gold);color:var(--brown);padding:8px 20px;border-radius:60px;font-weight:700;text-decoration:none;font-size:0.85rem;margin-bottom:12px;">📋 Contact Us</a>
+                    <div style="display:flex; gap:10px; margin-top:8px;">
+                        <a href="https://wa.me/212762934488" target="_blank" style="background:#25D366; color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">WhatsApp</a>
+                        <a href="https://www.instagram.com/abridmorocco/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4); color:#fff; padding:6px 16px; border-radius:30px; font-size:0.75rem; font-weight:600; text-decoration:none;">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+                <div style="display:flex; gap:20px; flex-wrap:wrap;">
+                    <a href="terms.html">Terms</a>
+                    <a href="privacy.html">Privacy</a>
+                    <a href="cookies.html">Cookies</a>
+                    <span style="color:rgba(255,255,255,.15);">|</span>
+                    <span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
-<!-- ─── WHATSAPP FLOAT ─── -->
+    <!-- ─── WHATSAPP FLOAT ─── -->
+    <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
 
-<script>
+    <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
         // Mobile menu
@@ -481,8 +1442,9 @@
         }
     </script>
 <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-</script>
-<script type="application/ld+json">
+  </script>
+
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -494,80 +1456,6 @@
       }
     ]
   }
-  </script>
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">
-            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
-            <div>
-              <strong>AbridMoroccoTrip</strong>
-              <span>Premium Morocco Tours</span>
-            </div>
-          </div>
-          <p>Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.</p>
-        </div>
-        <div>
-          <h4>Pages</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="tours.html">Tours</a></li>
-            <li><a href="destinations.html">Destinations</a></li>
-            <li><a href="classic-morocco.html">Classic 13-Day</a></li>
-            <li><a href="packages.html">Packages</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Support</h4>
-          <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="booking-guide.html">Booking Guide</a></li>
-            <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
-            <li><a href="cookies.html">Cookies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="contact.html" class="footer-contact-btn">Contact Us</a>
-          <div class="footer-socials">
-            <a href="https://wa.me/212762934488" target="_blank">WhatsApp</a>
-            <a href="https://www.instagram.com/abridmorocco/" target="_blank">Instagram</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
-        <div class="footer-bottom-links">
-          <a href="terms.html">Terms</a>
-          <a href="privacy.html">Privacy</a>
-          <a href="cookies.html">Cookies</a>
-          <span style="color:rgba(255,255,255,0.15);">|</span>
-          <span>Made in Morocco</span>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- WHATSAPP FLOAT -->
-  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('menuToggle').addEventListener('click', function() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-    });
-    window.addEventListener('scroll', function() {
-      var header = document.getElementById('siteHeader');
-      header.classList.toggle('scrolled', window.scrollY > 20);
-    });
   </script>
 </body>
 </html>
