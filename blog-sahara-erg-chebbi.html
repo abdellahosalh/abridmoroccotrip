@@ -45,25 +45,25 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .blog-post{max-width:800px;margin:0 auto;padding:40px 20px;}
-    .blog-post h1{font-size:2.5rem;color:var(--terracotta,#b84f2b);}
-    .blog-post .date{color:var(--muted,#6e5649);margin-bottom:20px;}
+    .blog-post h1{font-size:2.5rem;color:var(--terracotta);}
+    .blog-post .date{color:var(--muted,var(--muted));margin-bottom:20px;}
     .blog-post img{width:100%;border-radius:var(--radius,22px);margin:30px 0;}
-    .blog-post h2{margin-top:40px;color:var(--terracotta,#b84f2b);}
+    .blog-post h2{margin-top:40px;color:var(--terracotta);}
     .blog-post p{line-height:1.8;}
     .comparison-table{width:100%;border-collapse:collapse;margin:30px 0;font-size:.95rem;}
-    .comparison-table th{background:var(--terracotta,#b84f2b);color:white;padding:12px;}
+    .comparison-table th{background:var(--terracotta);color:white;padding:12px;}
     .comparison-table td{border:1px solid #ddd;padding:10px;}
-    .comparison-table tr:nth-child(even) td{background:#fff8f1;}
+    .comparison-table tr:nth-child(even) td{background:var(--sand-light);}
     .pros{color:#2e7d32;font-weight:600;}
     .cons{color:#c62828;font-weight:600;}
     .like-section{margin:40px 0;display:flex;align-items:center;gap:10px;}
-    .like-btn{background:none;border:2px solid var(--terracotta,#b84f2b);border-radius:50px;padding:10px 20px;font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s;}
-    .like-btn:hover{background:var(--terracotta,#b84f2b);color:white;}
-    .back-to-blog{display:inline-block;margin:40px 0;color:var(--terracotta,#b84f2b);font-weight:600;}
-    .cta-desert{background:linear-gradient(135deg,#b84f2b,#d46a2f);color:white;padding:28px;border-radius:16px;text-align:center;margin:40px 0;}
+    .like-btn{background:none;border:2px solid var(--terracotta);border-radius:50px;padding:10px 20px;font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s;}
+    .like-btn:hover{background:var(--terracotta);color:white;}
+    .back-to-blog{display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:600;}
+    .cta-desert{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-2));color:white;padding:28px;border-radius:16px;text-align:center;margin:40px 0;}
     .cta-desert h3{color:white;margin:0 0 10px;}
     .cta-desert p{color:rgba(255,255,255,.9);margin:0 0 14px;}
-    .cta-btn{display:inline-block;background:white;color:#b84f2b;padding:12px 28px;border-radius:30px;font-weight:700;}
+    .cta-btn{display:inline-block;background:white;color:var(--terracotta);padding:12px 28px;border-radius:30px;font-weight:700;}
   
 @media (max-width:860px) {
     .nav-actions .contact-link,
@@ -346,7 +346,7 @@ footer .footer-bottom {
 
       <div class="like-section">
         <button class="like-btn" id="likeBtn">❤️ Like <span id="likeCount">0</span></button>
-        <span style="color:#6e5649;font-size:.9rem;">Found this helpful? Share it!</span>
+        <span style="color:var(--muted);font-size:.9rem;">Found this helpful? Share it!</span>
       </div>
 
       <!-- Disqus Comments — sign up at disqus.com with shortname "abridmorocco" -->
@@ -379,12 +379,12 @@ footer .footer-bottom {
       const mt=document.getElementById('menuToggle'),mm=document.getElementById('mobileMenu');
       if(mt&&mm){mt.addEventListener('click',()=>{const o=mm.classList.toggle('open');mt.setAttribute('aria-expanded',o?'true':'false');});mm.querySelectorAll('a').forEach(l=>l.addEventListener('click',()=>{mm.classList.remove('open');mt.setAttribute('aria-expanded','false');}));}
       const likeBtn=document.getElementById('likeBtn');const likeCountSpan=document.getElementById('likeCount');
-      if(likeBtn&&likeCountSpan){const postId='erg-chebbi-vs-chigaga';let likes=parseInt(localStorage.getItem('likes_'+postId))||0;likeCountSpan.textContent=likes;likeBtn.addEventListener('click',()=>{likes++;localStorage.setItem('likes_'+postId,likes);likeCountSpan.textContent=likes;likeBtn.style.background='#b84f2b';likeBtn.style.color='white';});}
+      if(likeBtn&&likeCountSpan){const postId='erg-chebbi-vs-chigaga';let likes=parseInt(localStorage.getItem('likes_'+postId))||0;likeCountSpan.textContent=likes;likeBtn.addEventListener('click',()=>{likes++;localStorage.setItem('likes_'+postId,likes);likeCountSpan.textContent=likes;likeBtn.style.background='#c94f2c';likeBtn.style.color='white';});}
     })();
   </script>
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="WhatsApp" style="position:fixed;bottom:24px;right:24px;background:#25D366;color:#fff;width:62px;height:62px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;box-shadow:0 8px 25px rgba(37,211,102,.45);z-index:1000;text-decoration:none;transition:transform .3s;" onmouseover="this.style.transform='scale(1.12)'" onmouseout="this.style.transform='scale(1)'">💬</a>
   <!-- TO SET UP: Replace href with your Google Business review link from https://business.google.com -->
-  <div id="reviewNudge" style="display:none;position:fixed;bottom:100px;right:24px;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 12px 40px rgba(63,42,32,.18);border:1px solid rgba(63,42,32,.1);max-width:270px;z-index:999;"><button onclick="document.getElementById('reviewNudge').style.display='none'" style="position:absolute;top:8px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:#6e5649;">×</button><div style="font-size:1.5rem;margin-bottom:6px;">⭐</div><strong style="display:block;color:#3f2a20;margin-bottom:6px;">Enjoyed your tour?</strong><p style="color:#6e5649;font-size:.9rem;margin:0 0 12px;line-height:1.5;">Leave us a Google review! 🙏</p><a href="https://www.google.com/maps/search/AbridMoroccoTrip" target="_blank" rel="noopener" style="display:block;text-align:center;background:linear-gradient(135deg,#b84f2b,#d46a2f);color:#fff;padding:10px;border-radius:12px;font-weight:700;font-size:.9rem;text-decoration:none;">Leave a Google Review ⭐</a></div>
+  <div id="reviewNudge" style="display:none;position:fixed;bottom:100px;right:24px;background:#fff;border-radius:18px;padding:18px 20px;box-shadow:0 12px 40px rgba(63,42,32,.18);border:1px solid rgba(63,42,32,.1);max-width:270px;z-index:999;"><button onclick="document.getElementById('reviewNudge').style.display='none'" style="position:absolute;top:8px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted);">×</button><div style="font-size:1.5rem;margin-bottom:6px;">⭐</div><strong style="display:block;color:#3f2a20;margin-bottom:6px;">Enjoyed your tour?</strong><p style="color:var(--muted);font-size:.9rem;margin:0 0 12px;line-height:1.5;">Leave us a Google review! 🙏</p><a href="https://www.google.com/maps/search/AbridMoroccoTrip" target="_blank" rel="noopener" style="display:block;text-align:center;background:linear-gradient(135deg,var(--terracotta),var(--terracotta-2));color:#fff;padding:10px;border-radius:12px;font-weight:700;font-size:.9rem;text-decoration:none;">Leave a Google Review ⭐</a></div>
   <script>setTimeout(function(){var n=document.getElementById('reviewNudge');if(n)n.style.display='block';},40000);</script>
   <script type="text/javascript">
   function googleTranslateElementInit() {

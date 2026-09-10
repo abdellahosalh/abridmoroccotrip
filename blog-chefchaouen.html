@@ -23,19 +23,19 @@
   <link rel="stylesheet" href="style.css">
   <style>
     .blog-post{max-width:800px;margin:0 auto;padding:40px 20px;}
-    .blog-post h1{font-size:2.5rem;color:var(--terracotta,#b84f2b);}
-    .blog-post .date{color:var(--muted,#6e5649);margin-bottom:20px;}
+    .blog-post h1{font-size:2.5rem;color:var(--terracotta);}
+    .blog-post .date{color:var(--muted,var(--muted));margin-bottom:20px;}
     .blog-post img{width:100%;border-radius:var(--radius,22px);margin:30px 0;}
     .blog-post h2{margin-top:40px;}
     .blog-post p{line-height:1.8;}
     .like-section{margin:40px 0;display:flex;align-items:center;gap:10px;}
-    .like-btn{background:none;border:2px solid var(--terracotta,#b84f2b);border-radius:50px;padding:10px 20px;font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s;}
-    .like-btn:hover{background:var(--terracotta,#b84f2b);color:white;}
-    .back-to-blog{display:inline-block;margin:40px 0;color:var(--terracotta,#b84f2b);font-weight:600;}
-    .cta-tour{background:linear-gradient(135deg,#b84f2b,#d46a2f);color:white;padding:30px;border-radius:16px;text-align:center;margin:40px 0;}
+    .like-btn{background:none;border:2px solid var(--terracotta);border-radius:50px;padding:10px 20px;font-size:1.2rem;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:.2s;}
+    .like-btn:hover{background:var(--terracotta);color:white;}
+    .back-to-blog{display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:600;}
+    .cta-tour{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-2));color:white;padding:30px;border-radius:16px;text-align:center;margin:40px 0;}
     .cta-tour h3{margin:0 0 10px;font-size:1.3rem;}
     .cta-tour p{margin:0 0 16px;opacity:.9;}
-    .cta-btn{background:white;color:#b84f2b;padding:12px 28px;border-radius:30px;font-weight:700;display:inline-block;}
+    .cta-btn{background:white;color:var(--terracotta);padding:12px 28px;border-radius:30px;font-weight:700;display:inline-block;}
   
 @media (max-width:860px) {
     .nav-actions .contact-link,
@@ -312,7 +312,7 @@ footer .footer-bottom {
 
       <div class="like-section">
         <button class="like-btn" id="likeBtn">❤️ Like <span id="likeCount" class="like-count">0</span></button>
-        <span style="color:#6e5649;font-size:.9rem;">Found this helpful? Share it!</span>
+        <span style="color:var(--muted);font-size:.9rem;">Found this helpful? Share it!</span>
       </div>
 
       <!-- Disqus Comments — sign up free at disqus.com and replace "abridmorocco" with your shortname -->
