@@ -1,264 +1,128 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="robots" content="noindex, nofollow">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agent Tools – AbridMoroccoTrip</title>
   <link rel="icon" href="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" type="image/jpeg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
-    :root { --terracotta:#B86348; --terracotta-dark:#8B4332; --terracotta-2:#D4816A; --gold:#C9A86A; --gold-light:#E8DDC7; --cream:#F8F4EA; --brown:#1A1A18; --brown-light:#2E2E2E; --muted:#2E2E2E; --bg:#F8F4EA; --bg-2:#F0EADD; --sand:#F8F4EA; --sand-light:#F6F0E4; --atlas-green:#4B5F4F; --atlas-green-dark:#2F4235; --gold-strong:#B89A5E; --charcoal:#1A1A18; --shadow:0 8px 30px rgba(0,0,0,.07); --shadow-hover:0 16px 48px rgba(0,0,0,.12); --radius:20px; --radius-sm:12px; --transition:.35s cubic-bezier(.175,.885,.32,1.275); --font:'Work Sans',-apple-system,sans-serif; --font-serif:'Fraunces',serif; --line:rgba(26,26,24,.09); --line-2:rgba(26,26,24,.05); --border:rgba(26,26,24,.09); --r:20px; --radius-sm:12px; --t-fast:.2s; --shadow-sm:0 4px 14px rgba(0,0,0,.05); --shadow-xs:0 2px 8px rgba(0,0,0,.04); --font-main:'Work Sans',-apple-system,sans-serif; --primary-orange:#B86348; --accent:#B86348; --accent2:#4B5F4F; --accent-soft:rgba(184,99,72,.08); --accent-bg:#f3e6d2; --white:#ffffff; --dark-text:#1A1A18; --gray:#2E2E2E; --light-bg:#F8F4EA; --highlight:#C9A86A; --card:#ffffff; --card-bg:#ffffff; }
-
-    body { font-family: var(--font); background: var(--bg); color: var(--brown); padding: 40px 20px; line-height: 1.7; }
-    .container { max-width: 1000px; margin: 0 auto; }
-    h1 { font-family: 'Work Sans', sans-serif; color: var(--terracotta); font-size: 2.6rem; margin-bottom: 4px; }
-    .subtitle { color: var(--muted); margin-bottom: 40px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-    .card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06); transition: transform .3s; }
-    .card:hover { transform: translateY(-6px); }
-    .card .icon { font-size: 2.8rem; display: block; margin-bottom: 8px; }
-    .card h3 { font-family: 'Work Sans', sans-serif; font-size: 1.2rem; margin-bottom: 6px; }
-    .card p { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
-    .btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 12px 24px; border-radius: 60px; font-weight: 700; text-decoration: none; transition: all .3s; }
-    .btn:hover { background: #8B4332; transform: translateY(-3px); }
-    .btn-gold { background: var(--gold); color: var(--brown); }
-    .btn-gold:hover { background: #e6a832; }
-    .back-link { display: inline-block; margin-top: 40px; color: var(--terracotta); font-weight: 600; }
-    .footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; margin-top: 40px; border-radius: var(--radius); }
-    .footer a { color: rgba(255,255,255,.7); }
-    @media (max-width: 600px) { .card { padding: 20px; } }
-  
-@media (max-width:860px) {
-    .nav-actions .contact-link,
-    .nav-actions .btn-gold,
-    .nav-actions .lang-wrapper,
-    .nav-actions .mini-contact {
-        display: none !important;
-    }
-}<
-/* ─── FORCE ONE‑LINE HEADER ─── */
-.nav {
-    flex-wrap: nowrap !important;
-    gap: 6px !important;
-}
-.nav-links {
-    flex-wrap: nowrap !important;
-    gap: 8px !important;
-}
-.nav-links a {
-    font-size: 0.75rem !important;
-    padding: 4px 6px !important;
-    white-space: nowrap !important;
-}
-.nav-actions {
-    flex-wrap: nowrap !important;
-    gap: 4px !important;
-    flex-shrink: 0 !important;
-}
-.nav-actions .contact-link {
-    font-size: 0.75rem !important;
-    padding: 4px 8px !important;
-    white-space: nowrap !important;
-}
-.nav-actions .btn-gold {
-    font-size: 0.7rem !important;
-    padding: 4px 12px !important;
-    white-space: nowrap !important;
-}
-.nav-actions .lang-selector {
-    font-size: 0.65rem !important;
-    padding: 3px 8px !important;
-}
-.brand-text strong {
-    font-size: 0.9rem !important;
-}
-.brand-text span {
-    font-size: 0.55rem !important;
-}
-.brand-logo {
-    width: 32px !important;
-    height: 32px !important;
-    min-width: 32px !important;
-    min-height: 32px !important;
-    max-width: 32px !important;
-    max-height: 32px !important;
-}
-
-/* ─── MOBILE: hide Contact & Book Now ─── */
-@media (max-width: 860px) {
-    .nav-actions .contact-link,
-    .nav-actions .btn-gold,
-    .nav-actions .lang-wrapper {
-        display: none !important;
-    }
-    .nav-links {
-        display: none !important;
-    }
-    .menu-toggle {
-        display: flex !important;
-    }
-    .brand-text strong {
-        font-size: 0.75rem !important;
-    }
-    .brand-logo {
-        width: 28px !important;
-        height: 28px !important;
-        min-width: 28px !important;
-        min-height: 28px !important;
-        max-width: 28px !important;
-        max-height: 28px !important;
-    }
-}
-@media (max-width: 480px) {
-    .nav-actions .lang-selector {
-        display: none !important;
-    }
-    .brand-text strong {
-        font-size: 0.65rem !important;
-    }
-}
-
-/* ─── FIX FOOTER OVERFLOW ─── */
-footer {
-    overflow-x: hidden !important;
-    max-width: 100% !important;
-    width: 100% !important;
-}
-footer .container {
-    max-width: 1200px !important;
-    margin: 0 auto !important;
-    padding: 0 16px !important;
-    overflow-x: hidden !important;
-}
-footer .container > div {
-    flex-wrap: wrap !important;
-    gap: 20px !important;
-}
-footer .container > div > div {
-    min-width: 140px !important;
-    flex: 1 1 180px !important;
-}
-footer .container ul {
-    padding: 0 !important;
-    margin: 0 !important;
-    list-style: none !important;
-}
-footer .container ul li {
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
-}
-footer .footer-contact-btn {
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-}
-footer .footer-bottom {
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-}
-@media (max-width: 860px) {
-    footer .container > div {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 16px !important;
-    }
-    footer .container > div > div {
-        flex: 1 1 100% !important;
-        min-width: unset !important;
-    }
-    footer .container ul li {
-        white-space: normal !important;
-        word-break: break-word !important;
-    }
-}
-@media (max-width: 480px) {
-    footer .container {
-        padding: 0 12px !important;
-    }
-    footer .container > div {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-}
-
-</style>
-  <link rel="stylesheet" href="style.css">
-  <link rel="canonical" href="https://www.abridmorocco.com/agent-tools.html" />
-  <meta property="og:url" content="https://www.abridmorocco.com/agent-tools.html" />
-  <link rel="stylesheet" href="theme.css">
-  <link rel="stylesheet" href="new-design.css">
+  <meta name="description" content="" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Promo Banner -->
+  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
+
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-logo">
+          <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="AbridMoroccoTrip Logo">
+        </div>
+        <div class="brand-text">
+          <strong>AbridMoroccoTrip</strong>
+          <span>Premium Morocco Tours</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="packages.html">Packages</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="contact.html" class="contact-link">Contact</a>
+        <a class="btn btn-primary" href="contact.html">Book Now</a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="tours.html">Tours</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="classic-morocco.html">Classic 13-Day</a>
+        <a href="packages.html">Packages</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://wa.me/212762934488" target="_blank" style="color:#25D366;font-weight:700;">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <h1>⚙️ Agent Tools</h1>
+    </div>
+  </div>
+
+  <main style="padding: 48px 0;">
+    <div class="container">
 <div class="container">
-  <h1>⚙️ Agent Tools</h1>
-  <p class="subtitle">Everything you need to build, price, and sell Morocco trips with AbridMoroccoTrip.</p>
 
-  <div class="grid">
-    <div class="card">
-      <span class="icon">📋</span>
-      <h3>Classic 13-Day Itinerary</h3>
-      <p>Pre-built, ready-to-copy itinerary. Casablanca to Marrakech via Sahara, Fes, Chefchaouen.</p>
-      <a href="classic-morocco.html" class="btn">View & Copy</a>
-    </div>
-
-    <div class="card">
-      <span class="icon">📐</span>
-      <h3>Margin Calculator</h3>
-      <p>Enter your costs, set your markup, and get instant retail prices and profits.</p>
-      <a href="trip-template.html" class="btn btn-gold">Open Calculator</a>
-    </div>
-
-    <div class="card">
-      <span class="icon">📝</span>
-      <h3>Marketing Content Kit</h3>
-      <p>Ready-to-use descriptions, social media posts, and email templates for selling Morocco.</p>
-      <a href="#marketing-kit" class="btn" onclick="alert('Marketing kit is being prepared. Contact us for the full pack.');">Request Kit</a>
-    </div>
-
-    <div class="card">
-      <span class="icon">📞</span>
-      <h3>Contact Us Directly</h3>
-      <p>Need a custom quote for a large group or special request? We're here to help.</p>
-      <a href="contact.html" class="btn btn-gold">Contact Support</a>
-    </div>
-
-    <div class="card">
-      <span class="icon">🖼️</span>
-      <h3>Gallery & Media</h3>
-      <p>Download high-quality images and videos of Morocco to use in your own marketing.</p>
-      <a href="gallery.html" class="btn">View Gallery</a>
-    </div>
-
-    <div class="card">
-      <span class="icon">📰</span>
-      <h3>Blog Content Library</h3>
-      <p>Insider articles, city guides, and desert travel tips to share with your audience.</p>
-      <a href="blog.html" class="btn btn-gold">Read Blog</a>
-    </div>
-  </div>
-
-  <div style="margin-top: 40px; padding: 28px; background: #fff; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06);">
-    <h2 style="font-family: 'Work Sans', sans-serif; color: var(--terracotta); font-size: 1.4rem;">📋 Quick Copy – Itinerary Snippet</h2>
-    <p style="color: var(--muted);">Click the button below to copy a short, professional description of the Classic Morocco Tour.</p>
-    <button class="btn" onclick="copySnippet()" style="margin-top: 10px;">📋 Copy Marketing Snippet</button>
-  </div>
-
-  <a href="index.html" class="back-link">← Back to Home</a>
+<p class="subtitle">Everything you need to build, price, and sell Morocco trips with AbridMoroccoTrip.</p>
+<div class="grid">
+<div class="card">
+<span class="icon">📋</span>
+<h3>Classic 13-Day Itinerary</h3>
+<p>Pre-built, ready-to-copy itinerary. Casablanca to Marrakech via Sahara, Fes, Chefchaouen.</p>
+<a class="btn" href="classic-morocco.html">View &amp; Copy</a>
 </div>
-
+<div class="card">
+<span class="icon">📐</span>
+<h3>Margin Calculator</h3>
+<p>Enter your costs, set your markup, and get instant retail prices and profits.</p>
+<a class="btn btn-gold" href="trip-template.html">Open Calculator</a>
+</div>
+<div class="card">
+<span class="icon">📝</span>
+<h3>Marketing Content Kit</h3>
+<p>Ready-to-use descriptions, social media posts, and email templates for selling Morocco.</p>
+<a class="btn" href="#marketing-kit" onclick="alert('Marketing kit is being prepared. Contact us for the full pack.');">Request Kit</a>
+</div>
+<div class="card">
+<span class="icon">📞</span>
+<h3>Contact Us Directly</h3>
+<p>Need a custom quote for a large group or special request? We're here to help.</p>
+<a class="btn btn-gold" href="contact.html">Contact Support</a>
+</div>
+<div class="card">
+<span class="icon">🖼️</span>
+<h3>Gallery &amp; Media</h3>
+<p>Download high-quality images and videos of Morocco to use in your own marketing.</p>
+<a class="btn" href="gallery.html">View Gallery</a>
+</div>
+<div class="card">
+<span class="icon">📰</span>
+<h3>Blog Content Library</h3>
+<p>Insider articles, city guides, and desert travel tips to share with your audience.</p>
+<a class="btn btn-gold" href="blog.html">Read Blog</a>
+</div>
+</div>
+<div style="margin-top: 40px; padding: 28px; background: #fff; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06);">
+<h2 style="font-family: 'Syne', sans-serif; color: var(--terracotta); font-size: 1.4rem;">📋 Quick Copy – Itinerary Snippet</h2>
+<p style="color: var(--muted);">Click the button below to copy a short, professional description of the Classic Morocco Tour.</p>
+<button class="btn" onclick="copySnippet()" style="margin-top: 10px;">📋 Copy Marketing Snippet</button>
+</div>
+<a class="back-link" href="index.html">← Back to Home</a>
+</div>
 <div class="container">
-    <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
-    <div class="climate-note" style="background:var(--gold-light); border-radius:var(--radius-sm); padding:18px 24px; margin:30px 0; text-align:center; font-size:0.95rem; color:var(--brown-light); border-left:4px solid var(--gold);">
-      🌍 <strong>We're in the process of figuring out how much CO₂‑e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
+<!-- ─── CLIMATE COMMITMENT NOTE ─── -->
+<div class="climate-note" style="background:var(--gold-light); border-radius:var(--radius-sm); padding:18px 24px; margin:30px 0; text-align:center; font-size:0.95rem; color:var(--brown-light); border-left:4px solid var(--gold);">
+      🌍 <strong>We're in the process of figuring out how much CO₂‑e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br/>
       When you travel with us, <strong>AbridMoroccoTrip</strong> gives you more opportunities to support important causes in the destinations you visit.
     </div>
-</div><footer style="background:var(--brown);color:rgba(255,255,255,.7);padding:48px 0 24px;margin-top:40px;border-top:1px solid rgba(255,255,255,.06);"><div class="container"><div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;"><div><div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo" style="width:44px;height:44px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,.1);"><div><strong style="font-size:1.1rem;color:#fff;display:block;">AbridMoroccoTrip</strong><span style="font-size:0.7rem;color:rgba(255,255,255,.4);">Premium Morocco Tours</span></div></div><p style="font-size:0.85rem;color:rgba(255,255,255,.5);line-height:1.7;max-width:280px;">Authentic Morocco tours with local experts Abdellah & Karim. Sahara, Atlas, Imperial Cities — private guides, luxury camps, fair prices.</p></div><div><h4 style="color:#fff;font-size:0.85rem;font-weight:700;margin-bottom:14px;letter-spacing:0.3px;">Pages</h4><ul style="list-style:none;padding:0;font-size:0.85rem;line-height:2.2;color:rgba(255,255,255,.5);"><li><a href="index.html" style="color:rgba(255,255,255,.5);">Home</a></li><li><a href="about.html" style="color:rgba(255,255,255,.5);">About</a></li><li><a href="tours.html" style="color:rgba(255,255,255,.5);">Tours</a></li><li><a href="packages.html" style="color:rgba(255,255,255,.5);">Packages</a></li><li><a href="gallery.html" style="color:rgba(255,255,255,.5);">Gallery</a></li><li><a href="blog.html" style="color:rgba(255,255,255,.5);">Blog</a></li><li><a href="contact.html" style="color:rgba(255,255,255,.5);">Contact</a></li></ul></div><div><h4 style="color:#fff;font-size:0.85rem;font-weight:700;margin-bottom:14px;letter-spacing:0.3px;">Support</h4><ul style="list-style:none;padding:0;font-size:0.85rem;line-height:2.2;color:rgba(255,255,255,.5);"><li><a href="faq.html" style="color:rgba(255,255,255,.5);">FAQ</a></li><li><a href="booking-guide.html" style="color:rgba(255,255,255,.5);">Booking</a></li><li><a href="cancellation-policy.html" style="color:rgba(255,255,255,.5);">Cancellation Policy</a></li><li><a href="privacy.html" style="color:rgba(255,255,255,.5);">Privacy Policy</a></li><li><a href="terms.html" style="color:rgba(255,255,255,.5);">Terms of Service</a></li><li><a href="cookies.html" style="color:rgba(255,255,255,.5);">Cookies</a></li></ul></div><div><h4 style="color:#fff;font-size:0.85rem;font-weight:700;margin-bottom:14px;letter-spacing:0.3px;">Contact</h4>          <a href="contact.html" class="footer-contact-btn" style="display:inline-block;background:var(--gold);color:var(--brown);padding:8px 20px;border-radius:60px;font-weight:700;text-decoration:none;margin-top:8px;font-size:0.85rem;">📋 Contact Us</a><div style="display:flex;gap:10px;margin-top:12px;"><a href="https://wa.me/212762934488" target="_blank" style="background:#25D366;color:#fff;padding:6px 16px;border-radius:30px;font-size:0.75rem;font-weight:600;text-decoration:none;">WhatsApp</a><a href="https://www.instagram.com/abridmorocco/" target="_blank" style="background:linear-gradient(135deg,#E1306C,#833AB4);color:#fff;padding:6px 16px;border-radius:30px;font-size:0.75rem;font-weight:600;text-decoration:none;">Instagram</a></div></div></div><div style="border-top:1px solid rgba(255,255,255,.06);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:0.75rem;color:rgba(255,255,255,.3);"><div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div><div style="display:flex;gap:20px;flex-wrap:wrap;"><a href="terms.html" style="color:rgba(255,255,255,.3);">Terms</a><a href="privacy.html" style="color:rgba(255,255,255,.3);">Privacy</a><a href="cookies.html" style="color:rgba(255,255,255,.3);">Cookies</a><span style="color:rgba(255,255,255,.15);">|</span><span style="color:rgba(255,255,255,.15);">🇲🇦 Made in Morocco</span></div></div></div></footer>
-
+</div>
 <script>
   function copySnippet() {
     const snippet = `🌟 DISCOVER THE REAL MOROCCO – 13 DAYS\n\nFrom the bustling souks of Marrakech to the golden dunes of the Sahara, this 13-day journey takes you through the heart of Morocco. Explore the blue city of Chefchaouen, wander the medieval medina of Fes, camp under the stars in the desert, and hike through the stunning Todra Gorge. Led by local Berber guides. Authentic, sustainable, and unforgettable.\n\nBook now with AbridMoroccoTrip. Contact us for pricing and availability.`;
@@ -269,6 +133,82 @@ footer .footer-bottom {
     });
   }
 </script>
+    </div>
+  </main>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img src="https://i.postimg.cc/fR1NNYPc/500484189-17846895132482722-1431764686690149070-n.jpg" alt="Logo">
+            <div>
+              <strong>AbridMoroccoTrip</strong>
+              <span>Premium Morocco Tours</span>
+            </div>
+          </div>
+          <p>Authentic Morocco tours with local expert Abdellah. Sahara, Atlas, Imperial Cities — private guides and luxury camps.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Support</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="booking-guide.html">Booking Guide</a></li>
+            <li><a href="cancellation-policy.html">Cancellation Policy</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <a href="contact.html" class="footer-contact-btn">Contact Us</a>
+          <div class="footer-socials">
+            <a href="https://wa.me/212762934488" target="_blank">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmorocco/" target="_blank">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> AbridMoroccoTrip. All rights reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <span style="color:rgba(255,255,255,0.15);">|</span>
+          <span>Made in Morocco</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">💬</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+    window.addEventListener('scroll', function() {
+      var header = document.getElementById('siteHeader');
+      header.classList.toggle('scrolled', window.scrollY > 20);
+    });
+  </script>
 </body>
 </html>
