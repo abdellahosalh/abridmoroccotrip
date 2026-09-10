@@ -169,6 +169,14 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-serif); color: var(--brown); li
 .back-to-tours:hover { gap: 14px; }
 .tour-detail-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; margin-top: 20px; }
 
+/* --- Related guides (internal linking) --- */
+.related-guides { background: var(--bg-2); padding: 48px 0; }
+.related-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--brown); text-align: center; margin-bottom: 8px; }
+.related-sub { text-align: center; color: var(--brown-light); margin-bottom: 28px; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.related-grid a { display: flex; align-items: center; justify-content: center; text-align: center; background: #fff; border: 1px solid rgba(0,0,0,.06); border-radius: 12px; padding: 16px 18px; color: var(--terracotta); font-weight: 600; text-decoration: none; transition: all .3s; }
+.related-grid a:hover { border-color: var(--terracotta); background: var(--gold-light); transform: translateY(-2px); }
+
 /* --- Footer --- */
 footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 48px 0 24px; }
 footer a { color: rgba(255,255,255,.6); transition: color .2s; }
