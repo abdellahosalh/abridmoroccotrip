@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════════════════════════
+   ABRID MOROCCO TRIP — Global Theme
+   Extracted from Abrid-Morocco-New-Design.html
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  /* ── Colors ── */
+  --color-bg:             #F8F4EA;
+  --color-bg-alt:         #F8F4EA;
+  --color-surface:        #FFFFFF;
+  --color-surface-warm:   #E8DDC7;
+  --color-surface-muted:  #D9C7A6;
+
+  --color-text:           #1A1A18;
+  --color-text-secondary: #2E2E2E;
+  --color-text-muted:     #2E2E2Ecc;     /* 80% opacity */
+
+  --color-primary:        #B86348;        /* terracotta */
+  --color-primary-light:  #FFF9F0;        /* warm white for text-on-primary */
+
+  --color-green:          #4B5F4F;
+  --color-green-dark:     #2F4235;
+
+  --color-gold:           #C9A86A;
+  --color-gold-bg:        #E8DDC7;
+
+  /* ── Opacity Utilities ── */
+  --border-subtle:        rgba(26,26,24,0.10);
+  --border-faint:         rgba(26,26,24,0.08);
+  --border-medium:        rgba(26,26,24,0.15);
+
+  /* ── Fonts ── */
+  --font-body:            'Work Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display:         'Fraunces', Georgia, serif;
+  --font-serif:           'Newsreader', Georgia, serif;
+  --font-serif-alt:       'Instrument Serif', Georgia, serif;
+  --font-handwritten:     'Caveat', cursive;
+
+  /* ── Letter Spacing ── */
+  --tracking-tight:       -0.05em;
+  --tracking-tight-sm:    -0.04em;
+  --tracking-tight-xs:    -0.03em;
+  --tracking-tight-xxs:   -0.02em;
+  --tracking-normal:      0em;
+  --tracking-wide-xs:     0.06em;
+  --tracking-wide-sm:     0.1em;
+  --tracking-wide:        0.12em;
+  --tracking-wide-md:     0.15em;
+  --tracking-wide-lg:     0.18em;
+  --tracking-wide-xl:     0.20em;
+  --tracking-wide-xxl:    0.22em;
+  --tracking-widest-sm:   0.28em;
+  --tracking-widest:      0.32em;
+  --tracking-widest-xl:   0.35em;
+
+  /* ── Line Heights ── */
+  --leading-none:         1;
+  --leading-tight:        0.85;
+  --leading-tight-sm:     0.88;
+  --leading-tight-xs:     0.9;
+  --leading-snug:         1.05;
+  --leading-normal:       1.1;
+  --leading-relaxed:      1.25;
+  --leading-body:         1.5;
+  --leading-body-lg:      1.6;
+  --leading-body-xl:      1.65;
+  --leading-loose:        1.7;
+
+  /* ── Border Radius ── */
+  --radius-xs:            1px;
+  --radius-sm:            3px;
+  --radius-md:            4px;
+  --radius-lg:            8px;
+  --radius-pill:          9999px;          /* rounded-full */
+  --radius-card:          18px;
+  --radius-card-lg:       22px;
+  --radius-btn:           22px;
+  --radius-btn-asym-tl:   18px;
+  --radius-btn-asym-br:   28px;
+
+  /* ── Shadows ── */
+  --shadow-btn:           3px 4px 0px var(--color-text);
+  --shadow-btn-hover:     1px 2px 0px var(--color-text);
+  --shadow-btn-offset:    2px 3px 0px var(--color-text);
+
+  --shadow-card:          6px 8px 24px rgba(0,0,0,0.12);
+  --shadow-card-lg:       8px 12px 30px rgba(0,0,0,0.18);
+  --shadow-card-hover:    6px 10px 28px rgba(0,0,0,0.14);
+
+  --shadow-photo:         8px 12px 30px rgba(0,0,0,0.25);
+  --shadow-photo-subtle:  6px 8px 24px rgba(0,0,0,0.12), 1px 1px 0px rgba(26,26,24,0.05);
+
+  --shadow-sticker:       3px 4px 0px var(--color-text);
+  --shadow-sticker-subtle: 2px 3px 0px rgba(26,26,24,0.10);
+
+  --shadow-inner:         inset 0 2px 8px rgba(0,0,0,0.06);
+
+  /* ── Spacing ── */
+  --space-xs:             4px;
+  --space-sm:             8px;
+  --space-md:             12px;
+  --space-base:           16px;
+  --space-lg:             20px;
+  --space-xl:             24px;
+  --space-2xl:            32px;
+  --space-3xl:            40px;
+  --space-4xl:            48px;
+  --space-5xl:            56px;
+  --space-6xl:            64px;
+
+  --container-max:        1280px;
+  --container-px:         24px;           /* px-6 */
+  --container-px-md:      40px;           /* md:px-10 */
+
+  /* ── Transitions ── */
+  --ease-smooth:          cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:        150ms;
+  --duration-base:        250ms;
+  --duration-slow:        400ms;
+  --duration-photo:       1200ms;
+
+  /* ── Z-Index ── */
+  --z-base:               1;
+  --z-nav:                20;
+  --z-overlay:            100;
+  --z-modal:              100;
+}
+
+/* ── Base Reset & Defaults ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-px);
+  padding-right: var(--container-px);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--container-px-md);
+    padding-right: var(--container-px-md);
+  }
+}
