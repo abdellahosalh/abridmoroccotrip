@@ -18,6 +18,13 @@
       var open = menu.classList.toggle('open');
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
+    /* Close the mobile menu when a panel link is tapped */
+    menu.querySelectorAll('a').forEach(function (l) {
+      l.addEventListener('click', function () {
+        menu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
   }
 
   /* Sticky header shadow on scroll */
@@ -63,6 +70,22 @@
     }
   });
 
+
+  /* ===== Shared FAQ accordion toggle (all pages) =====
+     Works with .faq-item > .faq-question + .faq-answer markup.
+     Pages must NOT add their own duplicate toggle (double-toggle bug). */
+  document.querySelectorAll('.faq-question').forEach(function (q) {
+    q.addEventListener('click', function () {
+      var parent = this.closest('.faq-item');
+      if (!parent) return;
+      var answer = parent.querySelector('.faq-answer');
+      if (!answer) return;
+      answer.classList.toggle('open');
+      parent.classList.toggle('open');
+      var icon = this.querySelector('.faq-icon');
+      if (icon) icon.textContent = answer.classList.contains('open') ? '-' : '+';
+    });
+  });
 
   /* ── Search overlay ── */
   var overlay = document.getElementById('searchOverlay');
@@ -116,6 +139,15 @@
   }
   if (searchOpen) searchOpen.addEventListener('click', openSearch);
   if (searchClose) searchClose.addEventListener('click', closeSearch);
+  /* Mobile menu search entry: close the menu, open the search overlay */
+  document.querySelectorAll('.mobile-search-link').forEach(function (l) {
+    l.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (menu) menu.classList.remove('open');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      openSearch();
+    });
+  });
   if (overlay) {
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closeSearch();
