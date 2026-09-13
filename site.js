@@ -6,6 +6,28 @@
 (function () {
   'use strict';
 
+  /* Footer year */
+  var yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* Mobile menu */
+  var toggle = document.getElementById('menuToggle');
+  var menu = document.getElementById('mobileMenu');
+  if (toggle && menu) {
+    toggle.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  }
+
+  /* Sticky header shadow on scroll */
+  var header = document.getElementById('siteHeader');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      header.classList.toggle('scrolled', window.pageYOffset > 60);
+    }, { passive: true });
+  }
+
   /* ===== EXPLORE MOROCCO dropdown with 3s auto-hide =====
      Opens on hover/focus (CSS :hover + .open). A setTimeout(3000)
      force-hides it even while still hovered, via .drop-hide
