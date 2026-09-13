@@ -1,0 +1,373 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!--
+  ════════════════════════════════════════════════════════════════════
+  REUSABLE MOROCCO GUIDE ARTICLE TEMPLATE — Abrid Morocco
+  ════════════════════════════════════════════════════════════════════
+  HOW TO USE (for authors):
+  1. COPY this file to a new filename:  guide-food-marrakech.html  (or keep blog-*.html naming)
+  2. TEMPLATE FILE ITSELF IS noindex — after copying, change to:
+     <meta name="robots" content="index, follow" />
+  3. Replace every item marked  <!-- TODO: ... -->  below.
+  4. Pick ONE primary category page to file the article under:
+       guide-destinations.html | guide-itineraries.html | guide-transport.html
+       guide-culture.html      | guide-food.html        | guide-desert.html
+       guide-mountains.html    | guide-travel-tips.html
+  5. Add the article to blog.html (authentic hub) under its category, and to the
+     relevant category page.
+  6. Add the URL to sitemap.xml (Blog Posts section) and set a lastmod date.
+  ════════════════════════════════════════════════════════════════════
+
+  IMPORTANT FOR AUTHORS — keep these SEO rules:
+  • Exactly ONE <h1> (the article title, in the .article-title element).
+  • Use <h2> for each main section, <h3> for sub-sections. (H1/H2/H3 structure)
+  • First paragraphs should repeat the key phrase naturally (e.g. "Sahara desert
+    camp"). Do not stuff keywords.
+  • The related block at the bottom ALWAYS links to: 1 destination (destination-*.html),
+    1-2 trips (marrakech.html, merzouga.html, etc.), and experiences where relevant.
+  • Update the Article JSON-LD: headline, datePublished, image.
+  -->
+
+  <title><!-- TODO: Article Title | Abrid Morocco --></title>
+  <meta name="description" content="<!-- TODO: 140-160 char meta description that includes the main keyword -->" />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Canonical (MAKE SURE this matches the final page URL) -->
+  <link rel="canonical" href="https://www.abridmorocco.com/guide-my-article.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Abrid Morocco" />
+  <meta property="og:title" content="<!-- TODO: Article Title -->" />
+  <meta property="og:description" content="<!-- TODO: same as meta description -->" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.abridmorocco.com/guide-my-article.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="<!-- TODO: Article Title -->" />
+  <meta name="twitter:description" content="<!-- TODO: same as meta description -->" />
+
+  <!-- Article Schema (refresh datePublished / image / headline each article) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "<!-- TODO: Article Title -->",
+    "description": "<!-- TODO: meta description -->",
+    "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop",
+    "author": {"@type": "Person", "name": "Abdellah"},
+    "publisher": {"@type": "Organization", "name": "Abrid Morocco", "logo": {"@type": "ImageObject", "url": ""}},
+    "datePublished": "2026-09-11",
+    "dateModified": "2026-09-11",
+    "mainEntityOfPage": "https://www.abridmorocco.com/guide-my-article.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.abridmorocco.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Morocco Guide", "item": "https://www.abridmorocco.com/blog.html"},
+      {"@type": "ListItem", "position": 3, "name": "<!-- TODO: Category Name (e.g. Food) -->", "item": "https://www.abridmorocco.com/guide-food.html"},
+      {"@type": "ListItem", "position": 4, "name": "<!-- TODO: Article Title -->", "item": "https://www.abridmorocco.com/guide-my-article.html"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header (keep identical on every page for consistency) -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <div class="brand-text">
+          <strong>Abrid Morocco</strong>
+          <span>PREMIUM TOURS</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+  <li><a href="index.html">Home</a></li>
+  <li class="drop">
+    <a href="destinations.html">Explore Morocco <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Discover</span>
+      <a href="destinations.html">Destinations</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="blog.html">Morocco Guide</a>
+      <a href="trips.html">All Trips</a>
+    </ul>
+  </li>
+  <li><a href="trips.html">Trips</a></li>
+</ul>
+<div class="nav-actions">
+  <button class="search-toggle" id="searchOpen" aria-label="Search Abrid Morocco" type="button">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+  <a class="nav-wa" href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="Chat with Abrid Morocco on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.83 14.1c-.25.7-1.45 1.33-2 1.38-.51.05-1.03.22-3.45-.72-2.93-1.12-4.78-4.03-4.92-4.22-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.51.25.59.84 2.04.91 2.19.07.15.12.33.02.53-.09.2-.14.33-.27.51-.14.17-.29.39-.41.52-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.95 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.51.31.07.12.07.67-.18 1.34z"/></svg></a>
+  <a class="btn btn-primary btn-sm" href="plan-my-trip.html">Plan My Trip</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+</div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="blog.html">Morocco Guide</a>
+  <a href="trips.html">Trips</a>
+  <a href="about.html">About Abrid</a>
+  <a href="plan-my-trip.html">Plan My Trip</a>
+  <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</div>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ARTICLE HERO -->
+  <article>
+    <section class="article-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span class="sep">/</span>
+          <a href="blog.html">Morocco Guide</a><span class="sep">/</span>
+          <a href="guide-food.html"><!-- TODO: Category (e.g. Food) --></a><span class="sep">/</span>
+          <span><!-- TODO: Short Article Title --></span>
+        </nav>
+        <span class="eyebrow"><!-- TODO: Category-eyebrow, e.g. Food &amp; Culture --></span>
+        <h1 class="article-title"><!-- TODO: H1 — Article Title (ONE h1 per page) --></h1>
+        <p class="lede"><!-- TODO: One-sentence hook that includes the keyword naturally --></p>
+        <div class="byline">
+          <span><span class="by-author">By Abdellah</span> · Berber Guide, Imilchil</span>
+          <span>📅 <!-- TODO: Publication date, e.g. September 2026 --></span>
+          <span>⏱ <!-- TODO: Read time, e.g. 6 min --></span>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <figure class="hero-image-wrap">
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop" alt="<!-- TODO: alt text describing the image -->" />
+        <figcaption><!-- TODO: Optional image caption --></figcaption>
+      </figure>
+    </div>
+
+    <div class="container article-layout">
+      <!-- MAIN COLUMN -->
+      <div class="article-body">
+
+        <!-- Table of contents (optional — remove if the article is short) -->
+        <nav class="toc" aria-label="Table of contents">
+          <div class="toc-title">In this guide</div>
+          <ol>
+            <li><a href="#section-1"><!-- TODO: Section 1 heading --></a></li>
+            <li><a href="#section-2"><!-- TODO: Section 2 heading --></a></li>
+            <li><a href="#section-3"><!-- TODO: Section 3 heading --></a></li>
+            <li><a href="#faq"><!-- TODO: Section 4 heading (e.g. FAQ) --></a></li>
+          </ol>
+        </nav>
+
+        <!-- INTRO PARAGRAPHS -->
+        <!-- TODO: Write 2-3 intro paragraphs. Repeat the main keyword naturally once or twice. Add an inline link to one relevant page (trip/destination/category). Example: "Most travelers reach it as part of a multi-day <a href=\"classic-morocco.html\">Morocco tour</a>." -->
+
+        <h2 id="section-1"><!-- TODO: Section 1 heading --></h2>
+        <!-- TODO: Body content. Use <p> paragraphs, <ul>/<ol> lists, and <figure>+<img> for photos. Use <strong> for emphasis. -->
+
+        <h2 id="section-2"><!-- TODO: Section 2 heading --></h2>
+        <p><!-- TODO: ... --></p>
+
+        <blockquote>
+          <!-- TODO: A memorable quote or tip pulled out for emphasis -->
+        </blockquote>
+
+        <h2 id="section-3"><!-- TODO: Section 3 heading --></h2>
+        <ul>
+          <li><!-- TODO: ... --></li>
+          <li><!-- TODO: ... --></li>
+          <li><!-- TODO: ... --></li>
+        </ul>
+
+        <!-- AUTHOR BOX -->
+        <div class="author-box">
+          <strong>Abdellah — your guide in Morocco</strong>
+          <span>Founder · Abrid Morocco</span>
+          <p><!-- TODO: short bio. Example: "Berber guide from Imilchil in the High Atlas, leading private Morocco tours since 2022 with his team of local drivers." --></p>
+        </div>
+
+        <!-- FAQ SECTION (optional but recommended for SEO — pair with FAQPage schema if used) -->
+        <h2 id="faq">Frequently asked questions</h2>
+        <h3 id="faq-1"><!-- TODO: Question 1 --></h3>
+        <p><!-- TODO: Answer 1 --></p>
+        <h3 id="faq-2"><!-- TODO: Question 2 --></h3>
+        <p><!-- TODO: Answer 2 --></p>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="article-side">
+        <div class="side-panel">
+          <h3>Explore Morocco Guide</h3>
+          <ul>
+            <li><a href="guide-destinations.html">Destinations</a></li>
+            <li><a href="guide-itineraries.html">Itineraries</a></li>
+            <li><a href="guide-transport.html">Transport</a></li>
+            <li><a href="guide-culture.html">Culture</a></li>
+            <li><a href="guide-food.html">Food</a></li>
+            <li><a href="guide-desert.html">Desert</a></li>
+            <li><a href="guide-mountains.html">Mountains</a></li>
+            <li><a href="guide-travel-tips.html">Travel Tips</a></li>
+          </ul>
+        </div>
+        <div class="side-panel">
+          <h3>Popular destinations</h3>
+          <ul>
+            <li><a href="destination-marrakech.html">Marrakech <span class="side-link-sub">The Red City</span></a></li>
+            <li><a href="destination-fes.html">Fes <span class="side-link-sub">Imperial capital</span></a></li>
+            <li><a href="destination-chefchaouen.html">Chefchaouen <span class="side-link-sub">The Blue Pearl</span></a></li>
+            <li><a href="destination-sahara.html">Merzouga <span class="side-link-sub">Sahara dunes</span></a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </article>
+
+  <!-- RELATED — always link naturally to Destinations, Trips & Experiences -->
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Keep Exploring</span>
+        <h2>Related to this guide</h2>
+        <p>Turn reading into planning — these pages go with this article.</p>
+      </div>
+      <div class="discover-grid">
+        <a class="discover-card" href="guide-food.html">
+          <span class="discover-src">Guide</span>
+          <h4><!-- TODO: Category parent (e.g. More Food Guides) --></h4>
+          <p><!-- TODO: one-line description --></p>
+        </a>
+        <a class="discover-card" href="destination-marrakech.html">
+          <span class="discover-src">Destination</span>
+          <h4><!-- TODO: Related destination (e.g. Marrakech) --></h4>
+          <p><!-- TODO: one-line description --></p>
+        </a>
+        <a class="discover-card" href="marrakech.html">
+          <span class="discover-src">Trip</span>
+          <h4><!-- TODO: Related trip (e.g. Marrakech Discovery Tour) --></h4>
+          <p><!-- TODO: one-line description --></p>
+        </a>
+        <a class="discover-card" href="air-balloon.html">
+          <span class="discover-src">Experience</span>
+          <h4><!-- TODO: Related experience (e.g. Hot Air Balloon over Marrakech) --></h4>
+          <p><!-- TODO: one-line description --></p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="container">
+      <h2>Want to experience this in person?</h2>
+      <p>Tell us your dates or dream itinerary — we'll craft a private route and reply within 2 hours.</p>
+      <div class="cta-actions">
+        <a href="plan-my-trip.html" class="btn btn-primary">Plan My Trip</a>
+        <a class="btn btn-ghost-white" href="https://wa.me/212762934488" target="_blank" style="background:transparent;color:#FFFFFF;border:1px solid rgba(255,255,255,0.5);">
+        WhatsApp Abdellah</a>
+        <a class="btn btn-ghost-white" href="https://wa.me/212609282538" target="_blank" style="background:transparent;color:#FFFFFF;border:1px solid rgba(255,255,255,0.5);">WhatsApp Karim</a>
+      </div>
+    </div>
+  </section>
+
+  
+  </main>
+
+<!-- FOOTER (keep identical site-wide) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <strong>Abrid Morocco</strong>
+            <span>Premium Morocco Tours</span>
+          </div>
+          <p class="footer-about">Authentic Morocco tours with local experts Abdellah &amp; Karim. Sahara, Atlas, Imperial Cities — private guides and characterful riads since 2022.</p>
+          <a href="plan-my-trip.html" class="footer-contact-btn">Plan My Trip</a>
+          <div class="footer-socials">
+            <a href="https://wa.me/212762934488" target="_blank" class="wa">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmorocco/" target="_blank" class="ig">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Trips</h4>
+          <ul class="footer-links">
+            <li><a href="classic-morocco.html">Classic 13-Day</a></li>
+            <li><a href="6-day-christmas-morocco.html">6-Day Christmas</a></li>
+            <li><a href="merzouga.html">Merzouga Desert</a></li>
+            <li><a href="trips.html">All Trips</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-marrakech.html">Marrakech</a></li>
+            <li><a href="destination-fes.html">Fes</a></li>
+            <li><a href="destination-chefchaouen.html">Chefchaouen</a></li>
+            <li><a href="destination-essaouira.html">Essaouira</a></li>
+            <li><a href="destinations.html">All Destinations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a></li>
+            <li><a href="https://wa.me/212762934488">Abdellah · +212 762 934 488</a></li>
+            <li><a href="https://wa.me/212609282538">Karim · +212 609 282 538</a></li>
+            <li><a href="booking-guide.html">Booking Guide</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> Abrid Morocco. All rights reserved.</div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <span>|</span>
+          <span>🇲🇦 Made in Morocco</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Abrid on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 .1-.2-.2-1-1.1-1.7-1.8-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.4-.5-.5-.5h-.5c-.2 0-.5 0-.7.1-.2.2-.9.9-.9 2.2 0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.2-.2-.3-.4-.4zM12 21.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.8-1.4-1.3-3-1.3-4.7C3.4 8.6 7.2 4.8 12 4.8c4.8 0 8.6 3.8 8.6 8.5 0 4.8-3.8 8-8.6 8zM12 2.8C6.2 2.8 1.4 7.6 1.4 13.4c0 1.9.5 3.7 1.4 5.3L1.3 22l3.4-.9c1.5.9 3.3 1.4 5.2 1.4 5.8 0 10.6-4.8 10.6-10.6S17.8 2.8 12 2.8z"/></svg>
+  </a>
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-panel">
+      <div class="search-input-row">
+        <input type="search" id="searchInput" placeholder="Search trips, destinations, guides”¦" aria-label="Search">
+        <button class="search-close" id="searchClose" type="button">Close</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="search-data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

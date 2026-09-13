@@ -1,0 +1,502 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morocco Trips, Destinations & Travel Guides | Abrid Morocco</title>
+  <meta name="description" content="Abrid Morocco is a travel platform built by people who know Morocco. Private trips, Sahara desert adventures, Atlas experiences and honest local guides." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.abridmorocco.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Abrid Morocco" />
+  <meta property="og:title" content="Morocco Trips, Destinations & Travel Guides | Abrid Morocco" />
+  <meta property="og:description" content="Discover Morocco beyond the standard tourist route. Private trips, Sahara adventures and honest local guides." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&auto=format&fit=crop" />
+  <meta property="og:url" content="https://www.abridmorocco.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Morocco Trips, Destinations & Travel Guides | Abrid Morocco" />
+  <meta name="twitter:description" content="Discover Morocco beyond the standard tourist route. Private trips, Sahara adventures and honest local guides." />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Abrid Morocco",
+    "alternateName": "AbridMoroccoTrip",
+    "description": "Morocco travel platform built by local experts. Private trips, Sahara desert adventures, Atlas experiences and personalized itineraries.",
+    "url": "https://www.abridmorocco.com/",
+    "telephone": "+212762934488",
+    "email": "abridmorocco@gmail.com",
+    "priceRange": "$$",
+    "areaServed": "Morocco",
+    "sameAs": ["https://www.instagram.com/abridmorocco/"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="design.css">
+  <style>
+    /* Homepage-specific composition (kept minimal) */
+    .home-hero { padding: 72px 0 0; }
+    .dest-quick {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin: 40px 0 0;
+    }
+    .dest-quick a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid rgba(15,15,16,0.08);
+      box-shadow: var(--shadow-hard-sm);
+      padding: 18px 20px;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      color: var(--text-2);
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .dest-quick a:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .dest-quick a .arrow { color: var(--terracotta); font-size: 1.2rem; }
+    .exp-strip { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+    .step-item { background: var(--surface); border: 1px solid rgba(15,15,16,0.06); box-shadow: var(--shadow-hard-sm); padding: 24px; }
+    .step-item .step-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--color-primary); display: block; margin-bottom: 8px; }
+    .step-item h3 { font-weight: 500; font-size: 1rem; margin: 0 0 6px; }
+    .step-item p { font-family: var(--font-body); font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    @media (max-width: 800px) { .steps-grid { grid-template-columns: 1fr !important; } }
+    @media (min-width: 620px) {
+      .hero-actions .btn-primary { min-width: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a href="index.html" class="brand" aria-label="Abrid Morocco home">
+        <div class="brand-text">
+          <strong>Abrid Morocco</strong>
+          <span>PREMIUM TOURS</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+  <li><a href="index.html" class="active">Home</a></li>
+  <li class="drop">
+    <a href="destinations.html">Explore Morocco <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Discover</span>
+      <a href="destinations.html">Destinations</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="blog.html">Morocco Guide</a>
+      <a href="trips.html">All Trips</a>
+    </ul>
+  </li>
+  <li><a href="trips.html">Trips</a></li>
+</ul>
+      <div class="nav-actions">
+  <button class="search-toggle" id="searchOpen" aria-label="Search Abrid Morocco" type="button">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+  <a class="nav-wa" href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="Chat with Abrid Morocco on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.83 14.1c-.25.7-1.45 1.33-2 1.38-.51.05-1.03.22-3.45-.72-2.93-1.12-4.78-4.03-4.92-4.22-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.51.25.59.84 2.04.91 2.19.07.15.12.33.02.53-.09.2-.14.33-.27.51-.14.17-.29.39-.41.52-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.95 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.51.31.07.12.07.67-.18 1.34z"/></svg></a>
+  <a class="btn btn-primary btn-sm" href="plan-my-trip.html">Plan My Trip</a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+</div>
+    </div>
+    <div class="container mobile-menu" id="mobileMenu">
+      <div class="mobile-panel">
+  <a href="index.html" class="active">Home</a>
+  <a href="destinations.html">Destinations</a>
+  <a href="experiences.html">Experiences</a>
+  <a href="blog.html">Morocco Guide</a>
+  <a href="trips.html">Trips</a>
+  <a href="about.html">About Abrid</a>
+  <a href="plan-my-trip.html">Plan My Trip</a>
+  <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
+</div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="home-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Private Morocco tours since 2022</span>
+          <h1>Discover Morocco <span class="highlight">beyond the ordinary</span></h1>
+          <p>Local knowledge, authentic experiences and journeys designed around the way you want to travel. Led by Abdellah, a Berber guide from the High Atlas, with Karim and the team of Moroccan drivers and guides.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="destinations.html">Explore Morocco</a>
+            <a class="btn btn-secondary" href="plan-my-trip.html">Plan My Trip</a>
+          </div>
+          <div class="hero-badges">
+            <span class="badge">No deposit</span>
+            <span class="badge">4.9/5 · 500+ travelers</span>
+            <span class="badge">Pay cash on tour day</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-main">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&auto=format&fit=crop" alt="Blue-washed streets of Chefchaouen, Morocco" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+
+      <!-- Where do you want to go? -->
+      <div class="container">
+        <h2 style="font-size:1.35rem;font-weight:400;margin:40px 0 8px">Where do you want to go?</h2>
+        <p style="font-family:var(--font-body);color:var(--text-muted)">Start with a destination — we'll build the right trip around it.</p>
+        <div class="dest-quick">
+          <a href="destination-marrakech.html">Marrakech <span class="arrow">→</span></a>
+          <a href="destination-sahara.html">Sahara <span class="arrow">→</span></a>
+          <a href="destination-fes.html">Fes <span class="arrow">→</span></a>
+          <a href="destination-chefchaouen.html">Chefchaouen <span class="arrow">→</span></a>
+          <a href="destination-essaouira.html">Essaouira <span class="arrow">→</span></a>
+          <a href="destination-atlas.html">Atlas Mountains <span class="arrow">→</span></a>
+          <a href="destination-ait-ben-haddou.html">Aït Benhaddou <span class="arrow">→</span></a>
+          <a href="destination-agadir.html">Agadir <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="container">
+        <div class="trust-grid">
+          <div class="trust-item"><strong>500+</strong><span>Happy Travelers</span></div>
+          <div class="trust-item"><strong>4.9★</strong><span>Average Rating</span></div>
+          <div class="trust-item"><strong>15+</strong><span>Destinations</span></div>
+          <div class="trust-item"><strong>2022</strong><span>Founded in Morocco</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED TRIPS -->
+    <section id="trips" class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Trips</span>
+          <h2>Journeys designed by local hands</h2>
+          <p>From Marrakech day trips to full Sahara crossings — private transport, a local driver-guide and authentic stays included.</p>
+        </div>
+        <div class="tour-grid">
+          <article class="tour-card">
+            <div class="tour-image"><div class="badge-trend">Best Seller</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Erg Chebbi dunes near Merzouga, Sahara desert" loading="lazy"><span class="pill">3 days</span></div>
+            <div class="tour-body">
+              <div class="tour-top"><div><h3>Merzouga Desert Adventure</h3><div class="subtle">Sahara camp &amp; camel trek</div></div><div class="price">Quote on request</div></div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Transport Marrakech ↔ Merzouga</div>
+                <div class="inclusion-item"><span class="icon">✓</span> 2 nights (hotel + desert camp)</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Camel trek + 2 dinners</div>
+              </div>
+              <div class="tour-meta"><span>Camel trek</span><span>Desert camp</span></div>
+              <a class="btn btn-primary" href="merzouga.html">View Itinerary →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image"><div class="badge-trend">Signature</div><img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="The medieval medina of Fes, Morocco" loading="lazy"><span class="pill">13 days</span></div>
+            <div class="tour-body">
+              <div class="tour-top"><div><h3>Classic Morocco — The Grand Tour</h3><div class="subtle">Imperial cities, Sahara &amp; Chefchaouen</div></div><div class="price">Quote on request</div></div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Casablanca → Marrakech loop</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Private guide &amp; A/C vehicle</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Desert camp night included</div>
+              </div>
+              <div class="tour-meta"><span>13 days / 12 nights</span><span>Full itinerary</span></div>
+              <a class="btn btn-secondary" href="classic-morocco.html">View Itinerary →</a>
+            </div>
+          </article>
+
+          <article class="tour-card">
+            <div class="tour-image"><div class="badge-trend">Atlas</div><img src="https://images.unsplash.com/photo-1585213303822-f19214012600?w=600&auto=format&fit=crop" alt="High Atlas mountain landscape near Imlil" loading="lazy"><span class="pill">3 days</span></div>
+            <div class="tour-body">
+              <div class="tour-top"><div><h3>Imilchil, Lakes &amp; Summit</h3><div class="subtle">High Atlas adventure</div></div><div class="price">Quote on request</div></div>
+              <div class="inclusions">
+                <div class="inclusion-item"><span class="icon">✓</span> Berber villages &amp; lakes</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Guided mountain trek</div>
+                <div class="inclusion-item"><span class="icon">✓</span> Local guesthouse stays</div>
+              </div>
+              <div class="tour-meta"><span>Amazigh culture</span><span>Hiking</span></div>
+              <a class="btn btn-secondary" href="imilchil.html">View Itinerary →</a>
+            </div>
+          </article>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+          <a href="trips.html" class="btn btn-gold">Explore All Trips →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES STRIP -->
+    <section class="section-alt" style="padding:56px 0">
+      <div class="container" style="text-align:center">
+        <span class="eyebrow">Experiences</span>
+        <h2 style="font-weight:400;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:16px 0 8px">Do something you'll remember</h2>
+        <p style="font-family:var(--font-body);color:var(--text-muted);max-width:640px;margin:0 auto">Sunrise balloon over Marrakech, camel treks into the dunes, waterfalls by quad — each one led by locals who do it daily.</p>
+        <div class="exp-strip">
+          <a class="chip" href="air-balloon.html"><strong>Hot air balloon</strong> · Marrakech</a>
+          <a class="chip" href="ouzoud-quad-tour.html"><strong>Ouzoud quad</strong> · Atlas</a>
+          <a class="chip" href="merzouga.html"><strong>Desert camp</strong> · Merzouga</a>
+          <a class="chip" href="atlas.html"><strong>Ourika Valley</strong> · Atlas</a>
+          <a class="chip" href="essaouira.html"><strong>Essaouira coast</strong> · 1 day</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINATIONS PREVIEW -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Destinations</span>
+          <h2>A country of many moods</h2>
+          <p>From Atlantic breezes and blue mountain towns to golden desert dunes — find your Morocco.</p>
+        </div>
+        <div class="dest-grid">
+          <a class="dest-card" href="destination-marrakech.html">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech medina rooftops" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Marrakech</h3>
+              <div class="card-sub">The Red City</div>
+              <div class="card-desc">Palaces, souks, gardens and Jemaa el-Fna — Morocco's most vibrant medina.</div>
+              <span class="card-link">Discover Marrakech</span>
+            </div>
+          </a>
+          <a class="dest-card" href="destination-chefchaouen.html">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Blue lane in Chefchaouen" loading="lazy"></div>
+            <div class="card-body">
+              <h3>Chefchaouen</h3>
+              <div class="card-sub">The Blue Pearl</div>
+              <div class="card-desc">Blue-washed lanes beneath the Rif Mountains — Morocco's most photographed town.</div>
+              <span class="card-link">Discover Chefchaouen</span>
+            </div>
+          </a>
+          <a class="dest-card" href="destination-sahara.html">
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sand dunes of Erg Chebbi" loading="lazy"></div>
+            <div class="card-body">
+              <h3>The Sahara Desert</h3>
+              <div class="card-sub">Erg Chebbi Dunes</div>
+              <div class="card-desc">Camel treks, luxury desert camps and star-filled skies at the edge of the Sahara.</div>
+              <span class="card-link">Discover the Desert</span>
+            </div>
+          </a>
+        </div>
+        <div style="text-align:center; margin-top:40px;">
+          <a href="destinations.html" class="btn btn-secondary">Explore All Destinations →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ABRID -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Why Abrid</span>
+          <h2>A platform built by people who know Morocco</h2>
+          <p>Founded by a Berber guide from Imilchil — not a call center. Real homes, real meals, real Morocco.</p>
+        </div>
+        <div class="why-grid">
+          <div class="why-item"><span class="icon">🌍</span> Local Moroccan expertise</div>
+          <div class="why-item"><span class="icon">✨</span> Authentic experiences</div>
+          <div class="why-item"><span class="icon">👥</span> Small private groups only</div>
+          <div class="why-item"><span class="icon">💰</span> No deposit, no hidden costs</div>
+          <div class="why-item"><span class="icon">🕒</span> 24/7 help while traveling</div>
+          <div class="why-item"><span class="icon">🧭</span> Tailor-made itineraries</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW PLANNING WORKS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">How planning works</span>
+          <h2>From first message to tour day — in three steps</h2>
+          <p>No deposit, no call centers. Everything runs through Abdellah, Karim and the team in Morocco.</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="steps-grid">
+          <div class="step-item"><span class="step-num">01</span><h3>Tell us about your trip</h3><p>Destinations, dates, group size and pace — in a WhatsApp message or our short form.</p></div>
+          <div class="step-item"><span class="step-num">02</span><h3>We design the route</h3><p>A private itinerary with transport, driver-guide and authentic stays — quoted in full.</p></div>
+          <div class="step-item"><span class="step-num">03</span><h3>Confirm, then travel</h3><p>You pay in cash on tour day. No deposit. 24/7 help while you're on the road.</p></div>
+        </div>
+        <div style="text-align:center;margin-top:40px">
+          <a href="plan-my-trip.html" class="btn btn-primary">Start Planning My Trip</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Travelers</span>
+          <h2>What our travelers say</h2>
+          <p>Real reviews from real people who traveled Morocco with Abdellah, Karim and the team.</p>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Abdellah made our Marrakech visit absolutely magical! An unforgettable experience in Morocco."</p>
+            <div class="author">— Sarah M., London · Marrakech Discovery</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"The Merzouga desert tour was a dream come true — camel trek at sunset, luxury camp, the best nights of our trip."</p>
+            <div class="author">— Marco D., Rome · Merzouga Desert</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">"Traveled solo as a woman and felt completely safe. The guides went above and beyond. No deposit, paid in cash on the day — exactly as promised."</p>
+            <div class="author">— Emma R., Toronto · Classic Morocco</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GUIDE PREVIEW -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Morocco Guide</span>
+          <h2>Plan with local knowledge</h2>
+          <p>Honest guides, packing lists and route advice — written by the people who run the trips.</p>
+        </div>
+        <div class="guide-grid">
+          <article class="guide-card">
+            <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+            <div class="guide-body">
+              <div class="guide-meta"><span class="tag">Destinations</span></div>
+              <h3>Chefchaouen Blue City Guide 2026</h3>
+              <div class="guide-date blog-date">March 2026</div>
+              <p class="guide-excerpt">Everything from the Spanish Mosque viewpoint to Akchour waterfalls.</p>
+              <a href="blog-chefchaouen.html" class="read-more">Read Article →</a>
+            </div>
+          </article>
+          <article class="guide-card">
+            <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara dunes" loading="lazy">
+            <div class="guide-body">
+              <div class="guide-meta"><span class="tag">Desert</span></div>
+              <h3>The Complete Guide to the Sahara Desert</h3>
+              <div class="guide-date blog-date">March 2026</div>
+              <p class="guide-excerpt">Merzouga, camel treks, luxury camps, weather and what to pack.</p>
+              <a href="blog-sahara-guide.html" class="read-more">Read Article →</a>
+            </div>
+          </article>
+          <article class="guide-card">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving a road through Morocco" loading="lazy">
+            <div class="guide-body">
+              <div class="guide-meta"><span class="tag">Travel Tips</span></div>
+              <h3>Driving in Morocco: Safety Guide</h3>
+              <div class="guide-date blog-date">2026</div>
+              <p class="guide-excerpt">Road rules, tolls, fuel and mountain passes from a local driver's perspective.</p>
+              <a href="blog-driving-safety.html" class="read-more">Read Article →</a>
+            </div>
+          </article>
+        </div>
+        <div class="blog-cta">
+          <a href="blog.html" class="btn btn-secondary">View All Guides →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BAND -->
+    <section class="cta-band">
+      <div class="container">
+        <h2>Ready to plan your Morocco trip?</h2>
+        <p>Tell us your dates or dream itinerary — we'll craft a private route and reply within 2 hours.</p>
+        <div class="cta-actions">
+          <a href="plan-my-trip.html" class="btn btn-primary">Plan My Trip</a>
+          <a class="btn btn-ghost-white" href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <strong>Abrid Morocco</strong>
+            <span>Morocco travel platform</span>
+          </div>
+          <p class="footer-about">A Morocco travel platform built by people who know Morocco. Sahara, Atlas, Imperial Cities — private guides and characterful stays since 2022.</p>
+          <a href="plan-my-trip.html" class="footer-contact-btn">Plan My Trip</a>
+          <div class="footer-socials">
+            <a href="https://wa.me/212762934488" target="_blank" rel="noopener" class="wa">WhatsApp</a>
+            <a href="https://www.instagram.com/abridmorocco/" target="_blank" rel="noopener" class="ig">Instagram</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="footer-links">
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="experiences.html">Experiences</a></li>
+            <li><a href="blog.html">Morocco Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul class="footer-links">
+            <li><a href="destination-marrakech.html">Marrakech</a></li>
+            <li><a href="destination-fes.html">Fes</a></li>
+            <li><a href="destination-chefchaouen.html">Chefchaouen</a></li>
+            <li><a href="destination-essaouira.html">Essaouira</a></li>
+            <li><a href="destination-sahara.html">Sahara Desert</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Abrid</a></li>
+            <li><a href="plan-my-trip.html">Plan My Trip</a></li>
+            <li><a href="booking-guide.html">How Booking Works</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+            <li><a href="mailto:abridmorocco@gmail.com">abridmorocco@gmail.com</a></li>
+            <li><a href="https://wa.me/212762934488" target="_blank" rel="noopener">Abdellah · +212 762 934 488</a></li>
+            <li><a href="https://wa.me/212609282538" target="_blank" rel="noopener">Karim · +212 609 282 538</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© <span id="year"></span> Abrid Morocco. All rights reserved.</div>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <a href="terms.html">Terms</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="cookies.html">Cookies</a>
+          <span>|</span>
+          <span>Made in Morocco</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Abrid on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 .1-.2-.2-1-1.1-1.7-1.8-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.4-.5-.5-.5h-.5c-.2 0-.5 0-.7.1-.2.2-.9.9-.9 2.2 0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.2-.2-.3-.4-.4zM12 21.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.8-1.4-1.3-3-1.3-4.7C3.4 8.6 7.2 4.8 12 4.8c4.8 0 8.6 3.8 8.6 8.5 0 4.8-3.8 8-8.6 8zM12 2.8C6.2 2.8 1.4 7.6 1.4 13.4c0 1.9.5 3.7 1.4 5.3L1.3 22l3.4-.9c1.5.9 3.3 1.4 5.2 1.4 5.8 0 10.6-4.8 10.6-10.6S17.8 2.8 12 2.8z"/></svg>
+  </a>
+
+  <!-- Search overlay -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-panel">
+      <div class="search-input-row">
+        <input type="search" id="searchInput" placeholder="Search trips, destinations, guides…" aria-label="Search">
+        <button class="search-close" id="searchClose" type="button">Close</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="search-data.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>
