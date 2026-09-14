@@ -1950,3 +1950,19 @@ background: var(--color-primary);
   transition: transform var(--t), box-shadow var(--t); }
 .dest-related a:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 @media (max-width: 880px) { .dest-hero { padding: 48px 0 28px; } .dest-cta .btn + .btn { margin-left: 0; margin-top: 10px; } }
+
+/* -- Logo floating loop animation -- */
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.brand-logo img {
+  animation: logo-float 3s ease-in-out infinite;
+  will-change: transform;
+}
+.brand:hover .brand-logo img {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-logo img { animation: none; }
+}
