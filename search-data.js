@@ -8,6 +8,7 @@ window.ABRID_SEARCH = [
   { t: "Classic Morocco — The Grand Tour", c: "Trip", u: "classic-morocco.html", d: "13 days · Imperial cities, Sahara & Chefchaouen. Private guide & A/C vehicle." },
   { t: "Merzouga Desert Adventure", c: "Trip", u: "merzouga.html", d: "3 days · Sahara camp & camel trek. Transport Marrakech ↔ Merzouga." },
   { t: "Imilchil, Lakes & Summit", c: "Trip", u: "imilchil.html", d: "3 days · High Atlas adventure. Amazigh culture, mountain villages." },
+  { t: "Across the High Atlas: Azilal to Rich", c: "Trip", u: "high-atlas-azilal-imilchil-rich.html", d: "5 days · Signature journey via Imilchil, lakes Isli & Tislit, Agoudal, Amouguer and Rich. Private driver & local guides." },
   { t: "Imperial Cities Circuit", c: "Trip", u: "imperial.html", d: "8 days · Fez, Marrakech, Rabat. History, medinas & monuments." },
   { t: "Marrakech Day Tour", c: "Trip", u: "marrakech.html", d: "1 day · Souks, palaces & gardens. City highlights and photography." },
   { t: "Atlas Mountains & Ourika Valley Day Trip", c: "Trip", u: "atlas.html", d: "1 day · Private 4x4, waterfalls, Berber lunch." },

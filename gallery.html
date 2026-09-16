@@ -95,8 +95,6 @@
     .google-form-btn:hover { background: var(--terracotta-dark); transform: translateY(-3px); box-shadow: 0 12px 30px rgba(228,0,43,.4); }
     .wa-float { position: fixed; bottom: 24px; right: 24px; background: #25D366; color: #fff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2rem; box-shadow: 0 8px 28px rgba(37,211,102,.4); z-index: 50; transition: var(--transition); }
     .wa-float:hover { transform: scale(1.1) rotate(-5deg); }
-    .lang-notification { position:fixed; bottom:100px; left:50%; transform:translateX(-50%); background:var(--charcoal); color:#fff; padding:12px 28px; border-radius:60px; font-weight:600; box-shadow:0 8px 30px rgba(0,0,0,.2); z-index:1000; animation:fadeInUp .4s ease; }
-    @keyframes fadeInUp { from { opacity:0; transform:translateX(-50%) translateY(20px); } to { opacity:1; transform:translateX(-50%) translateY(0); } }
     @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); } .page-hero { padding: 72px 0 40px; } }
   
 @media (max-width:860px) {
@@ -269,15 +267,15 @@ footer .footer-bottom {
 <body>
 
   <div class="scroll-progress" id="scrollProgress"></div>
-  <div class="promo-banner">SUMMER 2026 EXCLUSIVE: <span>Luxury &amp; Sustainable Routes</span> — Book Your Bespoke Authentic Journey Today!</div>
+  <div class="promo-banner">Planning a 2026 trip? Send your dates and ideas — we reply within 2 hours, 9:00–21:00 Morocco time.</div>
 
     <!-- ── HEADER ── -->
   <header class="site-header" id="siteHeader">
     <div class="container nav">
       <!-- Brand (left) -->
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" aria-label="Abrid Morocco home">
         <div class="brand-logo">
-          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo">
+          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async">
         </div>
         <div class="brand-text">
           <strong>Abrid Morocco</strong>
@@ -299,13 +297,17 @@ footer .footer-bottom {
     </ul>
   </li>
   <li><a href="trips.html">Trips</a></li>
+  <li><a href="about.html">About</a></li>
 </ul>
 
       <!-- Right Side: Contact + Book Now + Language + Menu -->
       <div class="nav-actions">
+  <button class="search-toggle" id="searchOpen" aria-label="Search Abrid Morocco" type="button">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
   <a class="nav-wa" href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="Chat with Abrid Morocco on WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.83 14.1c-.25.7-1.45 1.33-2 1.38-.51.05-1.03.22-3.45-.72-2.93-1.12-4.78-4.03-4.92-4.22-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.51.25.59.84 2.04.91 2.19.07.15.12.33.02.53-.09.2-.14.33-.27.51-.14.17-.29.39-.41.52-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.95 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.51.31.07.12.07.67-.18 1.34z"/></svg></a>
   <a class="btn btn-primary btn-sm" href="plan-my-trip.html">Plan My Trip</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
           <span></span><span></span><span></span>
         </button>
 </div>
@@ -314,6 +316,7 @@ footer .footer-bottom {
     <!-- Mobile Menu -->
     <div class="container mobile-menu" id="mobileMenu">
       <div class="mobile-panel">
+  <a href="#" class="mobile-search-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="vertical-align:-3px;margin-right:10px;"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Search</a>
   <a href="index.html">Home</a>
   <a href="destinations.html">Destinations</a>
   <a href="experiences.html">Experiences</a>
@@ -338,124 +341,124 @@ footer .footer-bottom {
     <div class="gallery-grid">
       <!-- Existing Images -->
       <div class="gallery-item" data-full="https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg?auto=compress&cs=tinysrgb&w=1600">
-        <img src="https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Morocco landscape" loading="lazy">
+        <img src="https://images.pexels.com/photos/943510/pexels-photo-943510.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Morocco landscape" loading="lazy" decoding="async">
         <div class="gallery-caption">Morocco landscape</div>
       </div>
       <div class="gallery-item" data-full="https://images.pexels.com/photos/36202828/pexels-photo-36202828.jpeg?auto=compress&cs=tinysrgb&w=1600">
-        <img src="https://images.pexels.com/photos/36202828/pexels-photo-36202828.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech spice market" loading="lazy">
+        <img src="https://images.pexels.com/photos/36202828/pexels-photo-36202828.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech spice market" loading="lazy" decoding="async">
         <div class="gallery-caption">Marrakech spice market</div>
       </div>
       <div class="gallery-item" data-full="https://images.pexels.com/photos/36202816/pexels-photo-36202816.jpeg?auto=compress&cs=tinysrgb&w=1600">
-        <img src="https://images.pexels.com/photos/36202816/pexels-photo-36202816.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech market" loading="lazy">
+        <img src="https://images.pexels.com/photos/36202816/pexels-photo-36202816.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Marrakech market" loading="lazy" decoding="async">
         <div class="gallery-caption">Marrakech market</div>
       </div>
       <div class="gallery-item" data-full="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=1600&auto=format&fit=crop">
-        <img src="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=600&auto=format&fit=crop" alt="Essaouira coast" loading="lazy">
+        <img src="https://plus.unsplash.com/premium_photo-1699528390448-8eb13f9e3e58?w=600&auto=format&fit=crop" alt="Essaouira coast" loading="lazy" decoding="async">
         <div class="gallery-caption">Essaouira coast</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="Fez architecture" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="Fez architecture" loading="lazy" decoding="async">
         <div class="gallery-caption">Fez details</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=600&auto=format&fit=crop" alt="Fez medina" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1730759214231-d19aa817cba6?w=600&auto=format&fit=crop" alt="Fez medina" loading="lazy" decoding="async">
         <div class="gallery-caption">Fez medina</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara desert" loading="lazy" decoding="async">
         <div class="gallery-caption">Sahara desert</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=600&auto=format&fit=crop" alt="Chefchaouen blue city" loading="lazy" decoding="async">
         <div class="gallery-caption">Chefchaouen blue city</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech souks" loading="lazy" decoding="async">
         <div class="gallery-caption">Marrakech souks</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop" alt="Imperial city architecture" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop" alt="Imperial city architecture" loading="lazy" decoding="async">
         <div class="gallery-caption">Imperial city architecture</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy" decoding="async">
         <div class="gallery-caption">Chefchaouen blue streets</div>
       </div>
       <div class="gallery-item" data-full="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1600&auto=format&fit=crop">
-        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="Morocco desert dunes" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop" alt="Morocco desert dunes" loading="lazy" decoding="async">
         <div class="gallery-caption">Morocco desert dunes</div>
       </div>
 
       <!-- NEW IMAGES ADDED HERE -->
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/3b/c0/f1/3bc0f17d8773a2fe7920bde33f9fde2f.jpg">
-        <img src="https://i.pinimg.com/736x/3b/c0/f1/3bc0f17d8773a2fe7920bde33f9fde2f.jpg" alt="Morocco desert camp at night" loading="lazy">
+        <img src="https://i.pinimg.com/736x/3b/c0/f1/3bc0f17d8773a2fe7920bde33f9fde2f.jpg" alt="Morocco desert camp at night" loading="lazy" decoding="async">
         <div class="gallery-caption">Desert camp under stars</div>
       </div>
 
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/a5/85/0d/a5850dae80e7ee24f7b644d52f22f75f.jpg">
-        <img src="https://i.pinimg.com/736x/a5/85/0d/a5850dae80e7ee24f7b644d52f22f75f.jpg" alt="Moroccan desert landscape" loading="lazy">
+        <img src="https://i.pinimg.com/736x/a5/85/0d/a5850dae80e7ee24f7b644d52f22f75f.jpg" alt="Moroccan desert landscape" loading="lazy" decoding="async">
         <div class="gallery-caption">Golden Sahara dunes</div>
       </div>
 
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/9c/9c/99/9c9c99026bdc6a92ab8ea6f31ed1af8a.jpg">
-        <img src="https://i.pinimg.com/736x/9c/9c/99/9c9c99026bdc6a92ab8ea6f31ed1af8a.jpg" alt="Moroccan architecture details" loading="lazy">
+        <img src="https://i.pinimg.com/736x/9c/9c/99/9c9c99026bdc6a92ab8ea6f31ed1af8a.jpg" alt="Moroccan architecture details" loading="lazy" decoding="async">
         <div class="gallery-caption">Moroccan architecture details</div>
       </div>
 
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/6b/d0/a6/6bd0a61be54c634b67467ef8f54cd4ce.jpg">
-        <img src="https://i.pinimg.com/736x/6b/d0/a6/6bd0a61be54c634b67467ef8f54cd4ce.jpg" alt="Marrakech street life" loading="lazy">
+        <img src="https://i.pinimg.com/736x/6b/d0/a6/6bd0a61be54c634b67467ef8f54cd4ce.jpg" alt="Marrakech street life" loading="lazy" decoding="async">
         <div class="gallery-caption">Marrakech street life</div>
       </div>
 
       <div class="gallery-item" data-full="https://i.pinimg.com/736x/53/15/fe/5315febbebdc73ee8c975c2450a31360.jpg">
-        <img src="https://i.pinimg.com/736x/53/15/fe/5315febbebdc73ee8c975c2450a31360.jpg" alt="Moroccan sunset view" loading="lazy">
+        <img src="https://i.pinimg.com/736x/53/15/fe/5315febbebdc73ee8c975c2450a31360.jpg" alt="Moroccan sunset view" loading="lazy" decoding="async">
         <div class="gallery-caption">Moroccan sunset view</div>
       </div>
 
       <div class="gallery-item" data-full="https://i.pinimg.com/1200x/99/cd/59/99cd59ce85d4d762f3c563e4394bff1c.jpg">
-        <img src="https://i.pinimg.com/1200x/99/cd/59/99cd59ce85d4d762f3c563e4394bff1c.jpg" alt="Moroccan desert landscape" loading="lazy">
+        <img src="https://i.pinimg.com/1200x/99/cd/59/99cd59ce85d4d762f3c563e4394bff1c.jpg" alt="Moroccan desert landscape" loading="lazy" decoding="async">
         <div class="gallery-caption">Sahara desert landscape</div>
       </div>
 
       <!-- Featured Hot Air Balloon Images -->
       <div class="gallery-item" data-full="https://i.ibb.co/d4yhHZgY/1788783065925.jpg">
-        <img src="https://i.ibb.co/d4yhHZgY/1788783065925.jpg" alt="Couple enjoying a hot air balloon ride over Morocco" loading="lazy">
+        <img src="https://i.ibb.co/d4yhHZgY/1788783065925.jpg" alt="Couple enjoying a hot air balloon ride over Morocco" loading="lazy" decoding="async">
         <div class="gallery-caption">A Balloon Ride for Two</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/GvDfrT8p/1788783065930.jpg">
-        <img src="https://i.ibb.co/GvDfrT8p/1788783065930.jpg" alt="Traveler looking across the Moroccan landscape from a balloon" loading="lazy">
+        <img src="https://i.ibb.co/GvDfrT8p/1788783065930.jpg" alt="Traveler looking across the Moroccan landscape from a balloon" loading="lazy" decoding="async">
         <div class="gallery-caption">A Quiet Moment Above Morocco</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/KcZnGp78/1788783065934.jpg">
-        <img src="https://i.ibb.co/KcZnGp78/1788783065934.jpg" alt="Red hot air balloon rising at dawn" loading="lazy">
+        <img src="https://i.ibb.co/KcZnGp78/1788783065934.jpg" alt="Red hot air balloon rising at dawn" loading="lazy" decoding="async">
         <div class="gallery-caption">The Red Balloon at Dawn</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/vCNdkcSt/1788783065938.jpg">
-        <img src="https://i.ibb.co/vCNdkcSt/1788783065938.jpg" alt="Hot air balloon burner glowing before takeoff" loading="lazy">
+        <img src="https://i.ibb.co/vCNdkcSt/1788783065938.jpg" alt="Hot air balloon burner glowing before takeoff" loading="lazy" decoding="async">
         <div class="gallery-caption">Inside the Balloon Burner</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/V0mJzpH5/1788783065941.jpg">
-        <img src="https://i.ibb.co/V0mJzpH5/1788783065941.jpg" alt="Travelers celebrating during a hot air balloon flight" loading="lazy">
+        <img src="https://i.ibb.co/V0mJzpH5/1788783065941.jpg" alt="Travelers celebrating during a hot air balloon flight" loading="lazy" decoding="async">
         <div class="gallery-caption">Travelers in the Sky</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/Ld9q1FsR/1788783065946.jpg">
-        <img src="https://i.ibb.co/Ld9q1FsR/1788783065946.jpg" alt="Morocco seen from a hot air balloon over the desert" loading="lazy">
+        <img src="https://i.ibb.co/Ld9q1FsR/1788783065946.jpg" alt="Morocco seen from a hot air balloon over the desert" loading="lazy" decoding="async">
         <div class="gallery-caption">Morocco from the Sky</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/RTkfM7Yx/1788783065952.jpg">
-        <img src="https://i.ibb.co/RTkfM7Yx/1788783065952.jpg" alt="Aerial view from a hot air balloon above the desert" loading="lazy">
+        <img src="https://i.ibb.co/RTkfM7Yx/1788783065952.jpg" alt="Aerial view from a hot air balloon above the desert" loading="lazy" decoding="async">
         <div class="gallery-caption">A View Above the Clouds</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/wh5dF7K3/1788783065955.jpg">
-        <img src="https://i.ibb.co/wh5dF7K3/1788783065955.jpg" alt="Traveler looking down at the Moroccan landscape" loading="lazy">
+        <img src="https://i.ibb.co/wh5dF7K3/1788783065955.jpg" alt="Traveler looking down at the Moroccan landscape" loading="lazy" decoding="async">
         <div class="gallery-caption">Watching the Landscape Below</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/NnC64TkF/1788783065958.jpg">
-        <img src="https://i.ibb.co/NnC64TkF/1788783065958.jpg" alt="Traveler enjoying a panoramic balloon flight" loading="lazy">
+        <img src="https://i.ibb.co/NnC64TkF/1788783065958.jpg" alt="Traveler enjoying a panoramic balloon flight" loading="lazy" decoding="async">
         <div class="gallery-caption">A Panoramic Balloon Flight</div>
       </div>
       <div class="gallery-item" data-full="https://i.ibb.co/whbFFJ5D/1788783065964.jpg">
-        <img src="https://i.ibb.co/whbFFJ5D/1788783065964.jpg" alt="Hot air balloon basket and burner in the morning light" loading="lazy">
+        <img src="https://i.ibb.co/whbFFJ5D/1788783065964.jpg" alt="Hot air balloon basket and burner in the morning light" loading="lazy" decoding="async">
         <div class="gallery-caption">Preparing for Takeoff</div>
       </div>
 
@@ -491,15 +494,15 @@ footer .footer-bottom {
         <div class="gallery-caption">A Magical Balloon Ride Over Morocco</div>
       </div>
       <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069423.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot Air Balloon Over the Moroccan Landscape" loading="lazy">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069423.jpg" alt="Hot Air Balloon Over the Moroccan Landscape" loading="lazy" decoding="async">
         <div class="gallery-caption">Hot Air Balloon Over the Moroccan Landscape</div>
       </div>
       <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069419.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069419.jpg" alt="Marrakech Balloon Adventure at Sunrise" loading="lazy">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069419.jpg" alt="Marrakech Balloon Adventure at Sunrise" loading="lazy" decoding="async">
         <div class="gallery-caption">Marrakech Balloon Adventure at Sunrise</div>
       </div>
       <div class="gallery-item" data-full="https://ik.imagekit.io/4q2losd27z/1000069422.jpg">
-        <img src="https://ik.imagekit.io/4q2losd27z/1000069422.jpg" alt="A Memorable Hot Air Balloon Experience" loading="lazy">
+        <img src="https://ik.imagekit.io/4q2losd27z/1000069422.jpg" alt="A Memorable Hot Air Balloon Experience" loading="lazy" decoding="async">
         <div class="gallery-caption">A Memorable Hot Air Balloon Experience</div>
       </div>
     </div>
@@ -578,10 +581,12 @@ footer .footer-bottom {
     </div>
   </footer>
 
-  <a href="https://wa.me/212762934488" class="wa-float" target="_blank">💬</a>
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Abrid on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 .1-.2-.2-1-1.1-1.7-1.8-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.4-.5-.5-.5h-.5c-.2 0-.5 0-.7.1-.2.2-.9.9-.9 2.2 0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.2-.2-.3-.4-.4zM12 21.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.8-1.4-1.3-3-1.3-4.7C3.4 8.6 7.2 4.8 12 4.8c4.8 0 8.6 3.8 8.6 8.5 0 4.8-3.8 8-8.6 8zM12 2.8C6.2 2.8 1.4 7.6 1.4 13.4c0 1.9.5 3.7 1.4 5.3L1.3 22l3.4-.9c1.5.9 3.3 1.4 5.2 1.4 5.8 0 10.6-4.8 10.6-10.6S17.8 2.8 12 2.8z"/></svg>
+  </a>
 
   <div class="lightbox" id="lightbox">
-    <button class="lightbox-close" id="lightboxClose">×</button>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image viewer">×</button>
     <img id="lightboxImg" src="" alt="">
     <video id="lightboxVideo" controls playsinline preload="auto"></video>
     <a id="lightboxVideoFallback" class="lightbox-video-fallback" href="#" target="_blank" rel="noopener">Open video directly</a>
@@ -589,48 +594,6 @@ footer .footer-bottom {
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    let langDropdownOpen = false;
-    function toggleLangDropdown() {
-      const dropdown = document.getElementById('langDropdown');
-      const toggle = document.getElementById('langToggle');
-      langDropdownOpen = !langDropdownOpen;
-      dropdown.classList.toggle('show', langDropdownOpen);
-      toggle.classList.toggle('open', langDropdownOpen);
-    }
-    function switchLanguage(lang) {
-      const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
-      document.getElementById('currentLangLabel').textContent = langNames[lang] || lang.toUpperCase();
-      document.getElementById('langDropdown').classList.remove('show');
-      document.getElementById('langToggle').classList.remove('open');
-      langDropdownOpen = false;
-      localStorage.setItem('preferredLanguage', lang);
-      showNotification('🌍 Switching to ' + langNames[lang] + '...');
-    }
-    function showNotification(message) {
-      const existing = document.querySelector('.lang-notification');
-      if (existing) existing.remove();
-      const notif = document.createElement('div');
-      notif.className = 'lang-notification';
-      notif.textContent = message;
-      document.body.appendChild(notif);
-      setTimeout(() => { notif.style.opacity = '0'; notif.style.transition = 'opacity .4s ease'; setTimeout(() => notif.remove(), 400); }, 2000);
-    }
-    document.addEventListener('DOMContentLoaded', function() {
-      const savedLang = localStorage.getItem('preferredLanguage');
-      if (savedLang) {
-        const langNames = { 'en':'EN','fr':'FR','es':'ES','de':'DE','it':'IT','pt':'PT','ru':'RU','ja':'JA','ar':'AR' };
-        document.getElementById('currentLangLabel').textContent = langNames[savedLang] || 'EN';
-      }
-      document.addEventListener('click', function(event) {
-        const wrapper = document.querySelector('.lang-wrapper');
-        if (wrapper && !wrapper.contains(event.target)) {
-          document.getElementById('langDropdown').classList.remove('show');
-          document.getElementById('langToggle').classList.remove('open');
-          langDropdownOpen = false;
-        }
-      });
-    });
 
     const menuToggle = document.getElementById('menuToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -696,6 +659,18 @@ footer .footer-bottom {
 
   
   
+  <!-- Search overlay -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="search-panel">
+      <div class="search-input-row">
+        <input type="search" id="searchInput" placeholder="Search trips, destinations, guides…" aria-label="Search">
+        <button class="search-close" id="searchClose" type="button">Close</button>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <script src="search-data.js"></script>
   <script src="site.js"></script>
   </body>
 </html>

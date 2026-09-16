@@ -42,8 +42,8 @@
   • Update the Article JSON-LD: headline, datePublished, image.
   -->
 
-  <title><!-- TODO: Article Title | Abrid Morocco --></title>
-  <meta name="description" content="<!-- TODO: 140-160 char meta description that includes the main keyword -->" />
+  <title>Article Template | Abrid Morocco</title>
+  <meta name="description" content="Template for Abrid Morocco travel guides. Replace with the article summary before publishing." />
   <meta name="robots" content="noindex, nofollow" />
 
   <!-- Canonical (MAKE SURE this matches the final page URL) -->
@@ -52,21 +52,21 @@
   <!-- Open Graph -->
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Abrid Morocco" />
-  <meta property="og:title" content="<!-- TODO: Article Title -->" />
-  <meta property="og:description" content="<!-- TODO: same as meta description -->" />
+  <meta property="og:title" content="Article Template | Abrid Morocco" />
+  <meta property="og:description" content="Template for Abrid Morocco travel guides." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop" />
   <meta property="og:url" content="https://www.abridmorocco.com/guide-my-article.html" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<!-- TODO: Article Title -->" />
-  <meta name="twitter:description" content="<!-- TODO: same as meta description -->" />
+  <meta name="twitter:title" content="Article Template | Abrid Morocco" />
+  <meta name="twitter:description" content="Template for Abrid Morocco travel guides." />
 
   <!-- Article Schema (refresh datePublished / image / headline each article) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "<!-- TODO: Article Title -->",
-    "description": "<!-- TODO: meta description -->",
+    "headline": "Article Template",
+    "description": "Template for Abrid Morocco travel guides.",
     "image": "https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop",
     "author": {"@type": "Person", "name": "Abdellah"},
     "publisher": {"@type": "Organization", "name": "Abrid Morocco", "logo": {"@type": "ImageObject", "url": ""}},
@@ -101,9 +101,9 @@
   <!-- Header (keep identical on every page for consistency) -->
   <header class="site-header" id="siteHeader">
     <div class="container nav">
-      <a href="index.html" class="brand">
+      <a href="index.html" class="brand" aria-label="Abrid Morocco home">
         <div class="brand-logo">
-          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo">
+          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async">
         </div>
         <div class="brand-text">
           <strong>Abrid Morocco</strong>
@@ -123,6 +123,7 @@
     </ul>
   </li>
   <li><a href="trips.html">Trips</a></li>
+  <li><a href="about.html">About</a></li>
 </ul>
 <div class="nav-actions">
   <button class="search-toggle" id="searchOpen" aria-label="Search Abrid Morocco" type="button">
@@ -175,7 +176,7 @@
 
     <div class="container">
       <figure class="hero-image-wrap">
-        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop" alt="<!-- TODO: alt text describing the image -->" />
+        <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=1200&auto=format&fit=crop" alt="<!-- TODO: alt text describing the image -- fetchpriority="high" decoding="async">" />
         <figcaption><!-- TODO: Optional image caption --></figcaption>
       </figure>
     </div>

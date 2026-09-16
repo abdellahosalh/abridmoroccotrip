@@ -81,6 +81,29 @@
     @media (min-width: 620px) {
       .hero-actions .btn-primary { min-width: 220px; }
     }
+    /* Google reviews band above the footer — vertical auto-scrolling review cards */
+    .reviews-band{background:var(--bg-alt,#f6f2ec);border-top:1px solid var(--line-2);padding:56px 0;margin-top:10px;}
+    .reviews-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;}
+    @media (max-width:860px){.reviews-grid{grid-template-columns:1fr;}}
+    .g-wordmark{font-family:var(--font-ui);font-weight:700;font-size:1.6rem;letter-spacing:-.5px;}
+    .g-stars{color:#FBBC04;font-size:1.3rem;letter-spacing:4px;margin:10px 0 6px;}
+    .reviews-band h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);margin:8px 0 10px;color:var(--text);}
+    .reviews-band .lede{color:var(--text-2);margin-bottom:20px;max-width:44ch;}
+    .vmarquee{height:360px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);}
+    @media (max-width:640px){.vmarquee{height:300px;}}
+    .vmarquee-track{display:flex;flex-direction:column;gap:14px;}
+    .vmarquee-track.scroll{animation:vscroll 26s linear infinite;}
+    .vmarquee:hover .vmarquee-track.scroll{animation-play-state:paused;}
+    @keyframes vscroll{to{transform:translateY(-50%);}}
+    @media (prefers-reduced-motion:reduce){.vmarquee-track.scroll{animation:none;}}
+    .g-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow);}
+    .g-card .g-stars{font-size:.95rem;margin:0 0 8px;letter-spacing:2px;}
+    .g-card .quote{color:var(--text-2);font-size:.93rem;line-height:1.65;margin:0 0 12px;}
+    .g-card .who{display:flex;align-items:center;gap:10px;}
+    .g-card .avatar{width:34px;height:34px;border-radius:50%;background:var(--terracotta);color:#fff;font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-ui);}
+    .g-card .who strong{display:block;font-size:.9rem;}
+    .g-card .who span{font-size:.78rem;color:var(--text-muted);}
+    .g-card.cta-card{text-align:center;border-style:dashed;}
   </style>
 </head>
 <body>
@@ -92,7 +115,7 @@
     <div class="container nav">
       <a href="index.html" class="brand" aria-label="Abrid Morocco home">
         <div class="brand-logo">
-          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo">
+          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async">
         </div>
         <div class="brand-text">
           <strong>Abrid Morocco</strong>
@@ -112,6 +135,7 @@
     </ul>
   </li>
   <li><a href="trips.html">Trips</a></li>
+  <li><a href="about.html">About</a></li>
 </ul>
       <div class="nav-actions">
   <button class="search-toggle" id="searchOpen" aria-label="Search Abrid Morocco" type="button">
@@ -146,20 +170,20 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow">Private Morocco tours since 2022</span>
-          <h1>Discover Morocco <span class="highlight">beyond the ordinary</span></h1>
-          <p>Local knowledge, authentic experiences and journeys designed around the way you want to travel. Led by Abdellah, a Berber guide from the High Atlas, with Karim and the team of Moroccan drivers and guides.</p>
+          <h1>Discover Morocco. Experience It <span class="highlight">Exceptionally.</span></h1>
+          <p>Thoughtfully planned journeys, authentic local experiences, and trusted advice from people who know Morocco.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="destinations.html">Explore Morocco</a>
             <a class="btn btn-secondary" href="plan-my-trip.html">Plan My Trip</a>
           </div>
           <div class="hero-badges">
-            <span class="badge">4.9/5 · 500+ travelers</span>
+            <span class="badge">Private trips · Local guides</span>
             <span class="badge">Pay cash on tour day</span>
           </div>
         </div>
         <div class="hero-visual">
           <div class="hero-main">
-            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&auto=format&fit=crop" alt="Blue-washed streets of Chefchaouen, Morocco" fetchpriority="high">
+            <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&auto=format&fit=crop" alt="Blue-washed streets of Chefchaouen, Morocco" fetchpriority="high" decoding="async">
           </div>
         </div>
       </div>
@@ -183,8 +207,8 @@
       <!-- Stats -->
       <div class="container">
         <div class="trust-grid">
-          <div class="trust-item"><strong>500+</strong><span>Happy Travelers</span></div>
-          <div class="trust-item"><strong>4.9★</strong><span>Average Rating</span></div>
+          <div class="trust-item"><strong>Private</strong><span>Driver-guides</span></div>
+          <div class="trust-item"><strong>Berber</strong><span>Local founders</span></div>
           <div class="trust-item"><strong>15+</strong><span>Destinations</span></div>
           <div class="trust-item"><strong>2022</strong><span>Founded in Morocco</span></div>
         </div>
@@ -201,7 +225,7 @@
         </div>
         <div class="tour-grid">
           <article class="tour-card">
-            <div class="tour-image"><div class="badge-trend">Best Seller</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Erg Chebbi dunes near Merzouga, Sahara desert" loading="lazy"><span class="pill">3 days</span></div>
+            <div class="tour-image"><div class="badge-trend">Best Seller</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Erg Chebbi dunes near Merzouga, Sahara desert" loading="lazy" decoding="async"><span class="pill">3 days</span></div>
             <div class="tour-body">
               <div class="tour-top"><div><h3>Merzouga Desert Adventure</h3><div class="subtle">Sahara camp &amp; camel trek</div></div><div class="price">Quote on request</div></div>
               <div class="inclusions">
@@ -215,7 +239,7 @@
           </article>
 
           <article class="tour-card">
-            <div class="tour-image"><div class="badge-trend">Signature</div><img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="The medieval medina of Fes, Morocco" loading="lazy"><span class="pill">13 days</span></div>
+            <div class="tour-image"><div class="badge-trend">Signature</div><img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="The medieval medina of Fes, Morocco" loading="lazy" decoding="async"><span class="pill">13 days</span></div>
             <div class="tour-body">
               <div class="tour-top"><div><h3>Classic Morocco — The Grand Tour</h3><div class="subtle">Imperial cities, Sahara &amp; Chefchaouen</div></div><div class="price">Quote on request</div></div>
               <div class="inclusions">
@@ -229,7 +253,7 @@
           </article>
 
           <article class="tour-card">
-            <div class="tour-image"><div class="badge-trend">Atlas</div><img src="https://i.postimg.cc/J7YS1PXF/images.jpg" alt="High Atlas mountain landscape near Imlil" loading="lazy"><span class="pill">3 days</span></div>
+            <div class="tour-image"><div class="badge-trend">Atlas</div><img src="https://i.postimg.cc/J7YS1PXF/images.jpg" alt="High Atlas mountain landscape near Imlil" loading="lazy" decoding="async"><span class="pill">3 days</span></div>
             <div class="tour-body">
               <div class="tour-top"><div><h3>Imilchil, Lakes &amp; Summit</h3><div class="subtle">High Atlas adventure</div></div><div class="price">Quote on request</div></div>
               <div class="inclusions">
@@ -274,25 +298,25 @@
         </div>
         <div class="dest-grid">
           <a class="dest-card" href="destination-marrakech.html">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech medina rooftops" loading="lazy"></div>
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Marrakech medina rooftops" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <h3>Marrakech</h3>
               <div class="card-sub">The Red City</div>
-              <div class="card-desc">Palaces, souks, gardens and Jemaa el-Fna — Morocco's most vibrant medina.</div>
+              <div class="card-desc">Palaces, souks, gardens and Jemaa el-Fnaa.</div>
               <span class="card-link">Discover Marrakech</span>
             </div>
           </a>
           <a class="dest-card" href="destination-chefchaouen.html">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Blue lane in Chefchaouen" loading="lazy"></div>
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Blue lane in Chefchaouen" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <h3>Chefchaouen</h3>
               <div class="card-sub">The Blue Pearl</div>
-              <div class="card-desc">Blue-washed lanes beneath the Rif Mountains — Morocco's most photographed town.</div>
+              <div class="card-desc">Blue-washed lanes beneath the Rif Mountains.</div>
               <span class="card-link">Discover Chefchaouen</span>
             </div>
           </a>
           <a class="dest-card" href="destination-sahara.html">
-            <div class="card-media"><img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sand dunes of Erg Chebbi" loading="lazy"></div>
+            <div class="card-media"><img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Sand dunes of Erg Chebbi" loading="lazy" decoding="async"></div>
             <div class="card-body">
               <h3>The Sahara Desert</h3>
               <div class="card-sub">Erg Chebbi Dunes</div>
@@ -383,7 +407,7 @@
         </div>
         <div class="guide-grid">
           <article class="guide-card">
-            <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Chefchaouen blue streets" loading="lazy" decoding="async">
             <div class="guide-body">
               <div class="guide-meta"><span class="tag">Destinations</span></div>
               <h3>Chefchaouen Blue City Guide 2026</h3>
@@ -393,7 +417,7 @@
             </div>
           </article>
           <article class="guide-card">
-            <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara dunes" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Sahara dunes" loading="lazy" decoding="async">
             <div class="guide-body">
               <div class="guide-meta"><span class="tag">Desert</span></div>
               <h3>The Complete Guide to the Sahara Desert</h3>
@@ -403,7 +427,7 @@
             </div>
           </article>
           <article class="guide-card">
-            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving a road through Morocco" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Driving a road through Morocco" loading="lazy" decoding="async">
             <div class="guide-body">
               <div class="guide-meta"><span class="tag">Travel Tips</span></div>
               <h3>Driving in Morocco: Safety Guide</h3>
@@ -422,7 +446,7 @@
     <!-- CTA BAND -->
     <section class="cta-band">
       <div class="container">
-        <h2>Ready to plan your Morocco trip?</h2>
+        <h2>Not sure what fits? Ask us — no pressure.</h2>
         <p>Tell us your dates or dream itinerary — we'll craft a private route and reply within 2 hours.</p>
         <div class="cta-actions">
           <a href="plan-my-trip.html" class="btn btn-primary">Plan My Trip</a>
@@ -433,6 +457,24 @@
 
   </main>
 
+  <!-- ══════════ GOOGLE REVIEWS (above footer) ══════════ -->
+  <section class="reviews-band" aria-label="Google reviews">
+    <div class="container reviews-grid">
+      <div>
+        <div class="g-wordmark" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> <span style="color:var(--text-muted);font-weight:500;font-size:1.05rem;">Reviews</span></div>
+        <h2>Travellers rate Abrid Morocco on Google</h2>
+        <div class="g-stars" aria-label="Five star rating">★★★★★</div>
+        <p class="lede">Every review helps other travellers find Morocco. Travelled with us — by message, by road, or both? Leave your words on our Google profile.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Read our Google reviews</a>
+          <a class="btn btn-secondary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Leave a review</a>
+        </div>
+      </div>
+      <div class="vmarquee" aria-live="off">
+        <div class="vmarquee-track" id="googleReviewsTrack"></div>
+      </div>
+    </div>
+  </section>
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container">
@@ -509,6 +551,40 @@
     </div>
   </div>
 
+  <script>
+  /* ── Google reviews vertical marquee ─────────────────────────────
+     HOW TO ADD REAL REVIEWS: copy a review from your Google profile
+     (https://share.google/rGJNXf1UR3iOWAgqn) and add one line per
+     review below, keeping the exact format:
+       { name: "Sara M.", text: "The exact words of the review.", when: "2 weeks ago" },
+     Only ever paste genuine reviews. When the list is empty, an honest
+     invitation card is shown instead — never placeholder quotes. */
+  var GOOGLE_REVIEWS = [
+  ];
+  (function () {
+    var track = document.getElementById("googleReviewsTrack");
+    if (!track) return;
+    function esc(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+    function card(r) {
+      var initial = esc((r.name || "?").trim().charAt(0).toUpperCase());
+      return '<article class="g-card"><div class="g-stars" aria-label="Five star review">★★★★★</div>' +
+        '<p class="quote">' + esc(r.text) + "</p>" +
+        '<div class="who"><span class="avatar" aria-hidden="true">' + initial + "</span>" +
+        "<div><strong>" + esc(r.name) + "</strong><span>Google review" + (r.when ? " · " + esc(r.when) : "") + "</span></div></div></article>";
+    }
+    if (!GOOGLE_REVIEWS.length) {
+      track.innerHTML = '<article class="g-card cta-card"><div class="g-stars" aria-label="Five stars">★★★★★</div>' +
+        '<p class="quote">Travelled with us? Your words help other travellers find Morocco.</p>' +
+        '<div class="hero-actions" style="justify-content:center;"><a class="btn btn-primary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Leave a Google review</a></div></article>';
+      return;
+    }
+    var html = GOOGLE_REVIEWS.map(card).join("");
+    track.innerHTML = html + html; /* duplicate for a seamless vertical loop */
+    track.classList.add("scroll");
+  })();
+  </script>
   <script src="search-data.js"></script>
   <script src="site.js"></script>
 </body>

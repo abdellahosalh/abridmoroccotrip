@@ -1,9 +1,10 @@
 # robots.txt for Abrid Morocco
+# This file tells search engine crawlers which pages they can access
 
 User-agent: *
 Allow: /
 
-# Block internal/admin/template pages
+# Block access to internal admin and agent tools
 Disallow: /admin/
 Disallow: /agent-tools.html
 Disallow: /trip-template.html
@@ -12,5 +13,5 @@ Disallow: /destination-template.html
 Disallow: /itinerary-template.html
 Disallow: /tmp/
 
-# Sitemap
+# Sitemap location — helps search engines find all your pages
 Sitemap: https://www.abridmorocco.com/sitemap.xml
