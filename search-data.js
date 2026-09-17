@@ -17,6 +17,10 @@ window.ABRID_SEARCH = [
   { t: "Ouzoud Quad Tour", c: "Experience", u: "ouzoud-quad-tour.html", d: "Waterfalls & Atlas trails. 4x4 and quad adventure." },
   { t: "Small Group Morocco Tour", c: "Trip", u: "small-group-tour.html", d: "11 days · Shared group journey through Morocco." },
   { t: "Private Custom Morocco Tour", c: "Trip", u: "private.html", d: "Tailor-made itinerary designed around the way you travel." },
+  { t: "Chefchaouen Day Trip from Fes", c: "Trip", u: "chefchaouen.html", d: "1 day · Blue medina, kasbah square and Spanish Mosque viewpoint. Private transport & local guide." },
+  { t: "Fes Medina Guided Day Tour", c: "Trip", u: "fes.html", d: "1 day · Tanneries, madrasas, Mellah and pottery quarter with a licensed local guide." },
+  { t: "Ouzoud Waterfalls Day Trip", c: "Trip", u: "ouzoud.html", d: "1 day from Marrakech · Viewpoints, macaques and optional boat ride." },
+  { t: "Zagora Desert in 2 Days", c: "Trip", u: "zagora.html", d: "2 days · Atlas pass, Ait Benhaddou, Draa Valley, camel trek and desert camp." },
   { t: "6-Day Christmas Morocco Itinerary", c: "Trip", u: "6-day-christmas-morocco.html", d: "Winter adventure through Morocco's highlights." },
 
   /* ── Destinations ── */
@@ -27,6 +31,9 @@ window.ABRID_SEARCH = [
   { t: "Essaouira", c: "Destination", u: "destination-essaouira.html", d: "Coastal medina, surf, seafood and Atlantic sunsets." },
   { t: "Agadir", c: "Destination", u: "destination-agadir.html", d: "Beach resort city on Morocco's Atlantic coast — sun, surf and the Souss." },
   { t: "Atlas Mountains", c: "Destination", u: "destination-atlas.html", d: "Berber villages, trekking, Ourika Valley and the Imilchil lakes." },
+  { t: "Todra & Dades Gorges", c: "Destination", u: "destination-todra-dades.html", d: "Canyons, climbing and switchback roads on the road south to the Sahara." },
+  { t: "Rabat & Casablanca", c: "Destination", u: "destination-rabat-casablanca.html", d: "Imperial capital and ocean city — where Morocco trips begin." },
+  { t: "Tangier", c: "Destination", u: "destination-tangier.html", d: "Ferry gateway from Spain — Hercules Caves, Cap Spartel and the kasbah." },
   { t: "Ait Ben Haddou", c: "Destination", u: "destination-ait-ben-haddou.html", d: "UNESCO mud-brick ksar on the former caravan route to the Sahara." },
   { t: "Casablanca & Rabat", c: "Destination", u: "imperial.html", d: "The imperial cities circuit — Casablanca's Hassan II Mosque, Rabat and Fes." },
   { t: "Ouarzazate & the South", c: "Destination", u: "destination-ait-ben-haddou.html", d: "The gateway to the Sahara, Morocco's film studios and the kasbah road." },
@@ -38,11 +45,19 @@ window.ABRID_SEARCH = [
   { t: "What to Pack for the Sahara", c: "Guide", u: "blog-sahara-packing.html", d: "Essential packing list for desert travel in Morocco." },
   { t: "Top 10 Things to Do in Marrakech", c: "Guide", u: "blog-marrakech-top10.html", d: "The Red City's must-see sights, souks and experiences." },
   { t: "Imilchil: Berber Culture in the High Atlas", c: "Guide", u: "blog-imilchil.html", d: "The weekly souk, lakes and Amazigh traditions of Imilchil." },
+  { t: "Agoudal: the Village That Fell From the Sky", c: "Guide", u: "blog-agoudal.html", d: "Iron meteorite, high village and Assif Melloul valley east of Imilchil." },
+  { t: "Lakes Isli & Tislit: the Twin Lakes of Imilchil", c: "Guide", u: "blog-lakes-isli-tislit.html", d: "Twin lakes guide — legend, geology, walks and seasons." },
+  { t: "Rich & the Upper Ziz: Where the High Atlas Ends", c: "Guide", u: "blog-rich-ziz.html", d: "Ksar history, Monday souk and the road to the Ziz Gorges." },
   { t: "Essaouira Travel Guide", c: "Guide", u: "blog-essaouira.html", d: "Coastal town guide — ramparts, beaches and seafood." },
   { t: "Essaouira: Bus vs Private Tour", c: "Guide", u: "blog-essaouira-bus-vs-tour.html", d: "Compare the options for visiting Essaouira from Marrakech." },
   { t: "Sahara Erg Chebbi Guide", c: "Guide", u: "blog-sahara-erg-chebbi.html", d: "Everything about the great dunes of Erg Chebbi at Merzouga." },
+  { t: "What to Pack for the High Atlas", c: "Guide", u: "blog-high-atlas-packing.html", d: "Layers, footwear, sun, water and cash for mountain days above 2,000 metres." },
+  { t: "How Much Does a Morocco Trip Cost?", c: "Guide", u: "guide-costs.html", d: "What drives the price — transport, guides, stays, season and group size." },
+  { t: "Best Time to Visit Morocco", c: "Guide", u: "guide-best-time.html", d: "Seasons for the Sahara, Atlas, coast and cities, plus Ramadan timing." },
 
   /* ── Plan & contact ── */
   { t: "Plan My Trip", c: "Plan", u: "plan-my-trip.html", d: "Send your dates, destinations and travel style — we reply with a private Morocco itinerary within 2 hours." },
-  { t: "Contact Abrid Morocco", c: "Contact", u: "contact.html", d: "WhatsApp, email and office hours for Abrid Morocco. Response within 2 hours. No deposit required." }
+  { t: "Contact Abrid Morocco", c: "Contact", u: "contact.html", d: "WhatsApp, email and office hours for Abrid Morocco. Response within 2 hours. No deposit required." },
+  { t: "Traveller Reviews", c: "Trust", u: "reviews.html", d: "What travellers say about Abrid Morocco — Google reviews." },
+  { t: "Responsible Travel", c: "Trust", u: "responsible-travel.html", d: "Local guides, family stays and cultural respect — our commitments." }
 ];
