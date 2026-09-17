@@ -322,7 +322,7 @@
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

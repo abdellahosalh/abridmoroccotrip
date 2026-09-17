@@ -215,6 +215,49 @@ footer .footer-bottom {
 .brand-text span{color:#E4002B;}
 @media (max-width:1080px){.nav-links{display:none!important;}.nav-actions .btn-secondary{display:none!important;}.nav-actions .btn-primary{display:none!important;}.nav-actions .nav-wa,.nav-actions .search-toggle{display:none!important;}.menu-toggle{display:flex!important;}}
 </style>  <link rel="stylesheet" href="design.css">
+
+  <style>
+  /* Clean article template (matches blog-agoudal.html) */
+  .article-hero{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#1a1a1a;}
+  .article-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 40%,rgba(30,18,10,0.85) 100%);}
+  .article-hero-content{position:relative;z-index:2;padding:48px 0;color:#fff;max-width:900px;}
+  .article-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;background:var(--gold);color:var(--brown);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;}
+  .article-hero h1{font-size:clamp(32px,5vw,50px);line-height:1.15;color:#fff;margin-bottom:14px;}
+  .article-hero p{font-size:1.15rem;opacity:0.92;line-height:1.6;max-width:680px;}
+  .article-wrap{max-width:860px;margin:0 auto;padding:50px 24px 80px;}
+  .back-nav{display:inline-flex;align-items:center;gap:8px;color:var(--terracotta);font-weight:700;font-size:0.95rem;margin-bottom:32px;text-decoration:none;}
+  .intro-text{font-size:1.22rem;line-height:1.85;color:#3f2a20;margin-bottom:36px;}
+  .byline{color:var(--muted);font-size:.9rem;margin:-24px 0 36px;}
+  .article-quote{background:var(--accent-soft);border-left:4px solid var(--terracotta);padding:26px 30px;border-radius:0 16px 16px 0;font-style:italic;font-size:1.12rem;color:#5a3418;margin:40px 0;line-height:1.7;}
+  .article-h2{font-size:2rem;margin:48px 0 18px;color:var(--brown);border-bottom:2px solid rgba(228,0,43,0.2);padding-bottom:10px;}
+  .article-wrap p{color:#3f2a20;line-height:1.85;margin-bottom:18px;}
+  .article-wrap ul{color:#3f2a20;line-height:1.8;margin-bottom:18px;padding-left:22px;}
+  .article-wrap li{margin-bottom:8px;}
+  .highlight-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;margin:24px 0;box-shadow:0 6px 20px rgba(0,0,0,0.04);}
+  .highlight-card h3{color:var(--terracotta);font-size:1.3rem;margin-bottom:10px;}
+  .highlight-card p{margin:0;}
+  .article-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:36px 0;}
+  .article-gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0;}
+  .fact-card{background:#fff;padding:22px 16px;border-radius:14px;border:1px solid var(--border);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03);}
+  .fact-card .num{font-size:1.4rem;font-weight:700;color:var(--terracotta);}
+  .fact-card .label{font-size:0.85rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+  .travel-tips-box{background:rgba(77,124,15,0.07);border-left:4px solid var(--accent2);border-radius:0 16px 16px 0;padding:30px;margin:40px 0;}
+  .travel-tips-box h3{font-size:1.35rem;margin-bottom:14px;}
+  .travel-tips-box ul{margin:0;padding-left:20px;}
+  .travel-tips-box li{margin-bottom:10px;color:#3f2a20;}
+  .tour-promo-banner{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:44px 36px;border-radius:20px;text-align:center;margin:50px 0 20px;box-shadow:0 14px 40px rgba(228,0,43,0.35);}
+  .tour-promo-banner h3{color:#fff;font-size:1.8rem;margin-bottom:12px;}
+  .tour-promo-banner p{font-size:1.05rem;opacity:0.95;max-width:600px;margin:0 auto 24px;color:#fff;}
+  .tour-promo-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .keep-exploring{background:var(--bg-alt,#f6f2ec);border-radius:16px;padding:28px 30px;margin:40px 0;}
+  .keep-exploring h3{margin-bottom:12px;}
+  .keep-exploring ul{margin:0;padding-left:20px;}
+  .keep-exploring li{margin-bottom:8px;}
+  .keep-exploring a{color:var(--terracotta);font-weight:600;}
+  </style>
+
 </head>
 <body>
 
@@ -281,75 +324,40 @@ footer .footer-bottom {
   </header>
 
   <main id="main">
-    <article class="blog-post">
-      <h1>Exploring the Blue Pearl: Chefchaouen</h1>
-      <div class="date">Published March 5, 2026 · By Abdellah, Local Travel Expert</div>
-
-      <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=870&auto=format&fit=crop" alt="Blue painted streets of Chefchaouen, Morocco" loading="lazy" decoding="async">
-
-      <p>Nestled in the Rif Mountains of northern Morocco, Chefchaouen — often called the "Blue Pearl" — is one of the most enchanting destinations in the country. Famous for its striking blue-washed buildings, this small city offers a peaceful escape from the hustle of Marrakech or Fes. Whether you're a photographer, a culture lover, or simply seeking relaxation, Chefchaouen will captivate you.</p>
-
-      <h2>Why Is Chefchaouen Blue?</h2>
-      <p>The blue tradition dates back to the 1930s when Jewish refugees fleeing persecution painted buildings blue to symbolize the sky and heaven, reminding them of God's presence. This practice was maintained by subsequent Muslim residents, creating today's distinctive landscape.</p>
-
-      <h2>Top Things to Do in Chefchaouen</h2>
-
-      <h3>1. Wander the Medina</h3>
-      <!-- FIXED: Using a different image from the hero to avoid duplicate -->
-      <img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?q=80&w=870&auto=format&fit=crop" alt="Narrow alleyways of Chefchaouen medina with blue walls" loading="lazy" decoding="async">
-      <p>The entire medina is a living artwork. Every corner reveals new shades of blue, from deep indigo to soft sky hues. Get lost without a map — that's the magic. The best time for photography is early morning when the streets are empty and the light is soft.</p>
-
-      <h3>2. Visit the Kasbah</h3>
-      <img src="https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?q=80&w=870&auto=format&fit=crop" alt="Kasbah fortress in Chefchaouen" loading="lazy" decoding="async">
-      <p>Located in the heart of the medina, this ochre-coloured fortress is one of the few buildings not painted blue. Inside, you'll find a peaceful garden, a small ethnographic museum, and towers with panoramic views over the medina.</p>
-
-      <h3>3. Spanish Mosque Viewpoint</h3>
-      <img src="https://images.unsplash.com/photo-1651698377554-ca4a10ebbed9?q=80&w=870&auto=format&fit=crop" alt="View of Chefchaouen from Spanish Mosque viewpoint" loading="lazy" decoding="async">
-      <p>A 20–30 minute uphill hike from the medina leads to the Spanish Mosque, offering spectacular panoramic views of the city against the Rif Mountains. Come for sunset when the warm light bathes the blue buildings in magical hues.</p>
-
-      <h3>4. Ras El-Maa River</h3>
-      <p>At the edge of the medina, this small river is where locals gather to socialize and cool off. It's a peaceful spot to watch daily life and offers great views back toward the blue city. A perfect rest stop after walking the medina.</p>
-
-      <h3>5. Shop for Handicrafts</h3>
-      <p>Chefchaouen's souk is full of treasures: handwoven blankets, wool garments, leather goods, ceramics, and natural argan oil. Prices are very reasonable compared to Marrakech, and friendly bargaining is expected.</p>
-
-      <h3>6. Hike to Akchour Waterfalls</h3>
-      <img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=870&auto=format&fit=crop" alt="Akchour waterfalls near Chefchaouen" loading="lazy" decoding="async">
-      <p>A half-day trip to Akchour Waterfalls in Talassemtane National Park is a must. Hike to the famous "Bridge of God" rock arch and enjoy stunning natural pools — a complete contrast to the blue city.</p>
-
-      <h2>Best Time to Visit</h2>
-      <p>Spring (March–May) and autumn (September–November) offer perfect temperatures. Summer can be hot but manageable. Winter is chilly but quiet with very few tourists — perfect for photography.</p>
-
-      <h2>How to Get There from Marrakech</h2>
-      <p>From Marrakech, it's about a 6-hour drive via Fez. CTM buses are reliable. We can arrange a private transfer as part of a custom itinerary — contact us to combine Chefchaouen with other destinations.</p>
-
-      <!-- CTA linking to tour/contact -->
-      <div class="cta-tour">
-        <h3>Want to add Chefchaouen to your Morocco trip?</h3>
-        <p>Our team builds fully customized itineraries. Private transport, multilingual guides, hand-picked riads.</p>
-        <a href="index.html#contact" class="cta-btn">Plan My Custom Tour →</a>
+    <section class="article-hero">
+      <img fetchpriority="high" class="article-hero-img" src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?q=80&w=870&auto=format&fit=crop" alt="Blue painted streets of Chefchaouen, Morocco" loading="lazy" decoding="async">
+      <div class="article-hero-overlay"></div>
+      <div class="container article-hero-content">
+        <span class="article-tag">Blue City Guide</span>
+        <h1>Exploring the Blue Pearl: Chefchaouen</h1>
+        <p>Why the town is blue, what to see, and how to do it in a day — the honest Chefchaouen guide.</p>
       </div>
+    </section>
 
-      <div class="like-section">
-        <button class="like-btn" id="likeBtn">❤️ Like <span id="likeCount" class="like-count">0</span></button>
-        <span style="color:var(--muted);font-size:.9rem;">Found this helpful? Share it!</span>
+    <div class="article-wrap">
+      <a href="blog.html" class="back-nav">← All guides</a>
+      <p class="intro-text">Nestled in the Rif Mountains of northern Morocco, Chefchaouen — often called the "Blue Pearl" — is one of the most enchanting destinations in the country. Famous for its striking blue-washed buildings, this small city offers a peaceful escape from the hustle of Marrakech or Fes. Whether you're a photographer, a culture lover, or simply seeking relaxation, Chefchaouen will captivate you.</p>
+      
+      <div class="article-gallery"><img src="https://images.unsplash.com/photo-1548019142-cb7c1ee5594f?q=80&w=870&auto=format&fit=crop" alt="Narrow alleyways of Chefchaouen medina with blue walls" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1593105544559-ecb03bf76f82?q=80&w=870&auto=format&fit=crop" alt="Kasbah fortress in Chefchaouen" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1651698377554-ca4a10ebbed9?q=80&w=870&auto=format&fit=crop" alt="View of Chefchaouen from Spanish Mosque viewpoint" loading="lazy" decoding="async"><img src="https://images.unsplash.com/photo-1507048331197-7d4ac70811cf?q=80&w=870&auto=format&fit=crop" alt="Akchour waterfalls near Chefchaouen" loading="lazy" decoding="async"></div>
+      <h2 class="article-h2">Why Is Chefchaouen Blue?</h2><p>The blue tradition dates back to the 1930s when Jewish refugees fleeing persecution painted buildings blue to symbolize the sky and heaven, reminding them of God's presence. This practice was maintained by subsequent Muslim residents, creating today's distinctive landscape.</p><h2 class="article-h2">Top Things to Do in Chefchaouen</h2><h3>1. Wander the Medina</h3><p>The entire medina is a living artwork. Every corner reveals new shades of blue, from deep indigo to soft sky hues. Get lost without a map — that's the magic. The best time for photography is early morning when the streets are empty and the light is soft.</p><h3>2. Visit the Kasbah</h3><p>Located in the heart of the medina, this ochre-coloured fortress is one of the few buildings not painted blue. Inside, you'll find a peaceful garden, a small ethnographic museum, and towers with panoramic views over the medina.</p><h3>3. Spanish Mosque Viewpoint</h3><p>A 20–30 minute uphill hike from the medina leads to the Spanish Mosque, offering spectacular panoramic views of the city against the Rif Mountains. Come for sunset when the warm light bathes the blue buildings in magical hues.</p><h3>4. Ras El-Maa River</h3><p>At the edge of the medina, this small river is where locals gather to socialize and cool off. It's a peaceful spot to watch daily life and offers great views back toward the blue city. A perfect rest stop after walking the medina.</p><h3>5. Shop for Handicrafts</h3><p>Chefchaouen's souk is full of treasures: handwoven blankets, wool garments, leather goods, ceramics, and natural argan oil. Prices are very reasonable compared to Marrakech, and friendly bargaining is expected.</p><h3>6. Hike to Akchour Waterfalls</h3><p>A half-day trip to Akchour Waterfalls in Talassemtane National Park is a must. Hike to the famous "Bridge of God" rock arch and enjoy stunning natural pools — a complete contrast to the blue city.</p><h2 class="article-h2">Best Time to Visit</h2><p>Spring (March–May) and autumn (September–November) offer perfect temperatures. Summer can be hot but manageable. Winter is chilly but quiet with very few tourists — perfect for photography.</p><h2 class="article-h2">How to Get There from Marrakech</h2><p>From Marrakech, it's about a 6-hour drive via Fez. CTM buses are reliable. We can arrange a private transfer as part of a custom itinerary — contact us to combine Chefchaouen with other destinations.</p><h3>Want to add Chefchaouen to your Morocco trip?</h3><p>Our team builds fully customized itineraries. Private transport, multilingual guides, hand-picked riads.</p>
+      <div class="travel-tips-box">
+        <h3>Practical notes</h3>
+        <ul><li>Climb to the Spanish Mosque for sunset — the blue town glows gold from above.</li><li>Wear grippy shoes; the medina lanes are steep and smooth.</li><li>Haggle kindly in the shops; fixed prices are rare here.</li><li>Akchour waterfalls need a separate full day — don't squeeze them into a medina day.</li></ul>
       </div>
-
-      <!-- Disqus Comments — sign up free at disqus.com and replace "abridmorocco" with your shortname -->
-      <div id="disqus_thread"></div>
-      <script>
-        var disqus_config = function () { this.page.url = 'https://www.abridmorocco.com/blog-chefchaouen.html'; this.page.identifier = 'chefchaouen-guide'; };
-        (function() {
-          var d = document, s = d.createElement('script');
-          s.src = 'https://abridmorocco.disqus.com/embed.js'; // Sign up at disqus.com with shortname "abridmorocco"
-          s.setAttribute('data-timestamp', +new Date());
-          (d.head || d.body).appendChild(s);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
-
-      <a href="blog.html" class="back-to-blog">← Back to Blog</a>
-    </article>
+      <div class="keep-exploring">
+        <h3>Keep exploring</h3>
+        <ul><li><a href="blog-marrakech-top10.html">Top 10 things to do in Marrakech</a></li><li><a href="blog-driving-safety.html">Driving in Morocco: safety guide</a></li></ul>
+      </div>
+      <div class="tour-promo-banner">
+        <h3>See the Blue Pearl with us</h3>
+        <p>Private day trip from Fes with transport and a local medina guide.</p>
+        <div class="tour-promo-actions">
+          <a class="btn btn-secondary" href="chefchaouen.html">View details →</a>
+          <a class="btn btn-primary" href="plan-my-trip.html" style="background:#fff;color:var(--terracotta);">Plan My Trip</a>
+        </div>
+      </div>
+      
+    </div>
   </main>
 
   <div class="container">
@@ -459,7 +467,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

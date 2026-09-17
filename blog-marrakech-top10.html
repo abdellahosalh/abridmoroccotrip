@@ -227,6 +227,49 @@ footer .footer-bottom {
 .brand-text span{color:#E4002B;}
 @media (max-width:1080px){.nav-links{display:none!important;}.nav-actions .btn-secondary{display:none!important;}.nav-actions .btn-primary{display:none!important;}.nav-actions .nav-wa,.nav-actions .search-toggle{display:none!important;}.menu-toggle{display:flex!important;}}
 </style>  <link rel="stylesheet" href="design.css">
+
+  <style>
+  /* Clean article template (matches blog-agoudal.html) */
+  .article-hero{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#1a1a1a;}
+  .article-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 40%,rgba(30,18,10,0.85) 100%);}
+  .article-hero-content{position:relative;z-index:2;padding:48px 0;color:#fff;max-width:900px;}
+  .article-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;background:var(--gold);color:var(--brown);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;}
+  .article-hero h1{font-size:clamp(32px,5vw,50px);line-height:1.15;color:#fff;margin-bottom:14px;}
+  .article-hero p{font-size:1.15rem;opacity:0.92;line-height:1.6;max-width:680px;}
+  .article-wrap{max-width:860px;margin:0 auto;padding:50px 24px 80px;}
+  .back-nav{display:inline-flex;align-items:center;gap:8px;color:var(--terracotta);font-weight:700;font-size:0.95rem;margin-bottom:32px;text-decoration:none;}
+  .intro-text{font-size:1.22rem;line-height:1.85;color:#3f2a20;margin-bottom:36px;}
+  .byline{color:var(--muted);font-size:.9rem;margin:-24px 0 36px;}
+  .article-quote{background:var(--accent-soft);border-left:4px solid var(--terracotta);padding:26px 30px;border-radius:0 16px 16px 0;font-style:italic;font-size:1.12rem;color:#5a3418;margin:40px 0;line-height:1.7;}
+  .article-h2{font-size:2rem;margin:48px 0 18px;color:var(--brown);border-bottom:2px solid rgba(228,0,43,0.2);padding-bottom:10px;}
+  .article-wrap p{color:#3f2a20;line-height:1.85;margin-bottom:18px;}
+  .article-wrap ul{color:#3f2a20;line-height:1.8;margin-bottom:18px;padding-left:22px;}
+  .article-wrap li{margin-bottom:8px;}
+  .highlight-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;margin:24px 0;box-shadow:0 6px 20px rgba(0,0,0,0.04);}
+  .highlight-card h3{color:var(--terracotta);font-size:1.3rem;margin-bottom:10px;}
+  .highlight-card p{margin:0;}
+  .article-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:36px 0;}
+  .article-gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0;}
+  .fact-card{background:#fff;padding:22px 16px;border-radius:14px;border:1px solid var(--border);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03);}
+  .fact-card .num{font-size:1.4rem;font-weight:700;color:var(--terracotta);}
+  .fact-card .label{font-size:0.85rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+  .travel-tips-box{background:rgba(77,124,15,0.07);border-left:4px solid var(--accent2);border-radius:0 16px 16px 0;padding:30px;margin:40px 0;}
+  .travel-tips-box h3{font-size:1.35rem;margin-bottom:14px;}
+  .travel-tips-box ul{margin:0;padding-left:20px;}
+  .travel-tips-box li{margin-bottom:10px;color:#3f2a20;}
+  .tour-promo-banner{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:44px 36px;border-radius:20px;text-align:center;margin:50px 0 20px;box-shadow:0 14px 40px rgba(228,0,43,0.35);}
+  .tour-promo-banner h3{color:#fff;font-size:1.8rem;margin-bottom:12px;}
+  .tour-promo-banner p{font-size:1.05rem;opacity:0.95;max-width:600px;margin:0 auto 24px;color:#fff;}
+  .tour-promo-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .keep-exploring{background:var(--bg-alt,#f6f2ec);border-radius:16px;padding:28px 30px;margin:40px 0;}
+  .keep-exploring h3{margin-bottom:12px;}
+  .keep-exploring ul{margin:0;padding-left:20px;}
+  .keep-exploring li{margin-bottom:8px;}
+  .keep-exploring a{color:var(--terracotta);font-weight:600;}
+  </style>
+
 </head>
 <body>
   
@@ -288,88 +331,42 @@ footer .footer-bottom {
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
 </div>
     </div>
-  </header>
+  </header><main id="main">
+    <section class="article-hero">
+      <img class="article-hero-img" src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Marrakech souks and medina" fetchpriority="high" decoding="async">
+      <div class="article-hero-overlay"></div>
+      <div class="container article-hero-content">
+        <span class="article-tag">City Guides</span>
+        <h1>Top 10 Things to Do in Marrakech</h1>
+        <p>Medina to Majorelle — the ten Marrakech essentials, ranked by a local.</p>
+      </div>
+    </section>
 
-  <div class="container" style="padding-top:40px;">
-    <a href="blog.html" class="back-link">← Back to Blog</a>
-
-    <div class="blog-header">
-      <h1>Top 10 Things to Do in Marrakech</h1>
-      <p style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | March 20, 2026</p>
-      <img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=1200&auto=format&fit=crop" alt="Marrakech souks and medina" fetchpriority="high" decoding="async">
+    <div class="article-wrap">
+      <a href="blog.html" class="back-nav">← All guides</a>
+      <p class="intro-text" style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | March 20, 2026</p><p style="font-size:1.2rem;">Marrakech — the "Red City" — is an intoxicating blend of colors, smells, and sounds. Whether you're getting lost in the labyrinthine souks or seeking peace in a riad courtyard, Marrakech engages all senses. Here are the top 10 absolute must-do experiences — straight from a local!</p>
+      
+      <div class="article-gallery"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Jardin_Majorelle.jpg/1280px-Jardin_Majorelle.jpg" alt="Majorelle Garden Marrakech" loading="lazy" decoding="async"></div>
+      <h2 class="article-h2">1. Get Lost in the Medina and Souks</h2><p>You cannot visit Marrakech without diving into the deep, winding alleyways of the Medina. Shop for intricate lanterns, vibrant spices, leather goods, and hand-woven rugs. <strong>Tip:</strong> Always negotiate respectfully! The first price is almost never the final price. A local guide makes the difference between an overwhelming experience and a magical one.</p><h2 class="article-h2">2. Experience Jemaa el-Fna at Night</h2><p>As the sun sets, this enormous square transforms into the ultimate street food theater. Storytellers, musicians, snake charmers, and rows of food stalls. Grab a bowl of harira soup or a glass of fresh orange juice for just 4 Dirhams.</p><h3>Want a local guide to show you all of this?</h3><p>Our <a href="marrakech.html" style="color:var(--terracotta);font-weight:700;">Marrakech Discovery Tour</a> covers the highlights with an expert local guide and hotel pickup included.</p><h2 class="article-h2">3. Relax in the Majorelle Garden</h2><p>Created by French painter Jacques Majorelle and later restored by Yves Saint Laurent, this botanical garden is famous for its striking cobalt blue structures and towering cacti. Get here at 8:30 AM to beat the crowds!</p><h2 class="article-h2">4. Marvel at Bahia Palace</h2><p>The "Palace of the Brilliant" lives up to its name. Featuring 150 rooms filled with carved cedar wood ceilings, colorful zellij tiles, and grand courtyards — a masterpiece of 19th-century Moroccan architecture.</p><h2 class="article-h2">5. Watch the Sunset from a Rooftop Café</h2><p>Head to Café des Épices or Nomad in the heart of the Medina. Sipping sweet Moroccan mint tea while watching the sun dip behind the Koutoubia Mosque is purely magical. These spots also serve excellent food.</p><h2 class="article-h2">6. Experience a Traditional Hammam</h2><p>No visit is complete without the steam, black-soap scrub and massage of a hammam. Choose a private hotel hammam for comfort or a neighbourhood one for authenticity — bring swimwear, flip-flops and an open mind.</p><h2 class="article-h2">7. Stay in a Traditional Riad</h2><p>Skip the hotel block: medina riads are courtyard houses with fountains, tilework and breakfast on the terrace. Staying inside the old city puts the souks on your doorstep and the rooftop above the noise.</p><h2 class="article-h2">8. Explore the Saadian Tombs</h2><p>Sealed for centuries and rediscovered in 1917, this 16th-century royal necropolis — especially the Hall of Twelve Columns — is one of the finest decorated spaces in Morocco. Go early; it fills by midday.</p><h2 class="article-h2">9. Take a Cooking Class</h2><p>Shop the market for vegetables and spices, then learn tajine, couscous or bastilla in a half-day class. You eat what you cook — usually the best lunch of the trip.</p><h2 class="article-h2">10. Take a Hot Air Balloon Ride at Sunrise</h2><p>Float over the Palmeraie as the sun hits the Atlas foothills, then land to a Berber breakfast. See our <a href="air-balloon.html" style="color:var(--terracotta);font-weight:700;">sunrise balloon flights</a> for details.</p>
+      <div class="travel-tips-box">
+        <h3>Practical notes</h3>
+        <ul><li>Start early; the medina is coolest and calmest before 10am.</li><li>Haggle with a smile and be ready to walk away kindly.</li><li>Carry small cash for souks, tips and taxis.</li><li>Agree taxi fares before getting in — or ask your riad to call one.</li></ul>
+      </div>
+      <div class="keep-exploring">
+        <h3>Keep exploring</h3>
+        <ul><li><a href="blog-essaouira.html">Essaouira complete guide</a></li><li><a href="blog-sahara-guide.html">The complete Sahara guide</a></li></ul>
+      </div>
+      <div class="tour-promo-banner">
+        <h3>See Marrakech with us</h3>
+        <p>Private discovery day: souks, palaces and gardens with a local guide.</p>
+        <div class="tour-promo-actions">
+          <a class="btn btn-secondary" href="marrakech.html">View details →</a>
+          <a class="btn btn-primary" href="plan-my-trip.html" style="background:#fff;color:var(--terracotta);">Plan My Trip</a>
+        </div>
+      </div>
+      
     </div>
-
-    <div class="blog-content">
-      <p style="font-size:1.2rem;">Marrakech — the "Red City" — is an intoxicating blend of colors, smells, and sounds. Whether you're getting lost in the labyrinthine souks or seeking peace in a riad courtyard, Marrakech engages all senses. Here are the top 10 absolute must-do experiences — straight from a local!</p>
-
-      <h2>1. Get Lost in the Medina and Souks</h2>
-      <p>You cannot visit Marrakech without diving into the deep, winding alleyways of the Medina. Shop for intricate lanterns, vibrant spices, leather goods, and hand-woven rugs. <strong>Tip:</strong> Always negotiate respectfully! The first price is almost never the final price. A local guide makes the difference between an overwhelming experience and a magical one.</p>
-
-      <h2>2. Experience Jemaa el-Fna at Night</h2>
-      <p>As the sun sets, this enormous square transforms into the ultimate street food theater. Storytellers, musicians, snake charmers, and rows of food stalls. Grab a bowl of harira soup or a glass of fresh orange juice for just 4 Dirhams.</p>
-
-      <!-- CTA: Marrakech Tour -->
-      <div class="cta-marrakech-tour">
-        <h3>🗺️ Want a local guide to show you all of this?</h3>
-        <p>Our Marrakech Discovery Tour takes you through all the highlights with an expert local guide. Hotel pickup included. Just Quote/person!</p>
-        <a href="marrakech.html" class="btn">Book the Marrakech Tour →</a>
-      </div>
-
-      <h2>3. Relax in the Majorelle Garden</h2>
-      <p>Created by French painter Jacques Majorelle and later restored by Yves Saint Laurent, this botanical garden is famous for its striking cobalt blue structures and towering cacti. Get here at 8:30 AM to beat the crowds!</p>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Jardin_Majorelle.jpg/1280px-Jardin_Majorelle.jpg" alt="Majorelle Garden Marrakech" loading="lazy" decoding="async">
-
-      <h2>4. Marvel at Bahia Palace</h2>
-      <p>The "Palace of the Brilliant" lives up to its name. Featuring 150 rooms filled with carved cedar wood ceilings, colorful zellij tiles, and grand courtyards — a masterpiece of 19th-century Moroccan architecture.</p>
-
-      <h2>5. Watch the Sunset from a Rooftop Café</h2>
-      <p>Head to Café des Épices or Nomad in the heart of the Medina. Sipping sweet Moroccan mint tea while watching the sun dip behind the Koutoubia Mosque is purely magical. These spots also serve excellent food.</p>
-
-      <div class="cta-box">
-        <h3 style="margin-top:0;">Want the exact timeline &amp; budget for all of this?</h3>
-        <p>My complete 7-day Morocco itinerary PDF includes exact Google Maps pins, the best rooftop cafés, and how to avoid tourist traps.</p>
-        <a href="landing_page.html" class="btn">Get the Full Guide for Quote</a>
-      </div>
-
-      <h2>6. Experience a Traditional Hammam</h2>
-      <p>For ultimate relaxation, visit a traditional Moroccan bathhouse. Enjoy a steam session followed by a vigorous scrub with black soap and a kessa glove. You will leave with the softest skin of your life and a deep sense of calm.</p>
-
-      <h2>7. Stay in a Traditional Riad</h2>
-      <p>Skip the modern hotels. A riad is a traditional Moroccan house built around an inner courtyard, often with a fountain or small pool. It offers an oasis of quiet right in the center of the chaotic city. Worth every dirham.</p>
-
-      <h2>8. Explore the Saadian Tombs</h2>
-      <p>Hidden for centuries and only rediscovered in 1917, the resting place of the Saadian dynasty is an absolute marvel of imported Italian marble and pure gold decoration. One of the most underrated sites in Marrakech.</p>
-
-      <h2>9. Take a Cooking Class</h2>
-      <p>Learn to make your own tagine! Cooking classes usually start with a market tour to buy fresh ingredients before returning to the kitchen to slow-cook vegetables and meat in the iconic clay pot. A delicious memory to take home.</p>
-
-      <h2>10. Take a Hot Air Balloon Ride at Sunrise</h2>
-      <p>See the Red City and the towering Atlas Mountains from above. Drifting over ancient Berber villages as the sun rises is truly a once-in-a-lifetime bucket list experience. Perfect for couples and honeymoons!</p>
-
-      <!-- CTA: Hot Air Balloon -->
-      <div class="cta-marrakech-tour" style="margin-top:30px;">
-        <h3>🎈 Ready to experience Marrakech from the sky?</h3>
-        <p>Book our Hot Air Balloon ride — sunrise flight, Berber breakfast, and flight certificate. From just Quote/person.</p>
-        <a href="air-balloon.html" class="btn">Book the Balloon Ride →</a>
-      </div>
-
-      <div class="cta-box" style="background:var(--bg);margin-top:30px;">
-        <h3 style="margin-top:0;">Ready to book your Morocco adventure?</h3>
-        <p>If you don't want to plan this yourself, my team at <strong>Abrid Morocco</strong> will handle everything for you. From airport pickup to fluent guides, we've got you covered.</p>
-        <a href="index.html#tours" class="btn" style="background:var(--gold);color:var(--brown);">View Our Local Tours</a>
-      </div>
-
-    </div>
-    <a href="blog.html" style="display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:700;">← Back to Blog</a>
-  </div>
-
-  <div class="container">
-    <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
-    <div class="climate-note">
-      🌍 <strong>We're in the process of figuring out how much CO₂-e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
-      When you travel with us, <strong>Abrid Morocco</strong> gives you more opportunities to support important causes in the destinations you visit.
-    </div>
-</div><footer class="site-footer">
+  </main><footer class="site-footer">
     <div class="container">
       <div class="footer-grid footer-grid-v2">
         <div>
@@ -471,7 +468,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

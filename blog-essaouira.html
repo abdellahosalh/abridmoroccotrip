@@ -252,6 +252,49 @@ footer .footer-bottom {
 .brand-text span{color:#E4002B;}
 @media (max-width:1080px){.nav-links{display:none!important;}.nav-actions .btn-secondary{display:none!important;}.nav-actions .btn-primary{display:none!important;}.nav-actions .nav-wa,.nav-actions .search-toggle{display:none!important;}.menu-toggle{display:flex!important;}}
 </style>  <link rel="stylesheet" href="design.css">
+
+  <style>
+  /* Clean article template (matches blog-agoudal.html) */
+  .article-hero{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#1a1a1a;}
+  .article-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 40%,rgba(30,18,10,0.85) 100%);}
+  .article-hero-content{position:relative;z-index:2;padding:48px 0;color:#fff;max-width:900px;}
+  .article-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;background:var(--gold);color:var(--brown);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;}
+  .article-hero h1{font-size:clamp(32px,5vw,50px);line-height:1.15;color:#fff;margin-bottom:14px;}
+  .article-hero p{font-size:1.15rem;opacity:0.92;line-height:1.6;max-width:680px;}
+  .article-wrap{max-width:860px;margin:0 auto;padding:50px 24px 80px;}
+  .back-nav{display:inline-flex;align-items:center;gap:8px;color:var(--terracotta);font-weight:700;font-size:0.95rem;margin-bottom:32px;text-decoration:none;}
+  .intro-text{font-size:1.22rem;line-height:1.85;color:#3f2a20;margin-bottom:36px;}
+  .byline{color:var(--muted);font-size:.9rem;margin:-24px 0 36px;}
+  .article-quote{background:var(--accent-soft);border-left:4px solid var(--terracotta);padding:26px 30px;border-radius:0 16px 16px 0;font-style:italic;font-size:1.12rem;color:#5a3418;margin:40px 0;line-height:1.7;}
+  .article-h2{font-size:2rem;margin:48px 0 18px;color:var(--brown);border-bottom:2px solid rgba(228,0,43,0.2);padding-bottom:10px;}
+  .article-wrap p{color:#3f2a20;line-height:1.85;margin-bottom:18px;}
+  .article-wrap ul{color:#3f2a20;line-height:1.8;margin-bottom:18px;padding-left:22px;}
+  .article-wrap li{margin-bottom:8px;}
+  .highlight-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;margin:24px 0;box-shadow:0 6px 20px rgba(0,0,0,0.04);}
+  .highlight-card h3{color:var(--terracotta);font-size:1.3rem;margin-bottom:10px;}
+  .highlight-card p{margin:0;}
+  .article-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:36px 0;}
+  .article-gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0;}
+  .fact-card{background:#fff;padding:22px 16px;border-radius:14px;border:1px solid var(--border);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03);}
+  .fact-card .num{font-size:1.4rem;font-weight:700;color:var(--terracotta);}
+  .fact-card .label{font-size:0.85rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+  .travel-tips-box{background:rgba(77,124,15,0.07);border-left:4px solid var(--accent2);border-radius:0 16px 16px 0;padding:30px;margin:40px 0;}
+  .travel-tips-box h3{font-size:1.35rem;margin-bottom:14px;}
+  .travel-tips-box ul{margin:0;padding-left:20px;}
+  .travel-tips-box li{margin-bottom:10px;color:#3f2a20;}
+  .tour-promo-banner{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:44px 36px;border-radius:20px;text-align:center;margin:50px 0 20px;box-shadow:0 14px 40px rgba(228,0,43,0.35);}
+  .tour-promo-banner h3{color:#fff;font-size:1.8rem;margin-bottom:12px;}
+  .tour-promo-banner p{font-size:1.05rem;opacity:0.95;max-width:600px;margin:0 auto 24px;color:#fff;}
+  .tour-promo-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .keep-exploring{background:var(--bg-alt,#f6f2ec);border-radius:16px;padding:28px 30px;margin:40px 0;}
+  .keep-exploring h3{margin-bottom:12px;}
+  .keep-exploring ul{margin:0;padding-left:20px;}
+  .keep-exploring li{margin-bottom:8px;}
+  .keep-exploring a{color:var(--terracotta);font-weight:600;}
+  </style>
+
 </head>
 <body>
 
@@ -320,48 +363,40 @@ footer .footer-bottom {
   </header>
 
   <main id="main">
-    <article class="container">
-      <div class="blog-intro reveal">
-        <span class="eyebrow">Coastal Escape Guide</span>
+    <section class="article-hero">
+      <img class="article-hero-img" src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=1200&auto=format&fit=crop" alt="Essaouira Blue Doors" fetchpriority="high" decoding="async">
+      <div class="article-hero-overlay"></div>
+      <div class="container article-hero-content">
+        <span class="article-tag">Coastal Escape Guide</span>
         <h1>The Ultimate Guide to Essaouira: Morocco's Windy City</h1>
-        <div class="blog-meta">By Abdellah | Local Tour Expert | March 24, 2026</div>
-        <img src="https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=1200&auto=format&fit=crop" alt="Essaouira Blue Doors" class="blog-featured-image" fetchpriority="high" decoding="async">
+        <p>White walls, blue boats, ocean wind and grilled fish — Essaouira in one honest guide.</p>
       </div>
+    </section>
 
-      <div class="blog-content reveal">
-        <p class="drop-cap">Few places capture the soul as effortlessly as Essaouira. This white-and-blue coastal town, formerly known as Mogador, is a breath of fresh Atlantic air—literally. Known for its steady trade winds and laid-back atmosphere, it's the perfect antidote to the high energy of Marrakech.</p>
-
-        <h2>1. Walk the Historic Ramparts (Skala de la Ville)</h2>
-        <p>Built in the 18th century to protect the city from sea attacks, these ramparts offer stunning views of the Atlantic. You'll recognize them as a filming location for 'Game of Thrones'. It's the best spot for a sunset walk while watching the seagulls dance in the wind.</p>
-
-        <h2>2. Visit the Port and the Blue Boats</h2>
-        <p>The Essaouira fishing port is famous for its vibrant blue wooden boats. Watch local fishermen bring in the catch of the day, mend their nets, and sell fresh sardines. The atmosphere here is authentic, raw, and incredibly photogenic.</p>
-        
-        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&auto=format&fit=crop" alt="The famous blue boats of Essaouira" loading="lazy" decoding="async">
-
-        <h2>3. Explore the Labyrinthine Medina</h2>
-        <p>Unlike Marrakech, Essaouira's medina is easy to navigate because of its grid-like structure. It's filled with workshops where craftsmen carve beautiful objects from Thuya wood. Don't forget to look for the many art galleries that line the white-washed streets.</p>
-
-        <h2>4. Feast on Fresh Seafood</h2>
-        <p>Head to the fish stalls near the port. You pick your fish or lobster directly from the ice, and they grill it for you on the spot. Served with simple bread and salad, it's one of the most memorable meals you'll have in Morocco.</p>
-
-        <div class="cta-box">
-          <h3 style="margin-top: 0; font-family: 'Work Sans', serif; font-size: 2rem;">Planning your dream trip?</h3>
-          <p>Get my comprehensive 7-day Morocco itinerary. It includes my secret spots in Essaouira, the best riads to stay in, and exactly how much to pay for excursions!</p>
-          <a href="landing_page.html" class="btn btn-primary">Download the Guide for Quote</a>
-        </div>
-
-        <h2>5. Try Kitesurfing or Windsurfing</h2>
-        <p>Essaouira is a world-class destination for wind sports. Whether you're a pro or a beginner, the beaches offer plenty of schools where you can rent gear or take a lesson. The "Alize" wind makes it a surfer's paradise nearly all year round.</p>
-
-        <div class="cta-box" style="background: #ffffff; border-style: dashed;">
-          <h3 style="margin-top: 0; font-family: 'Work Sans', serif;">Ready to book your Morocco Adventure?</h3>
-          <p>Let <strong>Abrid Morocco</strong> handle the logistics. From private transfers to local seaside guides, we ensure your trip to Essaouira is seamless and stress-free.</p>
-          <a href="index.html#tours" class="btn btn-secondary">Explore Our Coastal Tours</a>
-        </div>
-
+    <div class="article-wrap">
+      <a href="blog.html" class="back-nav">← All guides</a>
+      <p class="intro-text">Few places capture the soul as effortlessly as Essaouira. This white-and-blue coastal town, formerly known as Mogador, is a breath of fresh Atlantic air—literally. Known for its steady trade winds and laid-back atmosphere, it's the perfect antidote to the high energy of Marrakech.</p>
+      <p class="byline">By Abdellah | Local Tour Expert | March 24, 2026</p>
+      
+      <h2 class="article-h2">1. Walk the Historic Ramparts (Skala de la Ville)</h2><p>Built in the 18th century to protect the city from sea attacks, these ramparts offer stunning views of the Atlantic. You'll recognize them as a filming location for 'Game of Thrones'. It's the best spot for a sunset walk while watching the seagulls dance in the wind.</p><h2 class="article-h2">2. Visit the Port and the Blue Boats</h2><p>The Essaouira fishing port is famous for its vibrant blue wooden boats. Watch local fishermen bring in the catch of the day, mend their nets, and sell fresh sardines. The atmosphere here is authentic, raw, and incredibly photogenic.</p><h2 class="article-h2">3. Explore the Labyrinthine Medina</h2><p>Unlike Marrakech, Essaouira's medina is easy to navigate because of its grid-like structure. It's filled with workshops where craftsmen carve beautiful objects from Thuya wood. Don't forget to look for the many art galleries that line the white-washed streets.</p><h2 class="article-h2">4. Feast on Fresh Seafood</h2><p>Head to the fish stalls near the port. You pick your fish or lobster directly from the ice, and they grill it for you on the spot. Served with simple bread and salad, it's one of the most memorable meals you'll have in Morocco.</p><h2 class="article-h2">5. Try Kitesurfing or Windsurfing</h2><p>Essaouira is a world-class destination for wind sports. Whether you're a pro or a beginner, the beaches offer plenty of schools where you can rent gear or take a lesson. The steady Alizé wind makes it a surfer's paradise nearly all year round.</p>
+      <div class="travel-tips-box">
+        <h3>Practical notes</h3>
+        <ul><li>Walk the Skala at sunset, not midday — the light and the wind are kindest then.</li><li>Bring a wind jacket even in summer; the Alizé never really stops.</li><li>Eat at the port grills: pick your fish on ice, pay the small grilling fee, eat well.</li><li>Cash for the port and medina stalls; cards work in bigger restaurants.</li></ul>
       </div>
-    </article>
+      <div class="keep-exploring">
+        <h3>Keep exploring</h3>
+        <ul><li><a href="blog-essaouira-bus-vs-tour.html">Marrakech to Essaouira: bus vs private trip</a></li><li><a href="blog-marrakech-top10.html">Top 10 things to do in Marrakech</a></li></ul>
+      </div>
+      <div class="tour-promo-banner">
+        <h3>See Essaouira with us</h3>
+        <p>Day trip from Marrakech with transport, free medina time and seafood stops.</p>
+        <div class="tour-promo-actions">
+          <a class="btn btn-secondary" href="essaouira.html">View details →</a>
+          <a class="btn btn-primary" href="plan-my-trip.html" style="background:#fff;color:var(--terracotta);">Plan My Trip</a>
+        </div>
+      </div>
+      
+    </div>
   </main>
 
   <div class="container">
@@ -497,7 +532,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

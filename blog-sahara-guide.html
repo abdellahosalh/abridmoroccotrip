@@ -226,6 +226,49 @@ footer .footer-bottom {
 .brand-text span{color:#E4002B;}
 @media (max-width:1080px){.nav-links{display:none!important;}.nav-actions .btn-secondary{display:none!important;}.nav-actions .btn-primary{display:none!important;}.nav-actions .nav-wa,.nav-actions .search-toggle{display:none!important;}.menu-toggle{display:flex!important;}}
 </style>  <link rel="stylesheet" href="design.css">
+
+  <style>
+  /* Clean article template (matches blog-agoudal.html) */
+  .article-hero{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#1a1a1a;}
+  .article-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 40%,rgba(30,18,10,0.85) 100%);}
+  .article-hero-content{position:relative;z-index:2;padding:48px 0;color:#fff;max-width:900px;}
+  .article-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;background:var(--gold);color:var(--brown);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;}
+  .article-hero h1{font-size:clamp(32px,5vw,50px);line-height:1.15;color:#fff;margin-bottom:14px;}
+  .article-hero p{font-size:1.15rem;opacity:0.92;line-height:1.6;max-width:680px;}
+  .article-wrap{max-width:860px;margin:0 auto;padding:50px 24px 80px;}
+  .back-nav{display:inline-flex;align-items:center;gap:8px;color:var(--terracotta);font-weight:700;font-size:0.95rem;margin-bottom:32px;text-decoration:none;}
+  .intro-text{font-size:1.22rem;line-height:1.85;color:#3f2a20;margin-bottom:36px;}
+  .byline{color:var(--muted);font-size:.9rem;margin:-24px 0 36px;}
+  .article-quote{background:var(--accent-soft);border-left:4px solid var(--terracotta);padding:26px 30px;border-radius:0 16px 16px 0;font-style:italic;font-size:1.12rem;color:#5a3418;margin:40px 0;line-height:1.7;}
+  .article-h2{font-size:2rem;margin:48px 0 18px;color:var(--brown);border-bottom:2px solid rgba(228,0,43,0.2);padding-bottom:10px;}
+  .article-wrap p{color:#3f2a20;line-height:1.85;margin-bottom:18px;}
+  .article-wrap ul{color:#3f2a20;line-height:1.8;margin-bottom:18px;padding-left:22px;}
+  .article-wrap li{margin-bottom:8px;}
+  .highlight-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;margin:24px 0;box-shadow:0 6px 20px rgba(0,0,0,0.04);}
+  .highlight-card h3{color:var(--terracotta);font-size:1.3rem;margin-bottom:10px;}
+  .highlight-card p{margin:0;}
+  .article-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:36px 0;}
+  .article-gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0;}
+  .fact-card{background:#fff;padding:22px 16px;border-radius:14px;border:1px solid var(--border);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03);}
+  .fact-card .num{font-size:1.4rem;font-weight:700;color:var(--terracotta);}
+  .fact-card .label{font-size:0.85rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+  .travel-tips-box{background:rgba(77,124,15,0.07);border-left:4px solid var(--accent2);border-radius:0 16px 16px 0;padding:30px;margin:40px 0;}
+  .travel-tips-box h3{font-size:1.35rem;margin-bottom:14px;}
+  .travel-tips-box ul{margin:0;padding-left:20px;}
+  .travel-tips-box li{margin-bottom:10px;color:#3f2a20;}
+  .tour-promo-banner{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:44px 36px;border-radius:20px;text-align:center;margin:50px 0 20px;box-shadow:0 14px 40px rgba(228,0,43,0.35);}
+  .tour-promo-banner h3{color:#fff;font-size:1.8rem;margin-bottom:12px;}
+  .tour-promo-banner p{font-size:1.05rem;opacity:0.95;max-width:600px;margin:0 auto 24px;color:#fff;}
+  .tour-promo-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .keep-exploring{background:var(--bg-alt,#f6f2ec);border-radius:16px;padding:28px 30px;margin:40px 0;}
+  .keep-exploring h3{margin-bottom:12px;}
+  .keep-exploring ul{margin:0;padding-left:20px;}
+  .keep-exploring li{margin-bottom:8px;}
+  .keep-exploring a{color:var(--terracotta);font-weight:600;}
+  </style>
+
 </head>
 <body>
 <header class="site-header" id="siteHeader">
@@ -281,82 +324,53 @@ footer .footer-bottom {
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
 </div>
         </div>
-    </header>
-<div class="container" style="padding-top:40px;">
-    <a href="blog.html" style="font-size:1.1rem;color:var(--muted);font-weight:normal;">← Back to Blog</a>
-
-    <div class="blog-header">
-      <h1>The Complete Guide to the Sahara Desert</h1>
-      <p style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | March 20, 2026</p>
-      <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" alt="Merzouga Sahara desert dunes Morocco" fetchpriority="high" decoding="async">
-    </div>
-
-    <div class="blog-content">
-      <p style="font-size:1.2rem;">No trip to Morocco is complete without experiencing the quiet majesty of the Sahara Desert. The rolling dunes stretching infinitely into the horizon, the deep silence of the night, and the glowing campfire beneath a sky blanketed in stars — it is a transformative experience.</p>
-
-      <h2>Merzouga (Erg Chebbi) vs Zagora</h2>
-      <p>When booking a tour to the Sahara from Marrakech, you will usually be offered two destinations: Zagora or Merzouga.</p>
-      <p><strong>Zagora</strong> is a 2-day, 1-night trip. It is closer, but the desert here is flat and rocky with very few sand dunes. Only choose it if you have extremely limited time.</p>
-      <p><strong>Merzouga (Erg Chebbi)</strong> is a 3-day, 2-night trip. <em>This is the Sahara you are dreaming of.</em> The dunes tower over 150 meters high and glow a deep orange in the sunset light. We exclusively run tours to Merzouga because it is vastly superior.</p>
-
-      <!-- CTA: Merzouga Tour -->
-      <div class="cta-desert">
-        <h3>🏜️ Book Our 3-Day Merzouga Desert Tour</h3>
-        <p>Camel trek at sunset, luxury desert camp, Dades Gorge, and Todra Gorge. All meals and accommodation included. Just Quote/person!</p>
-        <a href="merzouga.html" class="btn btn-white">View Tour Details & Book →</a>
+    </header><main id="main">
+    <section class="article-hero">
+      <img class="article-hero-img" src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=1200&auto=format&fit=crop" alt="Merzouga Sahara desert dunes Morocco" fetchpriority="high" decoding="async">
+      <div class="article-hero-overlay"></div>
+      <div class="container article-hero-content">
+        <span class="article-tag">Desert Travel</span>
+        <h1>The Complete Guide to the Sahara Desert</h1>
+        <p>Merzouga, camps, treks, seasons and the road there — the complete Sahara briefing.</p>
       </div>
+    </section>
 
-      <h2>The Luxury Desert Camp Experience</h2>
-      <p>Many travelers picture sleeping on thin mats under the stars. While that's romantic, modern luxury desert camps (like the ones we use in our tours) offer a completely different level of comfort:</p>
-      <ul>
+    <div class="article-wrap">
+      <a href="blog.html" class="back-nav">← All guides</a>
+      <p class="intro-text" style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | March 20, 2026</p><p style="font-size:1.2rem;">No trip to Morocco is complete without experiencing the quiet majesty of the Sahara Desert. The rolling dunes stretching infinitely into the horizon, the deep silence of the night, and the glowing campfire beneath a sky blanketed in stars — it is a transformative experience.</p>
+      
+      <div class="article-gallery"><img src="https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?auto=compress&cs=tinysrgb&w=1280" alt="Sahara desert night stars Morocco" loading="lazy" decoding="async"></div>
+      <h2 class="article-h2">Merzouga (Erg Chebbi) vs Zagora</h2><p>When booking a tour to the Sahara from Marrakech, you will usually be offered two destinations: Zagora or Merzouga.</p><p><strong>Zagora</strong> is a 2-day, 1-night trip. It is closer, but the desert here is flat and rocky with very few sand dunes. Only choose it if you have extremely limited time.</p><p><strong>Merzouga (Erg Chebbi)</strong> is a 3-day, 2-night trip. <em>This is the Sahara you are dreaming of.</em> The dunes tower over 150 meters high and glow a deep orange in the sunset light. We exclusively run tours to Merzouga because it is vastly superior.</p><h3>🏜️ Book Our 3-Day Merzouga Desert Tour</h3><p>Camel trek at sunset, luxury desert camp, Dades Gorge, and Todra Gorge. All meals and accommodation included. Just Quote/person!</p><h2 class="article-h2">The Luxury Desert Camp Experience</h2><p>Many travelers picture sleeping on thin mats under the stars. While that's romantic, modern luxury desert camps (like the ones we use in our tours) offer a completely different level of comfort:</p><ul>
         <li>Private, spacious canvas tents with real beds and premium mattresses</li>
         <li>En-suite bathrooms with running water and hot showers</li>
         <li>Gourmet Moroccan dinners served under lantern light</li>
         <li>Berber music and storytelling around the fire</li>
-      </ul>
-
-      <h2>What to Pack for the Sahara</h2>
-      <p>Packing for the desert requires preparing for extreme temperature shifts. Here are the essentials:</p>
-      <ul>
+      </ul><h2 class="article-h2">What to Pack for the Sahara</h2><p>Packing for the desert requires preparing for extreme temperature shifts. Here are the essentials:</p><ul>
         <li><strong>Layers!</strong> The desert is scorching in the day but near freezing at night in winter. Bring a warm jacket.</li>
         <li><strong>A headscarf (Cheich).</strong> Not just for photos — it protects your face from sand and wind during the camel ride.</li>
         <li><strong>Closed-toe shoes.</strong> Sandals are fine for the camp but you'll want solid shoes for climbing the dunes.</li>
         <li><strong>Sunscreen (SPF 50+) and sunglasses.</strong> The desert sun is intense even in winter.</li>
         <li><strong>Wet wipes and a power bank.</strong> Camp electricity can be limited!</li>
-      </ul>
-
-      <h2>The Drive from Marrakech</h2>
-      <p>Merzouga is about 10 hours from Marrakech — but the drive is one of the best parts! You will cross the dramatic High Atlas Mountains via the winding Tizi n'Tichka pass, stop at the ancient mud-brick fortress of <strong>Ait Benhaddou</strong> (where <em>Gladiator</em> was filmed), and pass through the spectacular sheer walls of the <strong>Todra Gorge</strong>. The road trip is just as important as the destination.</p>
-
-      <img src="https://images.pexels.com/photos/33688/delicate-arch-night-stars-landscape.jpg?auto=compress&cs=tinysrgb&w=1280" alt="Sahara desert night stars Morocco" loading="lazy" decoding="async">
-
-      <h2>Best Time to Visit the Sahara</h2>
-      <p>The best months are October–April when temperatures are comfortable (15–25°C during the day). Summer (June–August) is extremely hot (45°C+) and not recommended. Spring and autumn offer the perfect balance of warmth and comfort.</p>
-
-      <div class="cta-box">
-        <h3 style="margin-top:0;">Plan Your Entire Morocco Trip</h3>
-        <p>Want to combine the Sahara with Marrakech, Fès, and Chefchaouen? Download my brand-new 7-Page Morocco Itinerary E-Book!</p>
-        <a href="landing_page.html" class="btn btn-primary">Download the Guide (Quote)</a>
+      </ul><h2 class="article-h2">The Drive from Marrakech</h2><p>Merzouga is about 10 hours from Marrakech — but the drive is one of the best parts! You will cross the dramatic High Atlas Mountains via the winding Tizi n'Tichka pass, stop at the ancient mud-brick fortress of <strong>Ait Benhaddou</strong> (where <em>Gladiator</em> was filmed), and pass through the spectacular sheer walls of the <strong>Todra Gorge</strong>. The road trip is just as important as the destination.</p><h2 class="article-h2">Best Time to Visit the Sahara</h2><p>The best months are October–April when temperatures are comfortable (15–25°C during the day). Summer (June–August) is extremely hot (45°C+) and not recommended. Spring and autumn offer the perfect balance of warmth and comfort.</p>
+      <div class="travel-tips-box">
+        <h3>Practical notes</h3>
+        <ul><li>Go shoulder season (Mar–May, Sep–Nov) for the kindest desert weather.</li><li>Layers beat bulk: hot days, cold nights, always.</li><li>Bring a headlamp, power bank and closed shoes for the dunes.</li><li>Book camps through an operator you can message — desert logistics reward responsiveness.</li></ul>
       </div>
-
-      <!-- Final CTA -->
-      <div class="cta-desert">
-        <h3>Ready to experience the real Sahara?</h3>
-        <p>Our 3-day Merzouga tour includes everything — private transport from Marrakech, hotel, desert camp, camel treks, and all meals. Join hundreds of happy travelers!</p>
-        <a href="merzouga.html" class="btn btn-white">Book the Desert Tour – Quote →</a>
+      <div class="keep-exploring">
+        <h3>Keep exploring</h3>
+        <ul><li><a href="blog-sahara-packing.html">What to pack for the Sahara</a></li><li><a href="blog-sahara-erg-chebbi.html">Erg Chebbi vs Erg Chigaga</a></li></ul>
       </div>
-
+      <div class="tour-promo-banner">
+        <h3>Do it properly with us</h3>
+        <p>3-day Merzouga expedition with private transport and camp night.</p>
+        <div class="tour-promo-actions">
+          <a class="btn btn-secondary" href="merzouga.html">View details →</a>
+          <a class="btn btn-primary" href="plan-my-trip.html" style="background:#fff;color:var(--terracotta);">Plan My Trip</a>
+        </div>
+      </div>
+      
     </div>
-    <a href="blog.html" style="display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:700;">← Back to Blog</a>
-  </div>
-
-  <div class="container">
-    <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
-    <div class="climate-note">
-      🌍 <strong>We're in the process of figuring out how much CO₂-e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
-      When you travel with us, <strong>Abrid Morocco</strong> gives you more opportunities to support important causes in the destinations you visit.
-    </div>
-</div><footer class="site-footer">
+  </main><footer class="site-footer">
     <div class="container">
       <div class="footer-grid footer-grid-v2">
         <div>
@@ -458,7 +472,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

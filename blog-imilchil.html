@@ -603,7 +603,7 @@ footer .footer-bottom {
     </div>
 
     <!-- Gallery -->
-    <h2 class="article-h2">📸 Glimpses of Imilchil &amp; The Festival</h2>
+    <h2 class="article-h2">Glimpses of Imilchil &amp; The Festival</h2>
     <div class="article-gallery">
       <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=656,h=437,fit=crop/YNqJlL3B9gIRgqnp/whatsapp-image-2024-06-10-at-2.36.14-pm-YBgpnWkbLWTVbLvN.jpeg" alt="Imilchil traditional Berber women dress" loading="lazy" decoding="async">
       <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=720,h=544,fit=crop,trim=0;64.11185682326622;0;69.68680089485458/YNqJlL3B9gIRgqnp/imilchil-moroccan-wedding-festival-1-YNqJeB1WRrHa15Qw.jpg" alt="Imilchil Moroccan Wedding Festival celebration" loading="lazy" decoding="async">
@@ -770,7 +770,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}

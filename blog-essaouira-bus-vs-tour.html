@@ -265,6 +265,49 @@ footer .footer-bottom {
 .brand-text span{color:#E4002B;}
 @media (max-width:1080px){.nav-links{display:none!important;}.nav-actions .btn-secondary{display:none!important;}.nav-actions .btn-primary{display:none!important;}.nav-actions .nav-wa,.nav-actions .search-toggle{display:none!important;}.menu-toggle{display:flex!important;}}
 </style>  <link rel="stylesheet" href="design.css">
+
+  <style>
+  /* Clean article template (matches blog-agoudal.html) */
+  .article-hero{position:relative;min-height:440px;display:flex;align-items:flex-end;overflow:hidden;background:#1a1a1a;}
+  .article-hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .article-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15) 0%,rgba(0,0,0,0.4) 40%,rgba(30,18,10,0.85) 100%);}
+  .article-hero-content{position:relative;z-index:2;padding:48px 0;color:#fff;max-width:900px;}
+  .article-tag{display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:30px;background:var(--gold);color:var(--brown);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:16px;}
+  .article-hero h1{font-size:clamp(32px,5vw,50px);line-height:1.15;color:#fff;margin-bottom:14px;}
+  .article-hero p{font-size:1.15rem;opacity:0.92;line-height:1.6;max-width:680px;}
+  .article-wrap{max-width:860px;margin:0 auto;padding:50px 24px 80px;}
+  .back-nav{display:inline-flex;align-items:center;gap:8px;color:var(--terracotta);font-weight:700;font-size:0.95rem;margin-bottom:32px;text-decoration:none;}
+  .intro-text{font-size:1.22rem;line-height:1.85;color:#3f2a20;margin-bottom:36px;}
+  .byline{color:var(--muted);font-size:.9rem;margin:-24px 0 36px;}
+  .article-quote{background:var(--accent-soft);border-left:4px solid var(--terracotta);padding:26px 30px;border-radius:0 16px 16px 0;font-style:italic;font-size:1.12rem;color:#5a3418;margin:40px 0;line-height:1.7;}
+  .article-h2{font-size:2rem;margin:48px 0 18px;color:var(--brown);border-bottom:2px solid rgba(228,0,43,0.2);padding-bottom:10px;}
+  .article-wrap p{color:#3f2a20;line-height:1.85;margin-bottom:18px;}
+  .article-wrap ul{color:#3f2a20;line-height:1.8;margin-bottom:18px;padding-left:22px;}
+  .article-wrap li{margin-bottom:8px;}
+  .highlight-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:28px;margin:24px 0;box-shadow:0 6px 20px rgba(0,0,0,0.04);}
+  .highlight-card h3{color:var(--terracotta);font-size:1.3rem;margin-bottom:10px;}
+  .highlight-card p{margin:0;}
+  .article-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin:36px 0;}
+  .article-gallery img{width:100%;height:220px;object-fit:cover;border-radius:14px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
+  .facts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin:36px 0;}
+  .fact-card{background:#fff;padding:22px 16px;border-radius:14px;border:1px solid var(--border);text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.03);}
+  .fact-card .num{font-size:1.4rem;font-weight:700;color:var(--terracotta);}
+  .fact-card .label{font-size:0.85rem;color:var(--muted);margin-top:4px;text-transform:uppercase;letter-spacing:0.5px;font-weight:600;}
+  .travel-tips-box{background:rgba(77,124,15,0.07);border-left:4px solid var(--accent2);border-radius:0 16px 16px 0;padding:30px;margin:40px 0;}
+  .travel-tips-box h3{font-size:1.35rem;margin-bottom:14px;}
+  .travel-tips-box ul{margin:0;padding-left:20px;}
+  .travel-tips-box li{margin-bottom:10px;color:#3f2a20;}
+  .tour-promo-banner{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:44px 36px;border-radius:20px;text-align:center;margin:50px 0 20px;box-shadow:0 14px 40px rgba(228,0,43,0.35);}
+  .tour-promo-banner h3{color:#fff;font-size:1.8rem;margin-bottom:12px;}
+  .tour-promo-banner p{font-size:1.05rem;opacity:0.95;max-width:600px;margin:0 auto 24px;color:#fff;}
+  .tour-promo-actions{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;}
+  .keep-exploring{background:var(--bg-alt,#f6f2ec);border-radius:16px;padding:28px 30px;margin:40px 0;}
+  .keep-exploring h3{margin-bottom:12px;}
+  .keep-exploring ul{margin:0;padding-left:20px;}
+  .keep-exploring li{margin-bottom:8px;}
+  .keep-exploring a{color:var(--terracotta);font-weight:600;}
+  </style>
+
 </head>
 <body>
   <header class="site-header" id="siteHeader">
@@ -317,51 +360,48 @@ footer .footer-bottom {
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
 </div>
     </div>
-  </header>
-  <div class="container">
-    <a href="blog.html" style="font-size:1.1rem;color:var(--muted);font-weight:normal;">← Back to Blog</a>
-    <div style="margin: 10px 0;"></div>
+  </header><main id="main">
+    <section class="article-hero">
+      <img class="article-hero-img" src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?w=1200&auto=format&fit=crop" alt="Essaouira blue boats harbor Morocco" fetchpriority="high" decoding="async">
+      <div class="article-hero-overlay"></div>
+      <div class="container article-hero-content">
+        <span class="article-tag">Coastal Escape</span>
+        <h1>Marrakech to Essaouira Day Trip: Bus vs. Private Taxi</h1>
+        <p>Supratours, CTM or private driver? The Marrakech–Essaouira run, compared honestly.</p>
+      </div>
+    </section>
 
-    <div class="blog-header">
-      <h1>Marrakech to Essaouira Day Trip: Bus vs. Private Taxi</h1>
-      <p style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | May 24, 2026</p>
-      <img src="https://images.unsplash.com/photo-1581889470536-467bdbe30cd0?w=1200&auto=format&fit=crop" alt="Essaouira blue boats harbor Morocco" fetchpriority="high" decoding="async">
-    </div>
-
-    <div class="blog-content">
-      <p style="font-size:1.2rem;">If you are staying in Marrakech, taking a day trip to the coastal town of Essaouira is an absolute must. Known as the "Windy City of Africa," it offers a relaxed vibe, beautiful ocean views, incredible fresh seafood, and an old Medina that fans of <em>Game of Thrones</em> will instantly recognize!</p>
+    <div class="article-wrap">
+      <a href="blog.html" class="back-nav">← All guides</a>
+      <p class="intro-text" style="color:var(--muted);font-size:1.1rem;">By Abdellah | Local Tour Expert | May 24, 2026</p><p style="font-size:1.2rem;">If you are staying in Marrakech, taking a day trip to the coastal town of Essaouira is an absolute must. Known as the "Windy City of Africa," it offers a relaxed vibe, beautiful ocean views, incredible fresh seafood, and an old Medina that fans of <em>Game of Thrones</em> will instantly recognize!</p>
       
-      <p>But what is the best way to get there? The drive is about 2.5 to 3 hours each way. Here is a breakdown of your two main options: The public bus vs. a private tour.</p>
-
-      <h2>Option 1: The Public Bus (Supratours or CTM)</h2>
-      <ul>
+      
+      <h2 class="article-h2">Option 1: The Public Bus (Supratours or CTM)</h2><ul>
         <li><strong>The Pros:</strong> It is cheap. A one-way ticket costs around 80 to 100 MAD (about Quote-Quote). The buses are generally clean and air-conditioned.</li>
         <li><strong>The Cons:</strong> You are on a strict schedule. You have to pay for a taxi from your Riad to the bus station in Marrakech, wait in line, and sit on a crowded bus. The bus makes one quick stop at a busy rest stop, but you cannot pull over to take photos of the famous "Goats in the Argan Trees" (yes, goats literally climb trees here!).</li>
-      </ul>
-
-      <h2>Option 2: A Private Guided Trip</h2>
-      <ul>
+      </ul><h2 class="article-h2">Option 2: A Private Guided Trip</h2><ul>
         <li><strong>The Pros:</strong> Total freedom and comfort. Your driver picks you up directly from your Riad in Marrakech. You control the AC and the music. More importantly, you can stop wherever you want! We always stop to see the tree-climbing goats and visit a local women's Argan oil cooperative to see how "Moroccan liquid gold" is made.</li>
         <li><strong>The Cons:</strong> It costs a little more than the public bus, but the value and time saved are huge.</li>
       </ul>
-
-      <div class="cta-box">
-        <h3 style="margin-top:0;">Why You Should Choose the Private Option</h3>
-        <p>Your vacation time is precious. Spending 6 hours of your day waiting in bus stations and riding with 40 strangers is exhausting. With our <a href="essaouira.html" style="color:var(--terracotta);font-weight:700;">Essaouira Coastal Escape</a> (Quote/person), you get VIP treatment. We handle the driving in a private, comfortable vehicle, show you the hidden stops along the way, and give you plenty of free time to explore Essaouira’s beautiful Medina and eat fresh seafood by the harbor. Looking for more ideas near Marrakech? Browse our <a href="destinations.html" style="color:var(--terracotta);font-weight:700;">Morocco destinations guide</a>.</p>
-        <a href="essaouira.html" class="btn btn-primary">Book Essaouira Day Trip - Quote</a>
+      <div class="travel-tips-box">
+        <h3>Practical notes</h3>
+        <ul><li>Book the day before in high season; morning buses sell out.</li><li>Sit on the right side going west for ocean glimpses near the coast.</li><li>Keep your return ticket and note the departure bay — stations are busy.</li><li>Private wins for groups of 3+: similar per-person cost, door-to-door, your schedule.</li></ul>
       </div>
-
+      <div class="keep-exploring">
+        <h3>Keep exploring</h3>
+        <ul><li><a href="blog-essaouira.html">Essaouira complete guide</a></li><li><a href="blog-marrakech-top10.html">Top 10 things to do in Marrakech</a></li></ul>
+      </div>
+      <div class="tour-promo-banner">
+        <h3>Take the easy option</h3>
+        <p>Private Essaouira day trip from Marrakech — transport, free time, seafood.</p>
+        <div class="tour-promo-actions">
+          <a class="btn btn-secondary" href="essaouira.html">View details →</a>
+          <a class="btn btn-primary" href="plan-my-trip.html" style="background:#fff;color:var(--terracotta);">Plan My Trip</a>
+        </div>
+      </div>
+      
     </div>
-    <a href="blog.html" style="display:inline-block;margin:40px 0;color:var(--terracotta);font-weight:700;">← Back to Blog</a>
-  </div>
-
-  <div class="container">
-    <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
-    <div class="climate-note">
-      🌍 <strong>We're in the process of figuring out how much CO₂-e this trip generates.</strong> In the meantime, learn more about our climate commitment.<br>
-      When you travel with us, <strong>Abrid Morocco</strong> gives you more opportunities to support important causes in the destinations you visit.
-    </div>
-</div><footer class="site-footer">
+  </main><footer class="site-footer">
     <div class="container">
       <div class="footer-grid footer-grid-v2">
         <div>
@@ -458,7 +498,7 @@ footer .footer-bottom {
     function hide() { bar.setAttribute('hidden', ''); }
     var choice = null;
     try { choice = localStorage.getItem(KEY); } catch (e) {}
-    if (!choice) bar.removeAttribute('hidden');
+    if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
     document.getElementById('cookieAccept').addEventListener('click', function () {
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}
