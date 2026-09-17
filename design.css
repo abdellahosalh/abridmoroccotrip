@@ -2058,3 +2058,22 @@ svg.leaflet-zoom-animated{will-change:transform;}
 .cookie-banner p a{color:#fff;font-weight:700;text-decoration:underline;}
 .cookie-actions{display:flex;gap:10px;flex-shrink:0;}
 @media (min-width:720px){.cookie-banner{left:auto;max-width:420px;}}
+
+/* -- Abrid custom newsletter popup (leads go straight to email) -- */
+.abrid-popup-overlay{position:fixed;inset:0;z-index:3000;background:rgba(20,10,8,.55);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:20px;}
+.abrid-popup-overlay[hidden]{display:none;}
+.abrid-popup{position:relative;background:#fff;border-radius:18px;max-width:440px;width:100%;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4);animation:abridPop .35s ease;}
+@keyframes abridPop{from{transform:translateY(24px) scale(.97);opacity:0;}to{transform:none;opacity:1;}}
+.abrid-popup-top{background:linear-gradient(135deg,var(--terracotta),var(--terracotta-dark));color:#fff;padding:28px 28px 22px;text-align:center;}
+.abrid-popup-top h3{color:#fff;font-size:1.5rem;margin-bottom:6px;}
+.abrid-popup-top p{opacity:.92;font-size:.92rem;margin:0;}
+.abrid-popup-close{position:absolute;top:10px;right:12px;background:rgba(255,255,255,.2);border:none;color:#fff;font-size:1.1rem;width:32px;height:32px;border-radius:50%;cursor:pointer;line-height:1;}
+.abrid-popup-close:hover{background:rgba(255,255,255,.35);}
+.abrid-popup form{padding:24px 28px 28px;display:flex;flex-direction:column;gap:12px;}
+.abrid-popup label{font-size:.82rem;font-weight:700;color:var(--brown);}
+.abrid-popup input,.abrid-popup select{width:100%;padding:12px 14px;border:1.5px solid #e0d6cc;border-radius:12px;font-size:.95rem;background:var(--sand-light);font-family:inherit;}
+.abrid-popup input:focus,.abrid-popup select:focus{border-color:var(--terracotta);outline:none;}
+.abrid-popup .fine{font-size:.78rem;color:var(--muted);text-align:center;}
+.abrid-popup-ok{padding:36px 28px;text-align:center;display:flex;flex-direction:column;gap:10px;align-items:center;}
+.abrid-popup-ok .big{font-size:2.6rem;}
+@media (prefers-reduced-motion:reduce){.abrid-popup{animation:none;}}

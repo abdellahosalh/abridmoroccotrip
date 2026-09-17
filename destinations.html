@@ -397,14 +397,87 @@
   </script>
   <script src="search-data.js"></script>
   <script src="site.js"></script>
-<!-- MailerLite Universal -->
-<script>
-    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-    ml('account', '2642302');
-</script>
-<!-- End MailerLite Universal -->
+
+  <!-- Abrid newsletter popup: leads go straight to abdeosalh@gmail.com -->
+  <div class="abrid-popup-overlay" id="abridPopup" role="dialog" aria-modal="true" aria-label="Subscribe" hidden>
+    <div class="abrid-popup">
+      <button type="button" class="abrid-popup-close" id="abridPopupClose" aria-label="Close">✕</button>
+      <div id="abridPopupBody">
+        <div class="abrid-popup-top">
+          <h3>Morocco in your inbox</h3>
+          <p>One short letter a month — routes, seasons, secret spots. No spam, ever.</p>
+        </div>
+        <form id="abridPopupForm" action="https://formsubmit.co/abdeosalh@gmail.com" method="POST">
+          <div>
+            <label for="abridName">Your name</label>
+            <input type="text" id="abridName" name="name" placeholder="Sara" required autocomplete="name">
+          </div>
+          <div>
+            <label for="abridEmail">Email address</label>
+            <input type="email" id="abridEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+          </div>
+          <div>
+            <label for="abridInterest">I'm dreaming of…</label>
+            <select id="abridInterest" name="interest">
+              <option value="Anywhere in Morocco">Anywhere in Morocco</option>
+              <option value="Sahara desert">Sahara desert</option>
+              <option value="High Atlas">High Atlas</option>
+              <option value="Imperial cities">Imperial cities</option>
+            </select>
+          </div>
+          <input type="hidden" name="_subject" value="New subscriber – Abrid Morocco">
+          <input type="hidden" name="_template" value="table">
+          <input type="text" name="_honey" style="display:none">
+          <button type="submit" class="btn btn-primary" style="width:100%;">Subscribe free</button>
+          <p class="fine">Unsubscribe anytime with one click.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var KEY = 'abrid-popup-v1';
+    var box = document.getElementById('abridPopup');
+    if (!box) return;
+    var seen = null;
+    try { seen = localStorage.getItem(KEY); } catch (e) {}
+    function open() { box.removeAttribute('hidden'); }
+    function close() {
+      box.setAttribute('hidden', '');
+      try { localStorage.setItem(KEY, 'seen'); } catch (e) {}
+    }
+    if (!seen) setTimeout(function () {
+      try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+      open();
+    }, 25000);
+    document.getElementById('abridPopupClose').addEventListener('click', close);
+    box.addEventListener('click', function (ev) { if (ev.target === box) close(); });
+    document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !box.hasAttribute('hidden')) close(); });
+    document.getElementById('abridPopupForm').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var form = ev.target;
+      var data = {
+        name: document.getElementById('abridName').value,
+        email: document.getElementById('abridEmail').value,
+        interest: document.getElementById('abridInterest').value,
+        _subject: 'New subscriber – Abrid Morocco'
+      };
+      fetch('https://formsubmit.co/ajax/abdeosalh@gmail.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(data)
+      }).then(function () { done(true); }).catch(function () { form.submit(); });
+      function done() {
+        document.getElementById('abridPopupBody').innerHTML =
+          '<div class="abrid-popup-ok"><div class="big">🎉</div>' +
+          '<h3 style="margin:0;">You are in!</h3>' +
+          '<p style="color:var(--muted);">Welcome aboard — your first Morocco letter is on its way.</p>' +
+          '<button type="button" class="btn btn-secondary" id="abridOkClose">Continue exploring</button></div>';
+        document.getElementById('abridOkClose').addEventListener('click', close);
+        try { localStorage.setItem(KEY, 'subscribed'); } catch (e) {}
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
