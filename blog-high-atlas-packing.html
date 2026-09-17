@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>try{if(localStorage.getItem('abrid-consent')==='declined'){window['ga-disable-G-C868HF02SM']=true;}}catch(e){}</script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C868HF02SM"></script>
 <script>
@@ -243,7 +244,7 @@
     </div>
   </footer>
 
-  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Abrid on WhatsApp">💬</a>
+  <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Chat with Abrid on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 .1-.2-.2-1-1.1-1.7-1.8-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.4-.5-.5-.5h-.5c-.2 0-.5 0-.7.1-.2.2-.9.9-.9 2.2 0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.2-.2-.3-.4-.4zM12 21.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.8-1.4-1.3-3-1.3-4.7C3.4 8.6 7.2 4.8 12 4.8c4.8 0 8.6 3.8 8.6 8.5 0 4.8-3.8 8-8.6 8zM12 2.8C6.2 2.8 1.4 7.6 1.4 13.4c0 1.9.5 3.7 1.4 5.3L1.3 22l3.4-.9c1.5.9 3.3 1.4 5.2 1.4 5.8 0 10.6-4.8 10.6-10.6S17.8 2.8 12 2.8z"/></svg></a>
 
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Search">
     <div class="search-panel">
@@ -257,7 +258,47 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   <script src="mini-map.js"></script>
+
+  <!-- Cookie consent -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Cookie consent" hidden>
+    <p>We use cookies to improve your experience and analyse site traffic. Read our <a href="cookies.html">cookie policy</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Accept</button>
+      <button type="button" class="btn btn-secondary btn-sm" id="cookieDecline">Decline</button>
+    </div>
+  </div>
+  <script>
+  (function () {
+    var KEY = 'abrid-consent';
+    var bar = document.getElementById('cookieBanner');
+    if (!bar) return;
+    function hide() { bar.setAttribute('hidden', ''); }
+    var choice = null;
+    try { choice = localStorage.getItem(KEY); } catch (e) {}
+    if (!choice) bar.removeAttribute('hidden');
+    document.getElementById('cookieAccept').addEventListener('click', function () {
+      try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+      try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}
+      hide();
+    });
+    document.getElementById('cookieDecline').addEventListener('click', function () {
+      try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
+      try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_declined'); } } catch (e) {}
+      window['ga-disable-G-C868HF02SM'] = true;
+      hide();
+    });
+  })();
+  </script>
   <script src="search-data.js"></script>
   <script src="site.js"></script>
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2642302');
+</script>
+<!-- End MailerLite Universal -->
 </body>
 </html>

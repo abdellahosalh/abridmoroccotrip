@@ -2051,3 +2051,10 @@ svg.leaflet-zoom-animated{will-change:transform;}
 .footer-grid.footer-grid-v2{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;}
 @media (max-width:1024px){.footer-grid.footer-grid-v2{grid-template-columns:1fr 1fr;}}
 @media (max-width:560px){.footer-grid.footer-grid-v2{grid-template-columns:1fr;}}
+/* -- Cookie consent banner -- */
+.cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:2000;background:#1a1a1a;color:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 16px 40px rgba(0,0,0,.35);display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
+.cookie-banner[hidden]{display:none;}
+.cookie-banner p{flex:1 1 260px;margin:0;font-size:.9rem;line-height:1.6;color:rgba(255,255,255,.85);}
+.cookie-banner p a{color:#fff;font-weight:700;text-decoration:underline;}
+.cookie-actions{display:flex;gap:10px;flex-shrink:0;}
+@media (min-width:720px){.cookie-banner{left:auto;max-width:420px;}}
