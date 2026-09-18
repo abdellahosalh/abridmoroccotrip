@@ -2095,3 +2095,7 @@ svg.leaflet-zoom-animated{will-change:transform;}
 .cart-grid input{width:100%;padding:11px 12px;border:1.5px solid #e0d6cc;border-radius:10px;font-size:.9rem;font-family:inherit;background:var(--sand-light);}
 .cart-grid input:focus{border-color:var(--terracotta);outline:none;}
 .cart-box .fine{font-size:.78rem;color:var(--muted);text-align:center;margin-top:10px;}
+/* Reserve button pinned to the top of every tour card */
+.tour-card .tour-image{position:relative;}
+.tour-card .reserve-top{position:absolute;top:10px;right:10px;z-index:3;background:var(--terracotta);color:#fff;border:none;border-radius:60px;padding:7px 16px;font-weight:800;font-size:.72rem;font-family:var(--font-ui);letter-spacing:.04em;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .2s ease;}
+.tour-card .reserve-top:hover{background:var(--terracotta-dark);transform:scale(1.06);}

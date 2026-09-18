@@ -35,6 +35,7 @@
   var file = (location.pathname.split("/").pop() || "index.html").split("?")[0].toLowerCase();
   var tour = TOURS[file] || TOURS["private.html"];
   if (!tour) return;
+  var currentTour = tour;
 
   function esc(s) {
     return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -62,13 +63,13 @@
   overlay.setAttribute("hidden", "");
   overlay.setAttribute("role", "dialog");
   overlay.setAttribute("aria-modal", "true");
-  overlay.setAttribute("aria-label", "Reserve " + tour.name);
+  overlay.setAttribute("aria-label", "Reserve this tour");
   var today = new Date().toISOString().slice(0, 10);
   overlay.innerHTML =
     '<div class="cart-box">' +
     '<button type="button" class="cart-close" id="cartClose" aria-label="Close">✕</button>' +
-    '<div class="cart-tour"><img id="cartThumb" src="' + esc(tour.img) + '" alt="" loading="lazy">' +
-    '<div><strong>' + esc(tour.name) + '</strong><span>' + esc(tour.dur) + ' · Private · Quote on request</span></div></div>' +
+    '<div class="cart-tour"><img id="cartThumb" src="" alt="" loading="lazy">' +
+    '<div><strong id="cartTourName"></strong><span id="cartTourMeta"></span></div></div>' +
     '<div id="cartFormWrap">' +
     '<form id="cartForm">' +
     '<div class="cart-grid">' +
@@ -86,7 +87,23 @@
 
   function open() { overlay.removeAttribute("hidden"); document.body.style.overflow = "hidden"; }
   function close() { overlay.setAttribute("hidden", ""); document.body.style.overflow = ""; }
-  fab.addEventListener("click", open);
+  function setTour(key) {
+    var t = TOURS[key] || TOURS["private.html"] || tour;
+    currentTour = t;
+    document.getElementById("cartThumb").src = t.img;
+    document.getElementById("cartTourName").textContent = t.name;
+    document.getElementById("cartTourMeta").textContent = t.dur + " · Private · Quote on request";
+    overlay.setAttribute("aria-label", "Reserve " + t.name);
+  }
+  setTour(file in TOURS ? file : "private.html");
+  fab.addEventListener("click", function () { setTour(file in TOURS ? file : "private.html"); open(); });
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest ? e.target.closest("[data-reserve-tour]") : null;
+    if (!b) return;
+    e.preventDefault();
+    setTour(b.getAttribute("data-reserve-tour"));
+    open();
+  });
   overlay.querySelector("#cartClose").addEventListener("click", close);
   overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !overlay.hasAttribute("hidden")) close(); });
@@ -135,12 +152,12 @@
     doc.setFontSize(16);
     doc.setFont("helvetica", "bold");
     var tx = (img && img.dataUrl) ? 80 : 14;
-    var title = doc.splitTextToSize(tour.name, W - tx - 14);
+    var title = doc.splitTextToSize(currentTour.name, W - tx - 14);
     doc.text(title, tx, y + 8);
     doc.setFontSize(11);
     doc.setFont("helvetica", "normal");
     doc.setTextColor(120, 120, 120);
-    doc.text(tour.dur + "  ·  Ref " + ref, tx, y + 8 + title.length * 7);
+    doc.text(currentTour.dur + "  ·  Ref " + ref, tx, y + 8 + title.length * 7);
     y = Math.max(y + 46, y + 14 + title.length * 7 + 8);
     function row(k, v) {
       doc.setFont("helvetica", "bold");
@@ -171,7 +188,7 @@
     doc.setFont("helvetica", "normal");
     doc.setFontSize(10.5);
     var letter = doc.splitTextToSize(
-      "Thank you for choosing Abrid Morocco! Your reservation for \"" + tour.name +
+      "Thank you for choosing Abrid Morocco! Your reservation for \"" + currentTour.name +
       "\" (" + ref + ") is with Abdellah and Karim now. We reply personally within " +
       "2 hours (9:00-21:00 Morocco time) to confirm availability and shape the final details. " +
       "No payment is due until tour day. We cannot wait to show you our Morocco.", W - 28);
@@ -190,13 +207,13 @@
     btn.textContent = "Sending…";
     var g = function (id) { var el = document.getElementById(id); return el ? el.value : ""; };
     var name = g("cartName"), email = g("cartEmail");
-    loadImageData(tour.img).catch(function () { return null; }).then(function (img) {
+    loadImageData(currentTour.img).catch(function () { return null; }).then(function (img) {
       var out = buildPdf(img);
       var fd = new FormData();
-      fd.append("_subject", "New tour reservation – " + tour.name + " (" + out.ref + ")");
+      fd.append("_subject", "New tour reservation – " + currentTour.name + " (" + out.ref + ")");
       fd.append("_template", "table");
-      fd.append("Tour", tour.name);
-      fd.append("Duration", tour.dur);
+      fd.append("Tour", currentTour.name);
+      fd.append("Duration", currentTour.dur);
       fd.append("Reference", out.ref);
       fd.append("Name", name);
       fd.append("Email", email);
@@ -220,8 +237,8 @@
         '<button type="button" class="btn btn-secondary" id="cartDone">Continue exploring</button></div>';
       document.getElementById("cartDone").addEventListener("click", close);
     }).catch(function () {
-      var text = encodeURIComponent("Hello Abrid Morocco! I would like to reserve: " + tour.name +
-        " (" + tour.dur + "). Name: " + name + ", Email: " + email);
+      var text = encodeURIComponent("Hello Abrid Morocco! I would like to reserve: " + currentTour.name +
+        " (" + currentTour.dur + "). Name: " + name + ", Email: " + email);
       document.getElementById("cartFormWrap").innerHTML =
         '<div style="text-align:center;padding:18px 6px;"><h3>Sending hiccup</h3>' +
         '<p style="color:var(--muted);">Please send your reservation directly:</p>' +
