@@ -9,6 +9,10 @@
 (function () {
   var OWNER_EMAIL = "abdeosalh@gmail.com";
   var WA_NUMBER = "212762934488";
+  var LANG = (document.documentElement.getAttribute("lang") || "en").slice(0, 2).toLowerCase();
+  function T(en, fr, es) { return LANG === "fr" ? fr : (LANG === "es" ? es : en); }
+  var FR = LANG === "fr";
+  var ES = LANG === "es";
 
   var TOURS = {
     "marrakech.html": { name: "Marrakech Day Tour", dur: "1 Day", img: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop", price: "€50 pp" },
@@ -22,12 +26,12 @@
     "fes.html": { name: "Fes Medina Guided Tour", dur: "Day Tour", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "€50 pp" },
     "ouzoud.html": { name: "Ouzoud Waterfalls", dur: "Day Trip", img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop", price: "€150 pp" },
     "zagora.html": { name: "Zagora Desert Express", dur: "2 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop", price: "€1,000 pp" },
-    "toubkal.html": { name: "Mount Toubkal Trek", dur: "2 Days", img: "images/toubkal/toubkal-massif.jpg", price: "Quote on request" },
+    "toubkal.html": { name: "Mount Toubkal Trek", dur: "2 Days", img: "images/toubkal/toubkal-massif.jpg", price: "€700 pp" },
     "agafay.html": { name: "Agafay Desert Evening", dur: "Evening", img: "images/agafay/agafay-camp.jpg", price: "€200 pp" },
     "high-atlas-azilal-imilchil-rich.html": { name: "Across the High Atlas", dur: "5 Days", img: "images/high-atlas/imilchil/imilchil-01.jpg", price: "€3,000 pp" },
     "imperial.html": { name: "Imperial Cities Circuit", dur: "8 Days", img: "https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop", price: "€3,000 pp" },
     "6-day-christmas-morocco.html": { name: "6-Day Morocco Christmas Itinerary", dur: "6 Days", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg", price: "€2,500 pp" },
-    "classic-morocco.html": { name: "Classic Morocco Grand Tour", dur: "13 Days", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "Quote on request" },
+    "classic-morocco.html": { name: "Classic Morocco Grand Tour", dur: "13 Days", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "€3,000 pp" },
     "small-group-tour.html": { name: "Small Group Morocco Tour", dur: "11 Days", img: "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=600&auto=format&fit=crop", price: "€2,000 pp" },
     "private.html": { name: "Private Custom Morocco Tour", dur: "Any Length", img: "https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop", price: "€1,200 pp" }
   };
@@ -52,8 +56,8 @@
   fab.type = "button";
   fab.className = "cart-fab";
   fab.id = "cartFab";
-  fab.setAttribute("aria-label", "Reserve this tour");
-  fab.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>Reserve</span>';
+  fab.setAttribute("aria-label", T("Reserve this tour", "Réserver ce circuit", "Reservar este viaje"));
+  fab.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg><span>' + T("Reserve", "Réserver", "Reservar") + '</span>';
   document.body.appendChild(fab);
 
   /* Modal */
@@ -63,25 +67,25 @@
   overlay.setAttribute("hidden", "");
   overlay.setAttribute("role", "dialog");
   overlay.setAttribute("aria-modal", "true");
-  overlay.setAttribute("aria-label", "Reserve this tour");
+  overlay.setAttribute("aria-label", T("Reserve this tour", "Réserver ce circuit"));
   var today = new Date().toISOString().slice(0, 10);
   overlay.innerHTML =
     '<div class="cart-box">' +
-    '<button type="button" class="cart-close" id="cartClose" aria-label="Close">✕</button>' +
+    '<button type="button" class="cart-close" id="cartClose" aria-label="' + T("Close", "Fermer", "Cerrar") + '">✕</button>' +
     '<div class="cart-tour"><img id="cartThumb" src="" alt="" loading="lazy">' +
     '<div><strong id="cartTourName"></strong><span id="cartTourMeta"></span></div></div>' +
     '<div id="cartFormWrap">' +
     '<form id="cartForm">' +
     '<div class="cart-grid">' +
-    '<div><label for="cartName">Full name</label><input id="cartName" name="name" required autocomplete="name" placeholder="Sara"></div>' +
-    '<div><label for="cartEmail">Email</label><input id="cartEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com"></div>' +
-    '<div><label for="cartPhone">Phone / WhatsApp</label><input id="cartPhone" name="phone" autocomplete="tel" placeholder="+33 …"></div>' +
-    '<div><label for="cartDate">Preferred date</label><input id="cartDate" name="date" type="date" min="' + today + '" required></div>' +
-    '<div><label for="cartPax">Travelers</label><input id="cartPax" name="travelers" type="number" min="1" max="30" value="2" required></div>' +
-    '<div><label for="cartMsg">Anything we should know?</label><input id="cartMsg" name="requests" placeholder="Hotel, diet, pace…"></div>' +
+    '<div><label for="cartName">' + T("Full name", "Nom complet", "Nombre completo") + '</label><input id="cartName" name="name" required autocomplete="name" placeholder="' + T("Sara", "Sara") + '"></div>' +
+    '<div><label for="cartEmail">' + T("Email", "E-mail", "Correo electrónico") + '</label><input id="cartEmail" name="email" type="email" required autocomplete="email" placeholder="' + T("you@example.com", "vous@exemple.com", "tu@ejemplo.com") + '"></div>' +
+    '<div><label for="cartPhone">' + T("Phone / WhatsApp", "Téléphone / WhatsApp", "Teléfono / WhatsApp") + '</label><input id="cartPhone" name="phone" autocomplete="tel" placeholder="+33 …"></div>' +
+    '<div><label for="cartDate">' + T("Preferred date", "Date souhaitée", "Fecha preferida") + '</label><input id="cartDate" name="date" type="date" min="' + today + '" required></div>' +
+    '<div><label for="cartPax">' + T("Travelers", "Voyageurs", "Viajeros") + '</label><input id="cartPax" name="travelers" type="number" min="1" max="30" value="2" required></div>' +
+    '<div><label for="cartMsg">' + T("Anything we should know?", "Précisions ?", "¿Algo que debamos saber?") + '</label><input id="cartMsg" name="requests" placeholder="' + T("Hotel, diet, pace…", "Hôtel, régime, rythme…", "Hotel, dieta, ritmo…") + '"></div>' +
     '</div>' +
-    '<button type="submit" class="btn btn-primary" id="cartSubmit" style="width:100%;">Send reservation →</button>' +
-    '<p class="fine">No payment now — Abdellah or Karim replies personally within 2 hours.</p>' +
+    '<button type="submit" class="btn btn-primary" id="cartSubmit" style="width:100%;">' + T("Send reservation →", "Envoyer la réservation →", "Enviar reserva →") + '</button>' +
+    '<p class="fine">' + T("No payment now — Abdellah or Karim replies personally within 2 hours.", "Aucun paiement maintenant — Abdellah ou Karim répond personnellement sous 2 heures.", "Sin pago ahora — Abdellah o Karim responde personalmente en 2 horas.") + '</p>' +
     '</form></div></div>';
   document.body.appendChild(overlay);
 
@@ -93,7 +97,7 @@
     document.getElementById("cartThumb").src = t.img;
     document.getElementById("cartTourName").textContent = t.name;
     document.getElementById("cartTourMeta").textContent = t.dur + " · " + (t.price || "Quote on request");
-    overlay.setAttribute("aria-label", "Reserve " + t.name);
+    overlay.setAttribute("aria-label", T("Reserve ", "Réserver ", "Reservar ") + t.name);
   }
   setTour(file in TOURS ? file : "private.html");
   fab.addEventListener("click", function () { setTour(file in TOURS ? file : "private.html"); open(); });
@@ -197,11 +201,10 @@
     y += 7;
     doc.setFont("helvetica", "normal");
     doc.setFontSize(10.5);
-    var letter = doc.splitTextToSize(
-      "Thank you for choosing Abrid Morocco! Your reservation for \"" + currentTour.name +
-      "\" (" + ref + ") is with Abdellah and Karim now. We reply personally within " +
-      "2 hours (9:00-21:00 Morocco time) to confirm availability and shape the final details. " +
-      "No payment is due until tour day. We cannot wait to show you our Morocco.", W - 28);
+    var letterFR = "Merci d'avoir choisi Abrid Morocco ! Votre réservation pour \"" + currentTour.name + "\" (" + ref + ") est entre les mains d'Abdellah et Karim. Nous répondons personnellement sous 2 heures (9h00-21h00, heure du Maroc) pour confirmer la disponibilité et régler les derniers détails. Aucun paiement n'est dû avant le jour du départ. Nous avons hâte de vous faire découvrir notre Maroc.";
+    var letterES = "Gracias por elegir Abrid Morocco. Tu reserva de \"" + currentTour.name + "\" (" + ref + ") está en manos de Abdellah y Karim. Respondemos personalmente en 2 horas (9:00-21:00, hora de Marruecos) para confirmar disponibilidad y ultimar detalles. No se debe ningún pago hasta el día de salida. Estamos deseando mostrarte nuestro Marruecos.";
+    var letterEN = "Thank you for choosing Abrid Morocco! Your reservation for \"" + currentTour.name + "\" (" + ref + ") is with Abdellah and Karim now. We reply personally within 2 hours (9:00-21:00 Morocco time) to confirm availability and shape the final details. No payment is due until tour day. We cannot wait to show you our Morocco.";
+    var letter = doc.splitTextToSize(FR ? letterFR : (ES ? letterES : letterEN), W - 28);
     doc.text(letter, 14, y);
     y += letter.length * 5 + 10;
     doc.setFontSize(9);
@@ -242,21 +245,21 @@
       document.getElementById("cartFormWrap").innerHTML =
         '<div class="abrid-popup-ok" style="text-align:center;padding:18px 6px;">' +
         '<div style="font-size:2.4rem;">🎉</div>' +
-        "<h3>Reservation received!</h3>" +
-        "<p style=\"color:var(--muted);\">Thank you, " + esc(name.split(" ")[0]) +
-        " — Abdellah or Karim replies personally within 2 hours. A copy of your reservation PDF was prepared with your request.</p>" +
-        '<button type="button" class="btn btn-secondary" id="cartDone">Continue exploring</button></div>';
+        "<h3>" + T("Reservation received!", "Réservation reçue !", "¡Reserva recibida!") + "</h3>" +
+        "<p style=\"color:var(--muted);\">" + T("Thank you, ", "Merci, ", "Gracias, ") + esc(name.split(" ")[0]) +
+        T(" — Abdellah or Karim replies personally within 2 hours. A copy of your reservation PDF was prepared with your request.", " — Abdellah ou Karim répond personnellement sous 2 heures. Une copie de votre PDF de réservation a été préparée avec votre demande.", " — Abdellah o Karim responde personalmente en 2 horas. Se ha preparado una copia de tu PDF de reserva con tu solicitud.")+ "</p>" +
+        '<button type="button" class="btn btn-secondary" id="cartDone">' + T("Continue exploring", "Continuer à explorer", "Seguir explorando") + '</button></div>';
       document.getElementById("cartDone").addEventListener("click", close);
     }).catch(function () {
       var text = encodeURIComponent("Hello Abrid Morocco! I would like to reserve: " + currentTour.name +
         " (" + currentTour.dur + "). Name: " + name + ", Email: " + email);
       document.getElementById("cartFormWrap").innerHTML =
-        '<div style="text-align:center;padding:18px 6px;"><h3>Sending hiccup</h3>' +
-        '<p style="color:var(--muted);">Please send your reservation directly:</p>' +
-        '<a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/' + WA_NUMBER + "?text=" + text + '">Send via WhatsApp</a></div>';
+        '<div style="text-align:center;padding:18px 6px;"><h3>' + T("Sending hiccup", "Petit problème d'envoi", "Problema de envío") + '</h3>' +
+        '<p style="color:var(--muted);">' + T("Please send your reservation directly:", "Veuillez envoyer votre réservation directement :", "Envía tu reserva directamente:") + '</p>' +
+        '<a class="btn btn-primary" target="_blank" rel="noopener" href="https://wa.me/' + WA_NUMBER + "?text=" + text + '">' + T("Send via WhatsApp", "Envoyer via WhatsApp", "Enviar por WhatsApp") + '</a></div>';
     }).finally(function () {
       btn.disabled = false;
-      btn.textContent = "Send reservation →";
+      btn.textContent = T("Send reservation →", "Envoyer la réservation →");
     });
   });
 })();
