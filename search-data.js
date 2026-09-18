@@ -21,6 +21,8 @@ window.ABRID_SEARCH = [
   { t: "Fes Medina Guided Day Tour", c: "Trip", u: "fes.html", d: "1 day · Tanneries, madrasas, Mellah and pottery quarter with a licensed local guide." },
   { t: "Ouzoud Waterfalls Day Trip", c: "Trip", u: "ouzoud.html", d: "1 day from Marrakech · Viewpoints, macaques and optional boat ride." },
   { t: "Zagora Desert in 2 Days", c: "Trip", u: "zagora.html", d: "2 days · Atlas pass, Ait Benhaddou, Draa Valley, camel trek and desert camp." },
+  { t: "Mount Toubkal Trek", c: "Trip", u: "toubkal.html", d: "2 days · 4,167m summit with certified guide, mules and refuge night. From Marrakech." },
+  { t: "Agafay Desert Evening", c: "Trip", u: "agafay.html", d: "Evening from Marrakech · Sunset, dinner in camp and stars. Back the same night." },
   { t: "6-Day Christmas Morocco Itinerary", c: "Trip", u: "6-day-christmas-morocco.html", d: "Winter adventure through Morocco's highlights." },
 
   /* ── Destinations ── */
@@ -34,6 +36,7 @@ window.ABRID_SEARCH = [
   { t: "Todra & Dades Gorges", c: "Destination", u: "destination-todra-dades.html", d: "Canyons, climbing and switchback roads on the road south to the Sahara." },
   { t: "Rabat & Casablanca", c: "Destination", u: "destination-rabat-casablanca.html", d: "Imperial capital and ocean city — where Morocco trips begin." },
   { t: "Tangier", c: "Destination", u: "destination-tangier.html", d: "Ferry gateway from Spain — Hercules Caves, Cap Spartel and the kasbah." },
+  { t: "Ouarzazate", c: "Destination", u: "destination-ouarzazate.html", d: "Film studios, kasbahs and the door of the desert." },
   { t: "Ait Ben Haddou", c: "Destination", u: "destination-ait-ben-haddou.html", d: "UNESCO mud-brick ksar on the former caravan route to the Sahara." },
   { t: "Casablanca & Rabat", c: "Destination", u: "imperial.html", d: "The imperial cities circuit — Casablanca's Hassan II Mosque, Rabat and Fes." },
   { t: "Ouarzazate & the South", c: "Destination", u: "destination-ait-ben-haddou.html", d: "The gateway to the Sahara, Morocco's film studios and the kasbah road." },
@@ -54,6 +57,7 @@ window.ABRID_SEARCH = [
   { t: "What to Pack for the High Atlas", c: "Guide", u: "blog-high-atlas-packing.html", d: "Layers, footwear, sun, water and cash for mountain days above 2,000 metres." },
   { t: "How Much Does a Morocco Trip Cost?", c: "Guide", u: "guide-costs.html", d: "What drives the price — transport, guides, stays, season and group size." },
   { t: "Best Time to Visit Morocco", c: "Guide", u: "guide-best-time.html", d: "Seasons for the Sahara, Atlas, coast and cities, plus Ramadan timing." },
+  { t: "Tipping in Morocco", c: "Guide", u: "guide-tipping.html", d: "Who to tip, when, and typical amounts for guides, drivers and restaurants." },
 
   /* ── Plan & contact ── */
   { t: "Plan My Trip", c: "Plan", u: "plan-my-trip.html", d: "Send your dates, destinations and travel style — we reply with a private Morocco itinerary within 2 hours." },

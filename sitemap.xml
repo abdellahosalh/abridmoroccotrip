@@ -377,6 +377,30 @@
     <priority>0.6000</priority>
   </url>
   <url>
+    <loc>https://www.abridmorocco.com/toubkal.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/agafay.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8000</priority>
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/destination-ouarzazate.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7000</priority>
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/guide-tipping.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6000</priority>
+  </url>
+  <url>
     <loc>https://www.abridmorocco.com/6-day-christmas-morocco.html</loc>
     <lastmod>2026-09-08</lastmod>
     <changefreq>daily</changefreq>
