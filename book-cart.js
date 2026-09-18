@@ -33,7 +33,7 @@
   };
 
   var file = (location.pathname.split("/").pop() || "index.html").split("?")[0].toLowerCase();
-  var tour = TOURS[file];
+  var tour = TOURS[file] || TOURS["private.html"];
   if (!tour) return;
 
   function esc(s) {
