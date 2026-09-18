@@ -20,7 +20,7 @@
     "essaouira.html": { name: "Essaouira Day Trip", dur: "1 Day", img: "https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop", price: "€150 pp" },
     "air-balloon.html": { name: "Hot Air Balloon over Marrakech", dur: "Half Day", img: "https://i.postimg.cc/fRhRWzns/1788783065964.jpg", price: "€150 pp" },
     "ouzoud-camel-ride.html": { name: "Ouzoud Camel Ride", dur: "Half Day", img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop", price: "Quote on request" },
-    "merzouga.html": { name: "Merzouga Desert Adventure", dur: "3 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop", price: "Quote on request" },
+    "merzouga.html": { name: "Merzouga Desert Adventure", dur: "3 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop", price: "€180 pp" },
     "imilchil.html": { name: "Imilchil, Lakes & Summit", dur: "3 Days", img: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600&auto=format&fit=crop/YNqJlL3B9gIRgqnp/untitled-2-3-AoPepbZODoTZZDk2.jpg", price: "€1,500 pp" },
     "chefchaouen.html": { name: "Chefchaouen Day Trip", dur: "Day Trip", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg", price: "€200 pp" },
     "fes.html": { name: "Fes Medina Guided Tour", dur: "Day Tour", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "€50 pp" },
