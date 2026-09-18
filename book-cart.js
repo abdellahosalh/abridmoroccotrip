@@ -11,25 +11,25 @@
   var WA_NUMBER = "212762934488";
 
   var TOURS = {
-    "marrakech.html": { name: "Marrakech Day Tour", dur: "1 Day", img: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" },
-    "atlas.html": { name: "Atlas Mountains & Ourika Valley", dur: "1 Day", img: "https://i.postimg.cc/NfvKF7Rj/vincenzo-montagna-pd-Z9t-Nbpztw-unsplash.jpg" },
-    "essaouira.html": { name: "Essaouira Day Trip", dur: "1 Day", img: "https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop" },
-    "air-balloon.html": { name: "Hot Air Balloon over Marrakech", dur: "Half Day", img: "https://i.postimg.cc/fRhRWzns/1788783065964.jpg" },
-    "ouzoud-quad-tour.html": { name: "Ouzoud Quad Tour", dur: "Half Day", img: "https://images.unsplash.com/photo-1758622159686-7f61d8a81aa5?w=600&auto=format&fit=crop" },
-    "merzouga.html": { name: "Merzouga Desert Adventure", dur: "3 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" },
-    "imilchil.html": { name: "Imilchil, Lakes & Summit", dur: "3 Days", img: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600&auto=format&fit=crop/YNqJlL3B9gIRgqnp/untitled-2-3-AoPepbZODoTZZDk2.jpg" },
-    "chefchaouen.html": { name: "Chefchaouen Day Trip", dur: "Day Trip", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg" },
-    "fes.html": { name: "Fes Medina Guided Tour", dur: "Day Tour", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" },
-    "ouzoud.html": { name: "Ouzoud Waterfalls", dur: "Day Trip", img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop" },
-    "zagora.html": { name: "Zagora Desert Express", dur: "2 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" },
-    "toubkal.html": { name: "Mount Toubkal Trek", dur: "2 Days", img: "images/toubkal/toubkal-massif.jpg" },
-    "agafay.html": { name: "Agafay Desert Evening", dur: "Evening", img: "images/agafay/agafay-camp.jpg" },
-    "high-atlas-azilal-imilchil-rich.html": { name: "Across the High Atlas", dur: "5 Days", img: "images/high-atlas/imilchil/imilchil-01.jpg" },
-    "imperial.html": { name: "Imperial Cities Circuit", dur: "8 Days", img: "https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop" },
-    "6-day-christmas-morocco.html": { name: "6-Day Morocco Christmas Itinerary", dur: "6 Days", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg" },
-    "classic-morocco.html": { name: "Classic Morocco Grand Tour", dur: "13 Days", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" },
-    "small-group-tour.html": { name: "Small Group Morocco Tour", dur: "11 Days", img: "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=600&auto=format&fit=crop" },
-    "private.html": { name: "Private Custom Morocco Tour", dur: "Any Length", img: "https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" }
+    "marrakech.html": { name: "Marrakech Day Tour", dur: "1 Day", img: "https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop", price: "€50 pp" },
+    "atlas.html": { name: "Atlas Mountains & Ourika Valley", dur: "1 Day", img: "https://i.postimg.cc/NfvKF7Rj/vincenzo-montagna-pd-Z9t-Nbpztw-unsplash.jpg", price: "€100 pp" },
+    "essaouira.html": { name: "Essaouira Day Trip", dur: "1 Day", img: "https://images.unsplash.com/photo-1613057157282-cc3cbe630b26?w=600&auto=format&fit=crop", price: "€150 pp" },
+    "air-balloon.html": { name: "Hot Air Balloon over Marrakech", dur: "Half Day", img: "https://i.postimg.cc/fRhRWzns/1788783065964.jpg", price: "€150 pp" },
+    "ouzoud-camel-ride.html": { name: "Ouzoud Camel Ride", dur: "Half Day", img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop", price: "Quote on request" },
+    "merzouga.html": { name: "Merzouga Desert Adventure", dur: "3 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop", price: "Quote on request" },
+    "imilchil.html": { name: "Imilchil, Lakes & Summit", dur: "3 Days", img: "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600&auto=format&fit=crop/YNqJlL3B9gIRgqnp/untitled-2-3-AoPepbZODoTZZDk2.jpg", price: "€1,500 pp" },
+    "chefchaouen.html": { name: "Chefchaouen Day Trip", dur: "Day Trip", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg", price: "€200 pp" },
+    "fes.html": { name: "Fes Medina Guided Tour", dur: "Day Tour", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "€50 pp" },
+    "ouzoud.html": { name: "Ouzoud Waterfalls", dur: "Day Trip", img: "https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=600&auto=format&fit=crop", price: "€150 pp" },
+    "zagora.html": { name: "Zagora Desert Express", dur: "2 Days", img: "https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop", price: "€1,000 pp" },
+    "toubkal.html": { name: "Mount Toubkal Trek", dur: "2 Days", img: "images/toubkal/toubkal-massif.jpg", price: "Quote on request" },
+    "agafay.html": { name: "Agafay Desert Evening", dur: "Evening", img: "images/agafay/agafay-camp.jpg", price: "€200 pp" },
+    "high-atlas-azilal-imilchil-rich.html": { name: "Across the High Atlas", dur: "5 Days", img: "images/high-atlas/imilchil/imilchil-01.jpg", price: "€3,000 pp" },
+    "imperial.html": { name: "Imperial Cities Circuit", dur: "8 Days", img: "https://images.unsplash.com/photo-1559925523-10de9e23cf90?w=600&auto=format&fit=crop", price: "€3,000 pp" },
+    "6-day-christmas-morocco.html": { name: "6-Day Morocco Christmas Itinerary", dur: "6 Days", img: "https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg", price: "€2,500 pp" },
+    "classic-morocco.html": { name: "Classic Morocco Grand Tour", dur: "13 Days", img: "https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop", price: "Quote on request" },
+    "small-group-tour.html": { name: "Small Group Morocco Tour", dur: "11 Days", img: "https://images.unsplash.com/photo-1506869640319-fe1a24fd76dc?w=600&auto=format&fit=crop", price: "€2,000 pp" },
+    "private.html": { name: "Private Custom Morocco Tour", dur: "Any Length", img: "https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop", price: "€1,200 pp" }
   };
 
   var file = (location.pathname.split("/").pop() || "index.html").split("?")[0].toLowerCase();
@@ -92,7 +92,7 @@
     currentTour = t;
     document.getElementById("cartThumb").src = t.img;
     document.getElementById("cartTourName").textContent = t.name;
-    document.getElementById("cartTourMeta").textContent = t.dur + " · Private · Quote on request";
+    document.getElementById("cartTourMeta").textContent = t.dur + " · " + (t.price || "Quote on request");
     overlay.setAttribute("aria-label", "Reserve " + t.name);
   }
   setTour(file in TOURS ? file : "private.html");
@@ -109,9 +109,18 @@
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !overlay.hasAttribute("hidden")) close(); });
 
   /* Inline "Reserve" buttons (data-open-cart) replace the floating pill where present */
-  var inlineBtns = document.querySelectorAll("[data-open-cart]");
-  if (inlineBtns.length) fab.style.display = "none";
-  inlineBtns.forEach(function (b) { b.addEventListener("click", open); });
+  function refreshPill() {
+    var inlineVisible = document.querySelectorAll("[data-open-cart]");
+    var anyVisible = false;
+    inlineVisible.forEach(function (b) { if (b.offsetParent !== null) anyVisible = true; });
+    fab.style.display = anyVisible ? "none" : "";
+  }
+  refreshPill();
+  var rT = false;
+  window.addEventListener("resize", function () {
+    if (!rT) { rT = true; setTimeout(function () { refreshPill(); rT = false; }, 250); }
+  });
+  document.querySelectorAll("[data-open-cart]").forEach(function (b) { b.addEventListener("click", open); });
 
   function loadImageData(url) {
     return fetch(absUrl(url), { mode: "cors" }).then(function (r) {
@@ -175,6 +184,7 @@
     row("Phone", g("cartPhone"));
     row("Date", g("cartDate"));
     row("Travelers", g("cartPax"));
+    row("Price", currentTour.price || "Quote on request");
     row("Requests", g("cartMsg"));
     row("Received", new Date().toLocaleString());
     y += 6;
@@ -214,6 +224,7 @@
       fd.append("_template", "table");
       fd.append("Tour", currentTour.name);
       fd.append("Duration", currentTour.dur);
+      fd.append("Price", currentTour.price || "Quote on request");
       fd.append("Reference", out.ref);
       fd.append("Name", name);
       fd.append("Email", email);

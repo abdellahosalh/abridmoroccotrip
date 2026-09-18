@@ -1667,7 +1667,7 @@ background: var(--color-primary);
 /* ═══════════════════════════════════════════════════════════════════
    TRIP DETAIL PAGES — shared components for tour itinerary pages
    html: marrakech, atlas, esseouira, merzouga, imperial, imilchil,
-   air-balloon, ouzoud-quad-tour, classic-morocco, private,
+   air-balloon, ouzoud-camel-ride, classic-morocco, private,
    small-group-tour, 6-day-christmas-morocco.
    ═══════════════════════════════════════════════════════════════════ */
 
@@ -2051,6 +2051,15 @@ svg.leaflet-zoom-animated{will-change:transform;}
 .footer-grid.footer-grid-v2{grid-template-columns:1.4fr 1fr 1fr 1fr 1fr;}
 @media (max-width:1024px){.footer-grid.footer-grid-v2{grid-template-columns:1fr 1fr;}}
 @media (max-width:560px){.footer-grid.footer-grid-v2{grid-template-columns:1fr;}}
+
+/* -- Google Translate widget (header language switcher) -- */
+#google_translate_element{display:inline-flex;align-items:center;}
+#google_translate_element .goog-te-gadget{font-family:var(--font-ui);font-size:.72rem;color:var(--muted);white-space:nowrap;}
+#google_translate_element .goog-te-gadget a{display:none;}
+#google_translate_element select{background:var(--bg-alt,#f6f2ec);border:1px solid var(--line-2);border-radius:60px;padding:6px 10px;font-size:.75rem;font-weight:700;color:var(--brown);cursor:pointer;max-width:130px;}
+.goog-te-banner-frame.skiptranslate{display:none !important;}
+body{top:0 !important;}
+.skiptranslate iframe{display:none !important;}
 /* -- Cookie consent banner -- */
 .cookie-banner{position:fixed;left:16px;right:16px;bottom:16px;z-index:2000;background:#1a1a1a;color:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 16px 40px rgba(0,0,0,.35);display:flex;gap:16px;align-items:center;flex-wrap:wrap;}
 .cookie-banner[hidden]{display:none;}

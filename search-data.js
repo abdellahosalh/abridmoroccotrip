@@ -14,7 +14,7 @@ window.ABRID_SEARCH = [
   { t: "Atlas Mountains & Ourika Valley Day Trip", c: "Trip", u: "atlas.html", d: "1 day · Private 4x4, waterfalls, Berber lunch." },
   { t: "Essaouira Day Trip", c: "Trip", u: "essaouira.html", d: "1 day · Coastal medina & seafood. Atlantic breezes." },
   { t: "Hot Air Balloon over Marrakech", c: "Experience", u: "air-balloon.html", d: "Sunrise flight over the Palmeraie and Atlas foothills." },
-  { t: "Ouzoud Quad Tour", c: "Experience", u: "ouzoud-quad-tour.html", d: "Waterfalls & Atlas trails. 4x4 and quad adventure." },
+  { t: "Ouzoud Camel Ride", c: "Experience", u: "ouzoud-camel-ride.html", d: "Atlas trails around the falls with mint tea stop." },
   { t: "Small Group Morocco Tour", c: "Trip", u: "small-group-tour.html", d: "11 days · Shared group journey through Morocco." },
   { t: "Private Custom Morocco Tour", c: "Trip", u: "private.html", d: "Tailor-made itinerary designed around the way you travel." },
   { t: "Chefchaouen Day Trip from Fes", c: "Trip", u: "chefchaouen.html", d: "1 day · Blue medina, kasbah square and Spanish Mosque viewpoint. Private transport & local guide." },
