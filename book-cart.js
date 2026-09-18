@@ -91,6 +91,11 @@
   overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !overlay.hasAttribute("hidden")) close(); });
 
+  /* Inline "Reserve" buttons (data-open-cart) replace the floating pill where present */
+  var inlineBtns = document.querySelectorAll("[data-open-cart]");
+  if (inlineBtns.length) fab.style.display = "none";
+  inlineBtns.forEach(function (b) { b.addEventListener("click", open); });
+
   function loadImageData(url) {
     return fetch(absUrl(url), { mode: "cors" }).then(function (r) {
       if (!r.ok) throw new Error("img " + r.status);
