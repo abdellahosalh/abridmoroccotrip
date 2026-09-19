@@ -41,6 +41,7 @@ window.ABRID_SEARCH = [
   { t: "Casablanca & Rabat", c: "Destination", u: "imperial.html", d: "The imperial cities circuit — Casablanca's Hassan II Mosque, Rabat and Fes." },
   { t: "Ouarzazate & the South", c: "Destination", u: "destination-ait-ben-haddou.html", d: "The gateway to the Sahara, Morocco's film studios and the kasbah road." },
 
+  /* ── Experiences ── */
   /* ── Guide articles ── */
   { t: "Chefchaouen Blue City Guide 2026", c: "Guide", u: "blog-chefchaouen.html", d: "Spanish Mosque viewpoint, Akchour waterfalls and the blue medina." },
   { t: "The Complete Guide to the Sahara Desert", c: "Guide", u: "blog-sahara-guide.html", d: "Merzouga, camel treks, luxury camps, weather and packing." },
@@ -60,6 +61,7 @@ window.ABRID_SEARCH = [
   { t: "Tipping in Morocco", c: "Guide", u: "guide-tipping.html", d: "Who to tip, when, and typical amounts for guides, drivers and restaurants." },
 
   /* ── Plan & contact ── */
+  { t: "Itineraries & Sample Routes", c: "Guide", u: "itineraries.html", d: "Ready-made Morocco itineraries from 3 to 13 days — or build your own route. Desert escapes, imperial circuits, winter breaks." },
   { t: "Plan My Trip", c: "Plan", u: "plan-my-trip.html", d: "Send your dates, destinations and travel style — we reply with a private Morocco itinerary within 2 hours." },
   { t: "Contact Abrid Morocco", c: "Contact", u: "contact.html", d: "WhatsApp, email and office hours for Abrid Morocco. Response within 2 hours. No deposit required." },
   { t: "Traveller Reviews", c: "Trust", u: "reviews.html", d: "What travellers say about Abrid Morocco — Google reviews." },
