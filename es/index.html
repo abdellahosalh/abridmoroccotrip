@@ -1,712 +1,1415 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
 <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C868HF02SM"></script>
+
 <script>
+
   window.dataLayer = window.dataLayer || [];
+
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
 
+
+
   gtag('config', 'G-C868HF02SM');
+
 </script>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E4002B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
-  <title>Viajes a Marruecos, Destinos y Guías | Abrid Morocco</title>
-  <meta name="description" content="Abrid Morocco es una plataforma de viajes creada por gente que conoce Marruecos. Viajes privados, aventuras en el Sáhara, experiencias en el Atlas y guías locales honestos." />
+
+  <title>Circuitos por Marruecos, Destinos y Guías | Abrid Morocco</title>
+
+  <meta name="description" content="Abrid Morocco es una plataforma de viajes creada por gente que conoce Marruecos. Circuitos privados, aventuras en el Sahara, experiencias en el Atlas y guías locales auténticos." />
+
   <meta name="robots" content="index, follow" />
+
   <link rel="canonical" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/" />
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/" />
-  <meta property="og:type" content="website" />
+  />
+  /><meta property="og:type" content="website" />
+
   <meta property="og:site_name" content="Abrid Morocco" />
-  <meta property="og:title" content="Viajes a Marruecos, Destinos y Guías | Abrid Morocco" />
-  <meta property="og:description" content="Descubre Marruecos más allá de la ruta habitual. Viajes privados, aventuras saharianas y guías locales honestos." />
+
+  <meta property="og:title" content="Circuitos por Marruecos, Destinos y Guías | Abrid Morocco" />
+
+  <meta property="og:description" content="Descubre Marruecos más allá de lo típico. Circuitos privados, aventuras en el Sahara y guías locales honestos." />
+
   <meta property="og:image" content="https://i.postimg.cc/vTjVBp7p/Untitled-design.jpg" />
+
   <meta property="og:url" content="https://www.abridmorocco.com/es/" />
+
   <meta name="twitter:card" content="summary_large_image" />
+
   <meta name="twitter:title" content="Viajes a Marruecos, Destinos y Guías | Abrid Morocco" />
+
   <meta name="twitter:description" content="Descubre Marruecos más allá de la ruta habitual. Viajes privados, aventuras saharianas y guías locales honestos." />
+
   <script type="application/ld+json">
+
   {
+
     "@context": "https://schema.org",
+
     "@type": "TravelAgency",
+
     "name": "Abrid Morocco",
+
     "alternateName": "AbridMoroccoTrip",
+
     "description": "Plataforma de viajes marroquí creada por expertos locales. Viajes privados, aventuras en el desierto del Sáhara, experiencias en el Atlas e itinerarios personalizados.",
+
     "url": "https://www.abridmorocco.com/es/",
+
     "telephone": "+212762934488",
+
     "email": "abridmorocco@gmail.com",
+
     "priceRange": "$$",
+
     "areaServed": "Morocco",
+
     "sameAs": ["https://www.instagram.com/abridmorocco/"]
+
   }
+
   </script>
 
+
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="preconnect" href="https://i.postimg.cc"> <!-- images -->
+
   <link rel="preconnect" href="https://images.unsplash.com"> <!-- images -->
+
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
+
+
   <link rel="stylesheet" href="../design.css">
+
   <style>
+
     /* Homepage-specific composition (kept minimal) */
+
     .home-hero { padding: 72px 0 0; }
+
     .dest-quick {
+
       display: grid;
+
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
       gap: 16px;
+
       margin: 40px 0 0;
+
     }
+
     .dest-quick a {
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
+
       gap: 12px;
+
       background: var(--surface);
+
       border: 1px solid rgba(15,15,16,0.08);
+
       box-shadow: var(--shadow-hard-sm);
+
       padding: 18px 20px;
+
       font-family: var(--font-display);
+
       font-size: 1.1rem;
+
       color: var(--text-2);
+
       transition: transform var(--t), box-shadow var(--t);
+
     }
+
     .dest-quick a:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
     .dest-quick a .arrow { color: var(--terracotta); font-size: 1.2rem; }
+
     .exp-strip { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-top: 28px; }
+
     .step-item { background: var(--surface); border: 1px solid rgba(15,15,16,0.06); box-shadow: var(--shadow-hard-sm); padding: 24px; }
+
     .step-item .step-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; color: var(--color-primary); display: block; margin-bottom: 8px; }
+
     .step-item h3 { font-weight: 500; font-size: 1rem; margin: 0 0 6px; }
+
     .step-item p { font-family: var(--font-body); font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
     @media (max-width: 800px) { .steps-grid { grid-template-columns: 1fr !important; } }
+
     @media (min-width: 620px) {
+
       .hero-actions .btn-primary { min-width: 220px; }
+
     }
+
     /* Google reviews band above the footer — vertical auto-scrolling review cards */
+
     .reviews-band{background:var(--bg-alt,#f6f2ec);border-top:1px solid var(--line-2);padding:56px 0;margin-top:10px;}
+
     .reviews-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center;}
+
     @media (max-width:860px){.reviews-grid{grid-template-columns:1fr;}}
+
     .g-wordmark{font-family:var(--font-ui);font-weight:700;font-size:1.6rem;letter-spacing:-.5px;}
+
     .g-stars{color:#FBBC04;font-size:1.3rem;letter-spacing:4px;margin:10px 0 6px;}
+
     .reviews-band h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);margin:8px 0 10px;color:var(--text);}
+
     .reviews-band .lede{color:var(--text-2);margin-bottom:20px;max-width:44ch;}
+
     .vmarquee{height:360px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(180deg,transparent,#000 12%,#000 88%,transparent);}
+
     @media (max-width:640px){.vmarquee{height:300px;}}
+
     .vmarquee-track{display:flex;flex-direction:column;gap:14px;}
+
     .vmarquee-track.scroll{animation:vscroll 26s linear infinite;}
+
     .vmarquee:hover .vmarquee-track.scroll{animation-play-state:paused;}
+
     @keyframes vscroll{to{transform:translateY(-50%);}}
+
     @media (prefers-reduced-motion:reduce){.vmarquee-track.scroll{animation:none;}}
+
     .g-card{background:#fff;border:1px solid var(--line-2);border-radius:var(--radius-sm);padding:16px 18px;box-shadow:var(--shadow);}
+
     .g-card .g-stars{font-size:.95rem;margin:0 0 8px;letter-spacing:2px;}
+
     .g-card .quote{color:var(--text-2);font-size:.93rem;line-height:1.65;margin:0 0 12px;}
+
     .g-card .who{display:flex;align-items:center;gap:10px;}
+
     .g-card .avatar{width:34px;height:34px;border-radius:50%;background:var(--terracotta);color:#fff;font-weight:800;font-size:.85rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--font-ui);}
+
     .g-card .who strong{display:block;font-size:.9rem;}
+
     .g-card .who span{font-size:.78rem;color:var(--text-muted);}
+
     .g-card.cta-card{text-align:center;border-style:dashed;}
+
   </style>
+
 </head>
+
 <body>
+
+
 
   <a class="skip-link" href="#main">Ir al contenido principal</a>
 
+
+
   <!-- Header -->
+
   <header class="site-header" id="siteHeader">
+
     <div class="container nav">
+
       <a href="index.html" class="brand" aria-label="Inicio Abrid Morocco">
+
         <div class="brand-logo">
+
           <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Logo de Abrid Morocco" decoding="async">
+
         </div>
+
         <div class="brand-text">
+
           <strong>Abrid Morocco</strong>
+
           <span>PREMIUM TOURS</span>
+
         </div>
+
       </a>
+
       <ul class="nav-links">
+
   <li><a href="index.html" class="active">Inicio</a></li>
+
   <li class="drop">
+
     <a href="../destinations.html">Explorar Marruecos <span class="caret" aria-hidden="true">&#9662;</span></a>
+
     <ul class="nav-drop">
+
       <span class="drop-head">Descubrir</span>
+
       <a href="../destinations.html">Destinos</a>
+
       <a href="../experiences.html">Experiencias</a>
+
       <a href="../blog.html">Guía de Marruecos</a>
+
       <a href="../trips.html">Todos los viajes</a>
+
     </ul>
+
   </li>
+
   <li><a href="../trips.html">Viajes</a></li>
+
   <li><a href="../about.html">Nosotros</a></li>
+
 </ul>
+
       <div class="nav-actions">
+
   <div id="google_translate_element" title="Traducir esta página"></div>
+
   <button class="search-toggle" id="searchOpen" aria-label="Buscar en Abrid Morocco" type="button">
+
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+
         </button>
+
   <a class="nav-wa" href="https://wa.me/212762934488" target="_blank" rel="noopener" aria-label="Hablar con Abrid Morocco por WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm5.83 14.1c-.25.7-1.45 1.33-2 1.38-.51.05-1.03.22-3.45-.72-2.93-1.12-4.78-4.03-4.92-4.22-.14-.19-1.18-1.57-1.18-3s.75-2.13 1.02-2.42c.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.66.51.25.59.84 2.04.91 2.19.07.15.12.33.02.53-.09.2-.14.33-.27.51-.14.17-.29.39-.41.52-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.95 1.95 1.24 2.23 1.38.28.14.44.12.6-.07.16-.19.69-.81.87-1.08.18-.28.36-.23.61-.14.25.09 1.58.75 1.85.88.27.14.45.2.51.31.07.12.07.67-.18 1.34z"/></svg></a>
+
   <button type="button" class="btn btn-secondary btn-sm" data-open-cart style="white-space:nowrap;" aria-label="Reservar un viaje">Reservar</button>
+
   <a class="btn btn-primary btn-sm" href="../plan-my-trip.html">Organizar mi viaje</a>
+
   <button class="menu-toggle" id="menuToggle" aria-label="Abrir el menú" aria-expanded="false" type="button">
+
           <span></span><span></span><span></span>
+
         </button>
+
 </div>
+
     </div>
+
     <div class="container mobile-menu" id="mobileMenu">
+
       <div class="mobile-panel">
+
   <a href="#" class="mobile-search-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="vertical-align:-3px;margin-right:10px;"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Buscar</a>
+
   <a href="index.html" class="active">Inicio</a>
+
   <a href="../destinations.html">Destinos</a>
+
   <a href="../experiences.html">Experiencias</a>
+
   <a href="../blog.html">Guía de Marruecos</a>
+
   <a href="../trips.html">Viajes</a>
+
   <a href="../about.html">Sobre Abrid</a>
+
   <a href="../plan-my-trip.html">Organizar mi viaje</a>
+
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+
 </div>
+
     </div>
+
   </header>
+
+
 
   <main id="main">
 
+
+
     <!-- HERO -->
+
     <section class="home-hero">
+
       <div class="container hero-grid">
+
         <div class="hero-copy">
+
           <span class="eyebrow">Viajes privados a Marruecos desde 2022</span>
+
           <h1>Descubre Marruecos. Vívelo <span class="highlight">intensamente.</span></h1>
+
           <p>Viajes cuidadosamente preparados, experiencias locales auténticas y consejos de confianza de quienes conocen Marruecos.</p>
+
           <div class="hero-actions">
+
             <a class="btn btn-primary" href="../destinations.html">Explorar Marruecos</a>
+
             <a class="btn btn-secondary" href="../plan-my-trip.html">Organizar mi viaje</a>
+
           </div>
+
           <div class="hero-badges">
+
             <span class="badge">Viajes privados · Guías locales</span>
+
             <span class="badge">Pago en efectivo el día J</span>
+
           </div>
+
         </div>
+
         <div class="hero-visual">
+
           <div class="hero-main">
+
             <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?w=1200&auto=format&fit=crop" alt="Calles azules de Chefchaouen, Marruecos" fetchpriority="high" decoding="async">
+
           </div>
+
         </div>
+
       </div>
+
+
 
       <!-- ¿A dónde quieres ir? -->
+
       <div class="container">
+
         <h2 style="font-size:1.35rem;font-weight:400;margin:40px 0 8px">¿A dónde quieres ir?</h2>
+
         <p style="font-family:var(--font-body);color:var(--text-muted)">Empieza por un destino — crearemos el viaje ideal a tu medida.</p>
+
         <div class="dest-quick">
+
           <a href="../destination-marrakech.html">Marrakech <span class="arrow">→</span></a>
+
           <a href="../destination-sahara.html">Sáhara <span class="arrow">→</span></a>
+
           <a href="../destination-fes.html">Fez <span class="arrow">→</span></a>
+
           <a href="../destination-chefchaouen.html">Chefchaouen <span class="arrow">→</span></a>
+
           <a href="../destination-essaouira.html">Essaouira <span class="arrow">→</span></a>
+
           <a href="../destination-atlas.html">Montañas del Atlas <span class="arrow">→</span></a>
+
           <a href="../destination-ait-ben-haddou.html">Aït Benhaddou <span class="arrow">→</span></a>
+
           <a href="../destination-agadir.html">Agadir <span class="arrow">→</span></a>
+
         </div>
+
       </div>
+
+
 
       <!-- Stats -->
+
       <div class="container">
+
         <div class="trust-grid">
+
           <div class="trust-item"><strong>Privado</strong><span>Chóferes-guías</span></div>
+
           <div class="trust-item"><strong>Bereber</strong><span>Fundadores locales</span></div>
+
           <div class="trust-item"><strong>15+</strong><span>Destinos</span></div>
+
           <div class="trust-item"><strong>2022</strong><span>Fundado en Marruecos</span></div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- WATCH -->
+
     <section class="section-alt" style="padding:56px 0">
+
       <div class="container" style="text-align:center">
+
         <span class="eyebrow">Ver</span>
+
         <h2 style="font-weight:400;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:16px 0 8px">Marruecos en movimiento — 40 segundos</h2>
+
         <p style="font-family:var(--font-body);color:var(--text-muted);max-width:640px;margin:0 auto 26px">Nuestro país, nuestras rutas, nuestra gente. Pulsa reproducir — filmado en viajes reales de Abrid Morocco.</p>
+
         <video controls playsinline preload="none" poster="../videos/abrid-morocco-poster.jpg" style="width:100%;max-width:880px;border-radius:16px;box-shadow:var(--shadow);background:#000;" aria-label="Vídeo de presentación de Abrid Morocco">
+
           <source src="../videos/abrid-morocco.mp4" type="video/mp4">
+
           Lo sentimos, tu navegador no puede reproducir este vídeo.
+
         </video>
+
       </div>
+
     </section>
+
+
 
     <!-- FEATURED TRIPS -->
+
     <section id="trips" class="section">
+
       <div class="container">
+
         <div class="section-head">
+
           <span class="eyebrow">Viajes</span>
+
           <h2>Viajes pensados por manos locales</h2>
+
           <p>Desde excursiones de un día desde Marrakech hasta grandes travesías del Sáhara — transporte privado, chófer-guía local y alojamientos auténticos incluidos.</p>
+
         </div>
+
         <div class="tour-grid">
+
           <article class="tour-card">
+
             <div class="tour-image"><div class="badge-trend">Más vendido</div><img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Dunas del Erg Chebbi cerca de Merzouga, desierto del Sáhara" loading="lazy" decoding="async"><span class="pill">3 días</span></div>
+
             <div class="tour-body">
+
               <div class="tour-top"><div><h3>Aventura Desierto de Merzouga</h3><div class="subtle">Vivac sahariano y paseo en camello</div></div><div class="price">Presupuesto</div></div>
+
               <div class="inclusions">
+
                 <div class="inclusion-item"><span class="icon">✓</span> Transporte Marrakech ↔ Merzouga</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> 2 noches (hotel + vivac)</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> Paseo en camello + 2 cenas</div>
+
               </div>
+
               <div class="tour-meta"><span>Paseo en camello</span><span>Vivac</span></div>
+
               <a class="btn btn-primary" href="../merzouga.html">Ver el itinerario →</a>
+
             </div>
+
           </article>
 
+
+
           <article class="tour-card">
+
             <div class="tour-image"><div class="badge-trend">Signature</div><img src="https://images.unsplash.com/photo-1512958789358-4effcbe171a0?w=600&auto=format&fit=crop" alt="La medina medieval de Fez, Marruecos" loading="lazy" decoding="async"><span class="pill">13 días</span></div>
+
             <div class="tour-body">
+
               <div class="tour-top"><div><h3>Marruecos Clásico — El Gran Tour</h3><div class="subtle">Ciudades imperiales, Sáhara y Chefchaouen</div></div><div class="price">Presupuesto</div></div>
+
               <div class="inclusions">
+
                 <div class="inclusion-item"><span class="icon">✓</span> Bucle Casablanca → Marrakech</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> Guía privado y vehículo climatizado</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> Noche en vivac incluida</div>
+
               </div>
+
               <div class="tour-meta"><span>13 días / 12 noches</span><span>Itinerario completo</span></div>
+
               <a class="btn btn-secondary" href="../classic-morocco.html">Ver el itinerario →</a>
+
             </div>
+
           </article>
 
+
+
           <article class="tour-card">
+
             <div class="tour-image"><div class="badge-trend">Atlas</div><img src="https://i.postimg.cc/J7YS1PXF/images.jpg" alt="Paisaje de alta montaña cerca de Imlil" loading="lazy" decoding="async"><span class="pill">3 días</span></div>
+
             <div class="tour-body">
+
               <div class="tour-top"><div><h3>Imilchil, Lagos &amp; Cumbre</h3><div class="subtle">Aventura en el Alto Atlas</div></div><div class="price">1500 €/pers.</div></div>
+
               <div class="inclusions">
+
                 <div class="inclusion-item"><span class="icon">✓</span> Pueblos bereberes y lagos</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> Trek de montaña guiado</div>
+
                 <div class="inclusion-item"><span class="icon">✓</span> Noches en albergues locales</div>
+
               </div>
+
               <div class="tour-meta"><span>Cultura amazigh</span><span>Senderismo</span></div>
+
               <a class="btn btn-secondary" href="../imilchil.html">Ver el itinerario →</a>
+
             </div>
+
           </article>
+
         </div>
+
         <div style="text-align:center; margin-top:40px;">
+
           <a href="../trips.html" class="btn btn-primary">Ver todos los viajes →</a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- EXPERIENCES STRIP -->
+
     <section class="section-alt" style="padding:56px 0">
+
       <div class="container" style="text-align:center">
+
         <span class="eyebrow">Experiencias</span>
+
         <h2 style="font-weight:400;font-size:clamp(1.8rem,3.5vw,2.6rem);margin:16px 0 8px">Vive algo inolvidable</h2>
+
         <p style="font-family:var(--font-body);color:var(--text-muted);max-width:640px;margin:0 auto">Globo al amanecer sobre Marrakech, paseos en camello entre dunas, cascadas en quad — cada una guiada por locales que lo hacen a diario.</p>
+
         <div class="exp-strip">
+
           <a class="chip" href="../air-balloon.html"><strong>Globo aerostático</strong> · Marrakech</a>
+
           <a class="chip" href="../ouzoud-camel-ride.html"><strong>Paseo en camello</strong> · Atlas</a>
+
           <a class="chip" href="../merzouga.html"><strong>Vivac en el desierto</strong> · Merzouga</a>
+
           <a class="chip" href="../atlas.html"><strong>Valle del Ourika</strong> · Atlas</a>
+
           <a class="chip" href="../essaouira.html"><strong>Costa de Essaouira</strong> · 1 día</a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- DESTINATIONS PREVIEW -->
+
     <section class="section">
+
       <div class="container">
+
         <div class="section-head">
+
           <span class="eyebrow">Destinos</span>
+
           <h2>Un país de mil caras</h2>
+
           <p>De la brisa atlántica a los pueblos azules de montaña y las dunas doradas — encuentra tu Marruecos.</p>
+
         </div>
+
         <div class="dest-grid">
+
           <a class="dest-card" href="../destination-marrakech.html">
+
             <div class="card-media"><img src="https://images.unsplash.com/photo-1597212618440-806262de4f6b?w=600&auto=format&fit=crop" alt="Tejados de la medina de Marrakech" loading="lazy" decoding="async"></div>
+
             <div class="card-body">
+
               <h3>Marrakech</h3>
+
               <div class="card-sub">La Ciudad Roja</div>
+
               <div class="card-desc">Palacios, zocos, jardines y Jemaa el-Fna.</div>
+
               <span class="card-link">Descubrir Marrakech</span>
+
             </div>
+
           </a>
+
           <a class="dest-card" href="../destination-chefchaouen.html">
+
             <div class="card-media"><img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Callejón azul en Chefchaouen" loading="lazy" decoding="async"></div>
+
             <div class="card-body">
+
               <h3>Chefchaouen</h3>
+
               <div class="card-sub">La Perla Azul</div>
+
               <div class="card-desc">Calles azules al pie de las montañas del Rif.</div>
+
               <span class="card-link">Descubrir Chefchaouen</span>
+
             </div>
+
           </a>
+
           <a class="dest-card" href="../destination-sahara.html">
+
             <div class="card-media"><img src="https://images.unsplash.com/photo-1526994387180-9557a434b046?w=600&auto=format&fit=crop" alt="Dunas de arena del Erg Chebbi" loading="lazy" decoding="async"></div>
+
             <div class="card-body">
+
               <h3>El Desierto del Sáhara</h3>
+
               <div class="card-sub">Dunas del Erg Chebbi</div>
+
               <div class="card-desc">Paseos en camello, vivacs de lujo y noches estrelladas a las puertas del Sáhara.</div>
+
               <span class="card-link">Descubrir el Desierto</span>
+
             </div>
+
           </a>
+
         </div>
+
         <div style="text-align:center; margin-top:40px;">
+
           <a href="../destinations.html" class="btn btn-secondary">Ver todos los destinos →</a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- WHY ABRID -->
+
     <section class="section-alt">
+
       <div class="container">
+
         <div class="section-head">
+
           <span class="eyebrow">Por qué Abrid</span>
+
           <h2>Una plataforma creada por gente que conoce Marruecos</h2>
+
           <p>Fundada por un guía bereber de Imilchil — no un call center. Casas reales, comidas reales, Marruecos real.</p>
+
         </div>
+
         <div class="why-grid">
+
           <div class="why-item"><span class="icon">🌍</span> Experiencia marroquí local</div>
+
           <div class="why-item"><span class="icon">✨</span> Experiencias auténticas</div>
+
           <div class="why-item"><span class="icon">👥</span> Solo grupos privados pequeños</div>
+
           <div class="why-item"><span class="icon">💰</span> Sin costes ocultos</div>
+
           <div class="why-item"><span class="icon">🕒</span> Ayuda 24/7 en viaje</div>
+
           <div class="why-item"><span class="icon">🧭</span> Itinerarios a medida</div>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- HOW PLANNING WORKS -->
+
     <section class="section">
+
       <div class="container">
+
         <div class="section-head">
+
           <span class="eyebrow">Cómo funciona</span>
+
           <h2>Del primer mensaje al día J — en tres pasos</h2>
+
           <p>Sin call centers. Todo pasa por Abdellah, Karim y el equipo en Marruecos.</p>
+
         </div>
+
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="steps-grid">
+
           <div class="step-item"><span class="step-num">01</span><h3>Cuéntanos tu viaje</h3><p>Destinos, fechas, tamaño del grupo y ritmo — por WhatsApp o con nuestro corto formulario.</p></div>
+
           <div class="step-item"><span class="step-num">02</span><h3>Diseñamos la ruta</h3><p>Un itinerario privado con transporte, chófer-guía y alojamientos auténticos — con presupuesto completo.</p></div>
+
           <div class="step-item"><span class="step-num">03</span><h3>Confirma y viaja</h3><p>Pago en efectivo el día de salida. Ayuda 24/7 en carretera.</p></div>
+
         </div>
+
         <div style="text-align:center;margin-top:40px">
+
           <a href="../plan-my-trip.html" class="btn btn-primary">Empezar a organizar mi viaje</a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
     <!-- GUIDE PREVIEW -->
+
     <section class="section-alt">
+
       <div class="container">
+
         <div class="section-head">
+
           <span class="eyebrow">Guía de Marruecos</span>
+
           <h2>Prepárate con conocimiento local</h2>
+
           <p>Guías honestas, listas de equipaje y consejos de ruta — escritos por quienes organizan los viajes.</p>
+
         </div>
+
         <div class="guide-grid">
+
           <article class="guide-card">
+
             <img src="https://images.unsplash.com/photo-1569383746724-6f1b882b8f46?w=600&auto=format&fit=crop" alt="Calles azules de Chefchaouen" loading="lazy" decoding="async">
+
             <div class="guide-body">
+
               <div class="guide-meta"><span class="tag">Destinos</span></div>
+
               <h3>Chefchaouen : guía de la ciudad azul 2026</h3>
+
               <div class="guide-date blog-date">Marzo 2026</div>
+
               <p class="guide-excerpt">Todo, desde el mirador de la Mezquita Española hasta las cascadas de Akchour.</p>
+
               <a href="../blog-chefchaouen.html" class="read-more">Leer el artículo →</a>
+
             </div>
+
           </article>
+
           <article class="guide-card">
+
             <img src="https://images.unsplash.com/photo-1593350058052-cc6636c9facd?w=600&auto=format&fit=crop" alt="Dunas del Sáhara" loading="lazy" decoding="async">
+
             <div class="guide-body">
+
               <div class="guide-meta"><span class="tag">Desierto</span></div>
+
               <h3>La guía completa del desierto del Sáhara</h3>
+
               <div class="guide-date blog-date">Marzo 2026</div>
+
               <p class="guide-excerpt">Merzouga, paseos en camello, vivacs de lujo, clima y equipaje.</p>
+
               <a href="../blog-sahara-guide.html" class="read-more">Leer el artículo →</a>
+
             </div>
+
           </article>
+
           <article class="guide-card">
+
             <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=600&auto=format&fit=crop" alt="Carretera a través de Marruecos" loading="lazy" decoding="async">
+
             <div class="guide-body">
+
               <div class="guide-meta"><span class="tag">Consejos de viaje</span></div>
+
               <h3>Conducir en Marruecos : guía de seguridad</h3>
+
               <div class="guide-date blog-date">2026</div>
+
               <p class="guide-excerpt">Normas, peajes, combustible y puertos de montaña vistos por un conductor local.</p>
+
               <a href="../blog-driving-safety.html" class="read-more">Leer el artículo →</a>
+
             </div>
+
           </article>
+
         </div>
+
         <div class="blog-cta">
+
           <a href="../blog.html" class="btn btn-secondary">Ver todas las guías →</a>
+
         </div>
+
       </div>
+
     </section>
 
+
+
     <!-- CTA BAND -->
+
     <section class="cta-band">
+
       <div class="container">
+
         <h2>¿Dudas con el programa? Pregúntanos — sin presión.</h2>
+
         <p>Dinos tus fechas o tu itinerario soñado — crearemos una ruta privada y responderemos en 2 horas.</p>
+
         <div class="cta-actions">
+
           <a href="../plan-my-trip.html" class="btn btn-primary">Organizar mi viaje</a>
+
           <a class="btn btn-ghost-white" href="https://wa.me/212762934488" target="_blank" rel="noopener">Hablar por WhatsApp</a>
+
         </div>
+
       </div>
+
     </section>
+
+
 
   </main>
 
+
+
   <!-- ══════════ GOOGLE REVIEWS (above footer) ══════════ -->
+
   <section class="reviews-band" aria-label="Reseñas de Google">
+
     <div class="container reviews-grid">
+
       <div>
+
         <div class="g-wordmark" aria-label="Google"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span> <span style="color:var(--text-muted);font-weight:500;font-size:1.05rem;">Reseñas</span></div>
+
         <h2>Les voyageurs notent Abrid Morocco sur Google</h2>
+
         <div class="g-stars" aria-label="Nota de cinco estrellas">★★★★★</div>
+
         <p class="lede">Cada reseña ayuda a otros viajeros a encontrar Marruecos. ¿Viajaste con nosotros — por mensaje, por carretera, o ambos? Deja tus palabras en nuestro perfil de Google.</p>
+
         <div class="hero-actions">
+
           <a class="btn btn-primary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Leer nuestras reseñas de Google</a>
+
           <a class="btn btn-secondary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Dejar una reseña</a>
+
         </div>
+
       </div>
+
       <div class="vmarquee" aria-live="off">
+
         <div class="vmarquee-track" id="googleReviewsTrack"></div>
+
       </div>
+
     </div>
+
   </section>
+
   <!-- FOOTER -->
+
   <footer class="site-footer">
+
     <div class="container">
+
       <div class="footer-grid footer-grid-v2">
+
         <div>
+
           <div class="footer-brand">
+
             <strong>Abrid Morocco</strong>
+
             <span>Plataforma de viajes en Marruecos</span>
+
           </div>
+
           <p class="footer-about">Une plateforme de voyage marocaine créée par des gens qui connaissent le Maroc. Sahara, Atlas, Ciudades imperiales — guides privés et hébergements de caractère depuis 2022.</p>
+
           <a href="../plan-my-trip.html" class="footer-contact-btn">Organizar mi viaje</a>
+
           <div class="footer-socials">
+
             <a href="https://wa.me/212762934488" target="_blank" rel="noopener" class="wa">WhatsApp</a>
+
             <a href="https://www.instagram.com/abridmorocco/" target="_blank" rel="noopener" class="ig">Instagram</a>
+
           </div>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Reserva</h4>
+
           <ul class="footer-links">
+
             <li><a href="../plan-my-trip.html">Organizar mi viaje</a></li>
+
             <li><a href="../booking-guide.html">Cómo reservar</a></li>
+
             <li><a href="../cancellation-policy.html">Política de cancelación</a></li>
+
             <li><a href="../terms.html">Términos y condiciones</a></li>
+
             <li><a href="../airport-transfer.html">Traslado al aeropuerto</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Empresa</h4>
+
           <ul class="footer-links">
+
             <li><a href="../about.html">Nosotros</a></li>
+
             <li><a href="../trips.html">Viajes</a></li>
+
             <li><a href="../destinations.html">Destinations</a></li>
+
             <li><a href="../blog.html">Guía de Marruecos</a></li>
+
             <li><a href="../gallery.html">Galería</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Contacto</h4>
+
           <ul class="footer-links">
+
             <li><a href="../contact.html">Contáctanos</a></li>
+
             <li><a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat en vivo por WhatsApp</a></li>
+
             <li><a href="../faq.html">FAQ</a></li>
+
             <li><a href="mailto:abridmorocco@gmail.com">Escríbenos</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Compromiso</h4>
+
           <ul class="footer-links">
+
             <li><a href="../responsible-travel.html">Viaje responsable</a></li>
+
             <li><a href="../high-atlas-azilal-imilchil-rich.html">Viaje comunitario</a></li>
+
             <li><a href="../reviews.html">Opiniones de viajeros</a></li>
+
             <li><a href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Dejar una reseña en Google</a></li>
+
           </ul>
+
         </div>
+
       </div>
+
       <div class="footer-langs">
         <span class="langs-label">🌐 Languages / Langues / Idiomas</span>
-        <a href="../index.html">🇬🇧 English</a>
-        <a href="../fr/index.html">🇫🇷 Français</a>
-        <a href="index.html" class="current" aria-current="true">🇪🇸 Español</a>
+        <a href="/es/" class="current" aria-current="true">🇪🇸 Español</a>
+        <a href="/">🇬🇧 English</a>
+        <a href="/fr/">🇫🇷 Français</a>
       </div>
+
       <div class="footer-bottom">
+
         <div><span>Copyright <span id="year"></span> Abrid Morocco. Todos los derechos reservados.</span></div>
+
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
+
           <a href="../terms.html">Términos</a>
+
           <a href="../privacy.html">Privacidad</a>
+
           <a href="../cookies.html">Cookies</a>
+
           <span>|</span>
+
           <span>Hecho en Marruecos</span>
+
         </div>
+
       </div>
+
     </div>
+
   </footer>
 
+
+
   <a href="https://wa.me/212762934488" class="wa-float" target="_blank" rel="noopener" aria-label="Discuter avec Abrid sur WhatsApp">
+
     <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 .1-.2-.2-1-1.1-1.7-1.8-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.4-.5-.5-.5h-.5c-.2 0-.5 0-.7.1-.2.2-.9.9-.9 2.2 0 1.2.9 2.4 1 2.6.1.2 1.8 2.7 4.3 3.8 1.6.7 2.2.7 3 .6.5-.1 1.6-.7 1.9-1.3.2-.6.2-1.1.2-1.3-.1-.2-.2-.3-.4-.4zM12 21.3c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3.3.9.9-3.2-.2-.3c-.8-1.4-1.3-3-1.3-4.7C3.4 8.6 7.2 4.8 12 4.8c4.8 0 8.6 3.8 8.6 8.5 0 4.8-3.8 8-8.6 8zM12 2.8C6.2 2.8 1.4 7.6 1.4 13.4c0 1.9.5 3.7 1.4 5.3L1.3 22l3.4-.9c1.5.9 3.3 1.4 5.2 1.4 5.8 0 10.6-4.8 10.6-10.6S17.8 2.8 12 2.8z"/></svg>
+
   </a>
 
+
+
   <!-- Search overlay -->
+
   <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-label="Buscar">
+
     <div class="search-panel">
+
       <div class="search-input-row">
+
         <input type="search" id="searchInput" placeholder="Buscar viajes, destinos, guías..." aria-label="Buscar">
+
         <button class="search-close" id="searchClose" type="button">Cerrar</button>
+
       </div>
+
       <div class="search-results" id="searchResults"></div>
+
     </div>
+
   </div>
 
+
+
   <script>
+
   /* ── Avis Google : défilement vertical ───────────────────────────
+
      AJOUTER DE VRAIS AVIS : copiez un avis de votre profil Google
+
      (https://share.google/rGJNXf1UR3iOWAgqn) et ajoutez une ligne par
+
      avis au format exact :
+
        { name: "Sara M.", text: "Texte exact de l'avis.", when: "il y a 2 semaines" },
+
      Ne collez que des avis authentiques. Liste vide = carte d'invitation honnête. */
+
   var GOOGLE_REVIEWS = [
+
   ];
+
   (function () {
+
     var track = document.getElementById("googleReviewsTrack");
+
     if (!track) return;
+
     function esc(s) {
+
       return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
     }
+
     function card(r) {
+
       var initial = esc((r.name || "?").trim().charAt(0).toUpperCase());
+
       return '<article class="g-card"><div class="g-stars" aria-label="Reseña de cinco estrellas">★★★★★</div>' +
+
         '<p class="quote">' + esc(r.text) + "</p>" +
+
         '<div class="who"><span class="avatar" aria-hidden="true">' + initial + "</span>" +
+
         "<div><strong>" + esc(r.name) + "</strong><span>Reseñas de Google" + (r.when ? " · " + esc(r.when) : "") + "</span></div></div></article>";
+
     }
+
     if (!GOOGLE_REVIEWS.length) {
+
       track.innerHTML = '<article class="g-card cta-card"><div class="g-stars" aria-label="Cinco estrellas">★★★★★</div>' +
+
         '<p class="quote">Vous avez voyagé avec nous ? Vos mots aident d\u2019autres voyageurs à trouver le Maroc.</p>' +
+
         '<div class="hero-actions" style="justify-content:center;"><a class="btn btn-primary" href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Dejar una reseña en Google</a></div></article>';
+
       return;
+
     }
+
     var html = GOOGLE_REVIEWS.map(card).join("");
+
     track.innerHTML = html + html;
+
     track.classList.add("scroll");
+
   })();
+
   </script>
+
+
 
   <!-- Cookie consent -->
+
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentement cookies" hidden>
+
     <p>Nous utilisons des cookies pour améliorer votre expérience et analyser le trafic du site. Lire notre <a href="../cookies.html">política de cookies</a>.</p>
+
     <div class="cookie-actions">
+
       <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Aceptar</button>
+
       <button type="button" class="btn btn-secondary btn-sm" id="cookieDecline">Rechazar</button>
+
     </div>
+
   </div>
+
   <script>
+
   (function () {
+
     var KEY = 'abrid-consent';
+
     var bar = document.getElementById('cookieBanner');
+
     if (!bar) return;
+
     function hide() { bar.setAttribute('hidden', ''); }
+
     var choice = null;
+
     try { choice = localStorage.getItem(KEY); } catch (e) {}
+
     if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
+
     document.getElementById('cookieAccept').addEventListener('click', function () {
+
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}
+
       hide();
+
     });
+
     document.getElementById('cookieDecline').addEventListener('click', function () {
+
       try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
+
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_declined'); } } catch (e) {}
+
       window['ga-disable-G-C868HF02SM'] = true;
+
       hide();
+
     });
+
   })();
+
   </script>
+
+
 
   <!-- Abrid newsletter popup: leads go straight to abdeosalh@gmail.com -->
+
   <div class="abrid-popup-overlay" id="abridPopup" role="dialog" aria-modal="true" aria-label="Suscripción" hidden>
+
     <div class="abrid-popup">
+
       <button type="button" class="abrid-popup-close" id="abridPopupClose" aria-label="Cerrar">✕</button>
+
       <div id="abridPopupBody">
+
         <div class="abrid-popup-top">
+
           <h3>Le Maroc dans votre boîte mail</h3>
+
           <p>Une courte lettre par mois — routes, saisons, coins secrets. Jamais de spam.</p>
+
         </div>
+
         <form id="abridPopupForm" action="https://formsubmit.co/abdeosalh@gmail.com" method="POST">
+
           <div>
+
             <label for="abridName">Tu nombre</label>
+
             <input type="text" id="abridName" name="name" placeholder="Sara" required autocomplete="name">
+
           </div>
+
           <div>
+
             <label for="abridEmail">Correo electrónico</label>
+
             <input type="email" id="abridEmail" name="email" placeholder="tu@ejemplo.com" required autocomplete="email">
+
           </div>
+
           <div>
+
             <label for="abridInterest">Sueñas con…</label>
+
             <select id="abridInterest" name="interest">
+
               <option value="Anywhere in Morocco">Cualquier lugar de Marruecos</option>
+
               <option value="Sahara desert">Desierto del Sáhara</option>
+
               <option value="High Atlas">Alto Atlas</option>
+
               <option value="Imperial cities">Ciudades imperiales</option>
+
             </select>
+
           </div>
+
           <input type="hidden" name="_subject" value="New subscriber – Abrid Morocco">
+
           <input type="hidden" name="_template" value="table">
+
           <input type="text" name="_honey" style="display:none">
+
           <button type="submit" class="btn btn-primary" style="width:100%;">Suscribirme gratis</button>
+
           <p class="fine">Date de baja en un clic.</p>
+
         </form>
+
       </div>
+
     </div>
+
   </div>
+
   <script>
+
   (function () {
+
     var KEY = 'abrid-popup-v1';
+
     var box = document.getElementById('abridPopup');
+
     if (!box) return;
+
     var seen = null;
+
     try { seen = localStorage.getItem(KEY); } catch (e) {}
+
     function open() { box.removeAttribute('hidden'); }
+
     function close() {
+
       box.setAttribute('hidden', '');
+
       try { localStorage.setItem(KEY, 'seen'); } catch (e) {}
+
     }
+
     if (!seen) setTimeout(function () {
+
       try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+
       open();
+
     }, 25000);
+
     document.getElementById('abridPopupClose').addEventListener('click', close);
+
     box.addEventListener('click', function (ev) { if (ev.target === box) close(); });
+
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !box.hasAttribute('hidden')) close(); });
+
     document.getElementById('abridPopupForm').addEventListener('submit', function (ev) {
+
       ev.preventDefault();
+
       var form = ev.target;
+
       var data = {
+
         name: document.getElementById('abridName').value,
+
         email: document.getElementById('abridEmail').value,
+
         interest: document.getElementById('abridInterest').value,
+
         _subject: 'New subscriber – Abrid Morocco'
+
       };
+
       fetch('https://formsubmit.co/ajax/abdeosalh@gmail.com', {
+
         method: 'POST',
+
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+
         body: JSON.stringify(data)
+
       }).then(function () { done(true); }).catch(function () { form.submit(); });
+
       function done() {
+
         document.getElementById('abridPopupBody').innerHTML =
+
           '<div class="abrid-popup-ok"><div class="big">🎉</div>' +
+
           '<h3 style="margin:0;">¡Bienvenido!</h3>' +
+
           '<p style="color:var(--muted);">Te damos la bienvenida a bordo — tu primera carta de Marruecos está en camino.</p>' +
+
           '<button type="button" class="btn btn-secondary" id="abridOkClose">Seguir explorando</button></div>';
+
         document.getElementById('abridOkClose').addEventListener('click', close);
+
         try { localStorage.setItem(KEY, 'subscribed'); } catch (e) {}
+
       }
+
     });
+
   })();
+
   </script>
 
+
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
   <script src="../book-cart.js"></script>
+
   <script src="../search-data.js"></script>
+
   <script src="../site.js"></script>
+
 </body>
+
 </html>
+

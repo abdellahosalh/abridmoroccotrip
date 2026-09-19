@@ -1,459 +1,911 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
 <script>try{if(localStorage.getItem('abrid-consent')==='declined'){window['ga-disable-G-C868HF02SM']=true;}}catch(e){}</script>
+
 <!-- Google tag (gtag.js) -->
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-C868HF02SM"></script>
+
 <script>
+
   window.dataLayer = window.dataLayer || [];
+
   function gtag(){dataLayer.push(arguments);}
+
   gtag('js', new Date());
 
+
+
   gtag('config', 'G-C868HF02SM');
+
 </script>
+
   <meta name="robots" content="noindex, nofollow">
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23E4002B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='36' font-weight='bold' fill='white' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+
   <title>Herramientas del agente – Abrid Morocco</title>
+
   <meta name="description" content="Herramientas internas para la planificación de viajes y la creación de itinerarios de Abrid Morocco." />
+
   <meta property="og:title" content="Herramientas del agente – Abrid Morocco" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
   <style>
+
     * { margin:0; padding:0; box-sizing:border-box; }
+
     
 
+
+
     body { font-family: 'Work Sans', -apple-system, sans-serif; background: #ffffff; color: var(--brown); padding: 40px 20px; line-height: 1.7; }
+
     .container { max-width: 1000px; margin: 0 auto; }
+
     h1 { font-family: 'Syne', sans-serif; color: var(--terracotta); font-size: 2.6rem; margin-bottom: 4px; }
+
     .subtitle { color: var(--muted); margin-bottom: 40px; }
+
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+
     .card { background: #fff; padding: 28px; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06); transition: transform .3s; }
+
     .card:hover { transform: translateY(-6px); }
+
     .card .icon { font-size: 2.8rem; display: block; margin-bottom: 8px; }
+
     .card h3 { font-family: 'Syne', sans-serif; font-size: 1.2rem; margin-bottom: 6px; }
+
     .card p { color: var(--muted); font-size: .9rem; margin-bottom: 16px; }
+
     .btn { display: inline-block; background: var(--terracotta); color: #fff; padding: 12px 24px; border-radius: 60px; font-weight: 700; text-decoration: none; transition: all .3s; }
+
     .btn:hover { background: #C00024; transform: translateY(-3px); }
+
     .btn-gold { background: var(--gold); color: var(--brown); }
+
     .btn-gold:hover { background: #e6a832; }
+
     .back-link { display: inline-block; margin-top: 40px; color: var(--terracotta); font-weight: 600; }
+
     .footer { background: var(--brown); color: rgba(255,255,255,.7); padding: 24px 0; text-align: center; margin-top: 40px; border-radius: var(--radius); }
+
     .footer a { color: rgba(255,255,255,.7); }
+
     @media (max-width: 600px) { .card { padding: 20px; } }
+
   
+
 @media (max-width:860px) {
+
     .nav-actions .contact-link,
+
     .nav-actions .btn-gold,
+
     .nav-actions .lang-wrapper,
+
     .nav-actions .mini-contact {
+
         display: none !important;
+
     }
+
 }<
+
 /* ─── FORCE ONE‑LINE HEADER ─── */
+
 .nav {
+
     flex-wrap: nowrap !important;
+
     gap: 6px !important;
+
 }
+
 .nav-links {
+
     flex-wrap: nowrap !important;
+
     gap: 8px !important;
+
 }
+
 .nav-links a {
+
     font-size: 0.75rem !important;
+
     padding: 4px 6px !important;
+
     white-space: nowrap !important;
+
 }
+
 .nav-actions .btn-gold {
+
     font-size: 0.7rem !important;
+
     padding: 4px 12px !important;
+
     white-space: nowrap !important;
+
 }
+
 .brand-text strong {
+
     font-size: 0.9rem !important;
+
 }
+
 .brand-text span {
+
     font-size: 0.55rem !important;
+
 }
+
 .brand-logo {
+
     width: 32px !important;
+
     height: 32px !important;
+
     min-width: 32px !important;
+
     min-height: 32px !important;
+
     max-width: 32px !important;
+
     max-height: 32px !important;
+
 }
+
+
 
 /* ─── MOBILE: hide Contact & Book Now ─── */
+
 @media (max-width: 860px) {
+
     .nav-actions .contact-link,
+
     .nav-actions .btn-gold,
+
     .nav-actions .lang-wrapper {
+
         display: none !important;
+
     }
+
     .nav-links {
+
         display: none !important;
+
     }
+
     .menu-toggle {
+
         display: flex !important;
+
     }
-    .brand-text strong {
-        font-size: 0.75rem !important;
-    }
-    .brand-logo {
-        width: 28px !important;
-        height: 28px !important;
-        min-width: 28px !important;
-        min-height: 28px !important;
-        max-width: 28px !important;
-        max-height: 28px !important;
-    }
-}
-@media (max-width: 480px) {
 
     .brand-text strong {
-        font-size: 0.65rem !important;
+
+        font-size: 0.75rem !important;
+
     }
+
+    .brand-logo {
+
+        width: 28px !important;
+
+        height: 28px !important;
+
+        min-width: 28px !important;
+
+        min-height: 28px !important;
+
+        max-width: 28px !important;
+
+        max-height: 28px !important;
+
+    }
+
 }
+
+@media (max-width: 480px) {
+
+
+
+    .brand-text strong {
+
+        font-size: 0.65rem !important;
+
+    }
+
+}
+
+
 
 /* ─── FIX FOOTER OVERFLOW ─── */
+
 footer {
+
     overflow-x: hidden !important;
+
     max-width: 100% !important;
+
     width: 100% !important;
+
 }
+
 footer .container {
+
     max-width: 1200px !important;
+
     margin: 0 auto !important;
+
     padding: 0 16px !important;
+
     overflow-x: hidden !important;
+
 }
+
 footer .container > div {
+
     flex-wrap: wrap !important;
+
     gap: 20px !important;
+
 }
+
 footer .container > div > div {
+
     min-width: 140px !important;
+
     flex: 1 1 180px !important;
+
 }
+
 footer .container ul {
+
     padding: 0 !important;
+
     margin: 0 !important;
+
     list-style: none !important;
+
 }
+
 footer .container ul li {
+
     white-space: nowrap !important;
+
     overflow: hidden !important;
+
     text-overflow: ellipsis !important;
+
     max-width: 100% !important;
+
 }
+
 footer .footer-contact-btn {
+
     max-width: 100% !important;
+
     box-sizing: border-box !important;
+
 }
+
 footer .footer-bottom {
+
     flex-wrap: wrap !important;
+
     gap: 8px !important;
+
 }
+
 @media (max-width: 860px) {
+
     footer .container > div {
+
         grid-template-columns: 1fr 1fr !important;
+
         gap: 16px !important;
+
     }
+
     footer .container > div > div {
+
         flex: 1 1 100% !important;
+
         min-width: unset !important;
+
     }
+
     footer .container ul li {
+
         white-space: normal !important;
+
         word-break: break-word !important;
+
     }
+
 }
+
 @media (max-width: 480px) {
+
     footer .container {
+
         padding: 0 12px !important;
+
     }
+
     footer .container > div {
+
         grid-template-columns: 1fr !important;
+
         gap: 12px !important;
+
     }
+
 }
+
+
 
 </style>
+
   <link rel="stylesheet" href="../style.css">
+
   <link rel="canonical" href="https://www.abridmorocco.com/es/agent-tools.html />
-  <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/es/agent-tools.html" />
+  <link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/agent-tools.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/agent-tools.html" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/agent-tools.html" />
-  <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/es/agent-tools.html" />
-  <meta property="og:url" content="https://www.abridmorocco.com/es/agent-tools.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/agent-tools.html" />
+  <meta property=" /> /> />
+  og:url" content="https://www.abridmorocco.com/es/agent-tools.html" />
+
   <link rel="stylesheet" href="../design.css">
+
 </head>
+
 <body>
 
+
+
 <div class="container">
+
   <h1>⚙️ Herramientas del agente</h1>
+
   <p class="subtitle">Todo lo que necesita para crear, fijar precios y vender viajes a Marruecos con Abrid Morocco.</p>
 
+
+
   <div class="grid">
+
     <div class="card">
+
       <span class="icon">📋</span>
+
       <h3>Itinerario Clásico de 13 Días</h3>
+
       <p>Itinerario prediseñado y listo para copiar. Casablanca a Marrakech vía Sahara, Fez, Chefchaouen.</p>
+
       <a href="../classic-morocco.html" class="btn">Ver y copiar</a>
+
     </div>
 
+
+
     <div class="card">
+
       <span class="icon">📐</span>
+
       <h3>Calculadora de margen</h3>
+
       <p>Ingrese sus costos, establezca su margen de beneficio y obtenga precios minoristas y ganancias instantáneos.</p>
+
       <a href="../trip-template.html" class="btn btn-primary">Abrir calculadora</a>
+
     </div>
 
+
+
     <div class="card">
+
       <span class="icon">📝</span>
+
       <h3>Kit de contenido de marketing</h3>
+
       <p>Descripciones listas para usar, publicaciones en redes sociales y plantillas de correo electrónico para vender Marruecos.</p>
+
       <a href="../contact.html" class="btn">Solicitar kit</a>
+
     </div>
 
+
+
     <div class="card">
+
       <span class="icon">📞</span>
+
       <h3>Contáctenos directamente</h3>
+
       <p>¿Necesita un presupuesto personalizado para un grupo grande o una solicitud especial? Estamos aquí para ayudar.</p>
+
       <a href="../contact.html" class="btn btn-primary">Contactar con soporte</a>
+
     </div>
 
+
+
     <div class="card">
+
       <span class="icon">🖼️</span>
+
       <h3>Galería y medios</h3>
+
       <p>Descargue imágenes y vídeos de alta calidad de Marruecos para utilizarlos en su propio marketing.</p>
+
       <a href="../gallery.html" class="btn">Ver galería</a>
+
     </div>
 
+
+
     <div class="card">
+
       <span class="icon">📰</span>
+
       <h3>Biblioteca de contenido del blog</h3>
+
       <p>Artículos de información privilegiada, guías de ciudades y consejos de viajes por el desierto para compartir con su audiencia.</p>
+
       <a href="../blog.html" class="btn btn-primary">Leer blog</a>
+
     </div>
+
   </div>
+
+
 
   <div style="margin-top: 40px; padding: 28px; background: #fff; border-radius: var(--radius); box-shadow: 0 8px 30px rgba(0,0,0,.06);">
+
     <h2 style="font-family: 'Syne', sans-serif; color: var(--terracotta); font-size: 1.4rem;">📋 Copia rápida: fragmento de itinerario</h2>
+
     <p style="color: var(--muted);">Haga clic en el botón a continuación para copiar una descripción breve y profesional del Tour Clásico por Marruecos.</p>
+
     <button class="btn" onclick="copySnippet()" style="margin-top: 10px;">📋 Copiar fragmento de marketing</button>
+
   </div>
+
+
 
   <a href="../index.html" class="back-link">← Volver a Inicio</a>
+
 </div>
 
+
+
 <div class="container">
+
     <!-- ─── CLIMATE COMMITMENT NOTE ─── -->
+
     <div class="climate-note">
+
       🌍 <strong>Estamos en el proceso de determinar cuánto CO₂-e genera este viaje.</strong> Mientras tanto, conozca más sobre nuestro compromiso climático.<br>
+
       Cuando viajas con nosotros, <strong>Abrid Morocco</strong> te brinda más oportunidades de apoyar causas importantes en los destinos que visitas.
+
     </div>
+
 </div><footer class="site-footer">
+
     <div class="container">
+
       <div class="footer-grid footer-grid-v2">
+
         <div>
+
           <div class="footer-brand">
+
             <strong>Abrid Morocco</strong>
+
             <span>Plataforma de viajes a Marruecos</span>
+
           </div>
+
           <p class="footer-about">Una plataforma de viajes a Marruecos construida por personas que conocen Marruecos. Sahara, Atlas, Ciudades Imperiales: guías privados y estancias con carácter desde 2022.</p>
+
           <a href="../plan-my-trip.html" class="footer-contact-btn">Planificar mi viaje</a>
+
           <div class="footer-socials">
+
             <a href="https://wa.me/212762934488" target="_blank" rel="noopener" class="wa">QX WHATSAPP</a>
+
             <a href="https://www.instagram.com/abridmorocco/" target="_blank" rel="noopener" class="ig">Instagram</a>
+
           </div>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Reserva</h4>
+
           <ul class="footer-links">
+
             <li><a href="../plan-my-trip.html">Planificar mi viaje</a></li>
+
             <li><a href="../booking-guide.html">Cómo funciona la reserva</a></li>
+
             <li><a href="../cancellation-policy.html">Política de cancelación</a></li>
+
             <li><a href="../terms.html">Términos de servicio</a></li>
+
             <li><a href="../airport-transfer.html">Traslado al aeropuerto</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Empresa</h4>
+
           <ul class="footer-links">
+
             <li><a href="../about.html">Sobre nosotros</a></li>
+
             <li><a href="../trips.html">Viajes</a></li>
+
             <li><a href="../destinations.html">Destinos</a></li>
+
             <li><a href="../blog.html">Guía de Marruecos</a></li>
+
             <li><a href="../gallery.html">Galería</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Contacto</h4>
+
           <ul class="footer-links">
+
             <li><a href="../contact.html">Ponte en contacto</a></li>
+
             <li><a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat en vivo en WhatsApp</a></li>
+
             <li><a href="../faq.html">Preguntas frecuentes</a></li>
+
             <li><a href="mailto:abridmorocco@gmail.com">Envíenos un correo electrónico</a></li>
+
           </ul>
+
         </div>
+
         <div class="footer-col">
+
           <h4>Propósito</h4>
+
           <ul class="footer-links">
+
             <li><a href="../responsible-travel.html">Viaje responsable</a></li>
+
             <li><a href="../high-atlas-azilal-imilchil-rich.html">Viaje comunitario</a></li>
+
             <li><a href="../reviews.html">Comentarios de viajeros</a></li>
+
             <li><a href="https://share.google/rGJNXf1UR3iOWAgqn" target="_blank" rel="noopener">Deja una reseña de Google</a></li>
+
           </ul>
+
         </div>
+
       </div>
+
       <div class="footer-langs">
         <span class="langs-label">🌐 Languages / Langues / Idiomas</span>
-        <a href="../agent-tools.html">🇬🇧 English</a>
-        <a href="../fr/agent-tools.html">🇫🇷 Français</a>
-        <a href="agent-tools.html" class="current" aria-current="true">🇪🇸 Español</a>
+        <a href="/es/" class="current" aria-current="true">🇪🇸 Español</a>
+        <a href="/">🇬🇧 English</a>
+        <a href="/fr/">🇫🇷 Français</a>
       </div>
+
       <div class="footer-bottom">
+
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;"><span class="footer-flags" style="display:inline-flex;align-items:center;gap:8px;" aria-label="Banderas marroquíes y amazigh"><svg width="32" height="22" viewBox="0 0 60 40" role="img" aria-label="Bandera de Marruecos" style="border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,0.12);display:block;"><title>Bandera de Marruecos</title><rect width="60" height="40" fill="#C1272D"/><polygon points="30,9 32.6,16.4 40.5,16.6 34.2,21.4 36.5,28.9 30,24.4 23.5,28.9 25.8,21.4 19.5,16.6 27.4,16.4" fill="none" stroke="#006233" stroke-width="2" stroke-linejoin="round"/></svg><svg width="32" height="22" viewBox="0 0 36 24" role="img" aria-label="Bandera amazigh (bereber)" style="border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,0.12);display:block;"><title>Bandera amazigh (bereber)</title><rect width="36" height="24" fill="#FFC627"/><g stroke="#D21034" stroke-width="2" stroke-linecap="round" fill="none"><line x1="18" y1="5" x2="18" y2="19"/><line x1="18" y1="9" x2="13" y2="5"/><line x1="18" y1="9" x2="23" y2="5"/><line x1="18" y1="15" x2="13" y2="19"/><line x1="18" y1="15" x2="23" y2="19"/></g></svg></span><span>© <span id="year"></span> Abrid Morocco. Reservados todos los derechos.</span></div>
+
         <div style="display:flex; gap:16px; flex-wrap:wrap;">
+
           <a href="../terms.html">Términos</a>
+
           <a href="../privacy.html">Privacidad</a>
+
           <a href="../cookies.html">galletas</a>
+
           <span>|</span>
+
           <span>Hecho en Marruecos</span>
+
         </div>
+
       </div>
+
     </div>
+
   </footer>
 
+
+
 <script>
+
   function copySnippet() {
+
     const snippet = `🌟 DISCOVER THE REAL MOROCCO – 13 DAYS\n\nFrom the bustling souks of Marrakech to the golden dunes of the Sahara, this 13-day journey takes you through the heart of Morocco. Explore the blue city of Chefchaouen, wander the medieval medina of Fes, camp under the stars in the desert, and hike through the stunning Todra Gorge. Led by local Berber guides. Authentic, sustainable, and unforgettable.\n\nBook now with Abrid Morocco. Contact us for pricing and availability.`;
+
     navigator.clipboard.writeText(snippet).then(() => {
+
       alert('✅ Marketing snippet copied to clipboard!');
+
     }).catch(() => {
+
       prompt('Copy this snippet:', snippet);
+
     });
+
   }
+
 </script>
 
+
+
   <script src="../site.js"></script>
+
   
+
   <!-- Cookie consent -->
+
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies" hidden>
+
     <p>Utilizamos cookies para mejorar su experiencia y analizar el tráfico del sitio. Lea nuestro <a href="../cookies.html">política de cookies</a>.</p>
+
     <div class="cookie-actions">
+
       <button type="button" class="btn btn-primary btn-sm" id="cookieAccept">Aceptar</button>
+
       <button type="button" class="btn btn-secondary btn-sm" id="cookieDecline">Rechazar</button>
+
     </div>
+
   </div>
+
   <script>
+
   (function () {
+
     var KEY = 'abrid-consent';
+
     var bar = document.getElementById('cookieBanner');
+
     if (!bar) return;
+
     function hide() { bar.setAttribute('hidden', ''); }
+
     var choice = null;
+
     try { choice = localStorage.getItem(KEY); } catch (e) {}
+
     if (!choice) setTimeout(function () { bar.removeAttribute('hidden'); }, 15000);
+
     document.getElementById('cookieAccept').addEventListener('click', function () {
+
       try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_accepted'); } } catch (e) {}
+
       hide();
+
     });
+
     document.getElementById('cookieDecline').addEventListener('click', function () {
+
       try { localStorage.setItem(KEY, 'declined'); } catch (e) {}
+
       try { if (typeof gtag !== 'undefined') { gtag('event', 'consent_declined'); } } catch (e) {}
+
       window['ga-disable-G-C868HF02SM'] = true;
+
       hide();
+
     });
+
   })();
+
   </script>
 
+
+
   <!-- Abrid newsletter popup: leads go straight to abdeosalh@gmail.com -->
+
   <div class="abrid-popup-overlay" id="abridPopup" role="dialog" aria-modal="true" aria-label="Suscríbete" hidden>
+
     <div class="abrid-popup">
+
       <button type="button" class="abrid-popup-close" id="abridPopupClose" aria-label="Cerrar">✕</button>
+
       <div id="abridPopupBody">
+
         <div class="abrid-popup-top">
+
           <h3>Marruecos en tu bandeja de entrada</h3>
+
           <p>Una breve carta al mes: rutas, estaciones, rincones secretos. Nada de spam, nunca.</p>
+
         </div>
+
         <form id="abridPopupForm" action="https://formsubmit.co/abdeosalh@gmail.com" method="POST">
+
           <div>
+
             <label for="abridName">tu nombre</label>
+
             <input type="text" id="abridName" name="name" placeholder="sara" required autocomplete="name">
+
           </div>
+
           <div>
+
             <label for="abridEmail">Dirección de correo electrónico</label>
+
             <input type="email" id="abridEmail" name="email" placeholder="you@example.com" required autocomplete="email">
+
           </div>
+
           <div>
+
             <label for="abridInterest">Estoy soñando con…</label>
+
             <select id="abridInterest" name="interest">
+
               <option value="Anywhere in Morocco">En cualquier lugar de Marruecos</option>
+
               <option value="Sahara desert">desierto del sahara</option>
+
               <option value="High Atlas">Alto Atlas</option>
+
               <option value="Imperial cities">ciudades imperiales</option>
+
             </select>
+
           </div>
+
           <input type="hidden" name="_subject" value="New subscriber – Abrid Morocco">
+
           <input type="hidden" name="_template" value="table">
+
           <input type="text" name="_honey" style="display:none">
+
           <button type="submit" class="btn btn-primary" style="width:100%;">Suscríbete gratis</button>
+
           <p class="fine">Darse de baja en cualquier momento con un clic.</p>
+
         </form>
+
       </div>
+
     </div>
+
   </div>
+
   <script>
+
   (function () {
+
     var KEY = 'abrid-popup-v1';
+
     var box = document.getElementById('abridPopup');
+
     if (!box) return;
+
     var seen = null;
+
     try { seen = localStorage.getItem(KEY); } catch (e) {}
+
     function open() { box.removeAttribute('hidden'); }
+
     function close() {
+
       box.setAttribute('hidden', '');
+
       try { localStorage.setItem(KEY, 'seen'); } catch (e) {}
+
     }
+
     if (!seen) setTimeout(function () {
+
       try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+
       open();
+
     }, 25000);
+
     document.getElementById('abridPopupClose').addEventListener('click', close);
+
     box.addEventListener('click', function (ev) { if (ev.target === box) close(); });
+
     document.addEventListener('keydown', function (ev) { if (ev.key === 'Escape' && !box.hasAttribute('hidden')) close(); });
+
     document.getElementById('abridPopupForm').addEventListener('submit', function (ev) {
+
       ev.preventDefault();
+
       var form = ev.target;
+
       var data = {
+
         name: document.getElementById('abridName').value,
+
         email: document.getElementById('abridEmail').value,
+
         interest: document.getElementById('abridInterest').value,
+
         _subject: 'New subscriber – Abrid Morocco'
+
       };
+
       fetch('https://formsubmit.co/ajax/abdeosalh@gmail.com', {
+
         method: 'POST',
+
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+
         body: JSON.stringify(data)
+
       }).then(function () { done(true); }).catch(function () { form.submit(); });
+
       function done() {
+
         document.getElementById('abridPopupBody').innerHTML =
+
           '<div class="abrid-popup-ok"><div class="big">🎉</div>' +
+
           '<h3 style="margin:0;">You are in!</h3>' +
+
           '<p style="color:var(--muted);">Welcome aboard — your first Morocco letter is on its way.</p>' +
+
           '<button type="button" class="btn btn-secondary" id="abridOkClose">Continue exploring</button></div>';
+
         document.getElementById('abridOkClose').addEventListener('click', close);
+
         try { localStorage.setItem(KEY, 'subscribed'); } catch (e) {}
+
       }
+
     });
+
   })();
+
   </script>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
   <script src="../book-cart.js"></script>
+
 </body>
+
 </html>
+
