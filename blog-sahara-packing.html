@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
@@ -37,7 +37,6 @@
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-packing.html" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-packing.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/blog-sahara-packing.html" />
-  />
   <meta property="og:type" content="article" />
 
   <meta property="og:url" content="https://www.abridmorocco.com/blog-sahara-packing.html" />
@@ -78,7 +77,7 @@
 
   <link rel="preconnect" href="https://images.unsplash.com"> <!-- images -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
 
@@ -594,7 +593,7 @@ footer .footer-bottom {
 
         <div class="brand-logo">
 
-          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async">
+          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async" fetchpriority="high">
 
         </div>
 
@@ -609,38 +608,51 @@ footer .footer-bottom {
       </a>
 
       <ul class="nav-links">
-
-  <li><a href="index.html">Home</a></li>
-
   <li class="drop">
-
-    <a href="destinations.html">Destinations <span class="caret" aria-hidden="true">&#9662;</span></a>
-
+    <a href="destinations.html" aria-haspopup="true">Destinations <span class="caret" aria-hidden="true">&#9662;</span></a>
     <ul class="nav-drop">
-
-      <span class="drop-head">Discover</span>
-
+      <span class="drop-head">Explore</span>
       <a href="destinations.html">All Destinations</a>
-
-      <a href="experiences.html">Experiences</a>
-
-      <a href="itineraries.html">Itineraries</a>
-
-      <a href="blog.html">Morocco Guide</a>
-
-      <a href="trips.html">All Trips</a>
-
+      <a href="destination-sahara.html">Sahara Desert</a>
+      <a href="destination-marrakech.html">Marrakech</a>
+      <a href="destination-fes.html">Fes</a>
+      <a href="destination-chefchaouen.html">Chefchaouen</a>
+      <a href="destination-atlas.html">Atlas Mountains</a>
+      <a href="destination-essaouira.html">Essaouira &amp; Coast</a>
     </ul>
-
   </li>
-
-  <li><a href="trips.html">Trips</a></li>
-
-  <li><a href="itineraries.html">Itineraries</a></li>
-
-  <li><a href="about.html">About</a></li>
-
+  <li class="drop">
+    <a href="trips.html" aria-haspopup="true">Ways to Travel <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Travel styles</span>
+      <a href="trips.html">All Trips</a>
+      <a href="private.html">Private Tours</a>
+      <a href="small-group-tour.html">Small-Group Tours</a>
+      <a href="plan-my-trip.html">Tailor-Made Trips</a>
+      <a href="airport-transfer.html">Airport Transfers</a>
     </ul>
+  </li>
+  <li class="drop">
+    <a href="blog.html" aria-haspopup="true">Morocco Guide <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Guides</span>
+      <a href="blog.html">All Guides</a>
+      <a href="blog-sahara-guide.html">Sahara Guide</a>
+      <a href="guide-best-time.html">Best Time to Visit</a>
+      <a href="blog-chefchaouen.html">Chefchaouen Guide</a>
+      <a href="guide-desert.html">Desert Guide</a>
+    </ul>
+  </li>
+  <li class="drop">
+    <a href="about.html" aria-haspopup="true">About <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Company</span>
+      <a href="about.html">About Us</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </li>
+</ul>
 
       <div class="nav-actions">
 
@@ -656,8 +668,6 @@ footer .footer-bottom {
 
   <button type="button" class="btn btn-secondary btn-sm" data-open-cart style="white-space:nowrap;" aria-label="Reserve a tour">Reserve</button>
 
-  <a class="btn btn-primary btn-sm" href="plan-my-trip.html">Plan My Trip</a>
-
   <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
 
           <span></span><span></span><span></span>
@@ -671,27 +681,14 @@ footer .footer-bottom {
     <div class="container mobile-menu" id="mobileMenu">
 
       <div class="mobile-panel">
-
   <a href="#" class="mobile-search-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="vertical-align:-3px;margin-right:10px;"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Search</a>
-
-  <a href="index.html">Home</a>
-
   <a href="destinations.html">Destinations</a>
-
-  <a href="experiences.html">Experiences</a>
-
-  <a href="itineraries.html">Itineraries</a>
-
+  <a href="trips.html">Ways to Travel</a>
   <a href="blog.html">Morocco Guide</a>
-
-  <a href="trips.html">Trips</a>
-
-  <a href="about.html">About Abrid</a>
-
+  <a href="about.html">About</a>
   <a href="plan-my-trip.html">Plan My Trip</a>
-
+  <a href="contact.html">Contact</a>
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
-
 </div>
 
     </div>
@@ -1184,4 +1181,9 @@ footer .footer-bottom {
 </body>
 
 </html>
+
+
+
+
+
 

@@ -86,6 +86,7 @@
     '</div>' +
     '<button type="submit" class="btn btn-primary" id="cartSubmit" style="width:100%;">' + T("Send reservation →", "Envoyer la réservation →", "Enviar reserva →") + '</button>' +
     '<p class="fine">' + T("No payment now — Abdellah or Karim replies personally within 2 hours.", "Aucun paiement maintenant — Abdellah ou Karim répond personnellement sous 2 heures.", "Sin pago ahora — Abdellah o Karim responde personalmente en 2 horas.") + '</p>' +
+    '<p class="fine"><a href="plan-my-trip.html" style="color:var(--terracotta,#E4002B);font-weight:700;">' + T("Prefer a fully custom trip? Plan it here →", "Un voyage sur mesure ? Planifiez ici →", "¿Un viaje a medida? Planifícalo aquí →") + '</a></p>' +
     '</form></div></div>';
   document.body.appendChild(overlay);
 
