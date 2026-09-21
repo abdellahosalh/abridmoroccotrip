@@ -4,15 +4,16 @@
      data-center="lat,lon"   map centre (required)
      data-zoom="8"           zoom level (default 8)
      data-pins='[["Label",lat,lon],["Label2",lat,lon2]]'
-   Pins use pure-CSS markers — no image assets. Topographic tiles first,
-   automatic fallback to a second free style if unreachable.
+   Pins use pure-CSS markers — no image assets. Aerial satellite view
+   first (camera-from-above, with place labels), automatic fallback
+   to a second free style if unreachable.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   var TOPO = {
-    url: "https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png",
+    url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
     opts: {
-      maxZoom: 17, subdomains: "abc",
-      attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org" target="_blank" rel="noopener">SRTM</a> | style: &copy; <a href="https://opentopomap.org" target="_blank" rel="noopener">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener">CC-BY-SA</a>)'
+      maxZoom: 19,
+      attribution: 'Imagery &copy; <a href="https://www.esri.com/" target="_blank" rel="noopener">Esri</a>, Maxar, Earthstar Geographics | Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors'
     }
   };
   var FALLBACK = {
@@ -40,12 +41,14 @@
 
     var map = L.map(el, { scrollWheelZoom: false }).setView(center, zoom);
     var layer = L.tileLayer(TOPO.url, TOPO.opts).addTo(map);
+    var labels = L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}", { maxZoom: 19 }).addTo(map);
     var errors = 0, switched = false;
     layer.on("tileerror", function () {
       errors++;
       if (errors > 4 && !switched) {
         switched = true;
         map.removeLayer(layer);
+        map.removeLayer(labels);
         layer = L.tileLayer(FALLBACK.url, FALLBACK.opts).addTo(map);
       }
     });

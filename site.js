@@ -226,3 +226,64 @@
     applyFilters();
   });
 })();
+
+/* ═══════════════════════════════════════════════════════════════════
+   ABRID MOROCCO — Live traveller reviews (Google Sheet backend)
+   Paste your Apps Script Web app URL below (see reviews-backend.gs).
+   Empty string = backend disabled: the review form falls back to
+   WhatsApp and lists show manual entries only.
+   ═══════════════════════════════════════════════════════════════════ */
+window.ABRID_REVIEWS_API = window.ABRID_REVIEWS_API || '';
+
+(function () {
+  'use strict';
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function stars(n) {
+    n = Math.max(1, Math.min(5, parseInt(n, 10) || 5));
+    var s = '';
+    for (var i = 0; i < n; i++) s += '★';
+    return s;
+  }
+
+  /* Card for the reviews.html grid (global .review-card styles) */
+  function gridCard(r) {
+    return '<article class="review-card"><div class="stars" aria-label="' +
+      (parseInt(r.rating, 10) || 5) + ' out of 5 stars">' + stars(r.rating) + '</div>' +
+      '<p class="quote">' + esc(r.text) + '</p>' +
+      '<div class="author">' + esc(r.name) + (r.trip ? ' · ' + esc(r.trip) : '') + '</div></article>';
+  }
+
+  window.AbridReviews = {
+    load: function () {
+      var api = window.ABRID_REVIEWS_API || '';
+      var grid = document.getElementById('liveReviews');
+      if (!api || !grid) return;
+      var note = document.getElementById('liveReviewsNote');
+      fetch(api, { headers: { 'Accept': 'application/json' } })
+        .then(function (res) { return res.json(); })
+        .then(function (items) {
+          items = Array.isArray(items) ? items : [];
+          if (!items.length) {
+            if (note) note.textContent = 'No published reviews yet — yours could be the first.';
+            return;
+          }
+          grid.innerHTML = items.map(gridCard).join('');
+          if (note) note.textContent = 'Approved reviews from travellers who booked with Abrid Morocco.';
+        })
+        .catch(function () {
+          if (note) note.textContent = 'Reviews appear here once published.';
+        });
+    }
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function () { window.AbridReviews.load(); });
+  } else {
+    window.AbridReviews.load();
+  }
+})();

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 
@@ -37,7 +37,6 @@
   <link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/reviews.html" />
   <link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/reviews.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.abridmorocco.com/reviews.html" />
-  />
   <meta name="description" content="What travellers say about Abrid Morocco: read our Google reviews — and if you travelled with us, leave yours." />
 
   <meta property="og:type" content="website" />
@@ -60,7 +59,7 @@
 
   <link rel="preconnect" href="https://i.postimg.cc"> <!-- images -->
 
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Instrument+Serif:ital@0;1&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="design.css">
 
@@ -77,6 +76,18 @@
   .review-step .step-n{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--terracotta);}
 
   .review-step p{color:var(--text-2);margin:8px 0 0;font-size:.93rem;}
+
+  /* Leave-a-review form (reuses global form tokens from design.css) */
+  .plan-form{background:var(--surface,#fff);border:1px solid var(--line-2);border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:32px;}
+  .plan-form h2{font-weight:400;font-size:1.4rem;margin:0 0 4px;}
+  .plan-form > p{font-family:var(--font-body);color:var(--text-muted);margin:0 0 24px;font-size:.95rem;}
+  .req{color:var(--color-primary);}
+  .confirm-box{display:none;background:var(--bg-alt);border:1px solid rgba(228,0,43,.25);border-radius:10px;padding:20px 22px;margin-top:20px;}
+  .confirm-box.open{display:block;}
+  .confirm-box strong{color:var(--text);}
+  .confirm-box a{color:var(--color-primary);font-weight:600;}
+  #liveReviews{margin-top:20px;}
+  #traveller-reviews .day-title{font-size:1.6rem;margin-bottom:6px;}
 
   </style>
 
@@ -100,7 +111,7 @@
 
         <div class="brand-logo">
 
-          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async">
+          <img src="https://i.postimg.cc/C5cbTcxk/abrid-logo-transparent.png" alt="Abrid Morocco logo" decoding="async" fetchpriority="high">
 
         </div>
 
@@ -115,38 +126,51 @@
       </a>
 
       <ul class="nav-links">
-
-  <li><a href="index.html">Home</a></li>
-
   <li class="drop">
-
-    <a href="destinations.html">Destinations <span class="caret" aria-hidden="true">&#9662;</span></a>
-
+    <a href="destinations.html" aria-haspopup="true">Destinations <span class="caret" aria-hidden="true">&#9662;</span></a>
     <ul class="nav-drop">
-
-      <span class="drop-head">Discover</span>
-
+      <span class="drop-head">Explore</span>
       <a href="destinations.html">All Destinations</a>
-
-      <a href="experiences.html">Experiences</a>
-
-      <a href="itineraries.html">Itineraries</a>
-
-      <a href="blog.html">Morocco Guide</a>
-
-      <a href="trips.html">All Trips</a>
-
+      <a href="destination-sahara.html">Sahara Desert</a>
+      <a href="destination-marrakech.html">Marrakech</a>
+      <a href="destination-fes.html">Fes</a>
+      <a href="destination-chefchaouen.html">Chefchaouen</a>
+      <a href="destination-atlas.html">Atlas Mountains</a>
+      <a href="destination-essaouira.html">Essaouira &amp; Coast</a>
     </ul>
-
   </li>
-
-  <li><a href="trips.html">Trips</a></li>
-
-  <li><a href="itineraries.html">Itineraries</a></li>
-
-  <li><a href="about.html">About</a></li>
-
+  <li class="drop">
+    <a href="trips.html" aria-haspopup="true">Ways to Travel <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Travel styles</span>
+      <a href="trips.html">All Trips</a>
+      <a href="private.html">Private Tours</a>
+      <a href="small-group-tour.html">Small-Group Tours</a>
+      <a href="plan-my-trip.html">Tailor-Made Trips</a>
+      <a href="airport-transfer.html">Airport Transfers</a>
     </ul>
+  </li>
+  <li class="drop">
+    <a href="blog.html" aria-haspopup="true">Morocco Guide <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Guides</span>
+      <a href="blog.html">All Guides</a>
+      <a href="blog-sahara-guide.html">Sahara Guide</a>
+      <a href="guide-best-time.html">Best Time to Visit</a>
+      <a href="blog-chefchaouen.html">Chefchaouen Guide</a>
+      <a href="guide-desert.html">Desert Guide</a>
+    </ul>
+  </li>
+  <li class="drop">
+    <a href="about.html" aria-haspopup="true">About <span class="caret" aria-hidden="true">&#9662;</span></a>
+    <ul class="nav-drop">
+      <span class="drop-head">Company</span>
+      <a href="about.html">About Us</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+    </ul>
+  </li>
+</ul>
 
       <div class="nav-actions">
 
@@ -162,9 +186,7 @@
 
         <button type="button" class="btn btn-secondary btn-sm" data-open-cart style="white-space:nowrap;" aria-label="Reserve a tour">Reserve</button>
 
-  <a class="btn btn-primary btn-sm" href="plan-my-trip.html">Plan My Trip</a>
-
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
+  <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" type="button">
 
           <span></span><span></span><span></span>
 
@@ -177,27 +199,14 @@
     <div class="container mobile-menu" id="mobileMenu">
 
       <div class="mobile-panel">
-
   <a href="#" class="mobile-search-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" style="vertical-align:-3px;margin-right:10px;"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Search</a>
-
-  <a href="index.html">Home</a>
-
   <a href="destinations.html">Destinations</a>
-
-  <a href="experiences.html">Experiences</a>
-
-  <a href="itineraries.html">Itineraries</a>
-
+  <a href="trips.html">Ways to Travel</a>
   <a href="blog.html">Morocco Guide</a>
-
-  <a href="trips.html">Trips</a>
-
-  <a href="about.html">About Abrid</a>
-
+  <a href="about.html">About</a>
   <a href="plan-my-trip.html">Plan My Trip</a>
-
+  <a href="contact.html">Contact</a>
   <a href="https://wa.me/212762934488" target="_blank" rel="noopener">Chat on WhatsApp</a>
-
 </div>
 
     </div>
@@ -291,6 +300,190 @@
     </div>
 
 
+
+    <div class="container">
+
+      <section class="day-section" id="traveller-reviews">
+
+        <h2 class="day-title">Traveller reviews</h2>
+
+        <p style="color:var(--text-muted);margin-bottom:6px;" id="liveReviewsNote">Loading approved traveller reviews…</p>
+
+        <div class="review-grid" id="liveReviews"></div>
+
+      </section>
+
+      <section class="day-section" id="leave-review">
+
+        <h2 class="day-title" style="font-size:1.6rem;margin-bottom:6px;">Leave your review</h2>
+
+        <p style="color:var(--text-muted);margin-bottom:20px;max-width:640px;">Travelled with us? Write your review below — it opens in WhatsApp addressed to Abdellah and Karim, so your words reach us directly. Then, if you can, please also post it on our Google profile so other travellers can find us.</p>
+
+        <div class="plan-form" style="max-width:680px;">
+
+          <h2>Your review</h2>
+
+          <p>Fields marked <span class="req">*</span> are required. Nothing is published automatically — we only receive your words.</p>
+
+          <form id="reviewForm" novalidate>
+
+            <input type="text" name="website" value="" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;">
+
+            <div class="form-grid">
+
+              <div class="form-field">
+                <label for="rName">Your name <span class="req">*</span></label>
+                <input type="text" id="rName" name="name" required autocomplete="name" placeholder="Your name">
+              </div>
+
+              <div class="form-field">
+                <label for="rTrip">Which trip or experience?</label>
+                <input type="text" id="rTrip" name="trip" placeholder="e.g. 3-day Sahara, Atlas day trip">
+              </div>
+
+              <div class="form-field">
+                <label for="rRating">Your rating <span class="req">*</span></label>
+                <select id="rRating" name="rating" required>
+                  <option value="5">★★★★★ — Excellent</option>
+                  <option value="4">★★★★ — Very good</option>
+                  <option value="3">★★★ — Good</option>
+                  <option value="2">★★ — Fair</option>
+                  <option value="1">★ — Poor</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="rDate">When did you travel?</label>
+                <input type="month" id="rDate" name="traveldate">
+              </div>
+
+              <div class="form-field full">
+                <label for="rText">Your review <span class="req">*</span></label>
+                <textarea id="rText" name="review" required placeholder="What happened, what surprised you, what should we keep or fix?"></textarea>
+              </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" style="margin-top:18px">Send my review via WhatsApp</button>
+
+            <p class="form-note" style="margin-top:10px">One click: your review text is copied and our Google profile opens — just paste it there and press Post. Google requires every reviewer to publish from their own account.</p>
+
+            <div class="confirm-box" id="reviewConfirm" role="status">
+
+              <strong>Thank you, <span id="reviewConfirmName">friend</span>!</strong>
+
+              <p style="margin:8px 0 0;font-family:var(--font-body);font-size:.92rem;line-height:1.65">Your review text was copied — our Google profile should now be open in a new tab. Just paste it there and press Post. Want us to feature it here too? Send it to us on <a href="https://wa.me/212762934488" target="_blank" rel="noopener">WhatsApp</a>.</p>
+
+            </div>
+
+          </form>
+
+        </div>
+
+      </section>
+
+      <script>
+
+        window.__reviewStarted = Date.now();
+
+        document.getElementById('reviewForm').addEventListener('submit', function (e) {
+
+          e.preventDefault();
+
+          var f = e.target;
+
+          var name = f.name.value.trim();
+
+          var text = f.review.value.trim();
+
+          if (!name || !text) return;
+
+          if (f.website && f.website.value) return; /* honeypot: bots fill this */
+
+          var n = parseInt(f.rating.value, 10) || 5;
+
+          var api = window.ABRID_REVIEWS_API || '';
+
+          function done(openGoogle) {
+
+            document.getElementById('reviewConfirmName').textContent = name.split(' ')[0];
+
+            document.getElementById('reviewConfirm').classList.add('open');
+
+            if (openGoogle) window.open('https://share.google/rGJNXf1UR3iOWAgqn', '_blank', 'noopener');
+
+          }
+
+          /* Google lets nobody post reviews programmatically — the reviewer
+             must paste and press Post themselves. So: copy their text and
+             open the Google profile. Closest one-click flow possible. */
+          var clipText = text + ' — ' + name + (f.trip.value.trim() ? ' (' + f.trip.value.trim() + ')' : '');
+
+          function copyThenOpen() {
+            function open() { done(true); }
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(clipText).then(open, open);
+              } else {
+                var ta = document.createElement('textarea');
+                ta.value = clipText;
+                ta.setAttribute('readonly', '');
+                ta.style.position = 'absolute';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                try { document.execCommand('copy'); } catch (err) { /* clipboard unavailable */ }
+                document.body.removeChild(ta);
+                open();
+              }
+            } catch (err) { open(); }
+          }
+
+          if (!api) {
+
+            /* No review backend configured — straight to Google */
+
+            copyThenOpen();
+
+            f.reset();
+
+            return;
+
+          }
+
+          fetch(api, {
+
+            method: 'POST',
+
+            mode: 'no-cors',
+
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+
+            body: JSON.stringify({
+
+              name: name,
+
+              trip: f.trip.value.trim(),
+
+              rating: n,
+
+              traveldate: f.traveldate.value,
+
+              review: text,
+
+              started: window.__reviewStarted,
+
+              website: ''
+
+            })
+
+          }).then(function () { done(true); }).catch(function () { done(true); });
+
+        });
+
+      </script>
+
+    </div>
 
     <div class="container">
 
@@ -728,4 +921,9 @@
 </body>
 
 </html>
+
+
+
+
+
 
