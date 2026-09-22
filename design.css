@@ -1607,6 +1607,9 @@ background: var(--color-primary);
 }
 .footer-socials a.wa { background: #25D366; color: #fff; }
 .footer-socials a.ig { background: linear-gradient(135deg, #E1306C, #833AB4); color: #fff; }
+.footer-socials a.fb { background: #1877F2; color: #fff; }
+.footer-socials a.x { background: #000; color: #fff; }
+.footer-socials a.rd { background: #FF4500; color: #fff; }
 .footer-col h4 {
   font-family: var(--font-ui);
   font-size: 0.65rem;
