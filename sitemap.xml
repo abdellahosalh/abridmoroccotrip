@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
   <!-- ===== HOMEPAGE ===== -->
   <url>
     <loc>https://www.abridmorocco.com/index.html</loc>
@@ -29,28 +28,9 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/index.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/index.html" />
   </url>
-
   <!-- ===== MAIN PAGES ===== -->
   <url>
     <loc>https://www.abridmorocco.com/about.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/about.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/about.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/about.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/about.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/about.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/about.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/about.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/about.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9000</priority>
@@ -68,43 +48,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/plan-my-trip.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/plan-my-trip.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/plan-my-trip.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/plan-my-trip.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/plan-my-trip.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/plan-my-trip.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/plan-my-trip.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/plan-my-trip.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/plan-my-trip.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/tours.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/tours.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/tours.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/tours.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/tours.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/tours.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/tours.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/tours.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/tours.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
@@ -149,43 +93,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/packages.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/packages.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/packages.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/packages.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/packages.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/packages.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/packages.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/packages.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/packages.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/gallery.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/gallery.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/gallery.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/gallery.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/gallery.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/gallery.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/gallery.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/gallery.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/gallery.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -203,43 +111,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/contact.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/contact.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/contact.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/contact.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/contact.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/contact.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/contact.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/trips.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/trips.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/trips.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/trips.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/trips.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/trips.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/trips.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/trips.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/trips.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9000</priority>
@@ -257,24 +129,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/experiences.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -283,46 +137,9 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/experiences.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/experiences.html" />
   </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/experiences.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/experiences.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/experiences.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/experiences.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/experiences.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/experiences.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/experiences.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/experiences.html" />
-  </url>
-
   <!-- ===== TOUR DETAIL PAGES ===== -->
   <url>
     <loc>https://www.abridmorocco.com/marrakech.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/marrakech.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/marrakech.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/marrakech.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/marrakech.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/marrakech.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/marrakech.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/marrakech.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/marrakech.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -340,43 +157,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/atlas.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/atlas.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/atlas.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/atlas.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/atlas.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/atlas.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/atlas.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/atlas.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/atlas.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/ouzoud-camel-ride.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/ouzoud-camel-ride.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/ouzoud-camel-ride.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/ouzoud-camel-ride.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/ouzoud-camel-ride.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/ouzoud-camel-ride.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/ouzoud-camel-ride.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/ouzoud-camel-ride.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/ouzoud-camel-ride.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -394,43 +175,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/essaouira.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/essaouira.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/essaouira.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/essaouira.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/essaouira.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/merzouga.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/merzouga.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/merzouga.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/merzouga.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/merzouga.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/merzouga.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/merzouga.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/merzouga.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/merzouga.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -448,43 +193,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imilchil.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/imilchil.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imilchil.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/imilchil.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imilchil.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/high-atlas-azilal-imilchil-rich.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/high-atlas-azilal-imilchil-rich.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/high-atlas-azilal-imilchil-rich.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/high-atlas-azilal-imilchil-rich.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/high-atlas-azilal-imilchil-rich.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/high-atlas-azilal-imilchil-rich.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/high-atlas-azilal-imilchil-rich.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/high-atlas-azilal-imilchil-rich.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/high-atlas-azilal-imilchil-rich.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -502,43 +211,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imperial.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/imperial.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/imperial.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/imperial.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imperial.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/imperial.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/imperial.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/imperial.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/imperial.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/private.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/private.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/private.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/private.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/private.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/private.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/private.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/private.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/private.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -556,43 +229,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/air-balloon.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/air-balloon.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/air-balloon.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/air-balloon.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/air-balloon.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/air-balloon.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/air-balloon.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/air-balloon.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/air-balloon.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/chefchaouen.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/chefchaouen.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/chefchaouen.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/chefchaouen.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/chefchaouen.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -610,43 +247,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/fes.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/fes.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/fes.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/fes.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/fes.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/fes.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/fes.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/fes.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/fes.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/ouzoud.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/ouzoud.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/ouzoud.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/ouzoud.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/ouzoud.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/ouzoud.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/ouzoud.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/ouzoud.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/ouzoud.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -664,43 +265,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/zagora.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/zagora.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/zagora.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/zagora.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/zagora.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/zagora.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/zagora.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/zagora.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/zagora.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/classic-morocco.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/classic-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/classic-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/classic-morocco.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/classic-morocco.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/classic-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/classic-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/classic-morocco.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/classic-morocco.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -718,43 +283,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/small-group-tour.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/small-group-tour.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/small-group-tour.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/small-group-tour.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/small-group-tour.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/small-group-tour.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/small-group-tour.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/small-group-tour.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/small-group-tour.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/toubkal.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/toubkal.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/toubkal.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/toubkal.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/toubkal.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/toubkal.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/toubkal.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/toubkal.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/toubkal.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -772,24 +301,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/agafay.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/agafay.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/agafay.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/agafay.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/agafay.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/agafay.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/agafay.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/agafay.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/agafay.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/6-day-christmas-morocco.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -798,25 +309,6 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/6-day-christmas-morocco.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/6-day-christmas-morocco.html" />
   </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/6-day-christmas-morocco.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/6-day-christmas-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/6-day-christmas-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/6-day-christmas-morocco.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/6-day-christmas-morocco.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/6-day-christmas-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/6-day-christmas-morocco.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/6-day-christmas-morocco.html" />
-  </url>
-
   <!-- ===== DESTINATION PAGES ===== -->
   <url>
     <loc>https://www.abridmorocco.com/destination-marrakech.html</loc>
@@ -1169,7 +661,6 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-ouarzazate.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-ouarzazate.html" />
   </url>
-
   <url>
     <loc>https://www.abridmorocco.com/destination-tetouan.html</loc>
     <lastmod>2026-09-21</lastmod>
@@ -1373,43 +864,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-destinations.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/guide-destinations.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-destinations.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-destinations.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-destinations.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-destinations.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-destinations.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-destinations.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-destinations.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/guide-itineraries.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-itineraries.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-itineraries.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-itineraries.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-itineraries.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-itineraries.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-itineraries.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-itineraries.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-itineraries.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1427,43 +882,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-transport.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/guide-transport.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-transport.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-transport.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-transport.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-transport.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-transport.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-transport.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-transport.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/guide-culture.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-culture.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-culture.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-culture.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-culture.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-culture.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-culture.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-culture.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-culture.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1481,43 +900,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-food.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/guide-food.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-food.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-food.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-food.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-food.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-food.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-food.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-food.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/guide-desert.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-desert.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-desert.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-desert.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-desert.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-desert.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-desert.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-desert.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-desert.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1535,43 +918,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-mountains.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/guide-mountains.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-mountains.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-mountains.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-mountains.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-mountains.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-mountains.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-mountains.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-mountains.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/guide-travel-tips.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-travel-tips.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-travel-tips.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-travel-tips.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-travel-tips.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-travel-tips.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-travel-tips.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-travel-tips.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-travel-tips.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1589,43 +936,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-costs.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/guide-costs.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-costs.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-costs.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-costs.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-costs.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-costs.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-costs.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-costs.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/guide-best-time.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-best-time.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-best-time.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-best-time.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-best-time.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-best-time.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-best-time.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-best-time.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-best-time.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1642,46 +953,9 @@
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-tipping.html" />
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-tipping.html" />
   </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/guide-tipping.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-tipping.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-tipping.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-tipping.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/guide-tipping.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/guide-tipping.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/guide-tipping.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/guide-tipping.html" />
-  </url>
-
   <!-- ===== BLOG PAGES ===== -->
   <url>
     <loc>https://www.abridmorocco.com/blog-imilchil.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-imilchil.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-imilchil.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-imilchil.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-imilchil.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-imilchil.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1699,43 +973,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-marrakech-top10.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-marrakech-top10.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-marrakech-top10.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-marrakech-top10.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-marrakech-top10.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-marrakech-top10.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-marrakech-top10.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-marrakech-top10.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-marrakech-top10.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-sahara-guide.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-guide.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-guide.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-guide.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-sahara-guide.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-guide.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-guide.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-guide.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-sahara-guide.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1753,43 +991,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-chefchaouen.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-chefchaouen.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-chefchaouen.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-chefchaouen.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-chefchaouen.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-chefchaouen.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-sahara-erg-chebbi.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-erg-chebbi.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-erg-chebbi.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-erg-chebbi.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-sahara-erg-chebbi.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-erg-chebbi.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-erg-chebbi.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-erg-chebbi.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-sahara-erg-chebbi.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1807,43 +1009,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-driving-safety.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-driving-safety.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-driving-safety.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-driving-safety.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-driving-safety.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-driving-safety.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-driving-safety.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-driving-safety.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-driving-safety.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-essaouira.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-essaouira.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-essaouira.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-essaouira.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-essaouira.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-essaouira.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1861,43 +1027,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-packing.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-sahara-packing.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-packing.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-packing.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-packing.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-sahara-packing.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-sahara-packing.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-sahara-packing.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-sahara-packing.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-essaouira-bus-vs-tour.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-essaouira-bus-vs-tour.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-essaouira-bus-vs-tour.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-essaouira-bus-vs-tour.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-essaouira-bus-vs-tour.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-essaouira-bus-vs-tour.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-essaouira-bus-vs-tour.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-essaouira-bus-vs-tour.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-essaouira-bus-vs-tour.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1915,43 +1045,7 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-agoudal.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-agoudal.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-agoudal.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-agoudal.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-agoudal.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-agoudal.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-agoudal.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-agoudal.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-agoudal.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-lakes-isli-tislit.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-lakes-isli-tislit.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-lakes-isli-tislit.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-lakes-isli-tislit.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/fr/blog-lakes-isli-tislit.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-lakes-isli-tislit.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-lakes-isli-tislit.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-lakes-isli-tislit.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-lakes-isli-tislit.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8000</priority>
@@ -1969,24 +1063,6 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-rich-ziz.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-rich-ziz.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-rich-ziz.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-rich-ziz.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-rich-ziz.html" />
-  </url>
-  <url>
-    <loc>https://www.abridmorocco.com/es/blog-rich-ziz.html</loc>
-    <lastmod>2026-09-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-rich-ziz.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-rich-ziz.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-rich-ziz.html" />
-  </url>
-  <url>
     <loc>https://www.abridmorocco.com/blog-high-atlas-packing.html</loc>
     <lastmod>2026-09-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -1996,22 +1072,435 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-high-atlas-packing.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/fr/blog-high-atlas-packing.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://www.abridmorocco.com/fr/destination-asilah.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-high-atlas-packing.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-high-atlas-packing.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-high-atlas-packing.html" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-asilah.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-asilah.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-asilah.html" />
   </url>
   <url>
-    <loc>https://www.abridmorocco.com/es/blog-high-atlas-packing.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <loc>https://www.abridmorocco.com/es/destination-asilah.html</loc>
+    <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8000</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/blog-high-atlas-packing.html" />
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/blog-high-atlas-packing.html" />
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/blog-high-atlas-packing.html" />
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-asilah.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-asilah.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-asilah.html" />
   </url>
-
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-azrou.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-azrou.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-azrou.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-azrou.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-azrou.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-azrou.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-azrou.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-azrou.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-bin-el-ouidane.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-bin-el-ouidane.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-bin-el-ouidane.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-bin-el-ouidane.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-bin-el-ouidane.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-bin-el-ouidane.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-bin-el-ouidane.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-bin-el-ouidane.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-casablanca.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-casablanca.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-casablanca.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-casablanca.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-casablanca.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-casablanca.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-casablanca.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-casablanca.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-dades-valley.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-dades-valley.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-dades-valley.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-dades-valley.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-dades-valley.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-dades-valley.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-dades-valley.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-dades-valley.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-draa-valley.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-draa-valley.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-draa-valley.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-draa-valley.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-draa-valley.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-draa-valley.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-draa-valley.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-draa-valley.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-el-jadida.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-el-jadida.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-el-jadida.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-el-jadida.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-el-jadida.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-el-jadida.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-el-jadida.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-el-jadida.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-errachidia.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-errachidia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-errachidia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-errachidia.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-errachidia.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-errachidia.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-errachidia.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-errachidia.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-ifrane.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-ifrane.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-ifrane.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-ifrane.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-ifrane.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-ifrane.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-ifrane.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-ifrane.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-imilchil.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-imilchil.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-imilchil.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-imilchil.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-imilchil.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-imilchil.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-imilchil.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-imilchil.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-imlil.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-imlil.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-imlil.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-imlil.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-imlil.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-imlil.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-imlil.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-imlil.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-meknes.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-meknes.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-meknes.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-meknes.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-meknes.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-meknes.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-meknes.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-meknes.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-midelt.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-midelt.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-midelt.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-midelt.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-midelt.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-midelt.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-midelt.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-midelt.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-mirleft.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-mirleft.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-mirleft.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-mirleft.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-mirleft.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-mirleft.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-mirleft.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-mirleft.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-ourika.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-ourika.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-ourika.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-ourika.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-ourika.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-ourika.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-ourika.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-ourika.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-rabat.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-rabat.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-rabat.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-rabat.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-rabat.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-rabat.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-rabat.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-rabat.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-safi.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-safi.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-safi.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-safi.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-safi.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-safi.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-safi.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-safi.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-skoura.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-skoura.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-skoura.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-skoura.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-skoura.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-skoura.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-skoura.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-skoura.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-taghazout.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-taghazout.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-taghazout.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-taghazout.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-taghazout.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-taghazout.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-taghazout.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-taghazout.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-taroudant.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-taroudant.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-taroudant.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-taroudant.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-taroudant.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-taroudant.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-taroudant.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-taroudant.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-tetouan.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-tetouan.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-tetouan.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-tetouan.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-tetouan.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-tetouan.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-tetouan.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-tetouan.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-tiznit.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-tiznit.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-tiznit.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-tiznit.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-tiznit.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-tiznit.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-tiznit.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-tiznit.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-todra-gorge.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-todra-gorge.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-todra-gorge.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-todra-gorge.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-todra-gorge.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-todra-gorge.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-todra-gorge.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-todra-gorge.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/fr/destination-zagora.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-zagora.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-zagora.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-zagora.html" />
+  </url>
+  <url>
+    <loc>https://www.abridmorocco.com/es/destination-zagora.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.abridmorocco.com/destination-zagora.html" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.abridmorocco.com/fr/destination-zagora.html" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.abridmorocco.com/es/destination-zagora.html" />
+  </url>
 </urlset>

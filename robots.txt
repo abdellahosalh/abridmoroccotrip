@@ -12,5 +12,6 @@ Disallow: /sitemap.html
 Disallow: /admin/
 
 Sitemap: https://www.abridmorocco.com/sitemap.xml
+Sitemap: https://www.abridmorocco.com/image-sitemap.xml
 Sitemap: https://www.abridmorocco.com/fr/sitemap.xml
 Sitemap: https://www.abridmorocco.com/es/sitemap.xml
