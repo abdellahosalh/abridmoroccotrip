@@ -195,6 +195,9 @@
   <url>
     <loc>https://www.abridmorocco.com/destination-ait-ben-haddou.html</loc>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/06.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -220,9 +223,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/asilah/04.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/05.jpg</image:loc>
@@ -435,6 +435,9 @@
       <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/03.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/fes/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -525,9 +528,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/meknes/04.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/05.jpg</image:loc>
     </image:image>
     <image:image>
@@ -589,9 +589,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/04.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -768,12 +765,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/05.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/06.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/07.jpg</image:loc>
     </image:image>
     <image:image>
@@ -813,103 +804,103 @@
   <url>
     <loc>https://www.abridmorocco.com/destinations.html</loc>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tangier-strait-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tangier/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tetouan-medina-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/chefchaouen-orange.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/chefchaouen/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/asilah-murals-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/asilah/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/marrakech-koutoubia-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/marrakech/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/rabat-oudaias-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/rabat/05.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/meknes-gate-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/meknes/06.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/casablanca-mosque-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/casablanca/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/agadir-hill.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/agadir/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/taghazout-surf-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taghazout/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/safi-port-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/safi/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/el-jadida-cistern-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/el-jadida/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/mirleft-cove.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/mirleft/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/toubkal/toubkal-massif.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imlil/07.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ourika/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/ifrane-alps-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ifrane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/azrou-cedars-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/azrou/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/high-atlas/imilchil/imilchil-01.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imilchil/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/bin-el-ouidane-lake-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/bin-el-ouidane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/ouarzazate/ouarzazate-kasbah.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/01.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/ait-benhaddou-panorama.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/skoura-palmeraie-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/skoura/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/dades-switchbacks-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/dades-valley/03.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/dades-canyon.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/merzouga-erg-chebbi-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/merzouga/05.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/zagora-sign-morocco.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/draa-palms-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/draa-valley/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/midelt/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/midelt/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/errachidia-kasbah-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/errachidia/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tiznit-walls-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tiznit/01.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -1026,6 +1017,9 @@
   <url>
     <loc>https://www.abridmorocco.com/fr/destination-ait-ben-haddou.html</loc>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/06.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -1051,9 +1045,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/asilah/04.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/05.jpg</image:loc>
@@ -1266,6 +1257,9 @@
       <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/03.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/fes/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -1356,9 +1350,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/meknes/04.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/05.jpg</image:loc>
     </image:image>
     <image:image>
@@ -1420,9 +1411,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/04.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -1599,12 +1587,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/05.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/06.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/07.jpg</image:loc>
     </image:image>
     <image:image>
@@ -1644,103 +1626,103 @@
   <url>
     <loc>https://www.abridmorocco.com/fr/destinations.html</loc>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tangier-strait-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tangier/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tetouan-medina-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/chefchaouen-orange.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/chefchaouen/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/asilah-murals-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/asilah/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/marrakech-koutoubia-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/marrakech/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/rabat-oudaias-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/rabat/05.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/meknes-gate-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/meknes/06.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/casablanca-mosque-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/casablanca/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/agadir-hill.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/agadir/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/taghazout-surf-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taghazout/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/safi-port-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/safi/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/el-jadida-cistern-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/el-jadida/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/mirleft-cove.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/mirleft/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/toubkal/toubkal-massif.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imlil/07.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ourika/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/ifrane-alps-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ifrane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/azrou-cedars-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/azrou/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/high-atlas/imilchil/imilchil-01.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imilchil/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/bin-el-ouidane-lake-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/bin-el-ouidane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/ouarzazate/ouarzazate-kasbah.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/01.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/ait-benhaddou-panorama.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/skoura-palmeraie-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/skoura/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/dades-switchbacks-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/dades-valley/03.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/dades-canyon.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/merzouga-erg-chebbi-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/merzouga/05.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/zagora-sign-morocco.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/draa-palms-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/draa-valley/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/midelt/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/midelt/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/errachidia-kasbah-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/errachidia/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tiznit-walls-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tiznit/01.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -1776,6 +1758,9 @@
   <url>
     <loc>https://www.abridmorocco.com/es/destination-ait-ben-haddou.html</loc>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/06.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ait-benhaddou/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -1801,9 +1786,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/asilah/04.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/asilah/05.jpg</image:loc>
@@ -2016,6 +1998,9 @@
       <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
     </image:image>
     <image:image>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/03.jpg</image:loc>
+    </image:image>
+    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/fes/01.jpg</image:loc>
     </image:image>
     <image:image>
@@ -2106,9 +2091,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/meknes/04.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/meknes/05.jpg</image:loc>
     </image:image>
     <image:image>
@@ -2170,9 +2152,6 @@
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/03.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/04.jpg</image:loc>
     </image:image>
   </url>
   <url>
@@ -2349,12 +2328,6 @@
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/05.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/06.jpg</image:loc>
-    </image:image>
-    <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/tetouan/07.jpg</image:loc>
     </image:image>
     <image:image>
@@ -2394,103 +2367,103 @@
   <url>
     <loc>https://www.abridmorocco.com/es/destinations.html</loc>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tangier-strait-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tangier/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tetouan-medina-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tetouan/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/chefchaouen-orange.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/chefchaouen/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/asilah-murals-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/asilah/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/marrakech-koutoubia-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/marrakech/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/fes-tannery.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/fes/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/rabat-oudaias-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/rabat/05.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/meknes-gate-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/meknes/06.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/casablanca-mosque-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/casablanca/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/essaouira/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/agadir-hill.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/agadir/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/taghazout-surf-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taghazout/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/safi-port-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/safi/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/el-jadida-cistern-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/el-jadida/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/mirleft-cove.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/mirleft/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/toubkal/toubkal-massif.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imlil/07.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/photos/ourika/03.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/ifrane-alps-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ifrane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/azrou-cedars-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/azrou/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/high-atlas/imilchil/imilchil-01.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/imilchil/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/bin-el-ouidane-lake-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/bin-el-ouidane/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/ouarzazate/ouarzazate-kasbah.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/ouarzazate/01.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/ait-benhaddou-panorama.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/skoura-palmeraie-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/skoura/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/dades-switchbacks-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/dades-valley/03.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/dades-canyon.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/merzouga-erg-chebbi-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/merzouga/05.jpg</image:loc>
     </image:image>
     <image:image>
       <image:loc>https://www.abridmorocco.com/images/destinations/zagora-sign-morocco.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/draa-palms-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/draa-valley/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/midelt/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/midelt/01.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/errachidia-kasbah-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/errachidia/04.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/03.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/taroudant/02.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://www.abridmorocco.com/images/destinations/tiznit-walls-morocco.jpg</image:loc>
+      <image:loc>https://www.abridmorocco.com/images/photos/tiznit/01.jpg</image:loc>
     </image:image>
   </url>
   <url>
